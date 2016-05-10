@@ -1,0 +1,26 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+_build/
+build/
+bak/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Others
+.gitignore~
+*.[ch]~
+*.un~
+*.py~
+*.txt~
+*.swp
