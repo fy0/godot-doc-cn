@@ -220,7 +220,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-            如果该浮点数的值不是无穷(infinite)，返回 true。
+            如果该浮点数的值为无穷(infinite)，返回 true。
 			</description>
 		</method>
 		<method name="ease">
@@ -251,7 +251,7 @@
 			<argument index="1" name="step" type="float">
 			</argument>
 			<description>
-			Snap float value to a given step.
+            返回最接近 value 的 step 的倍数值。
 			</description>
 		</method>
 		<method name="lerp">
