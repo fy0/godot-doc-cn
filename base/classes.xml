@@ -2,10 +2,10 @@
 <doc version="2.1.alpha.custom_build" name="Engine Types">
 <class name="@GDScript" category="Core">
 	<brief_description>
-	Built-in GDScript functions.
+    GDScript 内建函数。
 	</brief_description>
 	<description>
-	This contains the list of built-in gdscript functions. Mostly math functions and other utilities. Everything else is expanded by objects.
+    这里列出了 gdscript 的内建函数。多数为数学函数和工具函数。除此之外所有函数都属于特定对象的扩展。
 	</description>
 	<methods>
 		<method name="sin">
@@ -14,7 +14,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Standard sine function.
+			正弦函数。
 			</description>
 		</method>
 		<method name="cos">
@@ -23,7 +23,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Standard cosine function.
+			余弦函数。
 			</description>
 		</method>
 		<method name="tan">
@@ -32,7 +32,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Standard tangent function.
+            正切函数。
 			</description>
 		</method>
 		<method name="sinh">
@@ -41,7 +41,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Hyperbolic sine.
+			双曲正弦函数。
 			</description>
 		</method>
 		<method name="cosh">
@@ -50,7 +50,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Hyperbolic cosine.
+			双曲余弦函数。
 			</description>
 		</method>
 		<method name="tanh">
@@ -59,7 +59,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Hyperbolic tangent.
+			双曲正切函数。
 			</description>
 		</method>
 		<method name="asin">
@@ -68,7 +68,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Arc-sine.
+			反正弦函数。
 			</description>
 		</method>
 		<method name="acos">
@@ -77,7 +77,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Arc-cosine.
+			反余弦函数。
 			</description>
 		</method>
 		<method name="atan">
@@ -86,7 +86,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Arc-tangent.
+			反正切函数。
 			</description>
 		</method>
 		<method name="atan2">
@@ -97,7 +97,7 @@
 			<argument index="1" name="y" type="float">
 			</argument>
 			<description>
-			Arc-tangent that takes a 2D vector as argument, returns the full -pi to +pi range.
+            使用 2D 向量为参数的反正切函数，返回值的范围是 [-pi, +pi]。
 			</description>
 		</method>
 		<method name="sqrt">
@@ -106,7 +106,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Square root.
+			求平方根。
 			</description>
 		</method>
 		<method name="fmod">
@@ -117,7 +117,7 @@
 			<argument index="1" name="y" type="float">
 			</argument>
 			<description>
-			Module (remainder of x/y).
+			求模 (x/y 的余数)。
 			</description>
 		</method>
 		<method name="fposmod">
@@ -128,7 +128,7 @@
 			<argument index="1" name="y" type="float">
 			</argument>
 			<description>
-			Module (remainder of x/y) that wraps equally in positive and negative.
+			返回值必定为正值的求模 (x/y 的余数)。
 			</description>
 		</method>
 		<method name="floor">
@@ -137,7 +137,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Floor (rounds down to nearest integer).
+			向下取整 (向下舍入为最接近的整数)。
 			</description>
 		</method>
 		<method name="ceil">
@@ -146,7 +146,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Ceiling (rounds up to nearest integer).
+            向上取整 (向上舍入为最接近的整数)。
 			</description>
 		</method>
 		<method name="round">
@@ -155,7 +155,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Round to nearest integer.
+            四舍五入到最接近的整数。
 			</description>
 		</method>
 		<method name="abs">
@@ -164,7 +164,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Remove sign (works for integer and float).
+            取绝对值(对整形和浮点数有效)
 			</description>
 		</method>
 		<method name="sign">
@@ -173,7 +173,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Return sign (-1 or +1).
+            返回符号 (-1 或 + 1)
 			</description>
 		</method>
 		<method name="pow">
@@ -184,7 +184,7 @@
 			<argument index="1" name="y" type="float">
 			</argument>
 			<description>
-			Power function, x elevate to y.
+            求幂函数，x 的 y 次方
 			</description>
 		</method>
 		<method name="log">
@@ -193,7 +193,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Natural logarithm.
+            自然对数。
 			</description>
 		</method>
 		<method name="exp">
@@ -202,7 +202,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Exponential logarithm.
+			返回 e 的 n 次方的值。
 			</description>
 		</method>
 		<method name="isnan">
@@ -211,7 +211,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Return true if the float is not a number.
+            如果该浮点数是一个合法数字(非 NaN)，返回 true。
 			</description>
 		</method>
 		<method name="isinf">
@@ -220,7 +220,7 @@
 			<argument index="0" name="s" type="float">
 			</argument>
 			<description>
-			Return true if the float is infinite.
+            如果该浮点数的值不是无穷(infinite)，返回 true。
 			</description>
 		</method>
 		<method name="ease">
@@ -231,7 +231,7 @@
 			<argument index="1" name="curve" type="float">
 			</argument>
 			<description>
-			Easing function, based on exponent. 0 is constant, 1 is linear, 0 to 1 is ease-in, 1+ is ease out. Negative values are in-out/out in.
+            基于指数的求渐进值函数。指数参数为0的时候，函数值为常量，指数参数为1的时候，函数为线性，0到1之间为逐渐加速，大于1时逐渐减速。遇到负值时加减速情况相反。
 			</description>
 		</method>
 		<method name="decimals">
@@ -240,7 +240,7 @@
 			<argument index="0" name="step" type="float">
 			</argument>
 			<description>
-			Return the amount of decimals in the floating point value.
+            获取浮点数的小数位数。
 			</description>
 		</method>
 		<method name="stepify">
@@ -264,6 +264,7 @@
 			<argument index="2" name="weight" type="float">
 			</argument>
 			<description>
+            在两值范围内根据一个标准值进行线性插值。
 			Linear interpolates between two values by a normalized value.
 			</description>
 		</method>
@@ -277,28 +278,28 @@
 			<argument index="2" name="step" type="float">
 			</argument>
 			<description>
-			Decreases time by a specified amount.
+            返回 value - amount * step。
 			</description>
 		</method>
 		<method name="randomize">
 			<return type="Nil">
 			</return>
 			<description>
-			Reset the seed of the random number generator with a new, different one.
+            将全新的值重设为随机数的种子。
 			</description>
 		</method>
 		<method name="randi">
 			<return type="int">
 			</return>
 			<description>
-			Random 32 bits value (integer). To obtain a value	from 0 to N, you can use remainder, like (for random from 0 to 19): randi() % 20.
+            生成 32 位随机数(整型)。若你想要获得一个 0 到 N 的值，可以使用求余，比如 0 到 19: randi() % 20。
 			</description>
 		</method>
 		<method name="randf">
 			<return type="float">
 			</return>
 			<description>
-			Random value (0 to 1 float).
+            生成随机数 (浮点类型，范围 0 到 1)
 			</description>
 		</method>
 		<method name="rand_range">
@@ -309,7 +310,7 @@
 			<argument index="1" name="to" type="float">
 			</argument>
 			<description>
-			Random range, any floating point value between 'from' and 'to'
+            范围随机函数，可在任意浮点数 'from' 和 'to' 之间取值。
 			</description>
 		</method>
 		<method name="seed">
@@ -318,7 +319,7 @@
 			<argument index="0" name="seed" type="float">
 			</argument>
 			<description>
-			Set seed for the random number generator.
+            设置随机数生成器的种子。
 			</description>
 		</method>
 		<method name="rand_seed">
@@ -327,7 +328,7 @@
 			<argument index="0" name="seed" type="float">
 			</argument>
 			<description>
-			Random from seed, pass a seed and an array with both number and new seed is returned.
+            连同种子进行随机，传入一个种子，返回一个带着数字和新种子的数组。
 			</description>
 		</method>
 		<method name="deg2rad">
@@ -336,7 +337,7 @@
 			<argument index="0" name="deg" type="float">
 			</argument>
 			<description>
-			Convert from degrees to radians.
+            角度转换为弧度。
 			</description>
 		</method>
 		<method name="rad2deg">
@@ -345,7 +346,7 @@
 			<argument index="0" name="rad" type="float">
 			</argument>
 			<description>
-			Convert from radians to degrees.
+			弧度转换为角度。
 			</description>
 		</method>
 		<method name="linear2db">
@@ -354,6 +355,7 @@
 			<argument index="0" name="nrg" type="float">
 			</argument>
 			<description>
+            将线性能量转换为分贝(音频)。
 			Convert from linear energy to decibels (audio).
 			</description>
 		</method>
@@ -363,6 +365,7 @@
 			<argument index="0" name="db" type="float">
 			</argument>
 			<description>
+            将分贝转换为线性能量(音频)。
 			Convert from decibels to linear energy (audio).
 			</description>
 		</method>
@@ -374,7 +377,7 @@
 			<argument index="1" name="b" type="float">
 			</argument>
 			<description>
-			Return the maximum of two values.
+            返回两值中较大的一个。
 			</description>
 		</method>
 		<method name="min">
@@ -385,7 +388,7 @@
 			<argument index="1" name="b" type="float">
 			</argument>
 			<description>
-			Return the minimum of two values.
+            返回两值中较小的一个。
 			</description>
 		</method>
 		<method name="clamp">
@@ -398,7 +401,7 @@
 			<argument index="2" name="max" type="float">
 			</argument>
 			<description>
-			Clamp both values to a range.
+            将值约束到一个区间之内。
 			</description>
 		</method>
 		<method name="nearest_po2">
@@ -407,7 +410,7 @@
 			<argument index="0" name="val" type="int">
 			</argument>
 			<description>
-			Return the nearest larger power of 2 for an integer.
+            返回一个刚好大于参数的2的n次幂。
 			</description>
 		</method>
 		<method name="weakref">
@@ -416,7 +419,7 @@
 			<argument index="0" name="obj" type="Object">
 			</argument>
 			<description>
-			Return a weak reference to an object.
+            返回一个对象的弱引用。
 			</description>
 		</method>
 		<method name="funcref">
@@ -427,7 +430,7 @@
 			<argument index="1" name="funcname" type="String">
 			</argument>
 			<description>
-			Return a reference to the specified function.
+            返回指定函数的一个引用。
 			</description>
 		</method>
 		<method name="convert">
@@ -438,7 +441,7 @@
 			<argument index="1" name="type" type="int">
 			</argument>
 			<description>
-			Convert from a type to another in the best way possible. The "type" parameter uses the enum TYPE_* in [@Global Scope].
+            以尽可能好的的方式将一个类型转换为另一个。"type" 参数需为枚举值 TYPE_* (见 [@Global Scope] )。
 			</description>
 		</method>
 		<method name="typeof">
@@ -447,7 +450,7 @@
 			<argument index="0" name="what" type="Variant">
 			</argument>
 			<description>
-			Return the internal type of the given Variant object, using the TYPE_* enum in [@Global Scope].
+            返回给出的泛型对象的内部类型，返回值为枚举值 TYPE_* 之一 (见 [@Global Scope] )
 			</description>
 		</method>
 		<method name="str">
@@ -458,6 +461,7 @@
 			<argument index="1" name="..." type="Variant">
 			</argument>
 			<description>
+            以尽可能好的方式将至少一个参数转换为字符串。
 			Convert one or more arguments to strings in the best way possible.
 			</description>
 		</method>
@@ -469,7 +473,7 @@
 			<argument index="1" name="..." type="Variant">
 			</argument>
 			<description>
-			Print one or more arguments to strings in the best way possible to a console line.
+            以字符串的形式尽可能妥善地将一个或多个参数打印到控制台。
 			</description>
 		</method>
 		<method name="printt">
@@ -480,7 +484,7 @@
 			<argument index="1" name="..." type="Variant">
 			</argument>
 			<description>
-			Print one or more arguments to the console with a tab between each argument.
+            将一个或多个参数打印到控制台，并在参数间以一个制表符作为间隔。
 			</description>
 		</method>
 		<method name="prints">
@@ -491,7 +495,7 @@
 			<argument index="1" name="..." type="Variant">
 			</argument>
 			<description>
-			Print one or more arguments to the console with a space between each argument.
+            将一个或多个参数打印到控制台，并在参数间以一个空格作为间隔。
 			</description>
 		</method>
 		<method name="printerr">
@@ -502,7 +506,7 @@
 			<argument index="1" name="..." type="Variant">
 			</argument>
 			<description>
-			Print one or more arguments to strings in the best way possible to standard error line.
+            以字符串的形式尽可能妥善地将一个或多个参数打印到标准错误输出。
 			</description>
 		</method>
 		<method name="printraw">
@@ -513,7 +517,7 @@
 			<argument index="1" name="..." type="Variant">
 			</argument>
 			<description>
-			Print one or more arguments to strings in the best way possible to console. No newline is added at the end.
+            以字符串的形式尽可能妥善地将一个或多个参数打印到控制台。句末不添加换行符。
 			</description>
 		</method>
 		<method name="var2str">
@@ -522,7 +526,7 @@
 			<argument index="0" name="var" type="Variant">
 			</argument>
 			<description>
-			Convert a value to a formatted string that can later be parsed using [method str2var].
+            将一个值转换为固定格式的字符串，以便于之后能够被 [method str2var] 解析。
 			</description>
 		</method>
 		<method name="str2var">
@@ -531,7 +535,7 @@
 			<argument index="0" name="string" type="String">
 			</argument>
 			<description>
-			Convert a formatted string that was returned by [method var2str] to the original value.
+            将一个 [method var2str] 返回的固定格式的字符串转换回其原始值。
 			</description>
 		</method>
 		<method name="var2bytes">
@@ -540,7 +544,7 @@
 			<argument index="0" name="var" type="Variant">
 			</argument>
 			<description>
-			Encode a variable value to a byte array.
+            将一个泛型对象编码为字节数组。
 			</description>
 		</method>
 		<method name="bytes2var">
@@ -549,7 +553,7 @@
 			<argument index="0" name="bytes" type="RawArray">
 			</argument>
 			<description>
-			Decode a byte array back to a value.
+            将字节数组解码为泛型对象。
 			</description>
 		</method>
 		<method name="range">
@@ -558,7 +562,7 @@
 			<argument index="0" name="..." type="Variant">
 			</argument>
 			<description>
-			Return an array with the given range. Range can be 1 argument N (0 to N-1), two arguments (initial, final-1) or three arguments (initial, final-1, increment).
+            返回包含给定范围的一个数组。范围可以被单个参数 N (0 到 N-1)，两个参数 (initial, final-1)，或三个参数 (initial, final-1, increment)。
 			</description>
 		</method>
 		<method name="load">
@@ -567,7 +571,7 @@
 			<argument index="0" name="path" type="String">
 			</argument>
 			<description>
-			Load a resource from the filesystem, pass a valid path as argument.
+            从文件系统加载一个资源，参数需为合法路径。
 			</description>
 		</method>
 		<method name="inst2dict">
@@ -576,7 +580,7 @@
 			<argument index="0" name="inst" type="Object">
 			</argument>
 			<description>
-			Convert a script class instance to a dictionary (useful for serializing).
+            将一个脚本类型实例对象转换为字典(用于序列化)。
 			</description>
 		</method>
 		<method name="dict2inst">
@@ -585,7 +589,7 @@
 			<argument index="0" name="dict" type="Dictionary">
 			</argument>
 			<description>
-			Convert a previously converted instances to dictionary back into an instance. Useful for deserializing.
+            将一个之前转换为字典的实例转回一个实例对象(用于反序列化)。
 			</description>
 		</method>
 		<method name="hash">
@@ -594,7 +598,7 @@
 			<argument index="0" name="var:Variant" type="Variant">
 			</argument>
 			<description>
-			Hash the variable passed and return an integer.
+            将传入的值哈希化并作为一个整数类型返回。
 			</description>
 		</method>
 		<method name="Color8">
@@ -609,14 +613,14 @@
 			<argument index="3" name="a8" type="int">
 			</argument>
 			<description>
-			Make a color from red, green, blue and alpha. Arguments can range from 0 to 255.
+            根据提供的红、绿、蓝和透明度生成一个色彩对象。参数值的范围是 0 到 255。
 			</description>
 		</method>
 		<method name="print_stack">
 			<return type="Nil">
 			</return>
 			<description>
-			Print a stack track at code location, only works when running with debugger turned on.
+            打印代码位置的栈跟踪信息，仅在调试器开启时工作。
 			</description>
 		</method>
 		<method name="instance_from_id">
@@ -625,7 +629,7 @@
 			<argument index="0" name="instance_id" type="int">
 			</argument>
 			<description>
-			Get an object by its ID.
+            根据 ID 获取对象实例。
 			</description>
 		</method>
 		<method name="preload">
@@ -634,7 +638,7 @@
 			<argument index="0" name="path" type="String">
 			</argument>
 			<description>
-			Preload a resource from the filesystem. The resource is loaded during script parsing.
+            从文件系统预加载一个资源。这个资源会在脚本解析(parsing 阶段，脚本开始运行之前)的时候加载。
 			</description>
 		</method>
 		<method name="yield">
@@ -645,9 +649,9 @@
 			<argument index="1" name="signal" type="String">
 			</argument>
 			<description>
-			Stop the function execution and return the current state. Call resume on the state to resume execution. This makes the state invalid.
-			Returns anything that was passed to the resume function call.
-			If passed an object and a signal, the execution is resumed when the object's signal is emmited.
+            暂停函数执行并返回当前 state。调用 resume 并作用于 state 从而恢复执行。这个操作将使 state 失效(invalid)。
+            返回传递给 resume 函数的值。
+            如果参数为一个对象和一个信号，执行将在这个对象的信号被触发(emmited)时恢复。
 			</description>
 		</method>
 		<method name="assert">
@@ -656,13 +660,13 @@
 			<argument index="0" name="condition" type="bool">
 			</argument>
 			<description>
-			Assert that the condition is true. If the condition is false, generates an error.
+            断定一个条件为真。如果该条件为假，产生一个错误。
 			</description>
 		</method>
 	</methods>
 	<constants>
 		<constant name="PI" value="3.141593">
-			Constant that represents how many times the diameter of a circumference fits around it's perimeter.
+            表示一个圆的周长是其直径多少倍的常数。
 		</constant>
 	</constants>
 </class>
