@@ -1,3 +1,5 @@
+SHELL = /bin/bash
+
 BASEDIR = $(CURDIR)
 CLASSES = $(BASEDIR)/base/classes.xml
 OUTPUTDIR = $(BASEDIR)/_build
@@ -23,8 +25,8 @@ doxygen:
 html:
 	rm -rf $(OUTPUTDIR)/html
 	mkdir -p  $(OUTPUTDIR)/html
-	pushd $(OUTPUTDIR)/html
-	python2 $(TOOLSDIR)/makehtml.py -multipage $(CLASSES)
+	pushd $(OUTPUTDIR)/html; \
+	python2 $(TOOLSDIR)/makehtml.py -multipage $(CLASSES) ; \
 	popd
 
 markdown:
@@ -37,8 +39,8 @@ markdown:
 rst:
 	rm -rf $(OUTPUTDIR)/rst
 	mkdir -p $(OUTPUTDIR)/rst
-	pushd $(OUTPUTDIR)/rst
-	python2 $(TOOLSDIR)/makerst.py $(CLASSES)
+	pushd $(OUTPUTDIR)/rst; \
+	python2 $(TOOLSDIR)/makerst.py $(CLASSES) ; \
 	popd
 
 textile:
