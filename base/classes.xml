@@ -265,7 +265,6 @@
 			</argument>
 			<description>
             在两值范围内根据一个标准值进行线性插值。
-			Linear interpolates between two values by a normalized value.
 			</description>
 		</method>
 		<method name="dectime">
@@ -462,7 +461,6 @@
 			</argument>
 			<description>
             以尽可能好的方式将至少一个参数转换为字符串。
-			Convert one or more arguments to strings in the best way possible.
 			</description>
 		</method>
 		<method name="print">
@@ -638,7 +636,7 @@
 			<argument index="0" name="path" type="String">
 			</argument>
 			<description>
-            从文件系统预加载一个资源。这个资源会在脚本解析(parsing 阶段，脚本开始运行之前)的时候加载。
+            从文件系统预加载资源。这个资源会在脚本解析(执行之前)的时候加载。
 			</description>
 		</method>
 		<method name="yield">
