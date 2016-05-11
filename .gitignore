@@ -24,3 +24,5 @@ bak/
 *.py~
 *.txt~
 *.swp
+Makefile~
+
