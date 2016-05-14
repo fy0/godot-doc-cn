@@ -1,4 +1,4 @@
-Inheritance class tree
+类继承关系树
 ======================
 
 Object
@@ -27,3 +27,4 @@ Spatial
 .. image:: /img/Spatial.png
 
 Source files: :download:`class_tree.zip </files/class_tree.zip>`.
+

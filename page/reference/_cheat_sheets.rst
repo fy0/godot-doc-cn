@@ -1,4 +1,4 @@
-Cheat sheets
+速查表
 ============
 
 .. toctree::
