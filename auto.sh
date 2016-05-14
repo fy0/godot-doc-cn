@@ -2,7 +2,11 @@ cd classes
 git pull
 make rst
 
-cd ../page
+cd ..
+rm page/classes/class_*
+cp classes/_build/rst/* page/classes -f
+
+cd page
 make html
 cd ..
 
