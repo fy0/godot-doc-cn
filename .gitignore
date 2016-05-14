@@ -8,6 +8,7 @@ __pycache__/
 # Distribution / packaging
 _build/
 build/
+page/classes
 bak/
 
 # Translations
@@ -22,7 +23,9 @@ bak/
 *.[ch]~
 *.un~
 *.py~
+*.md~
 *.txt~
 *.swp
+*.sh~
 Makefile~
 
