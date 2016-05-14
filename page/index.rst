@@ -34,7 +34,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: Reference
+   :caption: 参考
    :name: sec-reference
 
    classes/_classes
