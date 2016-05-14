@@ -3,10 +3,10 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Godot Engine's documentation!
+欢迎来到 Godot 游戏引擎中文文档！
 ========================================
 
-The main documentation for the site is organized into a few sections:
+这里是目录页，以章节的形式组织了站点内容。
 
 * :ref:`sec-tutorials`
 * :ref:`sec-reference`
@@ -14,7 +14,7 @@ The main documentation for the site is organized into a few sections:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Tutorials
+   :caption: 教程
    :name: sec-tutorials
 
    tutorials/step_by_step/_step_by_step
@@ -39,7 +39,7 @@ The main documentation for the site is organized into a few sections:
 
 .. toctree::
    :maxdepth: 1
-   :caption: Community
+   :caption: 社区
    :name: sec-community
 
    contributing/_contributing

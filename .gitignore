@@ -27,5 +27,6 @@ bak/
 *.txt~
 *.swp
 *.sh~
+*.rst~
 Makefile~
 
