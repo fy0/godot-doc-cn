@@ -1,15 +1,13 @@
 .. _doc_core_types:
 
-Core types
+核心类型
 ==========
 
-Godot has a rich set of classes and templates that compose its core,
-and everything is built upon them.
+Godot有一大组的类和模板来构成它的核心，并且所有东西都是建立在它们之上的。
 
-This reference will try to list them in order for their better
-understanding.
+这个参考将会尝试列举它们以便更好的理解它们。
 
-Definitions
+定义
 -----------
 
 Godot uses the standard C98 datatypes, such as ``uint8_t``,
