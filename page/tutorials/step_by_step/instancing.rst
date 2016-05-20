@@ -1,17 +1,12 @@
 .. _doc_instancing:
 
-Instancing
+实例化
 ==========
 
-Rationale
+基本理论
 ---------
 
-Having a scene and throwing nodes into it might work for small projects,
-but as a project grows, more and more nodes are used and it can quickly
-become unmanageable. To solve this, Godot allows a project to be
-separated in several scenes. This, however, does not work the same way
-as in other game engines. In fact, it's quite different, so please do
-not skip this tutorial!
+先弄一个场景然后把节点丢进去可能对一个小工程会起作用，但随着工程的增大，越来越多的节点被使用，并且很快它们就会变得难以管理。为了解决这一问题，Godot允许一个工程被分成几个场景。然而，这样和其他游戏引擎的工作方式并不一样。事实上是差别很大，所以请不要跳过本教程！
 
 To recap: A scene is a collection of nodes organized as a tree, where
 they can have only one single node as the tree root.
