@@ -76,107 +76,70 @@
 
 .. image:: /img/newnode_button.png
 
-This will open the Create Node dialog, showing the long list of nodes
-that can be created:
+这将会打开创建节点（Create Node）对话框，展示了一长串能够被创建的节点列表：
 
 .. image:: /img/node_classes.png
 
-From there, select the "Label" node first. Searching for it is probably
-the quickest way:
+从这里，先选择“标签”（Label）节点。直接搜索它可能是最快捷的方式：
 
 .. image:: /img/node_search_label.png
 
-And finally, create the Label! A lot happens when Create is pressed:
+并且最终，我们创建了一个标签（Label）！当创建被按下时，很多事情就发生了：
 
 .. image:: /img/editor_with_label.png
 
-First of all, the scene is changed to the 2D editor (because Label is
-a 2D Node type), and the Label appears, selected, at the top left
-corner of the viewport.
+首先，场景变成了一个2D编辑器（因为Label是一个2D节点类型），并且当Label出现时，选定，在视图（Viewport）的左上角。
 
-The node appears in the scene tree editor (box in the top left
-corner), and the label properties appear in the Inspector (box on the
-right side).
+这个节点出现在了场景树编辑器（Scene Tree Editor）（左上方的一栏里），而且标签的属性（Property）出现在了检查工具（Inspector）中（右侧的一栏）。
 
-The next step will be to change the "Text" Property of the label, let's
-change it to "Hello, World!":
+下一步就是去改变标签的“文本”（Text）属性了，我们来把它改成“Hello,World!”：
 
 .. image:: /img/hw.png
 
-Ok, everything's ready to run the scene! Press the PLAY SCENE Button on
-the top bar (or hit F6):
+好了，一切都已就绪来运行场景了！在顶栏按下“运行场景”（Play Scene）按钮（或敲击F6）：
 
 .. image:: /img/playscene.png
 
-Aaaand... Oops.
+然……然后，噢天哪！
 
 .. image:: /img/neversaved.png
 
-Scenes need to be saved to be run, so save the scene to something like
-hello.scn in Scene -> Save:
+场景需要被保存才能运行，所以在场景→保存（Scene->Save）菜单中把场景保存成hello.scn：
 
 .. image:: /img/save_scene.png
 
-And here's when something funny happens. The file dialog is a special
-file dialog, and only allows to save inside the project. The project
-root is "res://" which means "resource path. This means that files can
-only be saved inside the project. For the future, when doing file
-operations in Godot, remember that "res://" is the resource path, and no
-matter the platform or install location, it is the way to locate where
-resource files are from inside the game.
+然后，有趣的事情发生了。这个文件对话框是一个特别的文件对话框，只允许在工程内保存。工程根目录是“res://”，意味着“资源路径”（Resource Path）。这也就意味着，文件只可以被保存到工程的内部。日后，当进行文件操作的时候记住，“res://”就是资源的路径，并且无论平台和安装位置，它都是游戏中的资源文件所在的一种定位方式。
 
-After saving the scene and pressing run scene again, the "Hello, World!"
-demo should finally execute:
+在保存场景并再一次按下运行场景之后，“Hello, World!”演示应该被执行：
 
 .. image:: /img/helloworld.png
 
-Success!
+成功了！
 
 .. _doc_scenes_and_nodes-configuring_the_project:
 
-Configuring the project
+配置（Configuring）工程
 -----------------------
 
-Ok, It's time to do some configuration to the project. Right now, the
-only way to run something is to execute the current scene. Projects,
-however, have several scenes so one of them must be set as the main
-scene. This scene is the one that will be loaded at the time the project
-is run.
+好了，是时候去给工程做点配置（Configuration）了。就是现在，唯一运行某些东西的方式就是执行当前的场景。然而，工程有多个场景，因此其中一个必须被设定为主场景（Main Scene）。这个场景是将会在工程运行时被载入的场景。
 
-These settings are all stored in the engine.cfg file, which is a
-plaintext file in win.ini format, for easy editing. There are dozens of
-settings that can be set in that file to alter how a project executes,
-so to make matters simpler, a project setting dialog exists, which is
-sort of a frontend to editing engine.cfg
+这些设定将全部被存在engine.cfg文件中，一个win.ini格式的普通文本文件，以便编辑。有一些设定可以在这个文件中被设定，来更改工程的执行方式，所以为了让情况更简单，工程设定（Project Setting）对话框，一种编辑engine.cfg的前端，诞生了。
 
-To access that dialog, simply go to Scene -> Project Settings.
+为了通向这个对话框，只需要走场景→工程设定（Scene -> Project Settings）。
 
-Once the window opens, the task will be to select a main scene. This can
-be done easily by changing the application/main_scene property and
-selecting 'hello.scn'.
+一旦这个窗口打开了，任务就是选一个主场景。这可以很轻易的完成通过改变应用/主场景属性（Application/main_scene）然后选择"hello.scn"。
 
 .. image:: /img/main_scene.png
 
-With this change, pressing the regular Play button (or F5) will run the
-project, no matter which scene is being edited.
+伴随这个改变，按下常规运行（Play）按钮（或者F5）将会运行这个工程，无论场景是否正在被编辑。
 
-Going back to the project settings dialog. This dialog provides a lot
-of options that can be added to engine.cfg and show their default
-values. If the default value is ok, then there isn't any need to
-change it.
+回到场景设定对话框，这个对话框提供了许多能够被加到engine.cfg的选项并且显示出了他们的默认值，如果默认值就可以，那就无需改变它。
 
-When a value is changed, a tick is marked to the left of the name.
-This means that the property will be saved to the engine.cfg file and
-remembered.
+当一个值改变时，一个对勾被标记在名字的左侧。这意味着这个属性将被保存到engine.cfg文件中并且会被记住。
 
-As a side note, for future reference and a little out of context (this
-is the first tutorial after all!), it is also possible to add custom
-configuration options and read them in run-time using the
-:ref:`Globals <class_Globals>` singleton.
+附注，对于后文的引用以及超出上文的内容（毕竟这是第一篇教程啊喂！），添加自定义的配置属性又使用:ref:`全局（Globals） <class_Globals>` 实例来在运行期间读取它们是可行的.
 
-To be continued...
+未完待续……
 ------------------
 
-This tutorial talks about "scenes and nodes", but so far there has been
-only *one* scene and *one* node! Don't worry, the next tutorial will
-deal with that...
+这篇教程谈论了“场景和节点”，但是目前为止，还只有一个场景和一个节点！别担心，下一篇教程将会解决这个问题……
