@@ -44,5 +44,4 @@
 
 别太担心，这篇教程的重要部分是去建立一种关于场景和实例化在现实生活中是如何被使用的意识。做一些游戏是理解这一切的最佳方略。
 
-当涉足实践，一切都将变得清晰，所以，请不要Everything will become very obvious when put to practice, so, please do
-not scratch your head and go on to the next tutorial!
+当涉足实践，一切都将变得清晰，所以，请不要抓心挠肝焦头烂额，然后继续下一篇教程！
