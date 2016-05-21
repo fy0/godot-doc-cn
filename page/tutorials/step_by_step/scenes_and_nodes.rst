@@ -1,108 +1,78 @@
 .. _doc_scenes_and_nodes:
 
-Scenes and nodes
+场景与节点
 ================
 
-Introduction
+介绍
 ------------
 
 .. image:: /img/chef.png
 
-Imagine for a second that you are not a game developer anymore. Instead,
-You are a chef! Change your hipster outfit for a toque and a double
-breasted jacket. Now, instead of making games, you create new and
-delicious recipes for your guests.
+试想一秒钟你不再是一个游戏开发者。取而代之地，你是一个大厨！把你时髦的衣服换成一个无檐帽和一个双排扣夹克。现在，你是在为你的宾客打造一个美味的菜肴而不是在做游戏。
 
-So, how does a chef create a recipe? Recipes are divided in two
-sections, the first is the ingredients and the second is the
-instructions to prepare it. This way, anyone can follow the recipe and
-savor your magnificent creation.
+所以，一个伙夫如何打造一个菜品呢？菜谱被分为两部分，第一个是成分，第二个是关于准备它的说明。以这种方式，任何人都能够遵照菜谱并调制出你的绝佳创意。
 
-Making games in Godot feels pretty much the same way. Using the engine
-feels like being in a kitchen. In this kitchen, *nodes* are like a
-refrigerator full of fresh ingredients to cook with.
+在Godot中制作游戏和这种方式非常相同。使用这个引擎感觉就像是在厨房里。在这个厨房里，“节点（Nodes）”就是装满了用于烹饪的新鲜材料的冰箱。
 
-There are many types of nodes, some show images, others play sound,
-other nodes display 3D models, etc. There's dozens of them.
+有很多种类型的节点，有的显示图像、有的播放声音、有的节点显示3D模型等等。有很多。
 
-Nodes
+节点（Nodes）
 -----
 
-But let's go to the basics. A node is a basic element for creating a
-game, it has the following characteristics:
+但先让我们来走基础。一个节点是创建一个游戏的基本元素，它具有一下性质：
 
--  Has a name.
--  Has editable properties.
--  Can receive a callback to process every frame.
--  Can be extended (to have more functions).
--  Can be added to other nodes as children.
+-  有名字（Name）
+-  具有可编辑的属性（Editable Properties）。
+-  每帧（Frame）都能接收对进程的回调（Callback）。
+-  能够被扩展（Extended）（来具有更多的功能（Functions））。
+-  能够加入其他的节点作为子（Child）。
 
 .. image:: /img/tree.png
 
-The last one is very important. Nodes can have other nodes as
-children. When arranged in this way, the nodes become a **tree**.
+最后一个很重要。节点能够使其他节点作为子类。当以这种方式编排的时候，节点会变成一个“树”。
 
-In Godot, the ability to arrange nodes in this way creates a powerful
-tool for organizing the projects. Since different nodes have different
-functions, combining them allows to create more complex functions.
+在Godot中，以这种方式来编排节点的能力为组织整理工程创造了一个强有力的工具。因为不同的节点有不同的功能，将他们结合起来则允许了创建更多复杂的功能。
 
-This is probably not clear yet and it makes little sense, but everything
-will click a few sections ahead. The most important fact to remember for
-now is that nodes exist and can be arranged this way.
+这可能还不甚清晰并且几乎没什么意义。但是过了几节后一切都将大白。目前要记住最重要的一点是有节点这个东西存在，并且能够按这种方式来编排。
 
-Scenes
+场景（Scene）
 ------
 
 .. image:: /img/scene_tree_example.png
 
-Now that the existence of nodes has been defined, the next logical
-step is to explain what a Scene is.
+既然节点的存在已经被定义了，下一个逻辑步骤就是解释什么是场景了。
 
-A scene is composed of a group of nodes organized hierarchically (in
-tree fashion). It has the following properties:
+一个场景由一组（以树形图的方式）被分层组织的节点组成，它具有以下属性：
 
--  A scene always has only one root node.
--  Scenes can be saved to disk and loaded back.
--  Scenes can be *instanced* (more on that later).
--  Running a game means running a scene.
--  There can be several scenes in a project, but for it to start, one of
-   them must selected to be loaded first.
+-  一个场景有且只能有一个根节点（Root Node）。
+-  场景能够被保存到磁盘上，也能被载入回来。
+-  场景能够被“实例化”（Instanced）（后文说明原因）。
+-  运行一个游戏意味着运行一个场景。
+-  一个工程中可以有几个场景，但是要开始，它们中的一个必须被选定来首先载入。
 
-Basically, the Godot editor is a **scene editor**. It has plenty of
-tools for editing 2D and 3D scenes as well as user interfaces, but all
-the editor revolves around the concept of editing a scene and the nodes
-that compose it.
+基本上，Godot编辑器就是一个“场景编辑器”（Scene Editor）。它有很多工具来编辑2D和3D场景以及用户界面（UI，User Interface），但是编辑器的所有内容都是围绕着编辑构成它的场景和节点的概念展开的。
 
-Creating a new project
+创建一个新工程（Project）
 ----------------------
 
-Theory is boring, so let's change subject and go practical. Following a
-long tradition in tutorials, the first project will be a hello world.
-For this, the editor will be used.
+理论是枯燥的，所以我们来转换话题走向实际。按照教程类文章的长期传统，第一个工程将会是一个Hello World。为了这件事，编辑器将会被使用。
 
-When godot executable is run outside a project, the Project Manager
-appears. This helps developers manage their projects.
+当Godot可执行程序脱离一个工程运行，工程管理器（Project Manager）就出现了，它帮助开发者管理他们的工程。
 
 .. image:: /img/project_manager.png
 
-To create a new project, the "New Project" option must be used. Choose
-and create a path for the project and specify the project name:
+要创建一个新工程，“新建工程”（New Project）选项肯定被使用。给选择并创建一个路径（Path）然后指定工程的名字（Name）：
 
 .. image:: /img/create_new_project.png
 
-Editor
+编辑器（Editor）
 ------
 
-Once the "New Project" is created, the next step is opening it. This
-will open the Godot editor. Here is how the editor looks when freshly
-opened:
+一旦这个“新工程”被创建，下一步就是打开它。这将会打开Godot编辑器。下图展示了刚打开编辑器时它的样子：
 
 .. image:: /img/empty_editor.png
 
-As mentioned before, making games in Godot feels like being in a
-kitchen, so let's open the refrigerator and add some fresh nodes to the
-project. We'll begin with a Hello World! To do this, the "New Node"
-button must be pressed:
+如前文所述，在Godot中制作游戏就像是在厨房里一样，所以我们来打开冰箱然后加入一些新鲜的节点到工程中。我们将会以一个Hello World!开始。为了做到这一点，肯定要按下“新建节点”（New Node）按钮：
 
 .. image:: /img/newnode_button.png
 
