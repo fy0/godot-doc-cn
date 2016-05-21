@@ -1,6 +1,6 @@
 .. _doc_instancing_continued:
 
-实例化（续篇） (continued)
+实例化（续篇）
 ======================
 
 回顾
