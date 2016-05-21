@@ -1,22 +1,18 @@
 .. _doc_core_types:
 
-Core types
+核心类型
 ==========
 
-Godot has a rich set of classes and templates that compose its core,
-and everything is built upon them.
+Godot有一大组的类和模板来构成它的核心，并且所有东西都是建立在它们之上的。
 
-This reference will try to list them in order for their better
-understanding.
+这个参考将会尝试列举它们以便更好的理解它们。
 
-Definitions
+定义
 -----------
 
-Godot uses the standard C98 datatypes, such as ``uint8_t``,
-``uint32_t``, ``int64_t``, etc. which are nowadays supported by every
-compiler. Reinventing the wheel for those is not fun, as it makes code
-more difficult to read.
+Godot用了标准C98的数据类型，比如“uint8_t”、“uint32_t”、“int64_t”等，现如今被所有编辑器所支持。为此重新发明一套体系可并不有趣，因为这回使得代码非常难读。
 
+总的来说，除非使用大型的结构或者数组，否则不用在意为了指定的任务使用最有效率的数据类型。如果不必要的话“int”能贯穿整张代码使用。
 In general, care is not taken to use the most efficient datatype for a
 given task unless using large structures or arrays. ``int`` is used
 through most of the code unless necessary. This is done because nowadays
