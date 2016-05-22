@@ -1,6 +1,6 @@
 .. _doc_instancing:
 
-实例化
+实例化（Instancing）
 ==========
 
 基本理论
@@ -8,101 +8,78 @@
 
 先弄一个场景然后把节点丢进去可能对一个小工程会起作用，但随着工程的增大，越来越多的节点被使用，并且很快它们就会变得难以管理。为了解决这一问题，Godot允许一个工程被分成几个场景。然而，这样和其他游戏引擎的工作方式并不一样。事实上是差别很大，所以请不要跳过本教程！
 
-To recap: A scene is a collection of nodes organized as a tree, where
-they can have only one single node as the tree root.
+来回顾一下：一个场景是被组织成树形图的节点的集合，其中它们只能有唯一的节点作为树的根。
 
 .. image:: /img/tree.png
 
-In Godot, a scene can be created and saved to disk. As many scenes
-can be created and saved as desired.
+在Godot中，一个场景可以被创建并保存在磁盘上，你可以随心所欲尽可能多的创建并保存场景。
 
 .. image:: /img/instancingpre.png
 
-Afterwards, while editing an existing or a new scene, other scenes can
-be instanced as part of it:
+之后，当编辑一个存在的或者新的场景，其他场景能够被实例化为它的一部分：
 
 .. image:: /img/instancing.png
 
-In the above picture, Scene B was added to Scene A as an instance. It
-may seem weird at first, but at the end of this tutorial it will make
-complete sense!
+在上图中，场景B被添加到场景A而成为一个实例。这起初似乎有点诡异，但是在本篇教程的结尾，这将相当的有意义！
 
-Instancing, step by step
+实例化，从一点一滴开始
 ------------------------
 
-To learn how to do instancing, let's start with downloading a sample
-project: :download:`instancing.zip </files/instancing.zip>`.
+要学习如何进行实例化，让我们先以下载一个范例工程开始：:download:`instancing.zip </files/instancing.zip>`.
 
-Unzip this scene in any place of your preference. Then, add this scene to
-the project manager using the 'Import' option:
+解压这个场景到你喜欢的任意一个位置。然后把这个场景用“导入”（Import）选项添加到工程管理器中：
 
 .. image:: /img/importproject.png
 
-Simply browse to inside the project location and open the "engine.cfg"
-file. The new project will appear on the list of projects. Edit the
-project by using the 'Edit' option.
+简单地浏览一下工程位置的内部然后打开engine.cfg文件。这个新的工程将会出现在工程列表中。通过使用“编辑”（Edit）选项来编辑工程。
 
-This project contains two scenes "ball.scn" and "container.scn". The
-ball scene is just a ball with physics, while container scene has a
-nicely shaped collision, so balls can be thrown in there.
+这个工程包含两个场景“ball.scn”和"container.scn"。这个ball场景只是一个带有物理性质的球，而container场景则是有一个塑形精良的碰撞形体，以备球能够被扔进这里。
 
 .. image:: /img/ballscene.png
 
 .. image:: /img/contscene.png
 
-Open the container scene, then select the root node:
+打开container场景，然后选择根节点：
 
 .. image:: /img/controot.png
 
-Afterwards, push the '+' shaped button, this is the instancing button!
+之后，按下“+”形状的按钮，这是实例化按钮（Instancing Button）！
 
 .. image:: /img/continst.png
 
-Select the ball scene (ball.scn), the ball should appear in the origin
-(0,0), move it to around the center
-
-of the scene, like this:
+选择场景ball（ball.scn），这个球应当出现在原点（Origin）(0,0)处，把他移到场景中心附近，像这样：
 
 .. image:: /img/continstanced.png
 
-Press Play and Voila!
+按下运行，然后瞧！
 
 .. image:: /img/playinst.png
 
-The instanced ball fell to the bottom of the pit.
+这个被实例化的球跌入了坑的底部。
 
-A little more
+更多内容
 -------------
 
-There can be as many instances as desired in a scene, just try
-instancing more balls, or duplicating them (ctrl-D or duplicate button):
+在场境内可以根据需求有尽可能多的实例，那就尝试实例化更多的球，或者复制（Duplicate）它们（Ctrl+D或者复制按钮（Duplicate Button））：
 
 .. image:: /img/instmany.png
 
-Then try running the scene again:
+然后尝试再次运行场景：
 
 .. image:: /img/instmanyrun.png
 
-Cool, huh? This is how instancing works.
+很酷，是不是？这就是实例化的工作方式。
 
-Editing instances
+编辑实例
 -----------------
 
-Select one of the many copies of the balls and go to the property
-editor. Let's make it bounce a lot more, so look for the bounce
-parameter and set it to 1.0:
+选择众多球的拷贝当中的一个然后来到属性编辑器（Property Editor）。我们来让它更具有弹性，那就来找到弹性（Bounce）参数然后把他设成1.0：
 
 .. image:: /img/instedit.png
 
-The next it will happen is that a green "revert" button appears. When
-this button is present, it means we modified a property from the
-instanced scene to override for a specific value in this instance. Even
-if that property is modified in the original scene, the custom value
-will always overwrite it. Pressing the revert button will restore the
-property to the original value that came from the scene.
+接下来会发生的就是一个绿色的“复原”（Revert）按钮出现了。当这个按钮出现的时候，这就意味着我们从被实例化的场景中修改了一个属性（Property）来让这个值替换掉原来的在实例中的值。即使是属性值在源场景中被修改，自定义的值也总能覆盖它。按下复原按钮将会把属性恢复到来自于场景的原始值。
 
-Conclusion
+总结
 ----------
 
-Instancing seems handy, but there is more to it than it meets the eye!
-The next part of the instancing tutorial should cover the rest..
+实例化似乎很便利，但是比起眼前的这些，它还有更多的内容。实例化教程的下一部分就会包含剩下的东西……
