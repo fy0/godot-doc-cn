@@ -17,7 +17,7 @@
 对于那些有丰富经验的老码农来说，这意味着现在的场景系统与你所熟知的MVC设计模式有很大的区别。现在我们需要你暂时将你的这些习惯扔掉，来尝试一下*场景补充*设计模式（Scenes As
 a Complement，没有一个确定的官翻，目前先译做场景补充吧）。Godot向你保证，这种设计模式的效用是值得让你在游戏设计中丢弃MVC的。
 
-Godot的脚本支持继承(`extend <http://c2.com/cgi/wiki?EmbedVsExtend>`)，允许脚本继承自所有引擎中可以使用的类。
+Godot的脚本支持继承(`extend <http://c2.com/cgi/wiki?EmbedVsExtend>`__)，允许脚本继承自所有引擎中可以使用的类。
 
 GDScript
 --------
@@ -66,7 +66,7 @@ GDScript
 
 鼠标右键点击Panl节点，选中“Add Script”选项
 
-.. image:: /img/scriptscene.png
+.. image:: /img/addscript.png
 
 创建脚本的对话框将会弹出。这个对话框允许你选择脚本语言、类名等。GDScript并不在脚本文件中定义类名，因此类名是无法编辑的。如下图所示，脚本继承自Panel类（Panel继承自Node，这个输入框一般是自动帮你填好的）。
 
