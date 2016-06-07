@@ -1,15 +1,14 @@
 .. _doc_viewports:
 
-Viewports
+视窗（Viewports）
 =========
 
-Introduction
+简介
 ------------
 
-Godot has a small but very useful feature called viewports. Viewports
-are, as they name implies, rectangles where the world is drawn. They
-have three main uses, but can flexibly adapted to a lot more. All this
-is done via the :ref:`Viewport <class_Viewport>` node.
+Godot有一个小巧却非常有用的特点，称为视窗（viewport）。顾名思义，视窗就是用来描绘游戏世界的一个长方形区域。
+视窗有三个主要的应用，不过也可以很灵活的应用到更多方面。都是通过视窗节点（ :ref:`Viewport <class_Viewport>` ）实现的。
+
 
 .. image:: /img/viewportnode.png
 
