@@ -7,23 +7,22 @@
 ------------
 
 Godot有一个小巧却非常有用的特点，称为视窗（viewport）。顾名思义，视窗就是用来描绘游戏世界的一个长方形区域。
-视窗有三个主要的应用，不过也可以很灵活的应用到更多方面。都是通过视窗节点（ :ref:`Viewport <class_Viewport>` ）实现的。
+视窗有三个主要的应用，不过也可以很灵活的应用到更多方面。
+所有的应用都是通过视窗节点（ :ref:`Viewport <class_Viewport>` ）实现的。
 
 
 .. image:: /img/viewportnode.png
 
-The main uses in question are:
+上面提到的三个主要应用如下：
 
--  **Scene Root**: The root of the active scene is always a Viewport.
-   This is what displays the scenes created by the user. (You should
-   know this by having read previous tutorials!)
--  **Sub-Viewports**: These can be created when a Viewport is a child of
-   a :ref:`Control <class_Control>`.
--  **Render Targets**: Viewports can be set to "RenderTarget" mode. This
-   means that the viewport is not directly visible, but it's contents
-   can be accessed via a :ref:`Texture <class_Texture>`.
+-  **场景根节点（Scence Root）**: 当前活跃场景的根总是一个视窗。
+   这个视窗负责展示用户所创建的场景。（看了前面的教程你应该已经知道这个了！）
+-  **子视窗（Sub-viewport）**: 当视窗是控制节点（:ref:`Control <class_Control>`）的子节点时，
+   可以创建子视窗。
+-  **渲染目标（Render Targets）**: 视窗可以设定为“渲染目标（RenderTarget）”模式。
+   这表示视窗不能直接被看到，但是它的内容可以通过材质（:ref:`Texture <class_Texture>`）来获取。
 
-Input
+输入（Input）
 -----
 
 Viewports are also responsible of delivering properly adjusted and
@@ -32,7 +31,7 @@ and sub-viewports do this automatically, but render targets do not.
 Because of this, the user must do it manually via the
 :ref:`Viewport.input() <class_Viewport_input>` function if needed.
 
-Listener
+收听站（Listener）
 --------
 
 Godot supports 3D sound (in both 2D and 3D nodes), more on this can be
@@ -40,8 +39,9 @@ found in another tutorial (one day..). For this type of sound to be
 audible, the viewport needs to be enabled as a listener (for 2D or 3D).
 If you are using a custom viewport to display your world, don't forget
 to enable this!
+译者注：注意此处与监听器的区别
 
-Cameras (2D & 3D)
+摄像机(2D & 3D)
 -----------------
 
 When using a 2D or 3D :ref:`Camera <class_Camera>` /
@@ -69,7 +69,7 @@ or make it the current camera by calling:
 
     camera.make_current()
 
-Scale & stretching
+缩放和拉伸（Scale & stretching）
 ------------------
 
 Viewports have a "rect" property. X and Y are often not used (only the
@@ -90,7 +90,7 @@ calling:
 The root viewport uses this for the stretch options in the project
 settings.
 
-Worlds
+世界（Worlds）
 ------
 
 For 3D, a Viewport will contain a :ref:`World <class_World>`. This
@@ -114,7 +114,7 @@ For 2D, each Viewport always contains it's own :ref:`World2D <class_World2D>`.
 This suffices in most cases, but in case sharing them may be desired, it
 is possible to do so by calling the viewport API manually.
 
-Capture
+捕捉（Capture）
 -------
 
 It is possible to query a capture of the viewport contents. For the root
@@ -136,7 +136,7 @@ get it back by using:
 If the returned image is empty, capture still didn't happen, wait a
 little more, as this API is asyncronous.
 
-Sub-viewport
+子视窗（Sub-viewport）
 ------------
 
 If the viewport is a child of a control, it will become active and
@@ -150,7 +150,7 @@ The viewport will cover the area of it's parent control completely.
 
 .. image:: /img/subviewport.png
 
-Render target
+渲染目标（Render target）
 -------------
 
 To set as a render target, just toggle the "render target" property of
