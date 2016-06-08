@@ -25,45 +25,44 @@ Godot有一个小巧却非常有用的特点，称为视窗（viewport）。顾�
 输入（Input）
 -----
 
-Viewports are also responsible of delivering properly adjusted and
-scaled input events to all it's children nodes. Both the root viewport
-and sub-viewports do this automatically, but render targets do not.
-Because of this, the user must do it manually via the
-:ref:`Viewport.input() <class_Viewport_input>` function if needed.
+视窗还可以用来将调整、缩放过的输入事件传递给它的子节点。根视窗
+和子视窗会自动执行这种传达，但是渲染目标模式下的视窗不会自动执行。
+因此，如果需要渲染目标模式的视窗也执行这种传递，用户必须手动调用
+:ref:`Viewport.input() <class_Viewport_input>` 函数来达到目的。
 
 收听站（Listener）
 --------
 
-Godot supports 3D sound (in both 2D and 3D nodes), more on this can be
-found in another tutorial (one day..). For this type of sound to be
-audible, the viewport needs to be enabled as a listener (for 2D or 3D).
-If you are using a custom viewport to display your world, don't forget
-to enable this!
-译者注：注意此处与监听器的区别
+Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另外一篇教程中
+详细讨论（不知道哪天……）。为了让这类声音能够被人听到，视窗需要启用
+收听站（可以支持2D和3D）。如果你使用自定义的视窗来展示你的世界，别忘了
+启用收听站哦！
+译者注：注意此处listener并非指监听器
 
 摄像机(2D & 3D)
 -----------------
 
-When using a 2D or 3D :ref:`Camera <class_Camera>` /
-:ref:`Camera2D <class_Camera2D>`, cameras will always display on the
-closest parent viewport (going towards the root). For example, in the
-following hierarchy:
+当使用2D或者3D的摄像机节点（:ref:`Camera <class_Camera>` /
+:ref:`Camera2D <class_Camera2D>`）时，该摄像机节点总是会
+显示在最近的父视窗节点上（向根节点方向的最近）。例如，在下面的
+这种结构中：
 
--  Viewport
+-  视窗（Viewport）
 
-   -  Camera
+   -  摄像机（Camera）
 
-Camera will display on the parent viewport, but in the following one:
+上面这个摄像机节点会显示在它的父视窗节点上，但是看下面这个例子：
 
--  Camera
+-  摄像机（Camera）
 
-   -  Viewport
+   -  视窗（Viewport）
 
-It will not (or may display in the root viewport if this is a subscene).
+这里的摄像机节点就不会显示在例子中的视窗节点上（如果这是一个子场景的话，
+可能它会显示在根视窗节点上）
 
-There can be only one active camera per viewport, so if there is more
-than one, make sure that the desired one has the "current" property set,
-or make it the current camera by calling:
+每个视窗都只能有一个活跃中的摄像机节点，所以如果你的视窗有多于一个摄像机
+节点，请确保你想用的那个摄像机节点被设置了“当前（current）”属性。
+或者，你也可以通过如下函数来设定当前摄像机：
 
 ::
 
