@@ -71,7 +71,7 @@ Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另
 缩放和拉伸（Scale & stretching）
 ------------------
 
-Viewports have a "rect" property. X and Y are often not used (only the
+视窗具有矩形这个属性。Viewports have a "rect" property. X and Y are often not used (only the
 root viewport really uses them), while WIDTH AND HEIGHT represent the
 size of the viewport in pixels. For Sub-Viewports, these values are
 overridden by the ones from the parent control, but for render targets
