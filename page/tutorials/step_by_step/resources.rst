@@ -1,25 +1,20 @@
 .. _doc_resources:
 
-Resources
+资源（Resource）
 =========
 
-Nodes and resources
+节点和资源
 -------------------
 
-So far, :ref:`Nodes <class_Node>`
-have been the most important datatype in Godot, as most of the behaviors
-and features of the engine are implemented through them. There is,
-though, another datatype that is equally as important. That is
+到目前为止， :ref:`Nodes <class_Node>`
+已经成为了Godot中最重要的数据类型（Datatype），因为引擎的绝大多数行为和特性都是通过他们实现的。尽管如此，还有另外一种数据类型也是同样地重要，那就是
 :ref:`Resource <class_Resource>`.
 
-Where *Nodes* focus on behaviors, such as drawing a sprite, drawing a
-3D model, physics, GUI controls, etc,
+*节点*关注在行为上，比如绘制一个精灵、绘制一个3D模型、物理、GUI控制等，
 
-**Resources** are mere **data containers**. This means that they don't
-do any action nor process any information. Resources just contain
-data.
+**资源** 仅仅是 **数据容器（Data Container）**，这意味着他们既没有任何动作也不生成任何信息。资源仅仅包含着数据而已。
 
-Examples of resources are
+资源的样本有：
 :ref:`Texture <class_Texture>`,
 :ref:`Script <class_Script>`,
 :ref:`Mesh <class_Mesh>`,
@@ -30,54 +25,34 @@ Examples of resources are
 :ref:`Translation <class_Translation>`,
 etc.
 
-When Godot saves or loads (from disk) a scene (.scn or .xml), an image
-(png, jpg), a script (.gd) or pretty much anything, that file is
-considered a resource.
+当Godot保存或载入（从硬盘）一个场景（.scn或者.xml）、一个图片（png，jpg
+）、一个脚本（.gd）或者很多的东西，那个文件就被称为一个资源。
 
-When a resource is loaded from disk, **it is always loaded once**. That
-means, if there is a copy of that resource already loaded in memory,
-trying to load the resource again will just return the same copy again
-and again. This corresponds with the fact that resources are just data
-containers, so there is no need to have them duplicated.
+当一个资源被从磁盘里载入时，**它总是只被载入一次**。那也就意味着，如果在内存中已经有一份该资源被载入了，尝试一次又一次载入该资源将只返回相同的那份资源。这与资源只是数据容器这一事实相对应，因此没必要去让他们被复制。
 
-Typically, every object in Godot (Node, Resource, or anything else) can
-export properties, properties can be of many types (like a string,
-integer, Vector2, etc) and one of those types can be a resource. This
-means that both nodes and resources can contain resources as properties.
-To make it a little more visual:
+通常地，Godot中每一个对象（节点、资源或者别的东西）都能够导出属性（Properties），属性可以是许多种类型（例如一个字符串（String）、整数（Integers）、2D向量（Vector2）等）并且这些类型中每一个都能成为一个资源。这意味着节点和资源都可以包含资源作为属性。
+为了使它更加的直观一点：
 
 .. image:: /img/nodes_resources.png
 
-External vs built-in
+外部与内置
 --------------------
 
-The resource properties can reference resources in two ways,
-*external* (on disk) or **built-in**.
+资源属性可以以两种方式引用资源，*外部*（磁盘）或**内置**。
 
-To be more specific, here's a :ref:`Texture <class_Texture>`
-in a :ref:`Sprite <class_Sprite>` node:
+为了更具体一些，在一个 :ref:`Sprite <class_Sprite>` 节点中有一个 :ref:`Texture <class_Texture>`：
 
 .. image:: /img/spriteprop.png
 
-Pressing the the ">" button the right side of the preview, allows to
-view and edit the resources properties. One of the properties (path)
-shows where it came from. In this case, it came from a png image.
+按下预览右侧的">"按钮将允许查看并编辑资源属性。其中有一个属性（path）显示了它来自于哪里。在这个案例中，它来自于一个png图片。
 
 .. image:: /img/resourcerobi.png
 
-When the resource comes from a file, it is considered an *external*
-resource. If the path property is erased (or never had a path to begin
-with), it is then considered a built-in resource.
+当资源来自于一个文件时，它被认为是一个*外部*的资源。如果这个路径（path）属性被擦除了（或者开始就没有一个路径），那么他就被认为是一个内置的资源。
 
-For example, if the path \`"res://robi.png"\` is erased from the "path"
-property in the above example, and then the scene is saved, the resource
-will be saved inside the .scn scene file, no longer referencing the
-external "robi.png". However, even if saved as built-in, and even though
-the scene can be instanced multiple times, the resource will still
-always be loaded once. That means, different Robi robot scenes instanced
-at the same time will still share the same image.
+比如说，如果路径\`"res://robi.png"\`从上述范例中"path"属性被抹消，那么接下来这个场景被保存，资源就会被存到.scn场景文件里，不再引用外部的"robi.png"。然而，即使被存为内置资源，尽管这个场景可以被实例化多次，资源将仍然只载入一次。那意味着，同时被实例化的不同的Robi机器人场景将分享相同的图片。
 
-Loading resources from code
+利用代码载入资源
 ---------------------------
 
 Loading resources from code is easy, there are two ways to do it. The
