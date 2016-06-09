@@ -71,26 +71,25 @@ Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另
 缩放和拉伸（Scale & stretching）
 ------------------
 
-视窗具有矩形这个属性。Viewports have a "rect" property. X and Y are often not used (only the
-root viewport really uses them), while WIDTH AND HEIGHT represent the
-size of the viewport in pixels. For Sub-Viewports, these values are
-overridden by the ones from the parent control, but for render targets
-this sets their resolution.
+视窗具有"矩形（rect）"属性。"矩形"属性中的X和Y这两个值不常用（通常只有根视窗会使用这两个值；译注：这两个值是用来描述视窗位置的），但是宽度（WIDTH）和高度（HEIGHT）这两个值很常用，这两个值是以像素为单位描述视窗大小的。对于子视窗节点，这些值会被父控制节点的对应值所覆盖；而对于"渲染目标"模式的视窗，这些值设定了分辨率。
 
-It is also possible to scale the 2D content and make it believe the
-viewport resolution is other than the one specified in the rect, by
-calling:
+我们也可以调用一些函数来缩放（视窗中的）2D内容，使视窗的分辨率不同于在"矩形"属性中设定的值。这些函数如下： 
 
 ::
 
-    viewport.set_size_override(w,h) #custom size for 2D
-    viewport.set_size_override_stretch(true/false) #enable stretch for custom size
+    viewport.set_size_override(w,h) #自定义2D内容尺寸 
+    viewport.set_size_override_stretch(true/false) #开启／关闭自定义尺寸的拉伸功能
 
-The root viewport uses this for the stretch options in the project
-settings.
+根视窗在项目设置（project settings）中，使用这些方法来设置拉伸选项。
+
 
 世界（Worlds）
 ------
+
+对于3D，视窗会包含
+
+
+
 
 For 3D, a Viewport will contain a :ref:`World <class_World>`. This
 is basically the universe that links physics and rendering together.
