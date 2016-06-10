@@ -23,12 +23,12 @@
 :ref:`AudioStream <class_AudioStream>`,
 :ref:`Font <class_Font>`,
 :ref:`Translation <class_Translation>`,
-etc.
+等等。
 
-当Godot保存或载入（从硬盘）一个场景（.scn或者.xml）、一个图片（png，jpg
-）、一个脚本（.gd）或者很多的东西，那个文件就被称为一个资源。
+当Godot（从硬盘）保存或载入一个场景（.scn或者.xml）、一个图片（png，jpg
+）、一个脚本（.gd）或者其他什么类似的东西，那个文件就被称为一个资源。
 
-当一个资源被从磁盘里载入时，**它总是只被载入一次**。那也就意味着，如果在内存中已经有一份该资源被载入了，尝试一次又一次载入该资源将只返回相同的那份资源。这与资源只是数据容器这一事实相对应，因此没必要去让他们被复制。
+当一个资源被从磁盘里载入时，**它永远只被载入一次**。那也就意味着，如果在内存中已经有一份该资源被载入了，尝试再次载入该资源将只返回相同的那份资源。这与资源只是数据容器这一事实相对应，因此没必要去让他们存在多个副本。
 
 通常地，Godot中每一个对象（节点、资源或者别的东西）都能够导出属性（Properties），属性可以是许多种类型（例如一个字符串（String）、整数（Integers）、2D向量（Vector2）等）并且这些类型中每一个都能成为一个资源。这意味着节点和资源都可以包含资源作为属性。
 为了使它更加的直观一点：
@@ -50,13 +50,12 @@ etc.
 
 当资源来自于一个文件时，它被认为是一个*外部*的资源。如果这个路径（path）属性被擦除了（或者开始就没有一个路径），那么他就被认为是一个内置的资源。
 
-比如说，如果路径\`"res://robi.png"\`从上述范例中"path"属性被抹消，那么接下来这个场景被保存，资源就会被存到.scn场景文件里，不再引用外部的"robi.png"。然而，即使被存为内置资源，尽管这个场景可以被实例化多次，资源将仍然只载入一次。那意味着，同时被实例化的不同的Robi机器人场景将分享相同的图片。
+比如说，如果路径\`"res://robi.png"\`从上述范例中"path"属性被抹消，那么接下来当这个场景被保存，资源就会被存到.scn场景文件里，不再引用外部的"robi.png"。然而，即使被存为内置资源，尽管这个场景可以被实例化多次，资源将仍然只载入一次。那意味着，同时被实例化的不同的Robi机器人场景将分享相同的图片。
 
-利用代码载入资源
+使用代码载入资源
 ---------------------------
 
-Loading resources from code is easy, there are two ways to do it. The
-first is to use load(), like this:
+使用代码载入资源非常简单，有两种方式都能够完成此事。第一种是使用 load() 函数，就像这样：
 
 ::
 
@@ -64,8 +63,7 @@ first is to use load(), like this:
             var res = load("res://robi.png") # resource is loaded when line is executed
             get_node("sprite").set_texture(res)
 
-The second way is more optimal, but only works with a string constant
-parameter, because it loads the resource at compile-time.
+第二种方式要更理想，但是参数必须是一个字符串常量才能工作，因为它将在编译时载入资源。
 
 ::
 
@@ -73,16 +71,14 @@ parameter, because it loads the resource at compile-time.
             var res = preload("res://robi.png") # resource is loaded at compile time
             get_node("sprite").set_texture(res)
 
-Loading scenes
+加载场景
 --------------
 
-Scenes are also resources, but there is a catch. Scenes saved to disk
-are resources of type :ref:`PackedScene <class_PackedScene>`,
-this means that the scene is packed inside a resource.
+场景同样也是资源，但有点特别。场景会以 :ref:`PackedScene <class_PackedScene>`
+这种资源类型保存到硬盘。这意味着场景会被打包进一份资源之内。
 
-To obtain an instance of the scene, the method
+如果想要获得场景的实例(instance)，必须使用以下方法：
 :ref:`PackedScene.instance() <class_PackedScene_instance>`
-must be used.
 
 ::
 
@@ -90,30 +86,28 @@ must be used.
             var bullet = preload("res://bullet.scn").instance()
             add_child(bullet)                  
 
-This method creates the nodes in hierarchy, configures them (sets all
-the properties) and returns the root node of the scene, which can be
-added to any other node.
+这个方法能创建场景树每一层的节点，初始化它们(包括设定所有属性)同时返回
+场景的根节点。根节点能被添加为其他任意节点的子节点。
 
-The approach has several advantages. As the
+下面这个方法有若干优点：
 :ref:`PackedScene.instance() <class_PackedScene_instance>`
-function is pretty fast, adding extra content to the scene can be done
-efficiently. New enemies, bullets, effects, etc can be added or
-removed quickly, without having to load them again from disk each
-time. It is important to remember that, as always, images, meshes, etc
-are all shared between the scene instances.
+函数执行的非常快，能够高效的往场景里添加额外内容(extra content)。新的
+敌人、子弹、特效等等能够被快速添加或移除，而不需要每次都从硬盘上读取。
+记住这点，这非常重要：同样的，图片、网格(meshes)以及其他全部都是在场景
+实例间共享的。
 
-Freeing resources
+
+释放资源
 -----------------
 
-Resource extends from :ref:`Reference <class_Reference>`.
-As such, when a resource is no longer in use, it will automatically free
-itelf. Since, in most cases, Resources are contained in Nodes, scripts
-or other resources, when a node is removed or freed, all the children
-resources are freed too.
+资源类(Resource)都继承自 :ref:`Reference <class_Reference>`.
+因此，当一个资源不再使用的时候，他将自动被释放。因为在大多数情况下资源
+被包含在节点、脚本或者其他资源中，当一个节点被移除或者释放时，作为其子
+节点的资源也跟着被释放了。
 
-Scripting
+脚本
 ---------
 
-Like any object in Godot, not just nodes, resources can be scripted too.
-However, there isn't generally much of a win, as resources are just data
-containers.
+如同 Godot 中的其他对象（而不仅仅是Nodes）一般，资源也是可以附加脚本的。
+但这通常没什么卵用，因为资源只是数据容器罢了。
+
