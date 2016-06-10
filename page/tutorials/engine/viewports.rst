@@ -128,7 +128,7 @@ Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另
 
 -  视窗精灵（:ref:`ViewportSprite <class_ViewportSprite>` ）(针对2D).
 -  :strike:`ViewportQuad (for 3D).` #2.0中已删除
--  :strike:`ViewportFrame (for GUI).`#2.0中已删除
+-  :strike:`ViewportFrame (for GUI).` #2.0中已删除
 
 *要做：重新编辑文档，ViewportQuad和ViewportFrame在2.0中已删除。*
 
