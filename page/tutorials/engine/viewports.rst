@@ -6,46 +6,35 @@
 简介
 ------------
 
-Godot有一个小巧却非常有用的特点，称为视窗（viewport）。顾名思义，视窗就是用来描绘游戏世界的一个长方形区域。
-视窗有三个主要的应用，不过也可以很灵活的应用到更多方面。
+Godot有一个小巧却非常有用的特点，称为视窗（viewport）。顾名思义，视窗就是用来描绘游戏世界的一个长方形区域。视窗有三个主要的应用，不过也可以很灵活的应用到更多方面。
 所有的应用都是通过视窗节点（ :ref:`Viewport <class_Viewport>` ）实现的。
-
 
 .. image:: /img/viewportnode.png
 
 上面提到的三个主要应用如下：
 
--  **场景根节点（Scence Root）**: 当前活跃场景的根总是一个视窗。
-   这个视窗负责展示用户所创建的场景。（看了前面的教程你应该已经知道这个了！）
--  **子视窗（Sub-viewport）**: 当视窗是控制节点（:ref:`Control <class_Control>`）的子节点时，
-   可以创建子视窗。
--  **渲染目标（Render Targets）**: 视窗可以设定为“渲染目标（RenderTarget）”模式。
-   这表示视窗不能直接被看到，但是它的内容可以通过材质（:ref:`Texture <class_Texture>`）来获取。
+-  **场景根节点（Scence Root）**: 当前活跃场景的根总是一个视窗。这个视窗负责展示用户所创建的场景。（看了前面的教程你应该已经知道这个了！）
+
+-  **子视窗（Sub-viewport）**: 当视窗是控制节点（:ref:`Control <class_Control>`）的子节点时，可以创建子视窗。
+
+-  **渲染目标（Render Targets）**: 视窗可以设定为“渲染目标（RenderTarget）”模式。这表示视窗不能直接被看到，但是它的内容可以通过材质（:ref:`Texture <class_Texture>`）来获取。
 
 输入（Input）
 -----
 
-视窗还可以用来将调整、缩放过的输入事件传递给它的子节点。根视窗
-和子视窗会自动执行这种传达，但是渲染目标模式下的视窗不会自动执行。
-因此，如果需要渲染目标模式的视窗也执行这种传递，用户必须手动调用
-:ref:`Viewport.input() <class_Viewport_input>` 函数来达到目的。
+视窗还可以用来将调整、缩放过的输入事件传递给它的子节点。根视窗和子视窗会自动执行这种传达，但是渲染目标模式下的视窗不会自动执行。因此，如果需要渲染目标模式的视窗也执行这种传递，用户必须手动调用:ref:`Viewport.input() <class_Viewport_input>` 方法来达到目的。
 
 收听站（Listener）
 --------
 
-Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另外一篇教程中
-详细讨论（不知道哪天……）。为了让这类声音能够被人听到，视窗需要启用
-收听站（可以支持2D和3D）。如果你使用自定义的视窗来展示你的世界，别忘了
-启用收听站哦！
+Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另外一篇教程中详细讨论（不知道哪天……）。为了让这类声音能够被人听到，视窗需要启用收听站（可以支持2D和3D）。如果你使用自定义的视窗来展示你的世界，别忘了启用收听站哦！
+
 译者注：注意此处listener并非指监听器
 
 摄像机(2D & 3D)
 -----------------
 
-当使用2D或者3D的摄像机节点（:ref:`Camera <class_Camera>` /
-:ref:`Camera2D <class_Camera2D>`）时，该摄像机节点总是会
-显示在最近的父视窗节点上（向根节点方向的最近）。例如，在下面的
-这种结构中：
+当使用2D或者3D的摄像机节点（:ref:`Camera <class_Camera>`/:ref:`Camera2D<class_Camera2D>`）时，该摄像机节点总是会显示在最近的父视窗节点上（向根节点方向的最近）。例如，在下面的这种结构中：
 
 -  视窗（Viewport）
 
@@ -57,12 +46,11 @@ Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另
 
    -  视窗（Viewport）
 
-这里的摄像机节点就不会显示在例子中的视窗节点上（如果这是一个子场景的话，
-可能它会显示在根视窗节点上）
+这里的摄像机节点就不会显示在例子中的视窗节点上（如果这是一个子场景的话，可能它会显示在根视窗节点上）
 
 每个视窗都只能有一个活跃中的摄像机节点，所以如果你的视窗有多于一个摄像机
 节点，请确保你想用的那个摄像机节点被设置了“当前（current）”属性。
-或者，你也可以通过如下函数来设定当前摄像机：
+或者，你也可以通过如下方法来设定当前摄像机：
 
 ::
 
@@ -73,109 +61,76 @@ Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另
 
 视窗具有"矩形（rect）"属性。"矩形"属性中的X和Y这两个值不常用（通常只有根视窗会使用这两个值；译注：这两个值是用来描述视窗位置的），但是宽度（WIDTH）和高度（HEIGHT）这两个值很常用，这两个值是以像素为单位描述视窗大小的。对于子视窗节点，这些值会被父控制节点的对应值所覆盖；而对于"渲染目标"模式的视窗，这些值设定了分辨率。
 
-我们也可以调用一些函数来缩放（视窗中的）2D内容，使视窗的分辨率不同于在"矩形"属性中设定的值。这些函数如下： 
+我们也可以调用一些方法来缩放（视窗中的）2D内容，使视窗的分辨率不同于在"矩形"属性中设定的值。这些方法如下： 
 
 ::
 
     viewport.set_size_override(w,h) #自定义2D内容尺寸 
     viewport.set_size_override_stretch(true/false) #开启／关闭自定义尺寸的拉伸功能
 
-根视窗在项目设置（project settings）中，使用这些方法来设置拉伸选项。
+根视窗可在项目设置（project settings）中，使用这些方法来设置其拉伸选项。
 
 
 世界（Worlds）
 ------
 
-对于3D，视窗会包含
+对于3D来讲，视窗会包含世界（:ref:`World <class_World>`）资源。世界是将物体与渲染绑定在一起的一个宇宙。基于空间的节点，会绑定在离它最近的视窗节点的世界上。默认地，新建的视窗节点都不包含独立的世界，而是使用其父视窗的世界（当然，默认情况下，根视窗会带有一个世界，也就是展示出所有对象的那个）。世界可以通过视窗的“世界”属性来创建；一旦一个世界被创建在某个视窗节点上，该视窗的所有子节点都会停止与该视窗的父视窗的世界进行交互。当你想要强制以3D展示一个独立的角色时，这个特性会非常有用（就像在《星际争霸1》中那样）。
 
+有时候你想要创建只展示单个对象的视窗节点，又不想为它创建世界；视窗对此提供了很好的支持，视窗可以被设置为使用自己的世界。当你想在2D世界中，实例化3D角色或对象时，这点会非常有用。
 
-
-
-For 3D, a Viewport will contain a :ref:`World <class_World>`. This
-is basically the universe that links physics and rendering together.
-Spatial-base nodes will register using the World of the closest
-viewport. By default, newly created viewports do not contain a World but
-use the same as a parent viewport (root viewport does contain one
-though, which is the one objects are rendered to by default). A world can
-be set in a viewport using the "world" property, and that will separate
-all children nodes of that viewport from interacting with the parent
-viewport world. This is specially useful in scenarios where, for
-example, you might want to show a separate character in 3D imposed over
-the game (like in Starcraft).
-
-As a helper for situations where you want to create viewports that
-display single objects and don't want to create a world, viewport has
-the option to use it's own World. This is very useful when you want to
-instance 3D characters or objects in the 2D world.
-
-For 2D, each Viewport always contains it's own :ref:`World2D <class_World2D>`.
-This suffices in most cases, but in case sharing them may be desired, it
-is possible to do so by calling the viewport API manually.
+对于2D来讲，，每个视窗都会包含自己的世界2D（:ref:`World2D <class_World2D>`）资源。在大多数情况下，这就够用了；不过你可能也会需要（在视窗间）分享世界，分享世界可以通过手动调用视窗API来实现。
 
 捕捉（Capture）
 -------
 
-It is possible to query a capture of the viewport contents. For the root
-viewport this is effectively a screen capture. This is done with the
-following API:
+我们也可以捕捉视窗节点的内容。对于根视窗，实际上就等于截屏。捕捉可以通过调用如下API实现：
 
 ::
 
-    # queues a screen capture, will not happen immediately
-    viewport.queue_screen_capture() 
+    #将一个屏幕捕捉加入队列，不会立刻进行捕捉
+	viewport.queue_screen_capture() 
 
-After a frame or two (check _process()), the capture will be ready,
-get it back by using:
+在一两帧之后，捕捉就完成了(check _process())。我们可以使用下面的方法来取得捕捉内容：
 
 ::
 
     var capture = viewport.get_screen_capture()
 
-If the returned image is empty, capture still didn't happen, wait a
-little more, as this API is asyncronous.
+如果上面方法返回的图像是空的，那捕捉可能还没进行；多等一会再试一下，因为这个API是异步的。
+
 
 子视窗（Sub-viewport）
 ------------
 
-If the viewport is a child of a control, it will become active and
-display anything it has inside. The layout is something like this:
+如果视图节点是一个控制节点的子节点，它将活跃起来，展示它所包含的内容。这个布局看起来会像这样：
 
--  Control
+-  控制（Control）
 
-   -  Viewport
+   -  视图（Viewport）
 
-The viewport will cover the area of it's parent control completely.
+上面的视窗节点会完全覆盖其父控制节点的区域。
 
 .. image:: /img/subviewport.png
 
 渲染目标（Render target）
 -------------
 
-To set as a render target, just toggle the "render target" property of
-the viewport to enabled. Note that whatever is inside will not be
-visible in the scene editor. To display the contents, the render target
-texture must be used. This can be requested via code using (for
-example):
+只要将视窗的“渲染目标（render target）”属性开启，它就被设置成了渲染目标。注意，此时，视窗内包含的内容不能在场景编辑器中看到。只有渲染目标贴图被使用了，视窗包含的内容才能被看到。可以通过下面的代码，来使用渲染目标贴图（这里只是例子）：
 
 ::
 
     var rtt = viewport.get_render_target_texture() 
     sprite.set_texture(rtt)
+	
+默认地，当渲染目标贴图在一帧中被绘制后，渲染目标就会被重新渲染一次：如果渲染目标被设置为可见，它就会被渲染；如果设置为不可见，它就不会被渲染。上述渲染方式可以变更设置为：手动渲染（一次）；或总是渲染，不管设置为可见或不可见。
 
-By default, re-rendering of the render target happens when the render
-target texture has been drawn in a frame. If visible, it will be
-rendered, otherwise it will not. This behavior can be changed to manual
-rendering (once), or always render, no matter if visible or not.
+为了让渲染目标针对常见情况使用起来更简便，我们在编辑器内设置了几个类：
 
-A few classes are created to make this easier in most common cases
-inside the editor:
+-  视窗精灵（:ref:`ViewportSprite <class_ViewportSprite>` ）(针对2D).
+-  :strike:`ViewportQuad (for 3D).` #2.0中已删除
+-  :strike:`ViewportFrame (for GUI).`
 
--  :ref:`ViewportSprite <class_ViewportSprite>` (for 2D).
--  ViewportQuad (for 3D).
--  ViewportFrame (for GUI).
+*要做：重新编辑文档，ViewportQuad和ViewportFrame在2.0中已删除。*
 
-*TODO: Review the doc, ViewportQuad and ViewportFrame don't exist in 2.0.*
-
-Make sure to check the viewport demos! Viewport folder in the demos
-archive available to download, or
+别忘了去看看视窗的demo！Demo存档中的视窗文件夹可以下载，或者访问
 https://github.com/godotengine/godot/tree/master/demos/viewport
