@@ -17,13 +17,13 @@
 
 .. image:: /img/input_event_flow.png
 
-1. 首先，它会尝试将输入事件传递给GUI，看看有没有哪个控制节点能响应它。如果有，通过调用方法:ref:`Control._input_event() <class_Control__input_event>`，响应的控制节点（:ref:`Control <class_Control>`）会被使用，同时“输入事件”的信号会被发送出去（这个方法在被继承后，可以通过脚本反复执行）。如果响应的控制节点想要“消耗”掉这个输入事件，它可以调用方法:ref:`Control.accept_event() <class_Control_accept_event>`，这样输入事件就不会继续传递了。
+1. 首先，它会尝试将输入事件传递给GUI，看看有没有哪个控制节点能响应它。如果有，通过调用方法 :ref:`Control._input_event() <class_Control__input_event>`，响应的控制节点（:ref:`Control <class_Control>`）会被使用，同时“输入事件”的信号会被发送出去（这个方法在被继承后，可以通过脚本反复执行）。如果响应的控制节点想要“消耗”掉这个输入事件，它可以调用方法 :ref:`Control.accept_event() <class_Control_accept_event>`，这样输入事件就不会继续传递了。
 
-2. 如果GUI中没有能响应这个事件的节点，那么所有“输入处理”设置为开（通过:ref:`Node.set_process_input() <class_Node_set_process_input>`来设置为开，使用方法:ref:`Node._input() <class_Node__input>`会自动设置为开）的节点，都会调用标准输入（standard _input）方法。此时，如果有方法可以消耗这个输入事件，它就会调用:ref:`SceneTree.set_input_as_handled() <class_SceneTree_set_input_as_handled>`，然后，输入事件就不会继续传递了。
+2. 如果GUI中没有能响应这个事件的节点，那么所有“输入处理”设置为开（通过 :ref:`Node.set_process_input() <class_Node_set_process_input>` 来设置为开，使用方法 :ref:`Node._input() <class_Node__input>` 会自动设置为开）的节点，都会调用标准输入（standard _input）方法。此时，如果有方法可以消耗这个输入事件，它就会调用 :ref:`SceneTree.set_input_as_handled() <class_SceneTree_set_input_as_handled>`，然后，输入事件就不会继续传递了。
 
-3. 如果到了这里，还是没有节点消耗这个输入事件，未处理输入回调会被调用（通过:ref:`Node.set_process_unhandled_input() <class_Node_set_process_unhandled_input>`开启，使用:ref:`Node._unhandled_input() <class_Node__unhandled_input>`会自动开启）。如果有哪个方法消耗掉了这个事件，它会调用:ref:`SceneTree.set_input_as_handled() <class_SceneTree_set_input_as_handled>`，然后，输入事件就不会继续传递了。
+3. 如果到了这里，还是没有节点消耗这个输入事件，未处理输入回调会被调用（通过 :ref:`Node.set_process_unhandled_input() <class_Node_set_process_unhandled_input>` 开启，使用 :ref:`Node._unhandled_input() <class_Node__unhandled_input>` 会自动开启）。如果有哪个方法消耗掉了这个事件，它会调用 :ref:`SceneTree.set_input_as_handled() <class_SceneTree_set_input_as_handled>`，然后，输入事件就不会继续传递了。
 
-4. 如果还是没有节点消耗这个输入事件，那么一个摄像机（:ref:`Camera <class_Camera>`）会被指定到对应的视窗上；同时，会生成一条射线，指向项目的物理世界（从点击处指向世界）。如果这条射线碰撞到了某个对象，它会针对碰撞到的物理对象调用:ref:`CollisionObject._input_event() <class_CollisionObject__input_event>`方法。（默认地，物体（body）会收到这个回调，但是区域（area）收不到；可以通过调整区域节点（:`Area <class_Area>`）的属性，来设置为可以收到回调）
+4. 如果还是没有节点消耗这个输入事件，那么一个摄像机（:ref:`Camera <class_Camera>`）会被指定到对应的视窗上；同时，会生成一条射线，指向项目的物理世界（从点击处指向世界）。如果这条射线碰撞到了某个对象，它会针对碰撞到的物理对象调用 :ref:`CollisionObject._input_event() <class_CollisionObject__input_event>` 方法。（默认地，物体（body）会收到这个回调，但是区域（area）收不到；可以通过调整区域节点（:ref:`Area <class_Area>`）的属性，来设置为可以收到回调）
 
 5. 最终，如果这个输入事件还是未处理，它会被传递给场景树中的下一个视窗；如果没有下一个视窗了，它会被直接无视掉。 
 
@@ -83,10 +83,10 @@
 
 -  在运行中，可以重新设置输入方式。
 
-动作可以在 ``项目设置(Project Settings)`` 的 ``动作(Actions)`` 标签页创建。可以看一下:ref:`doc_simple_2d_game-input_actions_setup`，这篇文档具体讲解了如何使用动作编辑器。
+动作可以在 ``项目设置(Project Settings)`` 的 ``动作(Actions)`` 标签页创建。可以看一下 :ref:`doc_simple_2d_game-input_actions_setup`，这篇文档具体讲解了如何使用动作编辑器。
 
-所有输入事件都有:ref:`InputEvent.is_action() <class_InputEvent_is_action>`,
-:ref:`InputEvent.is_pressed() <class_InputEvent_is_pressed>`和:ref:`InputEvent <class_InputEvent>`，这三个方法。
+所有输入事件都有 :ref:`InputEvent.is_action() <class_InputEvent_is_action>`,
+:ref:`InputEvent.is_pressed() <class_InputEvent_is_pressed>` 和 :ref:`InputEvent <class_InputEvent>`，这三个方法。
 
 另外，你可能会需要从代码中产生动作（一个例子就是检测姿势）。场景树（从主循环中产生的）为此提供了一个方法：:ref:`MainLoop.input_event() <class_MainLoop_input_event>`。你可以这样使用这个方法：
 
