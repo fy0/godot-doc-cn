@@ -1,6 +1,6 @@
 .. _doc_instancing:
 
-实例化（Instancing）
+实例化
 ==========
 
 基本理论
