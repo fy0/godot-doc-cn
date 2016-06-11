@@ -1,72 +1,59 @@
 .. _doc_simple_2d_game:
 
-Simple 2D game
+简单2D游戏
 ==============
 
 Pong
 ~~~~
 
-In this simple tutorial, a basic game of Pong will be created. There are
-plenty of more complex examples in the demos included with the engine,
-but this should get one introduced to basic functionality for 2D Games.
+在这个简单的教程中，我们将创建一个基础的游戏Pong（对板弹球）。引擎一并包含了很多更加复杂的范例和演示，但是这个应该可以为一个人介绍2D游戏的基本设计目的。
 
-Assets
+资源
 ~~~~~~
 
-Some assets are included for this tutorial:
+这里包含了这个教程需要的资源：
 :download:`pong_assets.zip </files/pong_assets.zip>`.
 
-Scene setup
+场景建立
 ~~~~~~~~~~~
 
-For the sake of the old times, the game will be in 640x400 pixels
-resolution. This can be configured in the Project Settings (see :ref:`doc_scenes_and_nodes-configuring_the_project`). The default background color should be set to black:
+由于过去时代的原因，游戏将以640×480的像素分辨率运行。这可以在工程设定（Project Setting）中配置（详情参见 :ref:`doc_scenes_and_nodes-configuring_the_project` ）。默认背景颜色应当被设置为黑色：
 
 .. image:: /img/clearcolor.png
 
-Create a :ref:`class_Node2D` node for the project root. Node2D is the base
-type for the 2D engine. After this, add some sprites (:ref:`class_Sprite`
-node) and set each to the corresponding texture. The final scene layout
-should look similar to this (note: the ball is in the middle!):
+创建一个 :ref:`class_Node2D` 节点作为工程的根基。Node2D是2D引擎的基本类型。在此之后，添加一些精灵（Sprites， :ref:`class_Sprite`
+节点）并且为每一个精灵设定对应的贴图（Textures）。最终场景布局应当看起来像下面那样（注意：小球在中央！）：
 
 .. image:: /img/pong_layout.png
 
-The scene tree should, then, look similar to this:
+那么，场景树应当看起来像这样：
 
 .. image:: /img/pong_nodes.png
 
-Save the scene as "pong.scn" and set it as the main scene in the project
-properties.
+保存场景为"pong.scn"然后在工程属性（Project Properties）中把它设置为主场景。
 
 .. _doc_simple_2d_game-input_actions_setup:
 
-Input actions setup
+输入动作建立
 ~~~~~~~~~~~~~~~~~~~
 
-There are so many input methods for video games... Keyboard, Joypad,
-Mouse, Touchscreen (Multitouch). Yet this is pong. The only input that
-matters is for the pads going up and down.
+对于电子游戏会有很多的输入方法……键盘、手柄、鼠标、触控屏（多点触控）。好在这只是Pong。唯一重要的输入就是给板子上下移动的。
 
-Handling all possible input methods can be very frustrating and take a
-lot of code. The fact that most games allow controller customization
-makes this worse. For this, Godot created the "Input Actions". An action
-is defined, then input methods that trigger it are added.
+处理所有可能的输入方法会使非常令人恼火的并且还会需要大量代码。大多数游戏允许控制器自定义按键这一事实更是雪上加霜。对于这一点，Godot创建了“输入动作”（Input Actions）。一个动作被定义，那么触发它的输入方式就被添加。
 
-Open the project properties dialog again, but this time move to the
-"Input Map" tab.
 
-On it, add 4 actions:
+再次打开工程属性对话框，但这次调到“输入映射”（Input Map）选项卡。
+
+在这上面加入4个动作：
 ``left_move_up``, ``left_move_down``, ``right_move_up``, ``right_move_down``.
-Assign the keys that you desire. A/Z (for the left player) and Up/Down (for the right player) as keys
-should work in most cases.
+分配你想要的按键。A/Z（对于惯用左手的玩家）和上/下（对于惯用右手的玩家）作为在绝大多数情形中工作的键位。
 
 .. image:: /img/inputmap.png
 
-Script
+脚本
 ~~~~~~
 
-Create a script for the root node of the scene and open it (as explained
-in :ref:`doc_scripting-adding_a_script`). The script will inherit Node2D:
+为场景的根节点创建一个脚本然后打开它（正如在 :ref:`doc_scripting-adding_a_script`中解释得那样）。这个脚本将会继承Node2D类：
 
 ::
 
@@ -75,9 +62,7 @@ in :ref:`doc_scripting-adding_a_script`). The script will inherit Node2D:
     func _ready():
         pass
 
-In the constructor, two things will be done. The first is to enable
-processing, and the second to store some useful values. Such values are
-the dimensions of the screen and the pad:
+在构造器（Constructor）中，必须完成两件事情。第一个就是去处理，然后第二个存储一些有用的值。这些值就是屏幕或者挡板的尺寸：
 
 ::
 
@@ -92,7 +77,7 @@ the dimensions of the screen and the pad:
         pad_size = get_node("left").get_texture().get_size()
         set_process(true)
 
-Then, some variables used for in-game processing will be added:
+然后添加用于游戏内部处理的代码：
 
 ::
 
@@ -106,16 +91,13 @@ Then, some variables used for in-game processing will be added:
 
     const PAD_SPEED = 150
 
-Finally, the process function:
+最终，process函数：
 
 ::
 
     func _process(delta):
 
-Get some useful values for computation. The first is the ball position
-(from the node), the second is the rectangle (``Rect2``) for each of the pads.
-Sprites center their textures by default, so a small adjustment of ``pad_size / 2``
-must be added.
+获得到有用的值用于计算。首先是球的位置（从代码），第二个就是每个挡板的矩形区域（“Rect2”）。默认地精灵居中于他们的贴图。所以加入一个小的调整“pad_size / 2”。
 
 ::
 
@@ -123,22 +105,20 @@ must be added.
         var left_rect = Rect2( get_node("left").get_pos() - pad_size/2, pad_size )
         var right_rect = Rect2( get_node("right").get_pos() - pad_size/2, pad_size )
 
-Since the ball position was obtained, integrating it should be simple:
+由于球的位置已经获知，把它们累加起来应当不是问题：
 
 ::
 
         ball_pos += direction * ball_speed * delta
 
-Then, now that the ball has a new position, it should be tested against
-everything. First, the floor and the roof:
+然后，既然球拥有了一个新的位置。它倚在所有东西上都应该被检测。先是底部和顶部：
 
 ::
 
         if ( (ball_pos.y < 0 and direction.y < 0) or (ball_pos.y > screen_size.y and direction.y > 0)):
             direction.y = -direction.y
 
-If one of the pads was touched, change direction and increase speed a
-little.
+如果一个挡板被触碰，改变方向然后轻微加速。
 
 ::
 
@@ -148,7 +128,7 @@ little.
             direction.y = randf() * 2.0 - 1
             direction = direction.normalized()
 
-If the ball went out of the screen, it's game over. Game restarts:
+如果游戏飞出屏幕外部，游戏结束。游戏重启：
 
 ::
 
@@ -157,15 +137,13 @@ If the ball went out of the screen, it's game over. Game restarts:
             ball_speed = 80
             direction = Vector2(-1, 0)
 
-Once everything was done with the ball, the node is updated with the new
-position:
+一旦球上的所有事情都做完了，节点就应当以一个新的位置更新：
 
 ::
 
         get_node("ball").set_pos(ball_pos)
 
-Only update the pads according to player input. The Input class is
-really useful here:
+只根据用户输入来更新挡板。Input类此时很有用：
 
 ::
 
@@ -189,4 +167,4 @@ really useful here:
 
         get_node("right").set_pos(right_pos)
 
-And that's it! A simple Pong was written with a few lines of code.
+这就成了！一个用几行代码写出来的简单的对板弹球。

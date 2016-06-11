@@ -207,7 +207,7 @@ other class based datatype). Example:
 
     var scene = preload("res://myscene.scn") # will load when parsing the script
 
-但是 'scene' 依旧不是一个包含着子节点的节点。它被封装在一个特殊的资源叫做（此处供测试，如果成功将会替换 :ref:`封装场景 <class_PackedScene>`） :ref:`PackedScene <class_PackedScene>`.
+但是 'scene' 依旧不是一个包含着子节点的节点。它被封装在一个特殊的资源叫做 :ref:`封装场景 <class_PackedScene>` 。
 为了创建实际的节点，函数
 :ref:`PackedScene.instance() <class_PackedScene_instance>`
 必须被调用。这将会返回可以添加到活动场景中的节点树：
