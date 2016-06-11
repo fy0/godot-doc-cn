@@ -39,11 +39,11 @@
 
 ## 贡献者
 
-* fy0
+* [fy](https://github.com/fy0)
 
-* 小太
+* [小太](https://github.com/Oberon-Tonya)
 
-* Geequlim
+* [Geequlim](https://github.com/Geequlim)
 
-* 非战不屈
+* [非战不屈](https://github.com/wangshuo1617)
 
