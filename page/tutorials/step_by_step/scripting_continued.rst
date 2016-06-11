@@ -1,6 +1,6 @@
 .. _doc_scripting_continued:
 
-脚本（Script）（续）
+脚本(续)
 =====================
 
 处理
