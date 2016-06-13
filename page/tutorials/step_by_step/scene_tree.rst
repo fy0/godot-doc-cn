@@ -17,7 +17,7 @@
 
 Godot内部工作原理如下。有一个 :ref:`OS <class_OS>` 类(Class)，是唯一一个在最开始就运行的实例。之后所有的驱动器、伺服器、脚本语言、场景系统等都被载入了。
 
-当初始化完成后 :ref:`OS <class_OS>` 需要被提供一个 :ref:`MainLoop <class_MainLoop>`来运行。截止到此，所有的这些是在内部完成的(如果你对内部工作原理感兴趣的话，你可以检验源代码中的main/main.cpp文件)
+当初始化完成后 :ref:`OS <class_OS>` 需要被提供一个 :ref:`MainLoop <class_MainLoop>` 来运行。截止到此，所有的这些是在内部完成的(如果你对内部工作原理感兴趣的话，你可以检验源代码中的main/main.cpp文件)
 
 用户系统，或者游戏，在MainLoop中开始。这个类有一些方法(Method)，用于初始化(Initialization)、闲置(Idle)(帧同步回调,freame-synchronized callback)、以及输入(Input)。同样地，这很低级而且在Godot中制作游戏时，写你自己的MainLoop根本没什么意义。
 
@@ -43,10 +43,10 @@ Godot内部工作原理如下。有一个 :ref:`OS <class_OS>` 类(Class)，是�
 单例类能够通过只调用
 :ref:`Node.get_tree() <class_Node_get_tree>`来被获取到。
 
-根视野(Root Viewport)
+根视区(Root Viewport)
 -------------
 
-根:ref:`视野(Viewport) <class_Viewport>`
+根:ref:`视区(Viewport) <class_Viewport>`
 总是在场景的最顶端，通过一个节点它能够以两种不同的方式被获取到。
 
 ::
@@ -54,66 +54,49 @@ Godot内部工作原理如下。有一个 :ref:`OS <class_OS>` 类(Class)，是�
         get_tree().get_root() # access via scenemainloop
         get_node("/root") # access via absolute path
 
-这个节点包含了主要视野，所有作为:ref:`Viewport <class_Viewport>`子的东西默认被绘制在它里面，所以所有节点的顶端总是这个类型是有很重要的，否则什么也看不见！
+这个节点包含了主要视区，所有作为:ref:`Viewport <class_Viewport>`子的东西默认被绘制在它里面，所以所有节点的顶端总是这个类型是有很重要的，否则什么也看不见！
 
-比较于其他的视野能够被创建在场景中(用来做分屏效果和此类的东西)，这个根视野是永远不会被用户所创建的。它在场景树中被自动创建。
+比较于其他的视区能够被创建在场景中(用来做分屏效果和此类的东西)，这个根视区是永远不会被用户所创建的。它在场景树中被自动创建。
 
 场景树
 ----------
 
-当一个节点被直接地或间接地连接到根视野时，它就成为 *场景树* 的一部分。
+当一个节点被直接地或间接地连接到根视区时，它就成为 *场景树* 的一部分。
 
 这也就意味着，正如在之前教程中所诠释的那样，将会得到_enter_tree()和_ready()的回调(还有_exit_tree())。
 
 .. image:: /img/activescene.png
 
-When nodes enter the *Scene Tree*, they become active. They get access
-to everything they need to process, get input, display 2D and 3D,
-notifications, play sound, groups, etc. When they are removed from the
-*scene tree*, they lose it.
+当节点进入 *场景树* 中时，他们变得活跃了。他们开始获取他们需要处理的一切事物，获取输入、2D和3D显示、通告(Notification)、播放音乐、组等。当他们从*场景树*中被移除时，他们将失去它。
 
-Tree order
+场景树顺序
 ----------
 
-Most node operations in Godot, such as drawing 2D, processing or getting
-notifications are done in tree order. This means that parents and
-siblings with less order will get notified before the current node.
+在Godot中大多数节点操作，比如2D绘制(Drawing)、处理(Processing)或者获取通告都以场景树完成的。这也就是说低阶的父级和姊妹级将会在当前节点之前被通告(Notificated)。
 
 .. image:: /img/toptobottom.png
 
-"Becoming active" by entering the *Scene Tree*
+通过进入 *场景树* 来活跃化
 ----------------------------------------------
 
-#. A scene is loaded from disk or created by scripting.
-#. The root node of that scene (only one root, remember?) is added as
-   either a child of the "root" Viewport (from SceneTree), or to any
-   child or grand-child of it.
-#. Every node of the newly added scene, will receive the "enter_tree"
-   notification ( _enter_tree() callback in GDScript) in top-to-bottom
-   order.
-#. An extra notification, "ready" ( _ready() callback in GDScript) is
-   provided for convenience, when a node and all its children are
-   inside the active scene.
-#. When a scene (or part of it) is removed, they receive the "exit
-   scene" notification ( _exit_tree() callback in GDScript) in
-   bottom-to-top order
+#. 一个场景通过撰写代码来创建或从磁盘导入。
+#. 这个场景的根节点(只有一个，还记得么？)被添加作为一个根视区(来自于场景树)的子级或者是被添加到它别的子级以及隔代子级。
+#. 新添加的场景中每一个节点都会自上而下接收"enter_tree"通告(在GDScript中的 _enter_tree() 回调)。
+#. 又一个通告"ready"(GDScript中的 _ready() 回调)为方便起见被提供，这时一个节点和它的所有子节点都进入了这个活动场景中。
+#. 当一个场景(或者它的一部分)被移除时，它们将会自下而上地接收到"exit scene"通告(GDScript中的 _exit_tree() 回调)。
 
-Changing current scene
+改变当前场景
 ----------------------
 
-After a scene is loaded, it is often desired to change this scene for
-another one. The simple way to do this to use the
+一个场景被载入以后，我们通常都要把一个场景改变为另一个。简单的方法就是使用
 :ref:`SceneTree.change_scene() <class_SceneTree_change_scene>`
-function:
+函数：
 
 ::
 
     func _my_level_was_completed():
         get_tree().change_scene("res://levels/level2.scn")
 
-This is a quick and useful way to switch scenes, but has the drawback
-that the game will stall until the new scene is loaded and running. At
-some point in your game, it may be desired to create proper loading
-screens with progress bar, animated indicators or thread (background)
-loading. This must be done manually using autoloads (see next chapter!)
-and :ref:`doc_background_loading`.
+这是切换场景的一个快速有效的方式，但是有一个缺点：在新场景被载入并运行之前，游戏将被搁置挂起。在你游戏中的一些情况下，我们可能想要创建带有进度条的合适的载入画面、动态指示物或者线程(背景)载入。这必须通过使用AutoLoad(自动载入)和
+:ref:`doc_background_loading`
+来手动地实现。
