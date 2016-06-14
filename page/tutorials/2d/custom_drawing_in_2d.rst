@@ -1,44 +1,27 @@
 .. _doc_custom_drawing_in_2d:
 
-Custom drawing in 2D
+自定义2D绘图
 ====================
 
-Why?
+为什么?
 ----
 
-Godot has nodes to draw sprites, polygons, particles, and all sort of
-stuff. For most cases this is enough, but not always. If something
-desired is not supported, and before crying in fear, angst and range
-because a node to draw that-specific-something does not exist.. it would
-be good to know that it is possible to easily make any 2D node (be it
-:ref:`Control <class_Control>` or :ref:`Node2D <class_Node2D>`
-based) draw custom commands. It is *really* easy to do it too.
+Godot通过节点来绘制精灵(sprites)，多边形(polygons)，粒子(particles)和其他所有的类型。
+大多数情况下这已经足够创作者的需求，但不是全部。如果有些需要的功能但godot又不支持的话，在你因为需要某些特殊的东西需要绘制但又无法实现而哭鼻子之前，你需要了解下通过自定义命令来绘制2d节点(:ref:`Control <class_Control>` or :ref:`Node2D <class_Node2D>`) 。而且，这*非常*容易实现。
 
-But...
+但是...
 ------
 
-Custom drawing manually in a node is *really* useful. Here are some
-examples why:
+手动绘制节点真得非常有用。看看下面的例子：
+-  绘制形状或者某些特殊的节点（如：绘制圆，图片轨迹(image with trails)，带有动画的多边形等等）。
+-  一些与节点不兼容的东西（如：俄罗斯方块）。它使用了自定义的方法来绘制方块。
+-  管理大量（如：子弹）逻辑性但非常简单的东西。考虑到性能问题，最好不要用大量的节点来绘制这些东西。相反，绘制回调(draw calls)就显得非常高效。可以查看demo里面的"Shower of Bullets"。
+-  创建自定义UI。godot提供了大量现成的控件，但也许你仍然需要绘制一个新的。
 
--  Drawing shapes or logic that is not handled by nodes (example: making
-   a node that draws a circle, an image with trails, a special kind of
-   animated polygon, etc).
--  Visualizations that are not that compatible with nodes: (example: a
-   tetris board). The tetris example uses a custom draw function to draw
-   the blocks.
--  Managing drawing logic of a large amount of simple objects (in the
-   hundreds of thousands). Using a thousand nodes is probably not nearly
-   as efficient as drawing, but a thousand of draw calls are cheap.
-   Check the "Shower of Bullets" demo as example.
--  Making a custom UI control. There are plenty of controls available,
-   but it's easy to run into the need to make a new, custom one.
-
-OK, how?
+该怎么做?
 --------
-
-Add a script to any :ref:`CanvasItem <class_CanvasItem>`
-derived node, like :ref:`Control <class_Control>` or
-:ref:`Node2D <class_Node2D>`. Override the _draw() function.
+为任何派生自 :ref:`CanvasItem <class_CanvasItem>` 的节点添加脚本，如：:ref:`Control <class_Control>` 或
+:ref:`Node2D <class_Node2D>`. 重写 _draw() 方法。
 
 ::
 
@@ -48,21 +31,16 @@ derived node, like :ref:`Control <class_Control>` or
         #your draw commands here
         pass
 
-Draw commands are described in the :ref:`CanvasItem <class_CanvasItem>`
-class reference. There are plenty of them.
+查看 :ref:`CanvasItem <class_CanvasItem>` 来了解都有哪些绘制命令(draw commands)，相信我，真的有很多。
 
-Updating
+更新(Updating)
 --------
 
-The _draw() function is only called once, and then the draw commands
-are cached and remembered, so further calls are unnecessary.
+_draw() 方法只会被调用一次，然后绘制命令就被保存起来，因此不需要再次调用。
 
-If re-drawing is required because a state or something else changed,
-simply call :ref:`CanvasItem.update() <class_CanvasItem_update>`
-in that same node and a new _draw() call will happen.
+如果因为状态或其他什么改变导致节点确实需要重新绘制的时候，只需要简单的调用 :ref:`CanvasItem.update() <class_CanvasItem_update>`，之后一个新的 _draw() 将会被调用。
 
-Here is a little more complex example. A texture variable that will be
-redrawn if modified:
+下面是一些更复杂的例子。节点将在 texture 属性改变时重新绘制：
 
 ::
 
@@ -79,8 +57,7 @@ redrawn if modified:
     func _draw():
         draw_texture(texture,Vector2())
 
-In some cases, it may be desired to draw every frame. For this, just
-call update() from the _process() callback, like this:
+在有些情况下，实现这样的效果可能需要每帧都进行绘制。但在这个例子中，只需要在 _process() 中调用 update() 方法，就像这样：
 
 ::
 
@@ -96,14 +73,11 @@ call update() from the _process() callback, like this:
     func _ready():
         set_process(true)
 
-OK! This is basically it! Enjoy drawing your own nodes!
+好了！这就是基本的用法！发挥想象，绘制你的专属节点吧！
 
-Tools
+工具
 -----
 
-Drawing your own nodes might also be desired while running them in the
-editor, to use as preview or visualization of some feature or
-behavior.
+在编辑器中，可能需要预览自定义绘制的行为功能。
 
-Remember to just use the "tool" keyword at the top of the script
-(check the :ref:`doc_gdscript` reference if you forgot what this does).
+记住，只在脚本顶部需要使用 "tool" 关键字，如果你忘记了怎么用，查看 :ref:`doc_gdscript`。
