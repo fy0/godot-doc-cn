@@ -1,9 +1,9 @@
 .. _doc_canvas_layers:
 
-画布层 （Canvas layers）
+画布层(Canvas layers)
 =============
 
-Viewport and Canvas items
+视窗与画布项(Viewport and Canvas items)
 -------------------------
 一般的2D节点, 如 :ref:`Node2D <class_Node2D>` 或
 :ref:`Control <class_Control>` 都继承自
@@ -28,11 +28,11 @@ CanvasItem 按次序地放置在一个树形结构内，它们都会继承其坐
 
 -  **视差滚动**: 背景比舞台上的其他东西移动地更慢。
 -  **HUD**: 显示在角色上方的信息，或者GUI. 当游戏内容移动时，生命计数，分数等必须保持静止。
--  **过渡效果（Transitions）**: 过渡效果 (渐隐，混合等) 也许需要保持其位置不变。
+-  **过渡效果(Transitions)**: 过渡效果 (渐隐，混合等) 也许需要保持其位置不变。
 
 在单个场景树中如何解决这些问题？
 
-画布层 （CanvasLayers）
+画布层(CanvasLayers)
 ------------
 
 答案是 :ref:`CanvasLayer <class_CanvasLayer>`。
