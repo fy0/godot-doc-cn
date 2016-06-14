@@ -48,6 +48,8 @@
 * [Geequlim](https://github.com/Geequlim)
 
 * [非战不屈](https://github.com/wangshuo1617)
+
+* [zhangshiqian1214](https://github.com/zhangshiqian1214)
  
 * [rochesk](https://github.com/rochesk)
 
