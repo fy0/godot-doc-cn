@@ -3,14 +3,14 @@
 自定义2D绘图
 ====================
 
-为什么?
-----
+有必要？
+----------
 
 Godot通过节点来绘制精灵(sprites)，多边形(polygons)，粒子(particles)和其他所有的类型。
 大多数情况下这已经足够创作者的需求，但不是全部。如果有些需要的功能但godot又不支持的话，在你因为需要某些特殊的东西需要绘制但又无法实现而哭鼻子之前，你需要了解下通过自定义命令来绘制2d节点(:ref:`Control <class_Control>` or :ref:`Node2D <class_Node2D>`) 。而且，这*非常*容易实现。
 
-但是...
-------
+另外...
+---------
 
 手动绘制节点非常有用。看看下面的例子：
 -  绘制形状或者某些特殊的节点（如：绘制圆，图片轨迹(image with trails)，带有动画的多边形等等）。
@@ -18,8 +18,8 @@ Godot通过节点来绘制精灵(sprites)，多边形(polygons)，粒子(particl
 -  管理大量（如：子弹）逻辑性但非常简单的东西。考虑到性能问题，最好不要用大量的节点来绘制这些东西。相反，绘制回调(draw calls)就显得非常高效。可以查看demo里面的"Shower of Bullets"。
 -  创建自定义UI。godot提供了大量现成的控件，但也许你仍然需要绘制一个新的。
 
-该怎么做?
---------
+该怎么做？
+-----------
 为任何派生自 :ref:`CanvasItem <class_CanvasItem>` 的节点添加脚本，如：:ref:`Control <class_Control>` 或
 :ref:`Node2D <class_Node2D>`. 重写 _draw() 方法。
 
@@ -34,11 +34,11 @@ Godot通过节点来绘制精灵(sprites)，多边形(polygons)，粒子(particl
 查看 :ref:`CanvasItem <class_CanvasItem>` 来了解都有哪些绘制命令(draw commands)，相信我，真的有很多。
 
 更新(Updating)
---------
+----------------
 
 _draw() 方法只会被调用一次，然后绘制命令就被保存起来，因此不需要再次调用。
 
-如果因为状态或其他什么改变导致节点确实需要重新绘制的时候，只需要简单的调用 :ref:`CanvasItem.update() <class_CanvasItem_update>`，之后一个新的 _draw() 将会被调用。
+如果因为状态或其他什么改变导致节点确实需要重新绘制的时候，只需要简单的调用 :ref:`CanvasItem.update() <class_CanvasItem_update>` ，之后一个新的 _draw() 将会被调用。
 
 下面是一些更复杂的例子。节点将在 texture 属性改变时重新绘制：
 
@@ -81,3 +81,4 @@ _draw() 方法只会被调用一次，然后绘制命令就被保存起来，因
 在编辑器中，可能需要预览自定义绘制的行为功能。
 
 记住，只在脚本顶部需要使用 "tool" 关键字，如果你忘记了怎么用，查看 :ref:`doc_gdscript`。
+
