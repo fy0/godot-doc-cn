@@ -1,25 +1,19 @@
 .. _doc_singletons_autoload:
 
-Singletons (AutoLoad)
+单例(自动载入)
 =====================
 
-Introduction
+介绍
 ------------
 
-Scene Singletons are very useful things, as they represent a very common
-use case, but it's not clear at the beginning where their value is.
+场景单例(Scene Singletons)是非常有用的东西，因为它们代表一个非常普遍的使用情形，但是在最开始他们的价值在哪里不甚清晰。
 
-The scene system is very useful, but by itself it has a few drawbacks:
+场景系统非常的有用，但是它自己还有一些缺点：
 
--  There is no "common" place to store information (such as core, items
-   obtained, etc) between two scenes.
--  It is possible to make a scene that loads other scenes as children
-   and frees them, while keeping that information, but then if that is
-   done, it's not possible to run a scene alone by itself and expect it
-   to work
--  It is also possible to store persistent information to disk in
-   \`user://\` and have scenes always load it, but saving/loading that
-   while changing scenes is cumbersome.
+-  两个场景之间没有存储信息(比如核心(core)、包含的物件)的"共同"位置。
+-  当持有那些信息时，我们可以去创建一个载入其他场景作为子级并释放它们的场景，但接下来如果完成了，我们不可以单独运行一个场景并期待它能够工作。
+-  我们还可以在磁盘中的
+   \`user://\` 下存储持续性的信息并让场景总载入它，但是在切换场景时载入/保存是相当笨拙的。
 
 So, after using Godot for a while, it becomes clear that it is necessary
 to have parts of a scene that:

@@ -1,4 +1,4 @@
-Math
+数学
 ====
 
 .. toctree::

@@ -1,70 +1,46 @@
 .. _doc_vector_math:
 
-Vector math
+向量数学
 ===========
 
-Introduction
+介绍
 ~~~~~~~~~~~~
 
-This small tutorial aims to be a short and practical introduction to
-vector math, useful for 3D but also 2D games. Again, vector math is not
-only useful for 3D but *also* 2D games. It is an amazing tool once you
-get the grasp of it and makes programming of complex behaviors much
-simpler.
+这篇小教程意在对向量数学进行简短和实用的介绍，在2D和3D游戏中都非常有用。再说一遍，向量数学不仅是对3D有用， *而且* 对2D游戏也有用。一旦你掌握了它那么它是一个很棒的工具并能让复杂行为的编写更加简单。
 
-It often happens that young programmers rely too much on the *incorrect*
-math for solving a wide array of problems, for example using only
-trigonometry instead of vector of math for 2D games.
+通常地，新手程序员太依赖于 *不正确* 的数学来解决一大堆问题，比如说在2D游戏中只用三角几何学而不用向量。
 
-This tutorial will focus on practical usage, with immediate application
-to the art of game programming.
+这篇教程将关注于实用的用途，以及对游戏编程行业的快速应用。
 
-Coordinate systems (2D)
+2D坐标系(2D Coordinate System)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-Typically, we define coordinates as an (x,y) pair, x representing the
-horizontal offset and y the vertical one. This makes sense given the
-screen is just a rectangle in two dimensions. As an example, here is a
-position in 2D space:
+通常地，我们用有序数对(Pairs)(x,y)来定义坐标，x代表了水平偏移量而y代表了竖直偏移量。这在给定了一个二维矩形的屏幕时是有意义的。举个例子，在2D空间中有一个位置:
 
 .. image:: /img/tutovec1.png
 
-A position can be anywhere in space. The position (0,0) has a name, it's
-called the **origin**. Remember this term well because it has more
-implicit uses later. The (0,0) of a n-dimensions coordinate system is
-the **origin**.
+位置可以是空间内的任意地方。位置(0,0)有一个名字，叫做 **原点(Origin)** 。牢记这一点因为接下来它会有很多隐含的用法。一个n维坐标系中，(0,0)就是 **原点** (译注：此处说法似乎有问题，一个3D坐标系的原点是(0,0,0)，一个4D坐标系原点应当是(0,0,0,0)，一个n维坐标系的原点应当是(0,0,...,0))
 
-In vector math, coordinates have two different uses, both equally
-important. They are used to represent a *position* but also a *vector*.
-The same position as before, when imagined as a vector, has a different
-meaning.
+在向量数学中，坐标有两种用途，这两者都很重要。它们既被用于代表一个 *位置(Position)* 又被用来代表一个 *向量(Vector)* 。位置用途同之前所述，而当视为向量时，它却有另外一番含义。
 
 .. image:: /img/tutovec2.png
 
-When imagined as a vector, two properties can be inferred, the
-**direction** and the **magnitude**. Every position in space can be a
-vector, with the exception of the **origin**. This is because
-coordinates (0,0) can't represent direction (magnitude 0).
+当被视为向量时，我们就可以推测出两个属性， **方向(Direction)** 和 **模(Magnitude，又称为长度，与向量的范数(norm)相等)** 。空间中的每一个位置都可以是一个向量，除了 **原点** （译注：在数学中，这种情况也是向量，但被叫做零向量）。这是因为坐标(0,0)无法代表方向(模为0)（译注：在数学中，零向量的方向是任意的）
 
 .. image:: /img/tutovec2b.png
 
-Direction
+方向(Direction)
 ---------
 
-Direction is simply towards where the vector points to. Imagine an arrow
-that starts at the **origin** and goes towards a [STRIKEOUT:position].
-The tip of the arrow is in the position, so it always points outwards,
-away from the origin. Imagining vectors as arrows helps a lot.
+方向就和向量指向是一致的。试想一个箭头从 **原点** 出发然后朝向一个[STRIKEOUT:位置]（译注：这里STRIKEOUT格式意义不明）。箭头的末梢在一个位置中，因此它总是指向原点外的。把向量视为箭头会大有裨益。
 
 .. image:: /img/tutovec3b.png
 
-Magnitude
+模(Magnitude)
 ---------
 
-Finally, the length of the vector is the distance from the origin to the
-position. Obtaining the length from a vector is easy, just use the
-`Pythagorean
-Theorem <http://en.wikipedia.org/wiki/Pythagorean_theorem>`__.
+最终，向量的长度就是原点到这个位置的距离。获取这个距离很容易，用
+`勾股定理 <http://en.wikipedia.org/wiki/Pythagorean_theorem>`__ (Gou-gu Theorem，国外称毕达哥拉斯定理(Pythagorean Theorem))就可以了。
 
 ::
 
@@ -893,3 +869,4 @@ So the final algorithm is something like:
 This was all! Hope it was helpful, and please give feedback and let know
 if something in this tutorial is not clear! You should be now ready for
 the next challenge... :ref:`doc_matrices_and_transforms`!
+
