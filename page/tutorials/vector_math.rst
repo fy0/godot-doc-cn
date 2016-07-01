@@ -57,9 +57,6 @@
 
 任何情况下，获得一个向量的角度是十足简单的，可以用三角几……唉，那是什么鬼？我想说的是，
 :ref:`atan2() <class_@GDScript_atan2>` 函数。
-In any case, obtaining an angle from a vector is easy and can be
-accomplished with trig... er, what was that? I mean, the
-:ref:`atan2() <class_@GDScript_atan2>` function.
 
 Godot中的向量类型
 ~~~~~~~~~~~~~~~~
@@ -246,57 +243,46 @@ eye contact, it would do it in the same direction as vector BA.
 
 目前来看，蛇似乎还很安全。
 
-Siding with unit vectors
+支持单位向量
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Ok, so now we know that dot product between two vectors will let us know
-if they are looking towards the same side, opposite sides or are just
-perpendicular to each other.
+好了，那么我们现在知道了两个向量的点积将会告诉我们它们看向了同侧、异侧还是干脆彼此垂直。
 
-This works the same with all vectors, no matter the magnitude so **unit
-vectors** are not the exception. However, using the same property with
-unit vectors yields an even more interesting result, as an extra
-property is added:
+这对于所有向量都适用，和模量无关，因此 **单位向量** 也不例外。然而，对单位向量使用相同的属性会产生一个更有趣的结果，因为多了一个附加属性：
 
--  If both vectors are facing towards the exact same direction (parallel
-   to each other, angle between them is 0°), the resulting scalar is
-   **1**.
--  If both vectors are facing towards the exact opposite direction
-   (parallel to each other, but angle between them is 180°), the
-   resulting scalar is **-1**.
+-  如果两个向量都面向了完全相同的方向（彼此平行(Parallel，在向量中也被称为共线)，夹角是0°(同向)），标量结果为 **1** 。
 
-This means that dot product between unit vectors is always between the
-range of 1 and -1. So Again...
+-  如果两个向量都面向了完全相同的方向（彼此平行，夹角却是180°(反向)），标量结果为 **-1** 。
 
--  If their angle is **0°** dot product is **1**.
--  If their angle is **90°**, then dot product is **0**.
--  If their angle is **180°**, then dot product is **-1**.
+这也就意味着，单位向量的点积结果将总在范围[-1,1]之间。那么又……
 
-Uh.. this is oddly familiar... seen this before... where?
+-  如果夹角为 **0°** 点积为 **1** 。
 
-Let's take two unit vectors. The first one is pointing up, the second
-too but we will rotate it all the way from up (0°) to down (180°
-degrees)...
+-  如果夹角为 **90°** 点积为 **0** 。
+
+-  如果夹角为 **180°** 点积为 **-1** 。
+
+额……这有点莫名的熟悉……好像在哪见过……哪呢？
+
+我们来引入两个单位向量，第一个向上指，第二个也一样但是我们将会全程让它从上(0°)到下(180°)旋转……
 
 .. image:: /img/tutovec8.png
 
-While plotting the resulting scalar!
+当测算标量结果时！
 
 .. image:: /img/tutovec9.png
 
-Aha! It all makes sense now, this is a
-`Cosine <http://mathworld.wolfram.com/Cosine.html>`__ function!
+啊哈！一切都明朗了，这是 `余弦 <http://mathworld.wolfram.com/Cosine.html>`__ 函数！
 
-We can say that, then, as a rule...
+我们于是就能说，作为一个准则……
 
-The **dot product** between two **unit vectors** is the **cosine** of
-the **angle** between those two vectors. So, to obtain the angle between
-two vectors, we must do:
+两个 **单位向量** 的 **点积** 是两个向量 **夹角** 的 **余弦值** 。因此，欲获取两个向量的夹角，我们必须要：
 
 ::
 
     var angle_in_radians = acos( a.dot(b) )
 
+这对什么有用呢？直接获取向量的夹角可能不那么有用，
 What is this useful for? Well obtaining the angle directly is probably
 not as useful, but just being able to tell the angle is useful for
 reference. One example is in the `Kinematic
@@ -313,7 +299,7 @@ without modification in
 Vector math is, in a great deal, dimension-amount-independent, so adding
 or removing an axis only adds very little complexity.
 
-Planes
+平面
 ~~~~~~
 
 The dot product has another interesting property with unit vectors.
@@ -339,7 +325,7 @@ except that the plane is an infinite surface (imagine an infinite, flat
 sheet of paper that you can orient and is pinned to the origin) instead
 of a line.
 
-Distance to plane
+到平面的距离
 -----------------
 
 Now that it's clear what a plane is, let's go back to the dot product.
@@ -358,7 +344,7 @@ space the distance will be negative, too:
 
 This allows us to tell which side of the plane a point is.
 
-Away from the origin
+离开原点
 --------------------
 
 I know what you are thinking! So far this is nice, but *real* planes are
@@ -428,7 +414,7 @@ calculating the distance to it. So, why is it useful to calculate the
 distance from a point to a plane? It's extremely useful! Let's see some
 simple examples..
 
-Constructing a plane in 2D
+在2D中构建平面
 --------------------------
 
 Planes clearly don't come out of nowhere, so they must be built.
@@ -473,7 +459,7 @@ point_b will work since they are in the same plane:
 Doing the same in 3D is a little more complex and will be explained
 further down.
 
-Some examples of planes
+平面的使用举例
 -----------------------
 
 Here is a simple example of what planes are useful for. Imagine you have
@@ -558,7 +544,7 @@ This is usually just handled by splitting the concave polygon into
 smaller convex polygons, or using a technique such as BSP (which is not
 used much nowadays).
 
-Cross product
+叉积(Cross Product，又称向量的向量积、叉乘运算)
 -------------
 
 Quite a lot can be done with the dot product! But the party would not be
@@ -606,7 +592,7 @@ possible perpendicular vectors to a pair of 2D vectors.
 Also, the resulting cross product of two unit vectors is *not* a unit
 vector. Result will need to be renormalized.
 
-Area of a triangle
+三角形区域
 ~~~~~~~~~~~~~~~~~~
 
 Cross product can be used to obtain the surface area of a triangle in
@@ -641,7 +627,7 @@ of the triangle is half of it.
 
     var area = P.length()/2
 
-Plane of the triangle
+三角形所在平面
 ~~~~~~~~~~~~~~~~~~~~~
 
 With **P** computed from the previous step, normalize it to get the
@@ -692,7 +678,7 @@ So, to obtain N, the correct formula is:
     # var N = (A-B).cross(A-C).normalized()
     var D = N.dot(A)
 
-Collision detection in 3D
+3D中的碰撞检测
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is another bonus bit, a reward for being patient and keeping up
@@ -806,5 +792,6 @@ So the final algorithm is something like:
 This was all! Hope it was helpful, and please give feedback and let know
 if something in this tutorial is not clear! You should be now ready for
 the next challenge... :ref:`doc_matrices_and_transforms`!
+
 
 
