@@ -1,6 +1,6 @@
 .. _doc_singletons_autoload:
 
-单例(自动载入)
+单例(Singletons)(自动载入)
 =====================
 
 介绍
@@ -15,25 +15,24 @@
 -  我们还可以在磁盘中的
    \`user://\` 下存储持续性的信息并让场景总载入它，但是在切换场景时载入/保存是相当笨拙的。
 
-So, after using Godot for a while, it becomes clear that it is necessary
-to have parts of a scene that:
+所以在使用Godot一会之后，这就变得明晰了，有必要具备场景的局部：
 
--  Are always loaded, no matter which scene is opened from the editor.
--  Can keep global variables, such as player information, items, money,
-   etc.
--  Can handle switching of scenes and transitions.
--  Just have something that acts like a singleton, since GDScript does
-   not support global variables by design.
+-  总被装在，无论场景何时从编辑器被打开。
+-  能够存留全局变量(Global Variables)，比如玩家信息、物品、金钱等。
+-  能够处理场景的切换和切换效果。
+-  就是一种行为上类似于一个单例类的东西，因为GDScript有意地不支持全局变量。
 
-For this, the option for auto-loading nodes and scripts exists.
+基于这些原因，自动载入节点的选项和脚本就存在了。
 
-AutoLoad
+自动载入(AutoLoad)
 --------
 
+AutoLoad 可以是一个场景、或者一个继承了一个节点（一个将要被创建然后会为它设置脚本的节点）的脚本。它们可以在 Scene > Project Settings > AutoLoad标签页下被添加到工程中。
 AutoLoad can be a scene, or a script that inherits from Node (a Node
 will be created and the script will be set to it). They are added to the
 project in the Scene > Project Settings > AutoLoad tab.
 
+每一个自动载入项
 Each autoload needs a name, this name will be the node name, and the
 node will be always added to the root viewport before any scene is
 loaded.
