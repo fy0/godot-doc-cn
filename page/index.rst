@@ -3,16 +3,17 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-欢迎来到 Godot 游戏引擎中文文档！
+Welcome to Godot Engine's documentation!
 ========================================
 
-.. note::
-    | 这里是 `Godot 中文文档计划 <https://github.com/fy0/godot-doc-cn/>`_ 的预览页面。 
-    | 这个项目才刚刚起步，急需开源爱好者的支持！
-    | 这是一个非盈利公益项目，欢迎你的加入！
-    | 岂曰无衣，与子同袍！
+**Note:** Godot Engine is an open source project developed by a community of volunteers.
+It means that the documentation team can always use your feedback and help to improve our
+tutorials and class reference. So if you don't manage to understand something, or can't find
+what you are looking for in the docs, help us make the documentation better and let us know!
+Submit an issue `to the GitHub repository <https://github.com/godotengine/godot-docs/issues>`_,
+or annoy us at the #godotengine-devel IRC channel!
 
-这里是目录页，以章节的形式提供了站点内容的概况。
+The main documentation for the site is organized into a few sections:
 
 * :ref:`sec-tutorials`
 * :ref:`sec-reference`
@@ -20,7 +21,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 教程
+   :caption: Tutorials
    :name: sec-tutorials
 
    tutorials/step_by_step/_step_by_step
@@ -34,7 +35,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 参考
+   :caption: Reference
    :name: sec-reference
 
    classes/_classes
@@ -45,7 +46,7 @@
 
 .. toctree::
    :maxdepth: 1
-   :caption: 社区
+   :caption: Community
    :name: sec-community
 
    contributing/_contributing
