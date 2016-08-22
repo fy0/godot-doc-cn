@@ -1,4 +1,3 @@
-﻿# SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
 # community (CC BY 3.0)
 # This file is distributed under the same license as the Godot Engine
@@ -9,55 +8,64 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"POT-Creation-Date: 2016-08-23 02:32+0800\n"
 "PO-Revision-Date: 2016-08-23 00:00+0800\n"
+"Last-Translator: \n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
-"Last-Translator: \n"
-"Language-Team: \n"
-"Language: zh\n"
-"X-Generator: Poedit 1.8.8\n"
 
 #: ../../index.rst:7
 msgid "Welcome to Godot Engine's documentation!"
-msgstr ""
-"这里是 `Godot 中文文档计划 <https://github.com/fy0/godot-doc-cn/>`_ 的预览"
-"页面。\n"
-"这个项目才刚刚起步，急需开源爱好者的支持！\n"
-"这是一个非盈利公益项目，欢迎你的加入！\n"
-"岂曰无衣，与子同袍！"
+msgstr "欢迎来到 Godot 游戏引擎中文文档！"
 
-#: ../../index.rst:9
-msgid ""
-"**Note:** Godot Engine is an open source project developed by a community "
-"of volunteers. It means that the documentation team can always use your "
-"feedback and help to improve our tutorials and class reference. So if you "
-"don't manage to understand something, or can't find what you are looking "
-"for in the docs, help us make the documentation better and let us know! "
-"Submit an issue `to the GitHub repository <https://github.com/godotengine/"
-"godot-docs/issues>`_, or annoy us at the #godotengine-devel IRC channel!"
+#: ../../index.rst
+msgid "这里是 `Godot 中文文档计划 <https://github.com/fy0/godot-doc-cn/>`_ 的预览页面。"
 msgstr ""
-"**介绍：** Godot Engine是一个由商业公司（开发者）贡献的一个开源游戏引擎项"
-"目，这意味我们可以通过社区反馈以帮助引擎/文档维护团队完善我们的帮助文档和类"
-"参考手册，如果你对文档有什么建议或不明白之处，请让我们知道以帮助我们完善文"
-"档/教程。例如通过提交一个issue（建议）到Github仓库：<https://github.com/"
-"godotengine/godot-docs/issues>`_, 或者通过IRC频道 #godotengine-devel 和我们"
-"取得联系！"
+
+#: ../../index.rst
+msgid "这个项目才刚刚起步，急需开源爱好者的支持！"
+msgstr ""
+
+#: ../../index.rst
+msgid "这是一个非盈利公益项目，欢迎你的加入！"
+msgstr ""
+
+#: ../../index.rst
+msgid "岂曰无衣，与子同袍！"
+msgstr ""
 
 #: ../../index.rst:16
+msgid ""
+"**Note:** Godot Engine is an open source project developed by a community"
+" of volunteers. It means that the documentation team can always use your "
+"feedback and help to improve our tutorials and class reference. So if you"
+" don't manage to understand something, or can't find what you are looking"
+" for in the docs, help us make the documentation better and let us know! "
+"Submit an issue `to the GitHub repository <https://github.com/godotengine"
+"/godot-docs/issues>`_, or annoy us at the #godotengine-devel IRC channel!"
+msgstr ""
+"**介绍：** Godot "
+"Engine是一个由商业公司（开发者）贡献的一个开源游戏引擎项目，这意味我们可以通过社区反馈以帮助引擎/文档维护团队完善我们的帮助文档和类参考手册，如果你对文档有什么建议或不明白之处，请让我们知道以帮助我们完善文档/教程。例如通过提交一个issue（建议）到Github仓库：<https://github.com/godotengine"
+"/godot-docs/issues>`_, 或者通过IRC频道 #godotengine-devel 和我们取得联系！"
+
+#: ../../index.rst:23
 msgid "The main documentation for the site is organized into a few sections:"
 msgstr "本站点的主要文档分为以下几个章节："
 
-#: ../../index.rst:18
+#: ../../index.rst:25
 msgid ":ref:`sec-tutorials`"
-msgstr ""
+msgstr ":ref:`sec-tutorials`"
 
-#: ../../index.rst:19
+#: ../../index.rst:26
 msgid ":ref:`sec-reference`"
 msgstr ""
 
-#: ../../index.rst:20
+#: ../../index.rst:27
 msgid ":ref:`sec-community`"
 msgstr ""
+

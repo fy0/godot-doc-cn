@@ -6,6 +6,13 @@
 Welcome to Godot Engine's documentation!
 ========================================
 
+.. note::
+    | 这里是 `Godot 中文文档计划 <https://github.com/fy0/godot-doc-cn/>`_ 的预览页面。 
+    | 这个项目才刚刚起步，急需开源爱好者的支持！
+    | 这是一个非盈利公益项目，欢迎你的加入！
+    | 岂曰无衣，与子同袍！
+
+
 **Note:** Godot Engine is an open source project developed by a community of volunteers.
 It means that the documentation team can always use your feedback and help to improve our
 tutorials and class reference. So if you don't manage to understand something, or can't find
