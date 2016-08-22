@@ -28,7 +28,7 @@
 
 2. 单篇文档篇幅不等，所以也不要求一次认领整篇翻译
 
-3. 在 Issue 中[任务认领](https://github.com/fy0/godot-doc-cn/issues/1)帖子留言认领任务，例如：**认领 xxx.rst 全篇/上半部分**
+3. 在 Issue 中[任务认领](https://github.com/fy0/godot-doc-cn/issues/2)帖子留言认领任务，例如：**认领 xxx.rst 全篇/上半部分**
 
 
 ## 认领与汉化 - class reference
@@ -37,7 +37,7 @@
 
 2. 文本以一个 Class 为一个最小单位进行认领
 
-3. 在 Issue 中[任务认领](https://github.com/fy0/godot-doc-cn/issues/1)帖子留言认领任务，例如：**认领 @GDScript** (类的名字)
+3. 在 Issue 中[任务认领](https://github.com/fy0/godot-doc-cn/issues/2)帖子留言认领任务，例如：**认领 @GDScript** (类的名字)
 
 
 ## 编译和查看效果
