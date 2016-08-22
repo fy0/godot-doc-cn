@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-08-22 22:06+0800\n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,38 +20,33 @@ msgstr ""
 "Generated-By: Babel 2.3.4\n"
 
 #: ../../index.rst:7
-msgid "欢迎来到 Godot 游戏引擎中文文档！"
+msgid "Welcome to Godot Engine's documentation!"
 msgstr ""
 
-#: ../../index.rst
-msgid "这里是 `Godot 中文文档计划 <https://github.com/fy0/godot-doc-cn/>`_ 的预览页面。"
+#: ../../index.rst:9
+msgid ""
+"**Note:** Godot Engine is an open source project developed by a community"
+" of volunteers. It means that the documentation team can always use your "
+"feedback and help to improve our tutorials and class reference. So if you"
+" don't manage to understand something, or can't find what you are looking"
+" for in the docs, help us make the documentation better and let us know! "
+"Submit an issue `to the GitHub repository <https://github.com/godotengine"
+"/godot-docs/issues>`_, or annoy us at the #godotengine-devel IRC channel!"
 msgstr ""
 
-#: ../../index.rst
-msgid "这个项目才刚刚起步，急需开源爱好者的支持！"
-msgstr ""
-
-#: ../../index.rst
-msgid "这是一个非盈利公益项目，欢迎你的加入！"
-msgstr ""
-
-#: ../../index.rst
-msgid "岂曰无衣，与子同袍！"
-msgstr ""
-
-#: ../../index.rst:15
-msgid "这里是目录页，以章节的形式提供了站点内容的概况。"
-msgstr ""
-
-#: ../../index.rst:17
-msgid ":ref:`sec-tutorials`"
+#: ../../index.rst:16
+msgid "The main documentation for the site is organized into a few sections:"
 msgstr ""
 
 #: ../../index.rst:18
-msgid ":ref:`sec-reference`"
+msgid ":ref:`sec-tutorials`"
 msgstr ""
 
 #: ../../index.rst:19
+msgid ":ref:`sec-reference`"
+msgstr ""
+
+#: ../../index.rst:20
 msgid ":ref:`sec-community`"
 msgstr ""
 
