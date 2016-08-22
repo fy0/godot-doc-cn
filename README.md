@@ -46,7 +46,7 @@
 
 2. 如果你关注 classes 部分，那么 python2 是必备的，不光如此，若是win环境你还需要找到你的 python.exe 复制一份重命名为 python2.exe
 
-3. 通过 pip 安装 sphinx 包（这里留待实证者补充，其实应该是2个或3个包）
+3. 通过 pip 安装 sphinx 和 sphinx_rtd_theme 包
 
 4. build_page.sh （若需要classes则先执行build_classes.sh）
 
