@@ -31,7 +31,7 @@ version = 'latest'
 # The full version, including alpha/beta/rc tags
 release = 'latest'
 
-language = 'en'
+language = 'zh'
 
 exclude_patterns = ['_build']
 
@@ -71,3 +71,8 @@ latex_documents = [
   (master_doc, 'GodotEngine.tex', 'Godot Engine Documentation',
    'Juan Linietsky, Ariel Manzur and the Godot community', 'manual'),
 ]
+
+# -- Options for locale ---------------------------------------------
+
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.

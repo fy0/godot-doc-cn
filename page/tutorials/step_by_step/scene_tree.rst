@@ -1,102 +1,154 @@
 .. _doc_scene_tree:
 
-场景树(Scene Tree)
+SceneTree
 =========
 
-介绍
+Introduction
 ------------
-(译注：SceneTree作为类名时不予翻译)
-从这里开始事情开始越来越抽象，但是别担心，因为深奥的东西也不过如此了。
 
-在上篇教程中，所有东西都围绕着节点(Node)的概念，场景(Scene)由它们构成，并且它们一旦进入了"场景树"中它们就开始变得活跃了。
+This is where things start getting abstract, but don't panic, as
+there's not really more depth than this.
 
-这应该更深入一些。事实上，场景系统甚至都不是Godot中的核心部分，因为它是可以被跳过然后做个脚本(或者C++代码)直接访问伺服器(Server,本篇的Server只指代伺服器，而不指代网络上的服务器，网络服务器会在联网等相关章节中具体标注)。但是那样制作游戏将会有很大工作量并且也是为其他用途预留的。
+In previous tutorials, everything revolves around the concept of
+Nodes, scenes are made of them, and they become active once they enter
+the *scene tree*.
 
-主循环(MainLoop类)
+This deserves going a little more into depth. In fact, the scene system
+is not even a core component of Godot, as it is possible to skip it and
+make a script (or C++ code) that talks directly to the servers. But
+making a game that way would be a lot of work and is reserved for other
+uses.
+
+MainLoop
 --------
 
-Godot内部工作原理如下。有一个 :ref:`OS <class_OS>` 类(Class)，是唯一一个在最开始就运行的实例。之后所有的驱动器、伺服器、脚本语言、场景系统等都被载入了。
+The way Godot works internally is as follows. There is the the
+:ref:`OS <class_OS>` class,
+which is the only instance that runs at the beginning. Afterwards, all
+drivers, servers, scripting languages, scene system, etc are loaded.
 
-当初始化完成后 :ref:`OS <class_OS>` 需要被提供一个 :ref:`MainLoop <class_MainLoop>` 来运行。截止到此，所有的这些是在内部完成的(如果你对内部工作原理感兴趣的话，你可以检验源代码中的main/main.cpp文件)
+When initialization is complete, :ref:`OS <class_OS>` needs to be
+supplied a :ref:`MainLoop <class_MainLoop>`
+to run. Up to this point, all this is internals working (you can check
+main/main.cpp file in the source code if you are ever interested to
+see how this works internally).
 
-用户系统，或者游戏，在MainLoop中开始。这个类有一些方法(Method)，用于初始化(Initialization)、闲置(Idle)(帧同步回调,freame-synchronized callback)、以及输入(Input)。同样地，这很低级而且在Godot中制作游戏时，写你自己的MainLoop根本没什么意义。
+The user program, or game, starts in the MainLoop. This class has a few
+methods, for initialization, idle (frame-syncronized callback), fixed
+(physics-synchronized callback), and input. Again, this is really low
+level and when making games in Godot, writing your own MainLoop does not
+even make sense.
 
-场景树
+SceneTree
 ---------
 
-解释Godot如何工作的方式之一，那就是它是一个在一个低级中间件基础上的高级游戏引擎。
+One of the ways to explain how Godot works, is that it's a high level
+game engine over a low level middleware.
 
-场景系统就是游戏引擎，而 :ref:`OS <class_OS>`和伺服器就是低级应用程序接口(API,Application Plugin Interface)。
+The scene system is the game engine, while the :ref:`OS <class_OS>`
+and servers are the low level API.
 
-无论何时，场景系统为OS、 :ref:`SceneTree <class_SceneTree>` 提供了自己的主循环。
+In any case, the scene system provides it's own main loop to OS,
+:ref:`SceneTree <class_SceneTree>`.
 
-在运行一个场景时，这是被自动实例化并设定的，无需再做额外的事情。
+This is automatically instanced and set when running a scene, no need
+to do any extra work.
 
-知道一个类的存在是很重要的因为它有如下重要的用处：
+It's important to know that this class exists because it has a few
+important uses:
 
--  它包含了根 :ref:`Viewport <class_Viewport>`，当一个场景第一次被打开时，它被添加为它的一个子并成为了 *场景树* 的一部分。(具体内容在后文)
--  它包含了关于组(Group)的信息，并且能够调用组内的所有节点，或者获取到它们的列表。
--  它还包含一些全局级别的功能，比如设定暂停模式或者退出进程等。
+-  It contains the root :ref:`Viewport <class_Viewport>`,
+   when a scene is first opened, it's added as a child of it to become
+   part of the *Scene Tree* (more on that next)
+-  It contains information about the groups, and has means to call all
+   nodes in a group, or get a list of them.
+-  It contains some global state functionality, such as setting pause
+   mode, or quitting the process.
 
-当一个节点是场景树的一部分时，
+When a node is part of the Scene Tree, the
 :ref:`SceneTree <class_SceneTree>`
-单例类能够通过只调用
-:ref:`Node.get_tree() <class_Node_get_tree>`来被获取到。
+singleton can be obtained by simply calling
+:ref:`Node.get_tree() <class_Node_get_tree>`.
 
-根视区(Root Viewport)
+Root viewport
 -------------
 
-根:ref:`视区(Viewport) <class_Viewport>`
-总是在场景的最顶端，通过一个节点它能够以两种不同的方式被获取到。
+The root :ref:`Viewport <class_Viewport>`
+is always a top of the scene. From a node, it can be obtained in two
+different ways:
 
 ::
 
         get_tree().get_root() # access via scenemainloop
         get_node("/root") # access via absolute path
 
-这个节点包含了主要视区，所有作为:ref:`Viewport <class_Viewport>`子的东西默认被绘制在它里面，所以所有节点的顶端总是这个类型是有很重要的，否则什么也看不见！
+This node contains the main viewport, anything that is a child of a
+:ref:`Viewport <class_Viewport>`
+is drawn inside of it by default, so it makes sense that the top of all
+nodes is always a node of this type, otherwise nothing would be seen!
 
-比较于其他的视区能够被创建在场景中(用来做分屏效果和此类的东西)，这个根视区是永远不会被用户所创建的。它在场景树中被自动创建。
+While other viewports can be created in the scene (for split-screen
+effects and such), this one is the only one that is never created by the
+user. It's created automatically inside SceneTree.
 
-场景树
+Scene tree
 ----------
 
-当一个节点被直接地或间接地连接到根视区时，它就成为 *场景树* 的一部分。
+When a node is connected, directly or indirectly, to the root
+viewport, it becomes part of the *scene tree*.
 
-这也就意味着，正如在之前教程中所诠释的那样，将会得到_enter_tree()和_ready()的回调(还有_exit_tree())。
+This means that, as explained in previous tutorials, will get the
+_enter_tree() and _ready() callbacks (as well as _exit_tree()).
 
 .. image:: /img/activescene.png
 
-当节点进入 *场景树* 中时，他们变得活跃了。他们开始获取他们需要处理的一切事物，获取输入、2D和3D显示、通告(Notification)、播放音乐、组等。当他们从*场景树*中被移除时，他们将失去它。
+When nodes enter the *Scene Tree*, they become active. They get access
+to everything they need to process, get input, display 2D and 3D,
+notifications, play sound, groups, etc. When they are removed from the
+*scene tree*, they lose it.
 
-场景树顺序
+Tree order
 ----------
 
-在Godot中大多数节点操作，比如2D绘制(Drawing)、处理(Processing)或者获取通告都以场景树完成的。这也就是说低阶的父级和姊妹级将会在当前节点之前被通告(Notificated)。
+Most node operations in Godot, such as drawing 2D, processing or getting
+notifications are done in tree order. This means that parents and
+siblings with less order will get notified before the current node.
 
 .. image:: /img/toptobottom.png
 
-通过进入 *场景树* 来活跃化
+"Becoming active" by entering the *Scene Tree*
 ----------------------------------------------
 
-#. 一个场景通过撰写代码来创建或从磁盘导入。
-#. 这个场景的根节点(只有一个，还记得么？)被添加作为一个根视区(来自于场景树)的子级或者是被添加到它别的子级以及隔代子级。
-#. 新添加的场景中每一个节点都会自上而下接收"enter_tree"通告(在GDScript中的 _enter_tree() 回调)。
-#. 又一个通告"ready"(GDScript中的 _ready() 回调)为方便起见被提供，这时一个节点和它的所有子节点都进入了这个活动场景中。
-#. 当一个场景(或者它的一部分)被移除时，它们将会自下而上地接收到"exit scene"通告(GDScript中的 _exit_tree() 回调)。
+#. A scene is loaded from disk or created by scripting.
+#. The root node of that scene (only one root, remember?) is added as
+   either a child of the "root" Viewport (from SceneTree), or to any
+   child or grand-child of it.
+#. Every node of the newly added scene, will receive the "enter_tree"
+   notification ( _enter_tree() callback in GDScript) in top-to-bottom
+   order.
+#. An extra notification, "ready" ( _ready() callback in GDScript) is
+   provided for convenience, when a node and all its children are
+   inside the active scene.
+#. When a scene (or part of it) is removed, they receive the "exit
+   scene" notification ( _exit_tree() callback in GDScript) in
+   bottom-to-top order
 
-改变当前场景
+Changing current scene
 ----------------------
 
-一个场景被载入以后，我们通常都要把一个场景改变为另一个。简单的方法就是使用
+After a scene is loaded, it is often desired to change this scene for
+another one. The simple way to do this to use the
 :ref:`SceneTree.change_scene() <class_SceneTree_change_scene>`
-函数：
+function:
 
 ::
 
     func _my_level_was_completed():
         get_tree().change_scene("res://levels/level2.scn")
 
-这是切换场景的一个快速有效的方式，但是有一个缺点：在新场景被载入并运行之前，游戏将被搁置挂起。在你游戏中的一些情况下，我们可能想要创建带有进度条的合适的载入画面、动态指示物或者线程(背景)载入。这必须通过使用AutoLoad(自动载入)和
-:ref:`doc_background_loading`
-来手动地实现。
+This is a quick and useful way to switch scenes, but has the drawback
+that the game will stall until the new scene is loaded and running. At
+some point in your game, it may be desired to create proper loading
+screens with progress bar, animated indicators or thread (background)
+loading. This must be done manually using autoloads (see next chapter!)
+and :ref:`doc_background_loading`.

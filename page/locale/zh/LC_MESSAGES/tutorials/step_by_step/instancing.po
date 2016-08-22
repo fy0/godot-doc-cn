@@ -1,0 +1,169 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/step_by_step/instancing.rst:4
+msgid "Instancing"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:7
+msgid "Rationale"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:9
+msgid ""
+"Having a scene and throwing nodes into it might work for small projects, "
+"but as a project grows, more and more nodes are used and it can quickly "
+"become unmanageable. To solve this, Godot allows a project to be "
+"separated in several scenes. This, however, does not work the same way as"
+" in other game engines. In fact, it's quite different, so please do not "
+"skip this tutorial!"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:16
+msgid ""
+"To recap: A scene is a collection of nodes organized as a tree, where "
+"they can have only one single node as the tree root."
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:21
+msgid ""
+"In Godot, a scene can be created and saved to disk. As many scenes can be"
+" created and saved as desired."
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:26
+msgid ""
+"Afterwards, while editing an existing or a new scene, other scenes can be"
+" instanced as part of it:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:31
+msgid ""
+"In the above picture, Scene B was added to Scene A as an instance. It may"
+" seem weird at first, but at the end of this tutorial it will make "
+"complete sense!"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:36
+msgid "Instancing, step by step"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:38
+msgid ""
+"To learn how to do instancing, let's start with downloading a sample "
+"project: :download:`instancing.zip </files/instancing.zip>`."
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:41
+msgid ""
+"Unzip this scene in any place of your preference. Then, add this scene to"
+" the project manager using the 'Import' option:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:46
+msgid ""
+"Simply browse to inside the project location and open the \"engine.cfg\" "
+"file. The new project will appear on the list of projects. Edit the "
+"project by using the 'Edit' option."
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:50
+msgid ""
+"This project contains two scenes \"ball.scn\" and \"container.scn\". The "
+"ball scene is just a ball with physics, while container scene has a "
+"nicely shaped collision, so balls can be thrown in there."
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:58
+msgid "Open the container scene, then select the root node:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:62
+msgid "Afterwards, push the '+' shaped button, this is the instancing button!"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:66
+msgid ""
+"Select the ball scene (ball.scn), the ball should appear in the origin "
+"(0,0), move it to around the center"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:69
+msgid "of the scene, like this:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:73
+msgid "Press Play and Voila!"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:77
+msgid "The instanced ball fell to the bottom of the pit."
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:80
+msgid "A little more"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:82
+msgid ""
+"There can be as many instances as desired in a scene, just try instancing"
+" more balls, or duplicating them (ctrl-D or duplicate button):"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:87
+msgid "Then try running the scene again:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:91
+msgid "Cool, huh? This is how instancing works."
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:94
+msgid "Editing instances"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:96
+msgid ""
+"Select one of the many copies of the balls and go to the property editor."
+" Let's make it bounce a lot more, so look for the bounce parameter and "
+"set it to 1.0:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:102
+msgid ""
+"The next it will happen is that a green \"revert\" button appears. When "
+"this button is present, it means we modified a property from the "
+"instanced scene to override for a specific value in this instance. Even "
+"if that property is modified in the original scene, the custom value will"
+" always overwrite it. Pressing the revert button will restore the "
+"property to the original value that came from the scene."
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:110
+msgid "Conclusion"
+msgstr ""
+
+#: ../../tutorials/step_by_step/instancing.rst:112
+msgid ""
+"Instancing seems handy, but there is more to it than it meets the eye! "
+"The next part of the instancing tutorial should cover the rest.."
+msgstr ""
+

@@ -1,0 +1,291 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/3d/fixed_materials.rst:4
+msgid "Fixed materials"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:9
+msgid ""
+"Fixed materials (originally Fixed Pipeline Materials) are the most common"
+" type of materials, using the most common material options found in 3D "
+"DCCs (such as Maya, 3DS Max or Blender). The big advantage of using them "
+"is that 3D artists are very familiar with this layout. They also allow to"
+" try out different things quickly without the need of writing shaders. "
+"Fixed Materials inherit from :ref:`Material <class_Material>`, which also"
+" has several options. If you haven't read it before, reading the "
+":ref:`doc_materials` tutorial is recommended."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:20
+msgid "Options"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:22
+msgid "Here is the list of all the options available for fixed materials:"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:26
+msgid "From this point, every option will be explained in detail:"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:29
+msgid "Fixed flags"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:31
+msgid "These are a set of flags that control general aspects of the material."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:34
+msgid "Use alpha"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:36
+msgid ""
+"This flag needs to be active for transparent materials to blend with what"
+" is behind, otherwise display will always be opaque. Do not enable this "
+"flag unless the material really needs it, because it can severely affect "
+"performance and quality. Materials with transparency will also not cast "
+"shadows (unless they contain opaque areas and the \"opaque pre-pass\" "
+"hint is turned on, see the :ref:`doc_materials` tutorial for more "
+"information)."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:47
+msgid "Use vertex colors"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:49
+msgid ""
+"Vertex color painting is a very common technique to add detail to "
+"geometry. 3D DCCs all support this, and many even support baking "
+"occlusion to it. Godot allows this information to be used in the fixed "
+"material by modulating the diffuse color when enabled."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:57
+msgid "Point size"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:59
+msgid ""
+"Point size is used to set the point size (in pixels) for when rendering "
+"points. This feature is mostly used in tools and HUDs"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:63
+msgid "Discard alpha"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:65
+msgid ""
+"When alpha is enabled (see above) the invisible pixels are blended with "
+"what is behind them. In some combinations (of using alpha to render "
+"depth) it may be possible that invisible pixels cover other objects."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:70
+msgid ""
+"If this is the case, enable this option for the material. This option is "
+"often used in combination with \"opaque pre-pass\" hint (see the "
+":ref:`doc_materials` tutorial for more information)."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:75
+msgid "Parameters"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:78
+msgid "Diffuse, specular, emission and specular exponent"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:80
+msgid "These are the base colors for the material."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:82
+msgid ""
+"Diffuse color is responsible for the light that reaches the material, "
+"then gets diffused around. This color varies by the angle to the light "
+"and the distance (in the case of spot and omni lights). It is the color "
+"that best represents the material. It can also have alpha (transparency)"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:87
+msgid ""
+"Specular color is the color of the reflected light and responsible for "
+"shines. It is affected by the specular exponent."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:89
+msgid ""
+"Emission is the color of the light generated within the material "
+"(although it will not lit anything else around unless baking). This color"
+" is constant."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:92
+msgid ""
+"Specular Exponent (or \"Shininess\"/\"Intensity\" in some 3D DCCs) is the"
+" way light is reflected. If the value is high, light is reflected "
+"completely, otherwise it is diffused more and more."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:96
+msgid "Below is an example of how they interact:"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:101
+msgid "Shader & shader param"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:103
+msgid ""
+"Regular shader materials allow custom lighting code. Fixed materials come"
+" with four predefined shader types:"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:106
+msgid ""
+"**Lambert**: The standard diffuse light, where the amount of light is "
+"proportional to the angle from the light emitter."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:108
+msgid ""
+"**Wrap**: A variation on Lambert, where the \"coverage\" of the light can"
+" be changed. This is useful for many types of materials such as wood, "
+"clay, hair, etc."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:111
+msgid ""
+"**Velvet**: This is similar to Lambert, but adds light scattering in the "
+"edges. It's useful for leathers and some types of metals."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:113
+msgid ""
+"**Toon**: Standard toon shading with a coverage parameter. The specular "
+"component also becomes toon-ized."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:119
+msgid "Detail & detail mix"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:121
+msgid ""
+"Detail is a second diffuse texture which can be mixed with the first one "
+"(more on textures later!). Detail blend and mix control how these are "
+"added together, here's an example of what detail textures are for:"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:128
+msgid "Normal depth"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:130
+msgid ""
+"Normal depth controls the intensity of the normal-mapping as well as the "
+"direction. On 1 (the default) normalmapping applies normally, on -1 the "
+"map is inverted and on 0 is disabled. Intermediate or greater values are "
+"accepted. Here's how it's supposed to look:"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:138
+msgid "Glow"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:140
+msgid ""
+"This value controls how much of the color is sent to the glow buffer. It "
+"can be greater than 1 for a stronger effect. For glow to work, a "
+"WorldEnvironment must exist with Glow activated."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:147
+msgid "Blend mode"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:149
+msgid ""
+"Objects are usually blended in Mix mode. Other blend modes (Add and Sub) "
+"exist for special cases (usually particle effects, light rays, etc.) but "
+"materials can be set to them:"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:156
+msgid "Point size, line width"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:158
+msgid ""
+"When drawing points or lines, the size of them can be adjusted here per "
+"material."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:162
+msgid "Textures"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:164
+msgid ""
+"Almost all of the parameters above can have a texture assigned to them. "
+"There are four options to where they can get their UV coordinates:"
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:167
+msgid ""
+"**UV Coordinates (UV Array)**: This is the regular UV coordinate array "
+"that was imported with the model."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:169
+msgid "**UV x UV XForm**: UV Coordinates multiplied by the UV Xform matrix."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:170
+msgid ""
+"**UV2 Coordinates**: Some imported models might have come with a second "
+"set of UV coordinates. These are common for detail textures or for baked "
+"light textures."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:173
+msgid ""
+"**Sphere**: Spherical coordinates (difference of the normal at the pixel "
+"by the camera normal)."
+msgstr ""
+
+#: ../../tutorials/3d/fixed_materials.rst:176
+msgid ""
+"The value of every pixel of the texture is multiplied by the original "
+"parameter. This means that if a texture is loaded for diffuse, it will be"
+" multiplied by the color of the diffuse color parameter. Same applies to "
+"all the others except for specular exponent, which is replaced."
+msgstr ""
+

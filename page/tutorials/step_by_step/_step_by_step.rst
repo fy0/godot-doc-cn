@@ -1,4 +1,4 @@
-循序渐进
+Learning step by step
 =====================
 
 .. toctree::

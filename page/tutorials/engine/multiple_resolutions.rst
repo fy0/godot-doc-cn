@@ -1,46 +1,90 @@
 .. _doc_multiple_resolutions:
 
-多分辨率(Multiple resolutions)
-===============================
+Multiple resolutions
+====================
 
-基础分辨率(Base resolution)
----------------------------
+Base resolution
+---------------
 
-项目的基础屏幕分辨率可以在项目设置（project settings）中进行设定。
+A base screen resolution for the project can be specified in the project
+settings.
 
 .. image:: /img/screenres.png
 
-但是，具体这个设置做了什么，还不是很清晰。当你的项目运行在PC上时，引擎会尝试将分辨率设置为你在项目设置中设定的值（如果这个尝试失败了，引擎就会尝试设定为小一点的分辨率）。当你的项目运行在移动设备、主机或者是有固定分辨率、设置了全屏渲染的设备上时，你在项目设置中设定的分辨率就会被无视，设备原生的分辨率会被使用。为了解决这个问题，Godot提供了很多方法，来控制如何缩放、拉伸项目的屏幕，以适应不同的屏幕大小。
+However, what it does is not completely obvious. When running on PC, the
+engine will attempt to set this resolution (or use something smaller if
+it fails). On mobile, consoles or devices with a fixed resolution or
+full screen rendering, this resolution will be ignored and the native
+resolution will be used instead. To compensate for this, Godot offers
+many ways to control how the screen will resize and stretch to different
+screen sizes.
 
-缩放(Resizing)
-------------------
+Resizing
+--------
 
-现在市面上有很多不同类型的设备，它们的屏幕都不一样，当然它们的像素密度和分辨率也不一样。要想适配所有的屏幕，简直比登天都难……所以Godot试着减轻开发者在这方面的困难。视窗节点（:ref:`Viewport <class_Viewport>`）有一系列方法来处理缩放，而且场景树的根节点一定是一个视窗节点（后来加载的场景实例化后，会作为这个根视窗节点的子节点，这个根视窗节点可以通过调用 ``get_tree().get_root()`` 或 ``get_node("/root")`` 方法来访问）。
+There are several types of devices, with several types of screens, which
+in turn have different pixel density and resolutions. Handling all of
+them can be a lot of work, so Godot tries to make the developer's life a
+little easier. The :ref:`Viewport <class_Viewport>`
+node has several functions to handle resizing, and the root node of the
+scene tree is always a viewport (scenes loaded are instanced as a child
+of it, and it can always be accessed by calling
+``get_tree().get_root()`` or ``get_node("/root")``).
 
-尽管直接修改根视窗节点参数可能是最灵活的处理缩放问题的方式了，但这种处理方式会带来极大的工作量：不仅代码码起来麻烦，还要靠大量的猜和蒙。所以，Godot在项目设置中，提供了一系列更简单的参数来处理多分辨率问题。
+In any case, while changing the root Viewport params is probably the
+most flexible way to deal with the problem, it can be a lot of work,
+code and guessing, so Godot provides a simple set of parameters in the
+project settings to handle multiple resolutions.
 
-拉伸设置(Stretch settings)
-----------------------------
+Stretch settings
+----------------
 
-拉伸设置位于项目设置中，它由一系列有多个选项的设定值组成：
+Stretch settings are located in the project settings, it's just a bunch
+of configuration variables that provide several options:
 
 .. image:: /img/stretchsettings.png
 
-拉伸模式(Stretch mode)
------------------------
+Stretch mode
+------------
 
--  **禁止模式（Disabled）**：第一种拉伸模式。默认地，就是禁止拉伸（无论屏幕或窗口有多大，无论分辨率有多大，总是1:1的展示）。
--  **2D模式**：在这种模式下，项目设置中的 ``显示/宽度(display/width)`` 和 ``显示/高度(display/height)`` 所规定的分辨率，会被拉伸到覆盖整个屏幕。这就意味着3D对象不会被影响（仅仅会以高分辨率渲染），而2D也会被以高分辨率渲染，简单来说就是放大了。
--  **视窗模式(Viewport)**：视窗模式缩放又有所不同。根视窗节点( :ref:`Viewport <class_Viewport>` )会被设置为渲染目标，然后仍然精确地以项目设置中 ``显示/（display/）`` 部分所规定的分辨率来渲染。最终，这个视窗会被复制，然后缩放到屏幕大小。这种模式对于要求像素精确的游戏很有用；或者你也可以使用这种模式，来将视窗以低像素渲染来提升游戏运行效率，
+-  **Disabled**: The first is the stretch mode. By default this is
+   disabled, which means no stretching happens (the bigger the screen or
+   window, the bigger the resolution, always matching pixels 1:1).
+-  **2D**: In this mode, the resolution specified in display/width and
+   display/height in the project settings will be stretched to cover the
+   whole screen. This means that 3D will be unaffected (will just render
+   to higher-res) and 2D will also be rendered at higher-res, just
+   enlarged.
+-  **Viewport**: Viewport scaling is different, the root
+   :ref:`Viewport <class_Viewport>`
+   is set as a render target, and still renders precisely to the
+   resolution specified in the ``display/`` section of the project
+   settings. Finally, this viewport is copied and scaled to fit the
+   screen. This mode is useful when working with pixel-precise games, or
+   just for the sake of rendering to a lower resolution for improving
+   performance.
 
 .. image:: /img/stretch.png
 
+Stretch aspect
+--------------
 
-拉伸宽高(Stretch aspect)
-----------------------------
-
--  **忽略(Ignore)**：当拉伸屏幕时，忽略宽高比。这意味着，即使屏幕会变宽或变窄，原始分辨率也会被直接拉伸来适应新的分辨率。
--  **保持(Keep)**：当拉伸屏幕时，保持宽高比。这意味着，在适应新分辨率时，原始分辨率会被保持。上下、左右有可能会被添加黑边。
--  **保持宽度(Keep Width)**：当拉伸屏幕时，保持宽高比，但是当新屏幕的分辨率比原始分辨率高时，屏幕会在垂直方向上拉长（视窗会适当地增加更多的垂直分辨率）。通常来讲，这个选项用在GUI和HUD的缩放上最好，这样这些控制器就可以锚定在底部了( :ref:`doc_size_and_anchors` )。
--  **保持高度(Keep Height)**：当拉伸屏幕时，保持宽高比，但是当新屏幕的分辨率比原始分辨率宽时，屏幕会在水平方向上拉长（视窗会适当地增加更多的水平分辨率）。通常来讲，这个选项用在水平滚动的2D游戏上最好（比如说，跑酷类和跳台类游戏）。
-
+-  **Ignore**: Ignore the aspect ratio when stretching the screen. This
+   means that the original resolution will be stretched to fit the new
+   one, even if it's wider or narrower.
+-  **Keep**: Keep aspect ratio when stretching the screen. This means
+   that the original resolution will be kept when fitting the new one,
+   and black bars will be added to the sides or the top/bottom of the
+   screen.
+-  **Keep Width**: Keep aspect ratio when stretching the screen, but if
+   the resulting screen is taller than the specified resolution, it will
+   be stretched vertically (and more vertical resolution will be
+   reported in the viewport, proportionally). This is usually the best
+   option for creating GUIs or HUDs that scale, so some controls can be
+   anchored to the bottom (:ref:`doc_size_and_anchors`).
+-  **Keep Height**: Keep aspect ratio when stretching the screen, but if
+   the resulting screen is wider than the specified resolution, it will
+   be stretched horizontally (and more horizontal resolution will be
+   reported in the viewport, proportionally). This is usually the best
+   option for 2D games that scroll horizontally (like runners or
+   platformers).

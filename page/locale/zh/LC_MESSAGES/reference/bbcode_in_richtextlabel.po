@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:4
+msgid "BBCode in RichTextLabel"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:9
+msgid ""
+":ref:`class_RichTextLabel` allows to display complex text markup in a "
+"control. It has a built-in API for generating the markup, but can also "
+"parse a BBCode."
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:12
+msgid ""
+"Note that the BBCode tags can also be used to some extent in the "
+":ref:`XML source of the class reference "
+"<doc_updating_the_class_reference>`."
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:16
+msgid "Setting up"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:18
+msgid ""
+"For RichTextLabel to work properly, it must be set up. This means loading"
+" the intended fonts in the relevant properties:"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:24
+msgid "Reference"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:57
+msgid "Built-in color names"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:59
+msgid "List of valid color names for the [color=<name>] tag:"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:61
+msgid "aqua"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:62
+msgid "black"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:63
+msgid "blue"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:64
+msgid "fuchsia"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:65
+msgid "gray"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:66
+msgid "green"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:67
+msgid "lime"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:68
+msgid "maroon"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:69
+msgid "navy"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:70
+msgid "purple"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:71
+msgid "red"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:72
+msgid "silver"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:73
+msgid "teal"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:74
+msgid "white"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:75
+msgid "yellow"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:78
+msgid "Hexadecimal color codes"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:80
+msgid ""
+"Any valid 6 digit hexadecimal code is supported. e.g: "
+"[color=#ffffff]white[/color]"
+msgstr ""
+

@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/step_by_step/scripting.rst:4
+msgid "Scripting"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:9
+msgid ""
+"Much has been said about tools that allow users to create video games "
+"without programming. It's been a dream for many independent developers to"
+" create games without learning how to code. This need has been around for"
+" a long time, even inside companies, where game designers wish to have "
+"more control of the game flow."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:15
+msgid ""
+"Many products have been shipped promising a no-programming environment, "
+"but the result is often incomplete, too complex or inefficient compared "
+"to traditional code. As a result, programming is here to stay for a long "
+"time. In fact, the general direction in game engines has been to add "
+"tools that try to reduce the amount of code that needs to be written for "
+"specific tasks, to speed up development."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:22
+msgid ""
+"In that sense, Godot has taken some useful design decisions towards that "
+"goal. The first and most important is the scene system. The aim of it is "
+"not obvious at first, but works well later on. That is, to relieve "
+"programmers from the responsibility of architecting code."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:27
+msgid ""
+"When designing games using the scene system, the whole project is "
+"fragmented into *complementary* scenes (not individual ones). Scenes "
+"complement each other, instead of being separate. There will be plenty of"
+" examples about this later on, but it's very important to remember it."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:32
+msgid ""
+"For those with a good amount of programming expertise, this means a "
+"different design pattern to MVC. Godot promises efficiency at the expense"
+" of dropping the MVC habits, which are replaced by the *scenes as a "
+"complement* pattern."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:37
+msgid ""
+"Godot also uses the `extend <http://c2.com/cgi/wiki?EmbedVsExtend>`__ "
+"pattern for scripting, meaning that scripts extend from all the available"
+" engine classes."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:42
+msgid "GDScript"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:44
+msgid ""
+":ref:`doc_gdscript` is a dynamically typed scripting language to fit "
+"inside Godot. It was designed with the following goals:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:47
+msgid ""
+"First and most importantly, making it simple, familiar and as easy to "
+"learn as possible."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:49
+msgid ""
+"Making the code readable and error safe. The syntax is mostly borrowed "
+"from Python."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:52
+msgid ""
+"Programmers generally take a few days to learn it, and within two weeks "
+"feel comfortable with it."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:55
+msgid ""
+"As with most dynamically typed languages though, the higher productivity "
+"(code is easier to learn, faster to write, no compilation, etc) is "
+"balanced with a performance penalty, but most critical code is written in"
+" C++ already in the engine (vector ops, physics, math, indexing, etc), "
+"making the resulting performance more than enough for most types of "
+"games."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:62
+msgid ""
+"In any case, if more performance is required, critical sections can be "
+"rewritten in C++ and exposed transparently to the script. This allows for"
+" replacing a GDScript class with a C++ class without altering the rest of"
+" the game."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:68
+msgid "Scripting a scene"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:70
+msgid ""
+"Before continuing, please make sure to read the :ref:`doc_gdscript` "
+"reference. It's a simple language and the reference is short, should not "
+"take more than a few minutes to glance."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:75
+msgid "Scene setup"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:77
+msgid ""
+"This tutorial will begin by scripting a simple GUI scene. Use the add "
+"node dialog to create the following hierarchy, with the following nodes:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:80
+msgid "Panel"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:82
+msgid "Label"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:83
+msgid "Button"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:85
+msgid "It should look like this in the scene tree:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:89
+msgid "And try to make it look like this in the 2D editor, so it makes sense:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:93
+msgid "Finally, save the scene, a fitting name could be \"sayhello.scn\""
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:98
+msgid "Adding a script"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:100
+msgid ""
+"Right click on the panel node, then select \"Add Script\" in the context "
+"menu:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:105
+msgid ""
+"The script creation dialog will pop up. This dialog allows to select the "
+"language, class name, etc. GDScript does not use class names in script "
+"files, so that field is not editable. The script should inherit from "
+"\"Panel\" (as it is meant to extend the node, which is of Panel type, "
+"this is automatically filled anyway)."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:111
+msgid "Enter a path name for the script and then select \"Create\":"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:115
+msgid ""
+"Once this is done, the script will be created and added to the node. You "
+"can see this both as an extra icon in the node, as well as in the script "
+"property:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:121
+msgid ""
+"To edit the script, select either of the highlighted buttons. This will "
+"bring you to the script editor where an existing template will be "
+"included by default:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:127
+msgid ""
+"There is not much in there. The \"_ready()\" function is called when the "
+"node (and all its children) entered the active scene. (Remember, it's not"
+" a constructor, the constructor is \"_init()\" )."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:132
+msgid "The role of the script"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:134
+msgid ""
+"A script adds behavior to a node. It is used to control the node "
+"functions as well as other nodes (children, parent, siblings, etc). The "
+"local scope of the script is the node (just like in regular inheritance) "
+"and the virtual functions of the node are captured by the script."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:143
+msgid "Handling a signal"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:145
+msgid ""
+"Signals are used mostly in GUI nodes, (although other nodes have them "
+"too). Signals are \"emitted\" when some specific kind of action happens, "
+"and can be connected to any function of any script instance. In this "
+"step, the \"pressed\" signal from the button will be connected to a "
+"custom function."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:151
+msgid ""
+"An interface for connecting signals to your scripts exists in the editor."
+" You can access this by selecting the node in the scene tree and then "
+"selecting the \"Node\" tab. Make sure that you have \"Signals\" selected."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:157
+msgid ""
+"In any case, at this point it is clear that that we are interested in the"
+" \"pressed\" signal. Instead of doing it with the visual interface, we "
+"will opt to make the connection using code."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:161
+msgid ""
+"For this, there is a function that is probably the one that Godot "
+"programmers will use the most, this is :ref:`Node.get_node() "
+"<class_Node_get_node>`. This function uses paths to fetch nodes in the "
+"current tree or anywhere in the scene, relative to the node holding the "
+"script."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:167
+msgid "To fetch the button, the following must be used:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:173
+msgid ""
+"So, next, a callback will be added for when a button is pressed, that "
+"will change the label's text:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:181
+msgid ""
+"Finally, the button \"pressed\" signal will be connected to that callback"
+" in _ready(), by using :ref:`Object.connect() <class_Object_connect>`."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:189
+msgid "The final script should look like this:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:206
+msgid ""
+"Running the scene should have the expected result when pressing the "
+"button:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:211
+msgid ""
+"**Note:** As it is a common mistake in this tutorial, let's clarify again"
+" that get_node(path) works by returning the *immediate* children of the "
+"node controlled by the script (in this case, *Panel*), so *Button* must "
+"be a child of *Panel* for the above code to work. To give this "
+"clarification more context, if *Button* were a child of *Label*, the code"
+" to obtain it would be:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting.rst:224
+msgid "And, also, try to remember that nodes are referenced by name, not by type."
+msgstr ""
+

@@ -1,4 +1,4 @@
-场景，输入和视窗
+Scene, input & viewports
 ========================
 
 .. toctree::
@@ -9,4 +9,3 @@
    multiple_resolutions
    inputevent
    mouse_and_input_coordinates
-

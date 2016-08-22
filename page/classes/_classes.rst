@@ -1,4 +1,4 @@
-类参考手册
+Class reference
 ===============
 
 .. toctree::

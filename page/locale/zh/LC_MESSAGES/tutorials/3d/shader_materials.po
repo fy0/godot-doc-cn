@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/3d/shader_materials.rst:4
+msgid "Shader materials"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:9
+msgid ""
+"For the most common cases, :ref:`doc_fixed_materials` are enough to "
+"create the desired textures or look and feel. Shader materials are a step"
+" beyond that, adding a huge amount of flexibility. With them, it is "
+"possible to:"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:13
+msgid "Create procedural textures."
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:14
+msgid "Create complex texture blendings."
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:15
+msgid "Create animated materials, or materials that change with time."
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:16
+msgid "Create refractive effects or other advanced effects."
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:17
+msgid "Create special lighting shaders for more exotic materials."
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:18
+msgid "Animate vertices, like tree leaves or grass."
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:19
+msgid "And much more!"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:21
+msgid ""
+"Traditionally, most engines will ask you to learn GLSL, HLSL or CG, which"
+" are pretty complex for the skillset of most artists. Godot uses a "
+"simplified version of a shader language that will detect errors as you "
+"type, so you can see your edited shaders in real-time. Additionally, it "
+"is possible to edit shaders using a visual, node-based graph editor."
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:28
+msgid "Creating a ShaderMaterial"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:30
+msgid ""
+"Create a new ShaderMaterial in some object of your choice. Go to the "
+"\"Shader\" property, then create a new \"MaterialShader\" (use "
+"\"MaterialShaderGraph\" for access to the visual graph editor):"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:36
+msgid "Edit the newly created shader, and the shader editor will open:"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:40
+msgid ""
+"There are three code tabs open, the first is for the vertex shader, the "
+"second for the fragment and the third for the lighting. The shader "
+"language is documented in :ref:`doc_shading_language` so a small example "
+"will be presented next."
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:45
+msgid "Create a very simple fragment shader that writes a color:"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:52
+msgid ""
+"Code changes take place in real-time. If the code is modified, it will be"
+" instantly recompiled and the object will be updated. If a typo is made, "
+"the editor will notify of the compilation failure:"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:58
+msgid ""
+"Finally, go back and edit the material, and the exported uniform will be "
+"instantly visible:"
+msgstr ""
+
+#: ../../tutorials/3d/shader_materials.rst:63
+msgid ""
+"This allows to very quickly create custom, complex materials for every "
+"type of object."
+msgstr ""
+

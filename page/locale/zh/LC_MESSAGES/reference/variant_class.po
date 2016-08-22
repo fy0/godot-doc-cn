@@ -1,0 +1,140 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../reference/variant_class.rst:4
+msgid "Variant class"
+msgstr ""
+
+#: ../../reference/variant_class.rst:7
+msgid "About"
+msgstr ""
+
+#: ../../reference/variant_class.rst:9
+msgid ""
+"Variant is the most important datatype of Godot, it's the most important "
+"class in the engine. A Variant takes up only 20 bytes and can store "
+"almost any engine datatype inside of it. Variants are rarely used to hold"
+" information for long periods of time, instead they are used mainly for "
+"communication, editing, serialization and generally moving data around."
+msgstr ""
+
+#: ../../reference/variant_class.rst:16
+msgid "A Variant can:"
+msgstr ""
+
+#: ../../reference/variant_class.rst:18
+msgid "Store almost any datatype"
+msgstr ""
+
+#: ../../reference/variant_class.rst:19
+msgid ""
+"Perform operations between many variants (GDScript uses Variant as it's "
+"atomic/native datatype)."
+msgstr ""
+
+#: ../../reference/variant_class.rst:21
+msgid "Be hashed, so it can be compared quickly to over variants"
+msgstr ""
+
+#: ../../reference/variant_class.rst:22
+msgid "Be used to convert safely between datatypes"
+msgstr ""
+
+#: ../../reference/variant_class.rst:23
+msgid ""
+"Be used to abstract calling methods and their arguments (Godot exports "
+"all it's functions through variants)"
+msgstr ""
+
+#: ../../reference/variant_class.rst:25
+msgid "Be used to defer calls or move data between threads."
+msgstr ""
+
+#: ../../reference/variant_class.rst:26
+msgid "Be serialized as binary and stored to disk, or transferred via network."
+msgstr ""
+
+#: ../../reference/variant_class.rst:28
+msgid ""
+"Be serialized to text and use it for printing values and editable "
+"settings."
+msgstr ""
+
+#: ../../reference/variant_class.rst:30
+msgid "Work as an exported property, so the editor can edit it universally."
+msgstr ""
+
+#: ../../reference/variant_class.rst:31
+msgid "Be used for dictionaries, arrays, parsers, etc."
+msgstr ""
+
+#: ../../reference/variant_class.rst:33
+msgid ""
+"Basically, thanks to the Variant class, writing Godot itself was a much, "
+"much easier task, as it allows for highly dynamic constructs not common "
+"of C++ with little effort. Become a friend of Variant today."
+msgstr ""
+
+#: ../../reference/variant_class.rst:38 ../../reference/variant_class.rst:59
+msgid "References:"
+msgstr ""
+
+#: ../../reference/variant_class.rst:40
+msgid ""
+"`core/variant.h "
+"<https://github.com/godotengine/godot/blob/master/core/variant.h>`__"
+msgstr ""
+
+#: ../../reference/variant_class.rst:43
+msgid "Dictionary and Array"
+msgstr ""
+
+#: ../../reference/variant_class.rst:45
+msgid ""
+"Both are implemented using variants. A Dictionary can match any datatype "
+"used as key to any other datatype. An Array just holds an array of "
+"Variants. Of course, a Variant can also hold a Dictionary and an Array "
+"inside, making it even more flexible."
+msgstr ""
+
+#: ../../reference/variant_class.rst:50
+msgid ""
+"Both have a shared mode and a COW mode. Scripts often use them in shared "
+"mode (meaning modifications to a container will modify all references to "
+"it), or COW mode (modifications will always alter the local copy, making "
+"a copy of the internal data if necessary, but will not affect the other "
+"copies). In COW mode, Both Dictionary and Array are thread-safe, "
+"otherwise a Mutex should be created to lock if multi thread access is "
+"desired."
+msgstr ""
+
+#: ../../reference/variant_class.rst:61
+msgid ""
+"`core/dictionary.h "
+"<https://github.com/godotengine/godot/blob/master/core/dictionary.h>`__"
+msgstr ""
+
+#: ../../reference/variant_class.rst:62
+msgid ""
+"`core/array.h "
+"<https://github.com/godotengine/godot/blob/master/core/array.h>`__"
+msgstr ""
+

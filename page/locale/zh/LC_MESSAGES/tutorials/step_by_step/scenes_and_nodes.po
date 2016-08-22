@@ -1,0 +1,340 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:4
+msgid "Scenes and nodes"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:11
+msgid ""
+"Imagine for a second that you are not a game developer anymore. Instead, "
+"You are a chef! Change your hipster outfit for a toque and a double "
+"breasted jacket. Now, instead of making games, you create new and "
+"delicious recipes for your guests."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:16
+msgid ""
+"So, how does a chef create a recipe? Recipes are divided in two sections,"
+" the first is the ingredients and the second is the instructions to "
+"prepare it. This way, anyone can follow the recipe and savor your "
+"magnificent creation."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:21
+msgid ""
+"Making games in Godot feels pretty much the same way. Using the engine "
+"feels like being in a kitchen. In this kitchen, *nodes* are like a "
+"refrigerator full of fresh ingredients to cook with."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:25
+msgid ""
+"There are many types of nodes, some show images, others play sound, other"
+" nodes display 3D models, etc. There's dozens of them."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:29
+msgid "Nodes"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:31
+msgid ""
+"But let's go to the basics. A node is a basic element for creating a "
+"game, it has the following characteristics:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:34
+msgid "Has a name."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:35
+msgid "Has editable properties."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:36
+msgid "Can receive a callback to process every frame."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:37
+msgid "Can be extended (to have more functions)."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:38
+msgid "Can be added to other nodes as children."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:42
+msgid ""
+"The last one is very important. Nodes can have other nodes as children. "
+"When arranged in this way, the nodes become a **tree**."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:45
+msgid ""
+"In Godot, the ability to arrange nodes in this way creates a powerful "
+"tool for organizing the projects. Since different nodes have different "
+"functions, combining them allows to create more complex functions."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:49
+msgid ""
+"This is probably not clear yet and it makes little sense, but everything "
+"will click a few sections ahead. The most important fact to remember for "
+"now is that nodes exist and can be arranged this way."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:54
+msgid "Scenes"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:58
+msgid ""
+"Now that the existence of nodes has been defined, the next logical step "
+"is to explain what a Scene is."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:61
+msgid ""
+"A scene is composed of a group of nodes organized hierarchically (in tree"
+" fashion). It has the following properties:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:64
+msgid "A scene always has only one root node."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:65
+msgid "Scenes can be saved to disk and loaded back."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:66
+msgid "Scenes can be *instanced* (more on that later)."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:67
+msgid "Running a game means running a scene."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:68
+msgid ""
+"There can be several scenes in a project, but for it to start, one of "
+"them must selected to be loaded first."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:71
+msgid ""
+"Basically, the Godot editor is a **scene editor**. It has plenty of tools"
+" for editing 2D and 3D scenes as well as user interfaces, but all the "
+"editor revolves around the concept of editing a scene and the nodes that "
+"compose it."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:77
+msgid "Creating a new project"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:79
+msgid ""
+"Theory is boring, so let's change subject and go practical. Following a "
+"long tradition in tutorials, the first project will be a hello world. For"
+" this, the editor will be used."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:83
+msgid ""
+"When godot executable is run outside a project, the Project Manager "
+"appears. This helps developers manage their projects."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:88
+msgid ""
+"To create a new project, the \"New Project\" option must be used. Choose "
+"and create a path for the project and specify the project name:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:94
+msgid "Editor"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:96
+msgid ""
+"Once the \"New Project\" is created, the next step is opening it. This "
+"will open the Godot editor. Here is how the editor looks when freshly "
+"opened:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:102
+msgid ""
+"As mentioned before, making games in Godot feels like being in a kitchen,"
+" so let's open the refrigerator and add some fresh nodes to the project. "
+"We'll begin with a Hello World! To do this, the \"New Node\" button must "
+"be pressed:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:109
+msgid ""
+"This will open the Create Node dialog, showing the long list of nodes "
+"that can be created:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:114
+msgid ""
+"From there, select the \"Label\" node first. Searching for it is probably"
+" the quickest way:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:119
+msgid "And finally, create the Label! A lot happens when Create is pressed:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:123
+msgid ""
+"First of all, the scene is changed to the 2D editor (because Label is a "
+"2D Node type), and the Label appears, selected, at the top left corner of"
+" the viewport."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:127
+msgid ""
+"The node appears in the scene tree editor (box in the top left corner), "
+"and the label properties appear in the Inspector (box on the right side)."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:131
+msgid ""
+"The next step will be to change the \"Text\" Property of the label, let's"
+" change it to \"Hello, World!\":"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:136
+msgid ""
+"Ok, everything's ready to run the scene! Press the PLAY SCENE Button on "
+"the top bar (or hit F6):"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:141
+msgid "Aaaand... Oops."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:145
+msgid ""
+"Scenes need to be saved to be run, so save the scene to something like "
+"hello.scn in Scene -> Save:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:150
+msgid ""
+"And here's when something funny happens. The file dialog is a special "
+"file dialog, and only allows to save inside the project. The project root"
+" is \"res://\" which means \"resource path. This means that files can "
+"only be saved inside the project. For the future, when doing file "
+"operations in Godot, remember that \"res://\" is the resource path, and "
+"no matter the platform or install location, it is the way to locate where"
+" resource files are from inside the game."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:158
+msgid ""
+"After saving the scene and pressing run scene again, the \"Hello, "
+"World!\" demo should finally execute:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:163
+msgid "Success!"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:168
+msgid "Configuring the project"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:170
+msgid ""
+"Ok, It's time to do some configuration to the project. Right now, the "
+"only way to run something is to execute the current scene. Projects, "
+"however, have several scenes so one of them must be set as the main "
+"scene. This scene is the one that will be loaded at the time the project "
+"is run."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:176
+msgid ""
+"These settings are all stored in the engine.cfg file, which is a "
+"plaintext file in win.ini format, for easy editing. There are dozens of "
+"settings that can be set in that file to alter how a project executes, so"
+" to make matters simpler, a project setting dialog exists, which is sort "
+"of a frontend to editing engine.cfg"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:182
+msgid "To access that dialog, simply go to Scene -> Project Settings."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:184
+msgid ""
+"Once the window opens, the task will be to select a main scene. This can "
+"be done easily by changing the application/main_scene property and "
+"selecting 'hello.scn'."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:190
+msgid ""
+"With this change, pressing the regular Play button (or F5) will run the "
+"project, no matter which scene is being edited."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:193
+msgid ""
+"Going back to the project settings dialog. This dialog provides a lot of "
+"options that can be added to engine.cfg and show their default values. If"
+" the default value is ok, then there isn't any need to change it."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:198
+msgid ""
+"When a value is changed, a tick is marked to the left of the name. This "
+"means that the property will be saved to the engine.cfg file and "
+"remembered."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:202
+msgid ""
+"As a side note, for future reference and a little out of context (this is"
+" the first tutorial after all!), it is also possible to add custom "
+"configuration options and read them in run-time using the :ref:`Globals "
+"<class_Globals>` singleton."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:208
+msgid "To be continued..."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scenes_and_nodes.rst:210
+msgid ""
+"This tutorial talks about \"scenes and nodes\", but so far there has been"
+" only *one* scene and *one* node! Don't worry, the next tutorial will "
+"deal with that..."
+msgstr ""
+

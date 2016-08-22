@@ -1,0 +1,1139 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../reference/shading_language.rst:4
+msgid "Shading language"
+msgstr ""
+
+#: ../../reference/shading_language.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../reference/shading_language.rst:9
+msgid ""
+"Godot uses a simplified shader language (almost a subset of GLSL). "
+"Shaders can be used for:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:12
+msgid "Materials"
+msgstr ""
+
+#: ../../reference/shading_language.rst:13
+msgid "Post-Processing"
+msgstr ""
+
+#: ../../reference/shading_language.rst:14
+msgid "2D"
+msgstr ""
+
+#: ../../reference/shading_language.rst:16
+msgid "and are divided in *Vertex*, *Fragment* and *Light* sections."
+msgstr ""
+
+#: ../../reference/shading_language.rst:19
+msgid "Language"
+msgstr ""
+
+#: ../../reference/shading_language.rst:22
+msgid "Typing"
+msgstr ""
+
+#: ../../reference/shading_language.rst:24
+msgid ""
+"The language is statically type and supports only a few operations. "
+"Arrays, classes, structures, etc are not supported. Several built-in "
+"datatypes are provided:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:29
+msgid "Data types"
+msgstr ""
+
+#: ../../reference/shading_language.rst:32
+msgid "DataType"
+msgstr ""
+
+#: ../../reference/shading_language.rst:32
+#: ../../reference/shading_language.rst:142
+#: ../../reference/shading_language.rst:223
+#: ../../reference/shading_language.rst:272
+#: ../../reference/shading_language.rst:323
+#: ../../reference/shading_language.rst:354
+#: ../../reference/shading_language.rst:385
+msgid "Description"
+msgstr ""
+
+#: ../../reference/shading_language.rst:34
+msgid "*void*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:34
+msgid "Void"
+msgstr ""
+
+#: ../../reference/shading_language.rst:36
+msgid "*bool*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:36
+msgid "boolean (true or false)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:38
+msgid "*float*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:38
+msgid "floating point"
+msgstr ""
+
+#: ../../reference/shading_language.rst:40
+msgid "*vec2*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:40
+msgid "2-component vector, float subindices (x,y or r,g )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:42
+msgid "*vec3*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:42
+msgid "3-component vector, float subindices (x,y,z or r,g,b )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:44
+msgid "*vec4*, *color*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:44
+msgid "4-component vector, float subindices (x,y,z,w or r,g,b,a )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:46
+msgid "*mat2*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:46
+msgid "2x2 matrix, vec3 subindices (x,y)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:48
+msgid "*mat3*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:48
+msgid "3x3 matrix, vec3 subindices (x,y,z)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:50
+msgid "*mat4*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:50
+msgid "4x4 matrix, vec4 subindices (x,y,z,w)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:52
+msgid "*texture*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:52
+msgid "texture sampler, can only be used as uniform"
+msgstr ""
+
+#: ../../reference/shading_language.rst:54
+msgid "*cubemap*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:54
+msgid "cubemap sampler, can only be used as uniform"
+msgstr ""
+
+#: ../../reference/shading_language.rst:58
+msgid "Syntax"
+msgstr ""
+
+#: ../../reference/shading_language.rst:60
+msgid ""
+"The syntax is similar to C, with statements ending with ``;`` and "
+"comments as ``//`` and ``/* */``. Example:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:70
+msgid "Swizzling"
+msgstr ""
+
+#: ../../reference/shading_language.rst:72
+msgid ""
+"It is possible to use swizzling to reassigning subindices or groups of "
+"subindices, in order:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:83
+msgid "Constructors"
+msgstr ""
+
+#: ../../reference/shading_language.rst:85
+msgid ""
+"Constructors take the regular amount of elements, but can also accept "
+"less if the element has more subindices, for example:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:97
+msgid "Conditionals"
+msgstr ""
+
+#: ../../reference/shading_language.rst:99
+msgid "For now, only the ``if`` conditional is supported. Example:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:108
+msgid "Uniforms"
+msgstr ""
+
+#: ../../reference/shading_language.rst:110
+msgid ""
+"A variable can be declared as uniform. In this case, its value will come "
+"from outside the shader (it will be the responsibility of the material or"
+" whatever using the shader to provide it)."
+msgstr ""
+
+#: ../../reference/shading_language.rst:122
+msgid "Functions"
+msgstr ""
+
+#: ../../reference/shading_language.rst:124
+msgid ""
+"Simple support for functions is provided. Functions can't access uniforms"
+" or other shader variables."
+msgstr ""
+
+#: ../../reference/shading_language.rst:136
+msgid "Built-in functions"
+msgstr ""
+
+#: ../../reference/shading_language.rst:138
+msgid ""
+"Several built-in functions are provided for convenience, listed as "
+"follows:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:142
+msgid "Function"
+msgstr ""
+
+#: ../../reference/shading_language.rst:144
+msgid "float *sin* ( float )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:144
+msgid "Sine"
+msgstr ""
+
+#: ../../reference/shading_language.rst:146
+msgid "float *cos* ( float )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:146
+msgid "Cosine"
+msgstr ""
+
+#: ../../reference/shading_language.rst:148
+msgid "float *tan* ( float )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:148
+msgid "Tangent"
+msgstr ""
+
+#: ../../reference/shading_language.rst:150
+msgid "float *asin* ( float )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:150
+msgid "arc-Sine"
+msgstr ""
+
+#: ../../reference/shading_language.rst:152
+msgid "float *acos* ( float )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:152
+msgid "arc-Cosine"
+msgstr ""
+
+#: ../../reference/shading_language.rst:154
+msgid "float *atan* ( float )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:154
+msgid "arc-Tangent"
+msgstr ""
+
+#: ../../reference/shading_language.rst:156
+msgid "vec\\_type *pow* ( vec\\_type, float )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:156
+msgid "Power"
+msgstr ""
+
+#: ../../reference/shading_language.rst:158
+msgid "vec\\_type *pow* ( vec\\_type, vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:158
+msgid "Power (Vec. Exponent)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:160
+msgid "vec\\_type *exp* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:160
+msgid "Base-e Exponential"
+msgstr ""
+
+#: ../../reference/shading_language.rst:162
+msgid "vec\\_type *log* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:162
+msgid "Natural Logarithm"
+msgstr ""
+
+#: ../../reference/shading_language.rst:164
+msgid "vec\\_type *sqrt* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:164
+msgid "Square Root"
+msgstr ""
+
+#: ../../reference/shading_language.rst:166
+msgid "vec\\_type *abs* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:166
+msgid "Absolute"
+msgstr ""
+
+#: ../../reference/shading_language.rst:168
+msgid "vec\\_type *sign* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:168
+msgid "Sign"
+msgstr ""
+
+#: ../../reference/shading_language.rst:170
+msgid "vec\\_type *floor* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:170
+msgid "Floor"
+msgstr ""
+
+#: ../../reference/shading_language.rst:172
+msgid "vec\\_type *trunc* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:172
+msgid "Trunc"
+msgstr ""
+
+#: ../../reference/shading_language.rst:174
+msgid "vec\\_type *ceil* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:174
+msgid "Ceiling"
+msgstr ""
+
+#: ../../reference/shading_language.rst:176
+msgid "vec\\_type *fract* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:176
+msgid "Fractional"
+msgstr ""
+
+#: ../../reference/shading_language.rst:178
+msgid "vec\\_type *mod* ( vec\\_type,vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:178
+msgid "Remainder"
+msgstr ""
+
+#: ../../reference/shading_language.rst:180
+#: ../../reference/shading_language.rst:182
+msgid "vec\\_type *min* ( vec\\_type,vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:180
+msgid "Minimum"
+msgstr ""
+
+#: ../../reference/shading_language.rst:182
+msgid "Maximum"
+msgstr ""
+
+#: ../../reference/shading_language.rst:184
+msgid "vec\\_type *clamp* ( vec\\_type value,vec\\_type min, vec\\_type max )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:184
+msgid "Clamp to Min-Max"
+msgstr ""
+
+#: ../../reference/shading_language.rst:186
+msgid "vec\\_type *mix* ( vec\\_type a,vec\\_type b, float c )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:186
+msgid "Linear Interpolate"
+msgstr ""
+
+#: ../../reference/shading_language.rst:188
+msgid "vec\\_type *mix* ( vec\\_type a,vec\\_type b, vec\\_type c )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:188
+msgid "Linear Interpolate (Vector Coef.)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:190
+msgid "vec\\_type *step* ( vec\\_type a,vec\\_type b)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:190
+msgid "\\` a[i] < b[i] ? 0.0 : 1.0\\`"
+msgstr ""
+
+#: ../../reference/shading_language.rst:192
+msgid "vec\\_type *smoothstep* ( vec\\_type a,vec\\_type b,vec\\_type c)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:194
+msgid "float *length* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:194
+msgid "Vector Length"
+msgstr ""
+
+#: ../../reference/shading_language.rst:196
+msgid "float *distance* ( vec\\_type, vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:196
+msgid "Distance between vector."
+msgstr ""
+
+#: ../../reference/shading_language.rst:198
+msgid "float *dot* ( vec\\_type, vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:198
+msgid "Dot Product"
+msgstr ""
+
+#: ../../reference/shading_language.rst:200
+msgid "vec3 *dot* ( vec3, vec3 )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:200
+msgid "Cross Product"
+msgstr ""
+
+#: ../../reference/shading_language.rst:202
+msgid "vec\\_type *normalize* ( vec\\_type )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:202
+msgid "Normalize to unit length"
+msgstr ""
+
+#: ../../reference/shading_language.rst:204
+msgid "vec3 *reflect* ( vec3, vec3 )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:204
+msgid "Reflect"
+msgstr ""
+
+#: ../../reference/shading_language.rst:206
+msgid "color *tex* ( texture, vec2 )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:206
+msgid "Read from a texture in normalized coords"
+msgstr ""
+
+#: ../../reference/shading_language.rst:208
+msgid "color *texcube* ( texture, vec3 )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:208
+msgid "Read from a cubemap"
+msgstr ""
+
+#: ../../reference/shading_language.rst:210
+msgid "color *texscreen* ( vec2 )"
+msgstr ""
+
+#: ../../reference/shading_language.rst:210
+msgid "Read from screen (generates a copy)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:214
+msgid "Built-in variables"
+msgstr ""
+
+#: ../../reference/shading_language.rst:216
+msgid ""
+"Depending on the shader type, several built-in variables are available, "
+"listed as follows:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:220
+msgid "Material (3D) - VertexShader"
+msgstr ""
+
+#: ../../reference/shading_language.rst:223
+#: ../../reference/shading_language.rst:272
+#: ../../reference/shading_language.rst:323
+#: ../../reference/shading_language.rst:354
+#: ../../reference/shading_language.rst:385
+msgid "Variable"
+msgstr ""
+
+#: ../../reference/shading_language.rst:225
+msgid "const vec3 *SRC\\_VERTEX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:225
+msgid "Model-Space Vertex"
+msgstr ""
+
+#: ../../reference/shading_language.rst:227
+msgid "const vec3 *SRC\\_NORMAL*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:227
+msgid "Model-Space Normal"
+msgstr ""
+
+#: ../../reference/shading_language.rst:229
+msgid "const vec3 *SRC\\_TANGENT*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:229
+msgid "Model-Space Tangent"
+msgstr ""
+
+#: ../../reference/shading_language.rst:231
+msgid "const float *SRC\\_BINORMALF*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:231
+msgid "Direction to Compute Binormal"
+msgstr ""
+
+#: ../../reference/shading_language.rst:233
+msgid "vec3 *VERTEX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:233
+msgid "View-Space Vertex"
+msgstr ""
+
+#: ../../reference/shading_language.rst:235
+msgid "vec3 *NORMAL*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:235
+#: ../../reference/shading_language.rst:278
+msgid "View-Space Normal"
+msgstr ""
+
+#: ../../reference/shading_language.rst:237
+msgid "vec3 *TANGENT*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:237
+#: ../../reference/shading_language.rst:280
+msgid "View-Space Tangent"
+msgstr ""
+
+#: ../../reference/shading_language.rst:239
+msgid "vec3 *BINORMAL*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:239
+#: ../../reference/shading_language.rst:282
+msgid "View-Space Binormal"
+msgstr ""
+
+#: ../../reference/shading_language.rst:241
+#: ../../reference/shading_language.rst:358
+#: ../../reference/shading_language.rst:391
+msgid "vec2 *UV*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:241
+#: ../../reference/shading_language.rst:288
+#: ../../reference/shading_language.rst:358
+#: ../../reference/shading_language.rst:391
+msgid "UV"
+msgstr ""
+
+#: ../../reference/shading_language.rst:243
+msgid "vec2 *UV2*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:243
+#: ../../reference/shading_language.rst:290
+msgid "UV2"
+msgstr ""
+
+#: ../../reference/shading_language.rst:245
+#: ../../reference/shading_language.rst:364
+msgid "color *COLOR*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:245
+#: ../../reference/shading_language.rst:292
+#: ../../reference/shading_language.rst:364
+msgid "Vertex Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:247
+#: ../../reference/shading_language.rst:366
+msgid "out vec4 *VAR1*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:247
+#: ../../reference/shading_language.rst:366
+#: ../../reference/shading_language.rst:405
+msgid "Varying 1 Output"
+msgstr ""
+
+#: ../../reference/shading_language.rst:249
+#: ../../reference/shading_language.rst:368
+msgid "out vec4 *VAR2*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:249
+#: ../../reference/shading_language.rst:368
+#: ../../reference/shading_language.rst:407
+msgid "Varying 2 Output"
+msgstr ""
+
+#: ../../reference/shading_language.rst:251
+#: ../../reference/shading_language.rst:312
+msgid "out float *SPEC\\_EXP*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:251
+msgid "Specular Exponent (for Vertex Lighting)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:253
+#: ../../reference/shading_language.rst:370
+msgid "out float *POINT\\_SIZE*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:253
+#: ../../reference/shading_language.rst:370
+msgid "Point Size (for points)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:255
+#: ../../reference/shading_language.rst:372
+msgid "const mat4 *WORLD\\_MATRIX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:255
+#: ../../reference/shading_language.rst:372
+msgid "Object World Matrix"
+msgstr ""
+
+#: ../../reference/shading_language.rst:257
+msgid "const mat4 *INV\\_CAMERA\\_MATRIX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:257
+msgid "Inverse Camera Matrix"
+msgstr ""
+
+#: ../../reference/shading_language.rst:259
+#: ../../reference/shading_language.rst:376
+msgid "const mat4 *PROJECTION\\_MATRIX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:259
+msgid "Projection Matrix"
+msgstr ""
+
+#: ../../reference/shading_language.rst:261
+msgid "const mat4 *MODELVIEW\\_MATRIX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:261
+msgid "(InvCamera \\* Projection)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:263
+msgid "const float *INSTANCE\\_ID*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:263
+msgid "Instance ID (for multimesh)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:265
+#: ../../reference/shading_language.rst:300
+#: ../../reference/shading_language.rst:347
+#: ../../reference/shading_language.rst:378
+#: ../../reference/shading_language.rst:413
+msgid "const float *TIME*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:265
+#: ../../reference/shading_language.rst:300
+#: ../../reference/shading_language.rst:347
+#: ../../reference/shading_language.rst:378
+#: ../../reference/shading_language.rst:413
+msgid "Time (in seconds)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:269
+msgid "Material (3D) - FragmentShader"
+msgstr ""
+
+#: ../../reference/shading_language.rst:274
+msgid "const vec3 *VERTEX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:274
+msgid "View-Space vertex"
+msgstr ""
+
+#: ../../reference/shading_language.rst:276
+#: ../../reference/shading_language.rst:389
+msgid "const vec4 *POSITION*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:276
+msgid "View-Space Position"
+msgstr ""
+
+#: ../../reference/shading_language.rst:278
+#: ../../reference/shading_language.rst:325
+msgid "const vec3 *NORMAL*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:280
+msgid "const vec3 *TANGENT*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:282
+msgid "const vec3 *BINORMAL*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:284
+msgid "const vec3 *NORMALMAP*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:284
+msgid "Alternative to NORMAL, use for normal texture output."
+msgstr ""
+
+#: ../../reference/shading_language.rst:286
+msgid "const vec3 *NORMALMAP\\_DEPTH*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:286
+msgid "Complementary to the above, allows changing depth of normalmap."
+msgstr ""
+
+#: ../../reference/shading_language.rst:288
+msgid "const vec2 *UV*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:290
+msgid "const vec2 *UV2*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:292
+msgid "const color *COLOR*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:294
+msgid "const vec4 *VAR1*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:294
+msgid "Varying 1"
+msgstr ""
+
+#: ../../reference/shading_language.rst:296
+msgid "const vec4 *VAR2*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:296
+msgid "Varying 2"
+msgstr ""
+
+#: ../../reference/shading_language.rst:298
+#: ../../reference/shading_language.rst:409
+msgid "const vec2 *SCREEN\\_UV*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:298
+#: ../../reference/shading_language.rst:409
+msgid "Screen Texture Coordinate (for using with texscreen)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:302
+#: ../../reference/shading_language.rst:343
+#: ../../reference/shading_language.rst:411
+msgid "const vec2 *POINT\\_COORD*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:302
+msgid "UV for point, when drawing point sprites."
+msgstr ""
+
+#: ../../reference/shading_language.rst:304
+msgid "out vec3 *DIFFUSE*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:304
+msgid "Diffuse Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:306
+msgid "out vec4 *DIFFUSE\\_ALPHA*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:306
+msgid "Diffuse Color with Alpha (using this sends geometry to alpha pipeline)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:308
+msgid "out vec3 *SPECULAR*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:308
+msgid "Specular Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:310
+msgid "out vec3 *EMISSION*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:310
+msgid "Emission Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:312
+msgid "Specular Exponent (Fragment Version)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:314
+msgid "out float *GLOW*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:314
+msgid "Glow"
+msgstr ""
+
+#: ../../reference/shading_language.rst:316
+msgid "out mat4 *INV\\_CAMERA\\_MATRIX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:316
+msgid ""
+"Inverse camera matrix, can be used to obtain world coords (see example "
+"below)."
+msgstr ""
+
+#: ../../reference/shading_language.rst:320
+msgid "Material (3D) - LightShader"
+msgstr ""
+
+#: ../../reference/shading_language.rst:325
+msgid "View-Space normal"
+msgstr ""
+
+#: ../../reference/shading_language.rst:327
+msgid "const vec3 *LIGHT\\_DIR*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:327
+msgid "View-Space Light Direction"
+msgstr ""
+
+#: ../../reference/shading_language.rst:329
+msgid "const vec3 *EYE\\_VEC*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:329
+msgid "View-Space Eye-Point Vector"
+msgstr ""
+
+#: ../../reference/shading_language.rst:331
+msgid "const vec3 *DIFFUSE*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:331
+msgid "Material Diffuse Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:333
+msgid "const vec3 *LIGHT\\_DIFFUSE*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:333
+msgid "Light Diffuse Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:335
+msgid "const vec3 *SPECULAR*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:335
+msgid "Material Specular Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:337
+msgid "const vec3 *LIGHT\\_SPECULAR*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:337
+msgid "Light Specular Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:339
+msgid "const float *SPECULAR\\_EXP*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:339
+msgid "Specular Exponent"
+msgstr ""
+
+#: ../../reference/shading_language.rst:341
+msgid "const vec1 *SHADE\\_PARAM*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:341
+msgid "Generic Shade Parameter"
+msgstr ""
+
+#: ../../reference/shading_language.rst:343
+#: ../../reference/shading_language.rst:411
+msgid "Current UV for Point Sprite"
+msgstr ""
+
+#: ../../reference/shading_language.rst:345
+msgid "out vec2 *LIGHT*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:345
+msgid "Resulting Light"
+msgstr ""
+
+#: ../../reference/shading_language.rst:351
+msgid "CanvasItem (2D) - VertexShader"
+msgstr ""
+
+#: ../../reference/shading_language.rst:356
+msgid "const vec2 *SRC\\_VERTEX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:356
+msgid "CanvasItem space vertex."
+msgstr ""
+
+#: ../../reference/shading_language.rst:360
+msgid "out vec2 *VERTEX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:360
+msgid "Output LocalSpace vertex."
+msgstr ""
+
+#: ../../reference/shading_language.rst:362
+msgid "out vec2 *WORLD\\_VERTEX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:362
+msgid "Output WorldSpace vertex. (use this or the one above)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:374
+msgid "const mat4 *EXTRA\\_MATRIX*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:374
+msgid ""
+"Extra (user supplied) matrix via CanvasItem.draw\\_set\\_transform(). "
+"Identity by default."
+msgstr ""
+
+#: ../../reference/shading_language.rst:376
+msgid "Projection Matrix (model coords to screen)."
+msgstr ""
+
+#: ../../reference/shading_language.rst:382
+msgid "CanvasItem (2D) - FragmentShader"
+msgstr ""
+
+#: ../../reference/shading_language.rst:387
+msgid "const vec4 *SRC\\_COLOR*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:387
+msgid "Vertex color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:389
+msgid "Screen Position"
+msgstr ""
+
+#: ../../reference/shading_language.rst:393
+msgid "out color *COLOR*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:393
+msgid "Output Color"
+msgstr ""
+
+#: ../../reference/shading_language.rst:395
+msgid "out vec3 *NORMAL*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:395
+msgid "Optional Normal (used for 2D Lighting)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:397
+msgid "out vec3 *NORMALMAP*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:397
+msgid "Optional Normal in standard normalmap format (flipped y and Z from 0 to 1)"
+msgstr ""
+
+#: ../../reference/shading_language.rst:399
+msgid "out float *NORMALMAP\\_DEPTH*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:399
+msgid "Depth option for above normalmap output, default value is 1.0"
+msgstr ""
+
+#: ../../reference/shading_language.rst:401
+msgid "const texture *TEXTURE*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:401
+msgid "Current texture in use for CanvasItem"
+msgstr ""
+
+#: ../../reference/shading_language.rst:403
+msgid "const vec2 *TEXTURE\\_PIXEL\\_SIZE*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:403
+msgid "Pixel size for current 2D texture"
+msgstr ""
+
+#: ../../reference/shading_language.rst:405
+msgid "in vec4 *VAR1*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:407
+msgid "in vec4 *VAR2*"
+msgstr ""
+
+#: ../../reference/shading_language.rst:417
+msgid "CanvasItem (2D) - LightShader"
+msgstr ""
+
+#: ../../reference/shading_language.rst:454
+msgid "Examples"
+msgstr ""
+
+#: ../../reference/shading_language.rst:456
+msgid ""
+"Material that reads a texture, a color and multiples them, fragment "
+"program:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:466
+msgid "Material that glows from red to white:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:472
+msgid "Standard Blinn Lighting Shader"
+msgstr ""
+
+#: ../../reference/shading_language.rst:484
+msgid "Obtaining world-space normal and position in material fragment program:"
+msgstr ""
+
+#: ../../reference/shading_language.rst:501
+msgid "Notes"
+msgstr ""
+
+#: ../../reference/shading_language.rst:503
+msgid ""
+"**Do not** use DIFFUSE_ALPHA unless you really intend to use "
+"transparency. Transparent materials must be sorted by depth and slow down"
+" the rendering pipeline. For opaque materials, just use DIFFUSE."
+msgstr ""
+
+#: ../../reference/shading_language.rst:506
+msgid ""
+"**Do not** use DISCARD unless you really need it. Discard makes rendering"
+" slower, specially on mobile devices."
+msgstr ""
+
+#: ../../reference/shading_language.rst:508
+msgid ""
+"TIME may reset after a while (may last an hour or so), it's meant for "
+"effects that vary over time."
+msgstr ""
+
+#: ../../reference/shading_language.rst:510
+msgid ""
+"In general, every built-in variable not used results in less shader code "
+"generated, so writing a single giant shader with a lot of code and "
+"optional scenarios is often not a good idea."
+msgstr ""
+

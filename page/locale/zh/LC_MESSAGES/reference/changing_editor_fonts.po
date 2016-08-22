@@ -1,0 +1,40 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../reference/changing_editor_fonts.rst:4
+msgid "Changing editor fonts"
+msgstr ""
+
+#: ../../reference/changing_editor_fonts.rst:6
+msgid ""
+"Godot allows changing the font for the editor, and the font for the code "
+"editor. Both need to be in .fnt format, so they need to be imported "
+"somewhere using the :ref:`font import tool <doc_importing_fonts>`."
+msgstr ""
+
+#: ../../reference/changing_editor_fonts.rst:10
+msgid ""
+"Then copy or do whatever you want with the font, as long as the location "
+"does not change, and set the relevant property in Editor Settings. Code "
+"editor font is refreshed automatically, but the editor needs to be "
+"restarted for the new global font to take effect."
+msgstr ""
+

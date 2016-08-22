@@ -1,0 +1,208 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:4
+msgid "Scripting (continued)"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:7
+msgid "Processing"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:9
+msgid ""
+"Several actions in Godot are triggered by callbacks or virtual functions,"
+" so there is no need to check for writing code that runs all the time. "
+"Additionally, a lot can be done with animation players."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:13
+msgid ""
+"However, it is still a very common case to have a script process on every"
+" frame. There are two types of processing, idle processing and fixed "
+"processing."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:17
+msgid ""
+"Idle processing is activated with the :ref:`Node.set_process() "
+"<class_Node_set_process>` function. Once active, the "
+":ref:`Node._process() <class_Node__process>` callback will be called "
+"every frame. Example:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:30
+msgid ""
+"The delta parameter describes the time elapsed (in seconds, as floating "
+"point) since the previous call to _process(). Fixed processing is "
+"similar, but only needed for synchronization with the physics engine."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:35
+msgid ""
+"A simple way to test this is to create a scene with a single Label node, "
+"with the following script:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:51
+msgid "Which will show a counter increasing each second."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:54
+msgid "Groups"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:56
+msgid ""
+"Nodes can be added to groups (as many as desired per node). This is a "
+"simple yet useful feature for organizing large scenes. There are two ways"
+" to do this, the first is from the UI, from the Groups button:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:62
+msgid ""
+"And the second from code. One useful example would be, for example, to "
+"tag scenes which are enemies."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:70
+msgid ""
+"This way, if the player, sneaking into the secret base, is discovered, "
+"all enemies can be notified about the alarm sounding, by using "
+":ref:`SceneTree.call_group() <class_SceneTree_call_group>`:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:79
+msgid ""
+"The above code calls the function \"player_was_discovered\" on every "
+"member of the group \"guards\"."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:82
+msgid ""
+"Optionally, it is possible to get the full list of \"guards\" nodes by "
+"calling :ref:`SceneTree.get_nodes_in_group() "
+"<class_SceneTree_get_nodes_in_group>`:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:90
+msgid "More will be added about :ref:`SceneTree <class_SceneTree>` later."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:95
+msgid "Notifications"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:97
+msgid ""
+"Godot has a system of notifications. This is usually not needed to be "
+"used from scripting, as it's too low level and virtual functions are "
+"provided for most of them. It's just good to know they exists. Simply add"
+" a :ref:`Object._notification() <class_Object__notification>` function in"
+" your script:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:113
+msgid ""
+"The documentation of each class in the :ref:`Class Reference <toc-class-"
+"ref>` shows the notifications it can receive. However, again, for most "
+"cases script provides simpler overrideable functions."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:118
+msgid "Overrideable functions"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:120
+msgid ""
+"As mentioned before, it's better to use these functions. Nodes provide "
+"many useful overrideable functions, which are described as follows:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:163
+msgid "Creating nodes"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:165
+msgid ""
+"To create a node from code, just call the .new() method, (like for any "
+"other class based datatype). Example:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:175
+msgid "To delete a node, be it inside or outside the scene, free() must be used:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:183
+msgid ""
+"When a node is freed, it also frees all its children nodes. Because of "
+"this, manually deleting nodes is much simpler than it appears. Just free "
+"the base node and everything else in the sub-tree goes away with it."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:187
+msgid ""
+"However, it might happen very often that we might want to delete a node "
+"that is currently \"blocked\" this means, the node is emitting a signal "
+"or calling a function. This will result in crashing the game. Running "
+"Godot in the debugger often will catch this case and warn you about it."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:192
+msgid ""
+"The safest way to delete a node is by using :ref:`Node.queue_free() "
+"<class_Node_queue_free>` instead. This erases the node during idle, "
+"safely."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:202
+msgid "Instancing scenes"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:204
+msgid ""
+"Instancing a scene from code is pretty easy and done in two steps. The "
+"first one is to load the scene from disk."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:211
+msgid ""
+"Preloading it can be more convenient sometimes, as it happens at parse "
+"time."
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:218
+msgid ""
+"But 'scene' is still not a node containing subnodes. It's packed in a "
+"special resource called :ref:`PackedScene <class_PackedScene>`. To create"
+" the actual node, the function :ref:`PackedScene.instance() "
+"<class_PackedScene_instance>` must be called. This will return the tree "
+"of nodes that can be added to the active scene:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/scripting_continued.rst:230
+msgid ""
+"The advantage of this two-step process is that a packed scene may be kept"
+" loaded and ready to use, so it can be used to create as many instances "
+"as desired. This is specially useful, for example, to instance several "
+"enemies, bullets, etc. quickly in the active scene."
+msgstr ""
+

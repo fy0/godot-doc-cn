@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/step_by_step/animations.rst:4
+msgid "Animations"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:9
+msgid ""
+"This tutorial will explain how everything is animated in Godot. Godot's "
+"animation system is extremely powerful and flexible."
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:12
+msgid ""
+"To begin, let's just use the scene from the previous tutorial "
+"(:ref:`doc_splash_screen`). The goal will be to add a simple animation to"
+" it. Here's a copy just in case: :download:`robisplash.zip "
+"</files/robisplash.zip>`."
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:17
+msgid "Creating the animation"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:19
+msgid ""
+"First of all, add an :ref:`AnimationPlayer <class_AnimationPlayer>` node "
+"to the scene as a child of bg (the root node):"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:24
+msgid ""
+"When a node of this type is selected, the animation editor panel will "
+"appear:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:29
+msgid ""
+"So, it's time to create a new animation! Press the new animation button "
+"and name the animation \"intro\"."
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:34
+msgid ""
+"After the animation has been created, then it's time to edit it, by "
+"pressing the \"edit\" button:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:40
+msgid "Editing the animation"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:42
+msgid ""
+"Now this is when the magic happens! Several things happen when the "
+"\"edit\" button is pressed, the first one is that the animation editor "
+"appears above the animation panel. (In Godot 2.x, this button has been "
+"removed, instead, click on the 'animation' toggle at the bottom right for"
+" similar functionality.)"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:50
+msgid ""
+"But the second, and most important, is that the property editor enters "
+"into \"animation editing\" mode. In this mode, a key icon appears next to"
+" every property of the property editor. This means that, in Godot, *any "
+"property of any object* can be animated:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:58
+msgid "Making the logo appear"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:60
+msgid ""
+"Next, the logo will appear from the top of the screen. After selecting "
+"the animation player, the editor panel will stay visible until manually "
+"hidden (or the animation node is erased). Taking advantage of this, "
+"select the \"logo\" node and go to the \"pos\" property, move it up, to "
+"position: 114,-400."
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:66
+msgid "Once in this position, press the key button next to the property:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:70
+msgid "As the track is new, a dialog will appear asking to create it. Confirm it!"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:75
+msgid "And the keyframe will be added in the animation player editor:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:79
+msgid "Second, move the editor cursor to the end, by clicking here:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:83
+msgid ""
+"Change the logo position to 114,0 and add a keyframe again. With two "
+"keyframes, the animation happens."
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:88
+msgid ""
+"Pressing Play on the animation panel will make the logo descend. To test "
+"it by running the scene, the autoplay button can tag the animation to "
+"start automatically when the scene starts:"
+msgstr ""
+
+#: ../../tutorials/step_by_step/animations.rst:94
+msgid "And finally, when running the scene, the animation should look like this:"
+msgstr ""
+

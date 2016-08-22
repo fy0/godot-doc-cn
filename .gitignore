@@ -8,8 +8,11 @@ __pycache__/
 # Distribution / packaging
 _build/
 build/
-page/classes
 bak/
+
+# Classes
+page/classes
+page/locale/zh/LC_MESSAGES/classes
 
 # Translations
 *.mo

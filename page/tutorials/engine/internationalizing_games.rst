@@ -1,6 +1,6 @@
 .. _doc_internationalizing_games:
 
-支持多语言的游戏
+Internationalizing games
 ========================
 
 Introduction

@@ -1,0 +1,57 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../index.rst:7
+msgid "欢迎来到 Godot 游戏引擎中文文档！"
+msgstr ""
+
+#: ../../index.rst
+msgid "这里是 `Godot 中文文档计划 <https://github.com/fy0/godot-doc-cn/>`_ 的预览页面。"
+msgstr ""
+
+#: ../../index.rst
+msgid "这个项目才刚刚起步，急需开源爱好者的支持！"
+msgstr ""
+
+#: ../../index.rst
+msgid "这是一个非盈利公益项目，欢迎你的加入！"
+msgstr ""
+
+#: ../../index.rst
+msgid "岂曰无衣，与子同袍！"
+msgstr ""
+
+#: ../../index.rst:15
+msgid "这里是目录页，以章节的形式提供了站点内容的概况。"
+msgstr ""
+
+#: ../../index.rst:17
+msgid ":ref:`sec-tutorials`"
+msgstr ""
+
+#: ../../index.rst:18
+msgid ":ref:`sec-reference`"
+msgstr ""
+
+#: ../../index.rst:19
+msgid ":ref:`sec-community`"
+msgstr ""
+

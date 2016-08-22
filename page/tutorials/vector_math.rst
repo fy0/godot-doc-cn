@@ -1,87 +1,126 @@
 .. _doc_vector_math:
 
-向量数学
+Vector math
 ===========
 
-介绍
+Introduction
 ~~~~~~~~~~~~
 
-这篇小教程意在对向量数学(Vector Mathematics)进行简短和实用的介绍，在2D和3D游戏中都非常有用。再说一遍，向量数学不仅是对3D有用， *而且* 对2D游戏也有用。一旦你掌握了它那么它是一个很棒的工具并能让复杂行为的编写更加简单。
+This small tutorial aims to be a short and practical introduction to
+vector math, useful for 3D but also 2D games. Again, vector math is not
+only useful for 3D but *also* 2D games. It is an amazing tool once you
+get the grasp of it and makes programming of complex behaviors much
+simpler.
 
-通常地，新手程序员太依赖于 *不正确* 的数学来解决一大堆问题，比如说在2D游戏中只用三角几何学而不用向量。
+It often happens that young programmers rely too much on the *incorrect*
+math for solving a wide array of problems, for example using only
+trigonometry instead of vector of math for 2D games.
 
-这篇教程将关注于实用的用途，以及对游戏编程行业的快速应用。
+This tutorial will focus on practical usage, with immediate application
+to the art of game programming.
 
-2D坐标系(2D Coordinate System)
+Coordinate systems (2D)
 ~~~~~~~~~~~~~~~~~~~~~~~
 
-通常地，我们用有序数对(Pairs)(x,y)来定义坐标，x代表了水平偏移量而y代表了竖直偏移量。这在给定了一个二维矩形的屏幕时是有意义的。举个例子，在2D空间中有一个位置:
+Typically, we define coordinates as an (x,y) pair, x representing the
+horizontal offset and y the vertical one. This makes sense given the
+screen is just a rectangle in two dimensions. As an example, here is a
+position in 2D space:
 
 .. image:: /img/tutovec1.png
 
-位置可以是空间内的任意地方。位置(0,0)有一个名字，叫做 **原点(Origin)** 。牢记这一点因为接下来它会有很多隐含的用法。一个n维坐标系中，(0,0)就是 **原点** (译注：此处说法似乎有问题，一个3D坐标系的原点是(0,0,0)，一个4D坐标系原点应当是(0,0,0,0)，一个n维坐标系的原点应当是(0,0,...,0))
+A position can be anywhere in space. The position (0,0) has a name, it's
+called the **origin**. Remember this term well because it has more
+implicit uses later. The (0,0) of a n-dimensions coordinate system is
+the **origin**.
 
-在向量数学中，坐标有两种用途，这两者都很重要。它们既被用于代表一个 *位置(Position)* 又被用来代表一个 *向量(Vector)* 。位置用途同之前所述，而当视为向量时，它却有另外一番含义。
+In vector math, coordinates have two different uses, both equally
+important. They are used to represent a *position* but also a *vector*.
+The same position as before, when imagined as a vector, has a different
+meaning.
 
 .. image:: /img/tutovec2.png
 
-当被视为向量时，我们就可以推测出两个属性， **方向(Direction)** 和 **模(Magnitude，又称为长度，与向量的范数(norm)相等)** 。空间中的每一个位置都可以是一个向量，除了 **原点** （译注：在数学中，这种情况也是向量，但被叫做零向量）。这是因为坐标(0,0)无法代表方向(模为0)（译注：在数学中，零向量的方向是任意的）
+When imagined as a vector, two properties can be inferred, the
+**direction** and the **magnitude**. Every position in space can be a
+vector, with the exception of the **origin**. This is because
+coordinates (0,0) can't represent direction (magnitude 0).
 
 .. image:: /img/tutovec2b.png
 
-方向(Direction)
+Direction
 ---------
 
-方向就和向量指向是一致的。试想一个箭头从 **原点** 出发然后朝向一个[STRIKEOUT:位置]（译注：这里STRIKEOUT格式意义不明）。箭头的末梢在一个位置中，因此它总是指向原点外的。把向量视为箭头会大有裨益。
+Direction is simply towards where the vector points to. Imagine an arrow
+that starts at the **origin** and goes towards a [STRIKEOUT:position].
+The tip of the arrow is in the position, so it always points outwards,
+away from the origin. Imagining vectors as arrows helps a lot.
 
 .. image:: /img/tutovec3b.png
 
-模(Magnitude)
+Magnitude
 ---------
 
-最终，向量的长度就是原点到这个位置的距离。获取这个距离很容易，用
-`勾股定理 <http://en.wikipedia.org/wiki/Pythagorean_theorem>`__ (Gou-gu Theorem，国外称毕达哥拉斯定理(Pythagorean Theorem))就可以了。
+Finally, the length of the vector is the distance from the origin to the
+position. Obtaining the length from a vector is easy, just use the
+`Pythagorean
+Theorem <http://en.wikipedia.org/wiki/Pythagorean_theorem>`__.
 
 ::
 
     var len = sqrt( x*x + y*y )
 
-但是……角度呢?
+But... angles?
 --------------
 
-但为什么不用一个 *角度* 呢？毕竟我们也能够把一个向量想成一个角度和一个模来替换一个方向和一个模。角度也是更加为人所熟知概念。
+But why not using an *angle*? After all, we could also think of a vector
+as an angle and a magnitude, instead of a direction and a magnitude.
+Angles also are a more familiar concept.
 
-说实话，在向量数学中，角度不是那么有用，并且绝大多数时候它们也不是直接被处理的。也许它们在2D中还能运作，但到了3D中，很多能够用角度解决的问题就不再能用了。
+To say truth, angles are not that useful in vector math, and most of the
+time they are not dealt with directly. Maybe they work in 2D, but in 3D
+a lot of what can usually be done with angles does not work anymore.
 
-还是，角度使用依然不是一个托辞，即使对于2D来说。在2D中绝大多数大量依靠角度的事物，在向量数学中也能很自然很容易的被解决。在向量数学中，角度只在作为一个量度的时候有用，而在其中不占多大成分。所以尽早放弃三角几何学，准备好去拥抱向量吧！
+Still, using angles is still not an excuse, even for 2D. Most of what
+takes a lot of work with angles in 2D, is still much more natural easier
+to accomplish with vector math. In vector math, angles are useful only
+as measure, but take little part in the math. So, give up the
+trigonometry already, prepare to embrace vectors!
 
-任何情况下，获得一个向量的角度是十足简单的，可以用三角几……唉，那是什么鬼？我想说的是，
-:ref:`atan2() <class_@GDScript_atan2>` 函数。
+In any case, obtaining an angle from a vector is easy and can be
+accomplished with trig... er, what was that? I mean, the
+:ref:`atan2() <class_@GDScript_atan2>` function.
 
-Godot中的向量类型
+Vectors in Godot
 ~~~~~~~~~~~~~~~~
 
-为了方便举例子，这里有必要解释一下GDScript中向量是如何实现的。GDScript既有
-:ref:`Vector2 <class_Vector2>` 类型又有 :ref:`Vector3 <class_Vector3>`，分别对应2D数学和3D数学。Godot使用Vector类既作为位置又作为方向。他们也包含x和y(2D中)以及x、y和z(3D中)成员变量(Member Variables)。
+To make examples easier, it is worth explaining how vectors are
+implemented in GDScript. GDscript has both
+:ref:`Vector2 <class_Vector2>` and :ref:`Vector3 <class_Vector3>`,
+for 2D and 3D math respectively. Godot uses Vector classes as both
+position and direction. They also contain x and y (for 2D) and x, y and
+z (for 3D) member variables.
 
 ::
 
-    # 创建一个坐标为(2,5)的向量
+    # create a vector with coordinates (2,5)
     var a = Vector2(2,5)
-    # 创建一个向量然后手动分配x和y
+    # create a vector and assign x and y manually
     var b = Vector2()
     b.x = 7
     b.y = 8
 
-当执行向量运算时，我们没必要去直接操作成员变量(事实上，这更慢)。向量支持常规的算术运算符：
+When operating with vectors, it is not necessary to operate on the
+members directly (in fact this is much slower). Vectors support regular
+arithmetic operations:
 
 ::
 
-    # 向量a和向量b叠加
+    # add a and b
     var c = a + b
-    # 将会产生一个向量c，值为(9,13)
+    # will result in c vector, with value (9,13)
 
-除了前者是更有效且更具有可读性以外，这等效于：
+It is the same as doing:
 
 ::
 
@@ -89,17 +128,21 @@ Godot中的向量类型
     c.x = a.x + b.x
     c.y = a.y + b.y
 
-常规的算术运算符如加(Addition)、减(Subtraction)、乘(Multiplication)、除(Division)都是支持的
+Except the former is way more efficient and readable.
 
-向量的相乘和相除也可以结合单一的数字，这个数字也被叫做 **标量(Scalar)**。(也被称为向量的数乘运算，结果为一个向量)
+Regular arithmetic operations such as addition, subtraction,
+multiplication and division are supported.
+
+Vector multiplication and division can also be mixed with single-digit
+numbers, also named **scalars**.
 
 ::
 
-    # 用标量乘以向量
+    # multiplication of vector by scalar
     var c = a*2.0
-    # 将产生一个向量c，值为(4,10)
+    # will result in c vector, with value (4,10)
 
-还是，除了前者更加的高效且具有可读性以外，等效于：
+Which is the same as doing
 
 ::
 
@@ -107,40 +150,57 @@ Godot中的向量类型
     c.x = a.x*2.0
     c.y = a.y*2.0
 
-正交向量(Perpendicular Vectors，即相互垂直的向量)
+Except, again, the former is way more efficient and readable.
+
+Perpendicular vectors
 ~~~~~~~~~~~~~~~~~~~~~
 
-将一个2D向量向左右任意一边旋转90°，是相当简单的，只需要交换x和y，然后为x或y中的一个取相反数即可(方向取决于谁变负的了)
+Rotating a 2D vector 90° degrees to either side, left or right, is
+really easy, just swap x and y, then negate either x or y (direction of
+rotation depends on which is negated).
 
 .. image:: /img/tutovec15.png
 
-举例：
+Example:
 
 ::
 
     var v = Vector2(0,1)
-    # 向右旋转 (顺时针)
+    # rotate right (clockwise)
     var v_right = Vector2(-v.y, v.x)
-    # 向左旋转 (逆时针)
+    # rotate left (counter-clockwise)
     var v_right = Vector2(v.y, -v.x)
 
-这是一个很常用的手边技巧。但是这对于3D是不可能的，因为有无穷多个正交向量。
+This is a handy trick that is often of use. It is impossible to do with
+3D vectors, because there are an infinite amount of perpendicular
+vectors.
 
-单位向量(Unit Vectors，即模量为1的向量)
+Unit vectors
 ~~~~~~~~~~~~
 
-好的，那么我们知道了向量是什么。它有 **方向** 和 **模** 。我们还知道如何在Godot中使用它们。下一步就是了解 **单位向量** 了。任意一个 **模**为1的向量都被认为是一个 **单位向量**。在2D中，试想画一个半径为1的圆(被称作单位圆)。这个圆包含了在二维中存在的所有单位向量
+Ok, so we know what a vector is. It has a **direction** and a
+**magnitude**. We also know how to use them in Godot. The next step is
+learning about **unit vectors**. Any vector with **magnitude** of length
+1 is considered a **unit vector**. In 2D, imagine drawing a circle of
+radius one. That circle contains all unit vectors in existence for 2
+dimensions:
 
 .. image:: /img/tutovec3.png
 
-那么，单位向量的特殊之处在哪呢？单位向量很厉害。换句话说，单位有 **一些很有用的属性**。
+So, what is so special about unit vectors? Unit vectors are amazing. In
+other words, unit vectors have **several, very useful properties**.
 
-我们迫不及待要去了解关于单位向量的优良属性的更多内容了，但是还是要一步一步来。那么如何由一个常规向量创建一个单位向量呢？
+Can't wait to know more about the fantastic properties of unit vectors,
+but one step at a time. So, how is a unit vector created from a regular
+vector?
 
-归一化向量(Normalization)
+Normalization
 -------------
 
-取得任何一个向量然后把 **模量**削减为1.0而保持它的 **方向** 的过程被称之为 **向量的归一化**。归一化通过用一个向量的x和y(3D中还有z)分量(Component)除以向量的模：
+Taking any vector and reducing it's **magnitude** to 1.0 while keeping
+it's **direction** is called **normalization**. Normalization is
+performed by dividing the x and y (and z in 3D) components of a vector
+by it's magnitude:
 
 ::
 
@@ -149,80 +209,109 @@ Godot中的向量类型
     a.x /= m
     a.y /= m
 
-(注意：前方官方文档严重卖萌，与翻译组无关)
-正如你所猜到的那样，如果一个向量的模量为0时(意味着不是一个向量而是 **原点**或者也叫做 *零向量(Null Vector)*)，一个除以0的除法式将发生，然后宇宙将经历又一次大爆炸(译注：没这么危险，作者只不过是在玩(mài)笑(méng)，意在说明这种错误对于程序运行是灾难性的)，除非在倒转极性下它又回来了。结果人类还健在但Godot将会输出一个错误。记住！向量(0,0)不能被归一化！
+As you might have guessed, if the vector has magnitude 0 (meaning, it's
+not a vector but the **origin** also called *null vector*), a division
+by zero occurs and the universe goes through a second big bang, except
+in reverse polarity and then back. As a result, humanity is safe but
+Godot will print an error. Remember! Vector(0,0) can't be normalized!.
 
-当然，Vector2和Vector3已经提供了一个方法(Method)来做这件事：
+Of course, Vector2 and Vector3 already provide a method to do this:
 
 ::
 
     a = a.normalized()
 
-点积运算(Dot Production，又称数量积运算、点乘运算)
+Dot product
 ~~~~~~~~~~~
 
-好了， **点积**是向量数学中最重要的部分。没有点积的话，雷神之锤(Quake)就不可能被做出来。这是本教程最重要的一节，所以确保能够适当地掌握它。绝大多数尝试去理解向量数学的人都在此放弃了，因为无论它有多简单，他们从中也做不出个头尾。为什么呢？因为……
+OK, the **dot product** is the most important part of vector math.
+Without the dot product, Quake would have never been made. This is the
+most important section of the tutorial, so make sure to grasp it
+properly. Most people trying to understand vector math give up here
+because, despite how simple it is, they can't make head or tails from
+it. Why? Here's why, it's because...
 
-点积取两个向量进行运算并返回一个 **标量** ：
+The dot product takes two vectors and returns a **scalar**:
 
 ::
 
     var s = a.x*b.x + a.y*b.y
 
-是的，基本就是这样。用 **a**向量的 **x**乘以 **b**向量的 **x**。对y再进行一次然后相加。在3D中基本还是这样：
+Yes, pretty much that. Multiply **x** from vector **a** by **x** from
+vector **b**. Do the same with y and add it together. In 3D it's pretty
+much the same:
 
 ::
 
     var s = a.x*b.x + a.y*b.y + a.z*b.z
 
-我知道，这一点意义都没有，你甚至都可以用内置函数来完成：
+I know, it's totally meaningless! You can even do it with a built-in
+function:
 
 ::
 
     var s = a.dot(b)
 
-两个向量的顺序 **没有**影响(因为点积遵循交换律)， ``a.dot(b)``和 ``b.dot(a)``返回相同的值。
+The order of two vectors does *not* matter, ``a.dot(b)`` returns the
+same value as ``b.dot(a)``.
 
-这正是绝望的开始，教科书和教程都会给你下面这个公式：
+This is where despair begins and books and tutorials show you this
+formula:
 
 .. image:: /img/tutovec4.png
 
-然后你就意识到你该放弃制作3D或者复杂的2D游戏了。那么为什么会有这么个既简单又复杂的东西呢？别人将不得不去做塞尔达(Zelda)或者使命召唤(Call of Duty)。顶视角RPG(Top Down RPG,TDRPG)毕竟看起来不那么糟糕。是的，我听到有人
 And you realize it's time to give up making 3D games or complex 2D
 games. How can something so simple be so complex? Someone else will have
 to make the next Zelda or Call of Duty. Top down RPGs don't look so bad
 after all. Yeah I hear someone did pretty will with one of those on
 Steam...
 
-所以这是属于你的时刻，这是你闪耀的时间。 **不要怂，就是上！**
-在这一问题上，这篇教程将会来一个大转弯然后关注什么使得点积这么的有用。也就是， **为什么**它很有用。我们将会逐一关注点积的使用情形，以及现实中的应用。世上没有毫无意义的公式。 *一旦你了解了* 它们用于什么，公式们将会有意义。
+So this is your moment, this is your time to shine. **DO NOT GIVE UP**!
+At this point, this tutorial will take a sharp turn and focus on what
+makes the dot product useful. This is, **why** it is useful. We will
+focus one by one in the use cases for the dot product, with real-life
+applications. No more formulas that don't make any sense. Formulas will
+make sense *once you learn* what they are useful for.
 
 Siding
 ------
 
-点积第一个有用的也是最重要的性质就是去检测旁边事物在看什么。我们试想一下有任意两个向量 **a**和 **b**。任意的 **方向**或 **模**(不能是 **原点**)。。这些并不会影响它们，但是让我们试想我们对它们实施点积运算。
+The first useful and most important property of the dot product is to
+check what side stuff is looking at. Let's imagine we have any two
+vectors, **a** and **b**. Any **direction** or **magnitude** (neither
+**origin**). Does not matter what they are, but let's imagine we compute
+the dot product between them.
 
 ::
 
     var s = a.dot(b)
 
-运算将会返回一个单精度浮点型的数(但是既然我们在向量的世界中，我们叫它们 **标量**，从现在起我们将持续沿用这个概念)。这个数(译者吐槽：说好的从现在起持续沿用呢！！)将会告诉我们以下内容：
+The operation will return a single floating point number (but since we
+are in vector world, we call them **scalar**, will keep using that term
+from now on). This number will tell us the following:
 
--  如果这个数大于0，则两者皆面向同一方向(两者夹角小于90°，为锐角)。
--  如果这个数小于0，两者面向相反的方向(两者夹角大于90°，为钝角)。
--  如果这个数就是0，向量将会按L形垂直排列(两者夹角为90°，为直角)。
+-  If the number is greater than zero, both are looking towards the same
+   direction (the angle between them is < 90° degrees).
+-  If the number is less than zero, both are looking towards opposite
+   direction (the angle between them is > 90° degrees).
+-  If the number is zero, vectors are shaped in L (the angle between
+   them *is* 90° degrees).
 
 .. image:: /img/tutovec5.png
 
-那么，让我们想象一个真实的使用案例。想象一条蛇正在穿过一个森林，然后附近有一个敌人。我们如何快速的辨别敌人是否已经发现了蛇呢？为了发现他，敌人必须能够 *看到*蛇。然后我们说：
+So let's think of a real use-case scenario. Imagine Snake is going
+through a forest, and then there is an enemy nearby. How can we quickly
+tell if the enemy has seen discovered Snake? In order to discover him,
+the enemy must be able to *see* Snake. Let's say, then that:
 
--  蛇在位置 **A**。
--  敌人在位置 **B**。
--  敌人正 *面向*向量 **F**的方向。
+-  Snake is in position **A**.
+-  The enemy is in position **B**.
+-  The enemy is *facing* towards direction vector **F**.
 
 .. image:: /img/tutovec6.png
 
-那么，我们就来创建新向量 **BA**，从守卫( **B**)指向蛇( **A**)，通过两者坐标相减(末减初)：
+So, let's create a new vector **BA** that goes from the guard (**B**) to
+Snake (**A**), by subtracting the two:
 
 ::
 
@@ -230,59 +319,71 @@ Siding
 
 .. image:: /img/tutovec7.png
 
-理想地，如果守卫正好直视着蛇，为了发生眼神接触，它将会以和向量BA同向方向做这件事
-(译者注：最后一句it would do it没看懂，暂留原文以备修改)Ideally, if the guard was looking straight towards snake, to make eye to
+Ideally, if the guard was looking straight towards snake, to make eye to
 eye contact, it would do it in the same direction as vector BA.
 
-如果 **F**和 **BA**的数量积大于0，那么蛇就被发现了。这发生了因为我们将可以判断这个正面向他：
+If the dot product between **F** and **BA** is greater than 0, then
+Snake will be discovered. This happens because we will be able to tell
+that the guard is facing towards him:
 
 ::
 
     if (BA.dot(F) > 0):
         print("!")
 
-目前来看，蛇似乎还很安全。
+Seems Snake is safe so far.
 
-支持单位向量
+Siding with unit vectors
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-好了，那么我们现在知道了两个向量的点积将会告诉我们它们看向了同侧、异侧还是干脆彼此垂直。
+Ok, so now we know that dot product between two vectors will let us know
+if they are looking towards the same side, opposite sides or are just
+perpendicular to each other.
 
-这对于所有向量都适用，和模量无关，因此 **单位向量** 也不例外。然而，对单位向量使用相同的属性会产生一个更有趣的结果，因为多了一个附加属性：
+This works the same with all vectors, no matter the magnitude so **unit
+vectors** are not the exception. However, using the same property with
+unit vectors yields an even more interesting result, as an extra
+property is added:
 
--  如果两个向量都面向了完全相同的方向（彼此平行(Parallel，在向量中也被称为共线)，夹角是0°(同向)），标量结果为 **1** 。
+-  If both vectors are facing towards the exact same direction (parallel
+   to each other, angle between them is 0°), the resulting scalar is
+   **1**.
+-  If both vectors are facing towards the exact opposite direction
+   (parallel to each other, but angle between them is 180°), the
+   resulting scalar is **-1**.
 
--  如果两个向量都面向了完全相同的方向（彼此平行，夹角却是180°(反向)），标量结果为 **-1** 。
+This means that dot product between unit vectors is always between the
+range of 1 and -1. So Again...
 
-这也就意味着，单位向量的点积结果将总在范围[-1,1]之间。那么又……
+-  If their angle is **0°** dot product is **1**.
+-  If their angle is **90°**, then dot product is **0**.
+-  If their angle is **180°**, then dot product is **-1**.
 
--  如果夹角为 **0°** 点积为 **1** 。
+Uh.. this is oddly familiar... seen this before... where?
 
--  如果夹角为 **90°** 点积为 **0** 。
-
--  如果夹角为 **180°** 点积为 **-1** 。
-
-额……这有点莫名的熟悉……好像在哪见过……哪呢？
-
-我们来引入两个单位向量，第一个向上指，第二个也一样但是我们将会全程让它从上(0°)到下(180°)旋转……
+Let's take two unit vectors. The first one is pointing up, the second
+too but we will rotate it all the way from up (0°) to down (180°
+degrees)...
 
 .. image:: /img/tutovec8.png
 
-当测算标量结果时！
+While plotting the resulting scalar!
 
 .. image:: /img/tutovec9.png
 
-啊哈！一切都明朗了，这是 `余弦 <http://mathworld.wolfram.com/Cosine.html>`__ 函数！
+Aha! It all makes sense now, this is a
+`Cosine <http://mathworld.wolfram.com/Cosine.html>`__ function!
 
-我们于是就能说，作为一个准则……
+We can say that, then, as a rule...
 
-两个 **单位向量** 的 **点积** 是两个向量 **夹角** 的 **余弦值** 。因此，欲获取两个向量的夹角，我们必须要：
+The **dot product** between two **unit vectors** is the **cosine** of
+the **angle** between those two vectors. So, to obtain the angle between
+two vectors, we must do:
 
 ::
 
     var angle_in_radians = acos( a.dot(b) )
 
-这对什么有用呢？直接获取向量的夹角可能不那么有用，
 What is this useful for? Well obtaining the angle directly is probably
 not as useful, but just being able to tell the angle is useful for
 reference. One example is in the `Kinematic
@@ -299,7 +400,7 @@ without modification in
 Vector math is, in a great deal, dimension-amount-independent, so adding
 or removing an axis only adds very little complexity.
 
-平面
+Planes
 ~~~~~~
 
 The dot product has another interesting property with unit vectors.
@@ -325,7 +426,7 @@ except that the plane is an infinite surface (imagine an infinite, flat
 sheet of paper that you can orient and is pinned to the origin) instead
 of a line.
 
-到平面的距离
+Distance to plane
 -----------------
 
 Now that it's clear what a plane is, let's go back to the dot product.
@@ -344,7 +445,7 @@ space the distance will be negative, too:
 
 This allows us to tell which side of the plane a point is.
 
-离开原点
+Away from the origin
 --------------------
 
 I know what you are thinking! So far this is nice, but *real* planes are
@@ -414,7 +515,7 @@ calculating the distance to it. So, why is it useful to calculate the
 distance from a point to a plane? It's extremely useful! Let's see some
 simple examples..
 
-在2D中构建平面
+Constructing a plane in 2D
 --------------------------
 
 Planes clearly don't come out of nowhere, so they must be built.
@@ -459,7 +560,7 @@ point_b will work since they are in the same plane:
 Doing the same in 3D is a little more complex and will be explained
 further down.
 
-平面的使用举例
+Some examples of planes
 -----------------------
 
 Here is a simple example of what planes are useful for. Imagine you have
@@ -544,7 +645,7 @@ This is usually just handled by splitting the concave polygon into
 smaller convex polygons, or using a technique such as BSP (which is not
 used much nowadays).
 
-叉积(Cross Product，又称向量的向量积、叉乘运算)
+Cross product
 -------------
 
 Quite a lot can be done with the dot product! But the party would not be
@@ -592,7 +693,7 @@ possible perpendicular vectors to a pair of 2D vectors.
 Also, the resulting cross product of two unit vectors is *not* a unit
 vector. Result will need to be renormalized.
 
-三角形区域
+Area of a triangle
 ~~~~~~~~~~~~~~~~~~
 
 Cross product can be used to obtain the surface area of a triangle in
@@ -627,7 +728,7 @@ of the triangle is half of it.
 
     var area = P.length()/2
 
-三角形所在平面
+Plane of the triangle
 ~~~~~~~~~~~~~~~~~~~~~
 
 With **P** computed from the previous step, normalize it to get the
@@ -678,7 +779,7 @@ So, to obtain N, the correct formula is:
     # var N = (A-B).cross(A-C).normalized()
     var D = N.dot(A)
 
-3D中的碰撞检测
+Collision detection in 3D
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This is another bonus bit, a reward for being patient and keeping up
@@ -792,6 +893,3 @@ So the final algorithm is something like:
 This was all! Hope it was helpful, and please give feedback and let know
 if something in this tutorial is not clear! You should be now ready for
 the next challenge... :ref:`doc_matrices_and_transforms`!
-
-
-

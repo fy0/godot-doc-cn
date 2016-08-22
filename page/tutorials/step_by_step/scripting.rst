@@ -1,132 +1,192 @@
 .. _doc_scripting:
 
-脚本
+Scripting
 =========
 
-介绍
+Introduction
 ------------
 
-正如我们之前所说的那样，我们希望游戏开发工具可以不需要编程就可以创作电子游戏。然而，目前不需要学习编码就能开发游戏这仍然是不太现实的，这种无编程的游戏设计流程还有很长的路要走。因为在很多情况下我们需要使用程序来控制游戏中的各种逻辑和整个游戏的流程不是么？
+Much has been said about tools that allow users to create video games
+without programming. It's been a dream for many independent developers
+to create games without learning how to code. This need has been around
+for a long time, even inside companies, where game designers wish to
+have more control of the game flow.
 
-许多引擎和开发工具宣称不需要编程就能够设计作品，但这些工具往往半途而废或者过于复杂。因此，编程在游戏开发这项工作中仍然存在，并将在很长一段时间内难以被取代。事实上，现在都游戏引擎都朝着提供各种实用的工具来尽量减少开发过程中的代码量，以此解放开发者来提高游戏开发效率。
+Many products have been shipped promising a no-programming environment,
+but the result is often incomplete, too complex or inefficient compared
+to traditional code. As a result, programming is here to stay for a long
+time. In fact, the general direction in game engines has been to add
+tools that try to reduce the amount of code that needs to be written for
+specific tasks, to speed up development.
 
-同样，Godot也是朝着这个方向来设计的，其中最明显也是最重要的便是它的场景系统。它的用途可能不那么直观，但是一旦你掌握它之后，将长期从中收益。它能够将程序员从无限的架构游戏场景的编码工作中解放出来。
+In that sense, Godot has taken some useful design decisions towards that
+goal. The first and most important is the scene system. The aim of it is
+not obvious at first, but works well later on. That is, to relieve
+programmers from the responsibility of architecting code.
 
-使用场景系统设计游戏时，整个游戏项目被分为若干个相互补充的场景（并非独立的场景）。这些场景是相互补充而不是彼此分离的，后面的教程将会有大量的例子来介绍这个场景系统。现在，请记住这一点，因为它是很重要的概念。
+When designing games using the scene system, the whole project is
+fragmented into *complementary* scenes (not individual ones). Scenes
+complement each other, instead of being separate. There will be plenty
+of examples about this later on, but it's very important to remember it.
 
-对于那些有丰富经验的老码农来说，这意味着现在的场景系统与你所熟知的MVC设计模式有很大的区别。现在我们需要你暂时将你的这些习惯扔掉，来尝试一下*场景补充*设计模式（Scenes As
-a Complement，没有一个确定的官翻，目前先译做场景补充吧）。Godot向你保证，这种设计模式的效用是值得让你在游戏设计中丢弃MVC的。
+For those with a good amount of programming expertise, this means a
+different design pattern to MVC. Godot promises efficiency at the
+expense of dropping the MVC habits, which are replaced by the *scenes as
+a complement* pattern.
 
-Godot的脚本支持继承(`extend <http://c2.com/cgi/wiki?EmbedVsExtend>`__)，允许脚本继承自所有引擎中可以使用的类。
+Godot also uses the `extend <http://c2.com/cgi/wiki?EmbedVsExtend>`__
+pattern for scripting, meaning that scripts extend from all the
+available engine classes.
 
 GDScript
 --------
 
-:ref:`doc_gdscript` 是一门专门为Godot引擎设计的动态数据类型的脚本语言。它坚持以下设计原则：
+:ref:`doc_gdscript` is a dynamically typed scripting language to fit
+inside Godot. It was designed with the following goals:
 
-- 首要任务是尽可能简单、易于学习。
+-  First and most importantly, making it simple, familiar and as easy to
+   learn as possible.
+-  Making the code readable and error safe. The syntax is mostly
+   borrowed from Python.
 
-- 让脚本代码容易理解，并且安全、容错高。
+Programmers generally take a few days to learn it, and within two weeks
+feel comfortable with it.
 
-- 语法在很大程度上借鉴自Python。
+As with most dynamically typed languages though, the higher productivity
+(code is easier to learn, faster to write, no compilation, etc) is
+balanced with a performance penalty, but most critical code is written
+in C++ already in the engine (vector ops, physics, math, indexing, etc),
+making the resulting performance more than enough for most types of
+games.
 
-一般程序员只需花几天时间来学习它，两周左右即可得心应手地使用它进行游戏编程。
+In any case, if more performance is required, critical sections can be
+rewritten in C++ and exposed transparently to the script. This allows
+for replacing a GDScript class with a C++ class without altering the
+rest of the game.
 
-正如大多数动态类型的语言一样，产能高的脚本（容易学习、编写快速、没有完整类型这类语言）的执行效率都在一定程度上有所折扣。GDScript中的绝大多数核心代码（诸如向量、物理库、数学库等等）都是使用C++编写的，这使得Godot的脚本执行效率远高于其他游戏引擎的脚本。
-
-任何情况下，对于对性能要求较高的程序，都可将性能影响较高的核心部分使用C++来写，然后在导出给脚本使用。Godot允许你不必变更已经设计好的游戏就能使用C++来替换任何一个GDScript类来提升游戏性能。
-
-为场景编写脚本
+Scripting a scene
 -----------------
 
-在你继续下面的内容之前，请确认你已经看过:ref:`doc_gdscript`这篇文档。GDScript是一门简单的脚本语言，因此这篇文档并不长，你应该花几分钟过一遍。
+Before continuing, please make sure to read the :ref:`doc_gdscript` reference.
+It's a simple language and the reference is short, should not take more
+than a few minutes to glance.
 
-建立场景
+Scene setup
 ~~~~~~~~~~~
 
-这段教程将带你为一个简单的GUI场景编写脚本。使用添加节点对话框来创建如下节点层次：
+This tutorial will begin by scripting a simple GUI scene. Use the add
+node dialog to create the following hierarchy, with the following nodes:
 
 - Panel
 
   * Label
   * Button
 
-你的节点树窗口看起来应该像这样子
+It should look like this in the scene tree:
 
-.. image:: /img/scriptscene.png
+.. image:: /img/scripting_scene_tree.png
 
-在2D编辑器中尝试将这个场景调整成类似下面这样：
+And try to make it look like this in the 2D editor, so it makes sense:
 
-.. image:: /img/scriptsceneimg.png
+.. image:: /img/label_button_example.png
 
-最后，保存场景，将其保存在名为“sayhello.tscn”的文件中。
+Finally, save the scene, a fitting name could be "sayhello.scn"
 
-添加脚本
+.. _doc_scripting-adding_a_script:
+
+Adding a script
 ~~~~~~~~~~~~~~~
 
-鼠标右键点击Panl节点，选中“Add Script”选项
+Right click on the panel node, then select "Add Script" in the context
+menu:
 
-.. image:: /img/addscript.png
+.. image:: /img/add_script.png
 
-创建脚本的对话框将会弹出。这个对话框允许你选择脚本语言、类名等。GDScript并不在脚本文件中定义类名，因此类名是无法编辑的。如下图所示，脚本继承自Panel类（Panel继承自Node，这个输入框一般是自动帮你填好的）。
+The script creation dialog will pop up. This dialog allows to select
+the language, class name, etc. GDScript does not use class names in
+script files, so that field is not editable. The script should inherit
+from "Panel" (as it is meant to extend the node, which is of Panel type,
+this is automatically filled anyway).
 
-.. image:: /img/scriptcreate.png
+Enter a path name for the script and then select "Create":
 
-现在选择保存脚本的文件名（如果你之前保存过场景，那么将会填充生产与场景文件相同的文件名，这里应该是sayhello.gd）然后按下“Create”按钮。
+.. image:: /img/script_create.png
 
-这样我们就创建了一个脚本，并将其添加到了Panel节点上。你可以通过点击节点上的脚本图标或者通过Inspector窗口中的"script"属性来查看这个脚本。
+Once this is done, the script will be created and added to the node. You
+can see this both as an extra icon in the node, as well as in the script
+property:
 
-.. image:: /img/scriptadded.png
+.. image:: /img/script_added.png
 
-要编辑脚本，只需要按照上面的操作即可打开脚本编辑窗口。下图是创建脚本的对话框自动为我们填写的脚本内容：
+To edit the script, select either of the highlighted buttons. 
+This will bring you to the script editor where an existing template will
+be included by default:
 
 .. image:: /img/script_template.png
 
-这儿并没有太多内容。“_ready()”函数将会在Panel节点（以及其所有子孙节点）添加到场景后被调用。（请记住，这个函数并不是该类的构造函数，构造函数是"_init()"）。
+There is not much in there. The "_ready()" function is called when the
+node (and all its children) entered the active scene. (Remember, it's
+not a constructor, the constructor is "_init()" ).
 
-脚本编写规则
+The role of the script
 ~~~~~~~~~~~~~~~~~~~~~~
 
-一般脚本用于为节点添加一些基本的控制操作，这些控制或操作往往是针对该节点或者是其他节点（可能是其子孙节点、父节点、兄弟节点等）。同其他语言的继承机制一样，脚本的作用域是在它所属的节点，同时脚本能够重写其父类的虚函数。
+A script adds behavior to a node. It is used to control the
+node functions as well as other nodes (children, parent, siblings, etc).
+The local scope of the script is the node (just like in regular
+inheritance) and the virtual functions of the node are captured by the
+script.
 
 .. image:: /img/brainslug.jpg
 
-处理信号（Signal）
+Handling a signal
 ~~~~~~~~~~~~~~~~~
 
-信号（Signal）在GUI节点中被大量使用（其他节点同样能使用，请参考GDScript文档）。信号在发生特定事件时被触发（emit），能够被绑定（connect）到任何脚本的任何函数上。在这里，我们将Panel节点下按钮Button节点的“pressed”信号连接到一个函数。右键点击Button节点，选择“Edit Connections”弹出信号绑定对话框：
+Signals are used mostly in GUI nodes, (although other nodes have them
+too). Signals are "emitted" when some specific kind of action happens,
+and can be connected to any function of any script instance. In this
+step, the "pressed" signal from the button will be connected to a custom
+function.
+
+An interface for connecting signals to your scripts exists in the editor. 
+You can access this by selecting the node in the scene tree and then
+selecting the "Node" tab. Make sure that you have "Signals" selected.
 
 .. image:: /img/signals.png
 
-这个对话框中列出了所有Button类能够触发的信号。
+In any case, at this point it is clear that that we are interested in
+the "pressed" signal. Instead of doing it with the visual
+interface, we will opt to make the connection using code.
 
-.. image:: /img/button_connections.png
+For this, there is a function that is probably the one that Godot
+programmers will use the most, this is
+:ref:`Node.get_node() <class_Node_get_node>`.
+This function uses paths to fetch nodes in the current tree or anywhere
+in the scene, relative to the node holding the script.
 
-但在这里我们并不使用它，你知道这里能够绑定信号和脚本中的函数就可以了。我们不想搞得太过简单，因此关闭对话框，我带你装逼！
-
-为了更高的逼格，哦不，是为了让代码看上去更有条理，让别人阅读我们的脚本时能够清楚“pressed”信号触发时我们干了什么事，我们需要用脚本来绑定这个信号。
-
-这里我们需要用到Godot中最常用的:ref:`Node.get_node() <class_Node_get_node>`函数，这个函数通过节点路径来获取与这个脚本被绑定到的节点相关的其他节点(有点绕口，请在读一遍)。要获取到Button节点，我们这样用它：
+To fetch the button, the following must be used:
 
 ::
 
     get_node("Button")
 
-然后我们添加一个回调函数来处理按钮被按下时触发的"pressed"信号，在按下时修改Label节点的文本。
+So, next, a callback will be added for when a button is pressed, that
+will change the label's text:
 
 ::
 
-    func _on_button_pressed():
+    func _on_button_pressed():  
         get_node("Label").set_text("HELLO!")
 
-最后在_ready()函数中使用 :ref:`Object.connect() <class_Object_connect>` 函数将Button节点的“pressed”信号绑定到这个回调函数上。
+Finally, the button "pressed" signal will be connected to that callback
+in _ready(), by using :ref:`Object.connect() <class_Object_connect>`.
 
 ::
 
     func _ready():
         get_node("Button").connect("pressed",self,"_on_button_pressed")
 
-最终，这个脚本的内容将是这样子的：
+The final script should look like this:
 
 ::
 
@@ -143,16 +203,23 @@ GDScript
     func _ready():
         get_node("Button").connect("pressed",self,"_on_button_pressed")
 
-执行这个场景，如果没有出错的话，你将得到预期的效果，是不是很棒啊！
+Running the scene should have the expected result when pressing the
+button:
 
-.. image:: /img/scripthello.png
+.. image:: /img/scripting_hello.png
 
-**注意**：本节中常见的错误是很多同学可能没有按照教程中的节点次序创建Button节点，把Button节点放到了Label下面。这是因为在创建Button时你选中的是Label对象造成的。这会导致在脚本中通过get_node("Button")获取不到Button这个对象，因为它并不是我们的脚本绑定的Panel的子对象（他是个孙子～）。因此，我们需要下面的方式获取到这个孙子：
+**Note:** As it is a common mistake in this tutorial, let's clarify
+again that get_node(path) works by returning the *immediate* children of
+the node controlled by the script (in this case, *Panel*), so *Button*
+must be a child of *Panel* for the above code to work. To give this
+clarification more context, if *Button* were a child of *Label*, the code
+to obtain it would be:
 
 ::
 
     # not for this case
     # but just in case
-    get_node("Label/Button")
+    get_node("Label/Button") 
 
-最后，再啰嗦一句，记住我们是通过名称获取节点的，而不是通过节点的类型，尽管这里节点的名称就是它们的类型名。
+And, also, try to remember that nodes are referenced by name, not by
+type.

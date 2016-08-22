@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 21:59+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../reference/custom_modules_in_c++.rst:4
+msgid "Custom modules in C++"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:7
+msgid "Modules"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:9
+msgid ""
+"Godot allows extending the engine in a modular way. New modules can be "
+"created and then enabled/disabled. This allows for adding new engine "
+"functionality at every level without modifying the core, which can be "
+"split for use and reuse in different modules."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:14
+msgid ""
+"Modules are located in the ``modules/`` subdirectory of the build system."
+" By default, two modules exist, GDScript (which, yes, is not part of the "
+"core engine), and the GridMap. As many new modules as desired can be "
+"created and combined, and the SCons build system will take care of it "
+"transparently."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:21
+msgid "What for?"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:23
+msgid ""
+"While it's recommended that most of a game is written in scripting (as it"
+" is an enormous time saver), it's perfectly possible to use C++ instead. "
+"Adding C++ modules can be useful in the following scenarios:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:27
+msgid "Binding an external library to Godot (like Bullet, Physx, FMOD, etc)."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:28
+msgid "Optimize critical parts of a game."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:29
+msgid "Adding new functionality to the engine and/or editor."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:30
+msgid "Porting an existing game."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:31
+msgid "Write a whole, new game in C++ because you can't live without C++."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:34
+msgid "Creating a new module"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:36
+msgid ""
+"Before creating a module, make sure to download the source code of Godot "
+"and manage to compile it. There are tutorials in the documentation for "
+"this."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:39
+msgid ""
+"To create a new module, the first step is creating a directory inside "
+"``modules/``. If you want to maintain the module separately, you can "
+"checkout a different VCS into modules and use it."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:43
+msgid ""
+"The example module will be called \"sumator\", and is placed inside the "
+"Godot source tree (``C:\\godot`` refers to wherever the Godot sources are"
+" located):"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:54
+msgid "Inside we will create a simple sumator class:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:82
+msgid "And then the cpp file."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:116
+msgid ""
+"Then, the new class needs to be registered somehow, so two more files "
+"need to be created:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:124
+msgid "With the following contents:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:151
+msgid ""
+"Next, we need to create a ``SCsub`` file so the build system compiles "
+"this module:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:161
+msgid ""
+"If you want to add custom compiler flags when building your module, you "
+"need to clone `env` first, so it won't add those flags to whole Godot "
+"build (which can cause errors). Example `SCub` with custom flags:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:174
+msgid ""
+"And finally, the configuration file for the module, this is a simple "
+"python script that must be named ``config.py``:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:187
+msgid ""
+"The module is asked if it's ok to build for the specific platform (in "
+"this case, True means it will build for every platform)."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:190
+msgid ""
+"And that's it. Hope it was not too complex! Your module should look like "
+"this:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:202
+msgid ""
+"You can then zip it and share the module with everyone else. When "
+"building for every platform (instructions in the previous sections), your"
+" module will be included."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:207
+msgid "Using the module"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:209
+msgid ""
+"Using your newly created module is very easy, from any script you can now"
+" do:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:221
+msgid "And the output will be ``60``."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:224
+msgid "Summing up"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:226
+msgid ""
+"As you see, it's really easy to develop Godot in C++. Just write your "
+"stuff normally and remember to:"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:229
+msgid "use ``OBJ_TYPE`` macro for inheritance, so Godot can wrap it"
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:230
+msgid ""
+"use ``_bind_methods`` to bind your functions to scripting, and to allow "
+"them to work as callbacks for signals."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:233
+msgid ""
+"But this is not all, depending what you do, you will be greeted with some"
+" surprises."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:236
+msgid ""
+"If you inherit from :ref:`class_Node` (or any derived node type, such as "
+"Sprite), your new class will appear in the editor, in the inheritance "
+"tree in the \"Add Node\" dialog."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:239
+msgid ""
+"If you inherit from :ref:`class_Resource`, it will appear in the resource"
+" list, and all the exposed properties can be serialized when "
+"saved/loaded."
+msgstr ""
+
+#: ../../reference/custom_modules_in_c++.rst:242
+msgid ""
+"By this same logic, you can extend the Editor and almost any area of the "
+"engine."
+msgstr ""
+
