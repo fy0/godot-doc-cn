@@ -5,136 +5,153 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-24 22:30+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../../tutorials/step_by_step/animations.rst:4
 msgid "Animations"
-msgstr ""
+msgstr "动画(Animations)"
 
 #: ../../tutorials/step_by_step/animations.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #: ../../tutorials/step_by_step/animations.rst:9
 msgid ""
 "This tutorial will explain how everything is animated in Godot. Godot's "
 "animation system is extremely powerful and flexible."
 msgstr ""
+"这篇教程将会解释Godot中一切是怎样被编成动画的。Godot的动画系统是极其的强大且灵"
+"活。"
 
 #: ../../tutorials/step_by_step/animations.rst:12
 msgid ""
-"To begin, let's just use the scene from the previous tutorial "
-"(:ref:`doc_splash_screen`). The goal will be to add a simple animation to"
-" it. Here's a copy just in case: :download:`robisplash.zip "
-"</files/robisplash.zip>`."
+"To begin, let's just use the scene from the previous tutorial (:ref:"
+"`doc_splash_screen`). The goal will be to add a simple animation to it. Here's "
+"a copy just in case: :download:`robisplash.zip </files/robisplash.zip>`."
 msgstr ""
+"首先，我们就来使用上一篇教程的场景(:ref:`doc_splash_screen`)，目标是加入一些简单"
+"的动画。以防万一，这里还有个拷贝：\n"
+":download:`robisplash.zip </files/robisplash.zip>`."
 
 #: ../../tutorials/step_by_step/animations.rst:17
 msgid "Creating the animation"
-msgstr ""
+msgstr "创建动画"
 
 #: ../../tutorials/step_by_step/animations.rst:19
 msgid ""
-"First of all, add an :ref:`AnimationPlayer <class_AnimationPlayer>` node "
-"to the scene as a child of bg (the root node):"
+"First of all, add an :ref:`AnimationPlayer <class_AnimationPlayer>` node to the "
+"scene as a child of bg (the root node):"
 msgstr ""
+"首先，添加一个 :ref:`动画播放器(AnimationPlayer) <class_AnimationPlayer>`节点(译"
+"注：AnimationPlayer作为节点名或类时不予翻译)到场景中作为bg(根节点)的一个子节点："
 
 #: ../../tutorials/step_by_step/animations.rst:24
 msgid ""
-"When a node of this type is selected, the animation editor panel will "
-"appear:"
+"When a node of this type is selected, the animation editor panel will appear:"
 msgstr ""
+"当这种类型的一个节点被选定时，动画编辑器面板(Animation Editor Panel)将会出现："
 
 #: ../../tutorials/step_by_step/animations.rst:29
 msgid ""
-"So, it's time to create a new animation! Press the new animation button "
-"and name the animation \"intro\"."
+"So, it's time to create a new animation! Press the new animation button and "
+"name the animation \"intro\"."
 msgstr ""
+"那么，是时候去创建一个新动画了！按下新建动画(New Animation)按钮，并将动画命名为"
+"\"intro\"。"
 
 #: ../../tutorials/step_by_step/animations.rst:34
 msgid ""
-"After the animation has been created, then it's time to edit it, by "
-"pressing the \"edit\" button:"
-msgstr ""
+"After the animation has been created, then it's time to edit it, by pressing "
+"the \"edit\" button:"
+msgstr "在动画被创建之后，那就该编辑它了，通过按下编辑(Edit)按钮："
 
 #: ../../tutorials/step_by_step/animations.rst:40
 msgid "Editing the animation"
-msgstr ""
+msgstr "编辑动画"
 
 #: ../../tutorials/step_by_step/animations.rst:42
 msgid ""
-"Now this is when the magic happens! Several things happen when the "
-"\"edit\" button is pressed, the first one is that the animation editor "
-"appears above the animation panel. (In Godot 2.x, this button has been "
-"removed, instead, click on the 'animation' toggle at the bottom right for"
-" similar functionality.)"
+"Now this is when the magic happens! Several things happen when the \"edit\" "
+"button is pressed, the first one is that the animation editor appears above the "
+"animation panel. (In Godot 2.x, this button has been removed, instead, click on "
+"the 'animation' toggle at the bottom right for similar functionality.)"
 msgstr ""
+"现在就是见证奇迹的时刻(翻译组卖萌：@刘谦)！在编辑按钮被按下时，发生了一些事情，"
+"首先就是动画编辑器(Animation Editor)出现在了动画面板的上方。"
 
 #: ../../tutorials/step_by_step/animations.rst:50
 msgid ""
-"But the second, and most important, is that the property editor enters "
-"into \"animation editing\" mode. In this mode, a key icon appears next to"
-" every property of the property editor. This means that, in Godot, *any "
-"property of any object* can be animated:"
+"But the second, and most important, is that the property editor enters into "
+"\"animation editing\" mode. In this mode, a key icon appears next to every "
+"property of the property editor. This means that, in Godot, *any property of "
+"any object* can be animated:"
 msgstr ""
+"而第二个最重要，就是属性编辑器(Property Editor)进入了动画编辑(Animation Editing)"
+"模式。在这个模式下，一个钥匙的图标出现在了属性编辑器中的每一个属性旁边。这就意味"
+"着，在Godot中，*任意对象的任意属性*都是可补间的："
 
 #: ../../tutorials/step_by_step/animations.rst:58
 msgid "Making the logo appear"
-msgstr ""
+msgstr "让logo出现"
 
 #: ../../tutorials/step_by_step/animations.rst:60
 msgid ""
-"Next, the logo will appear from the top of the screen. After selecting "
-"the animation player, the editor panel will stay visible until manually "
-"hidden (or the animation node is erased). Taking advantage of this, "
-"select the \"logo\" node and go to the \"pos\" property, move it up, to "
-"position: 114,-400."
+"Next, the logo will appear from the top of the screen. After selecting the "
+"animation player, the editor panel will stay visible until manually hidden (or "
+"the animation node is erased). Taking advantage of this, select the \"logo\" "
+"node and go to the \"pos\" property, move it up, to position: 114,-400."
 msgstr ""
+"接下来，logo将会从屏幕顶端出现。在选定了动画播放器之后，编辑器面板将始终可见直至"
+"手动隐藏(或者动画节点被消除)。利用这一点，选择\"logo\"节点然后来到\"pos\"属性，"
+"让他动起来，运动到：114,-400。"
 
 #: ../../tutorials/step_by_step/animations.rst:66
 msgid "Once in this position, press the key button next to the property:"
-msgstr ""
+msgstr "一到达了这个位置，就按下这个属性旁边的钥匙按钮："
 
 #: ../../tutorials/step_by_step/animations.rst:70
 msgid "As the track is new, a dialog will appear asking to create it. Confirm it!"
 msgstr ""
+"由于动画轨(Animation Track)是新的，因此会出现一个询问是否创建这条轨。确定！"
 
 #: ../../tutorials/step_by_step/animations.rst:75
 msgid "And the keyframe will be added in the animation player editor:"
-msgstr ""
+msgstr "然后，这个关键帧(Keyframe)就被添加到了动画编辑器中："
 
 #: ../../tutorials/step_by_step/animations.rst:79
 msgid "Second, move the editor cursor to the end, by clicking here:"
-msgstr ""
+msgstr "接着，移动编辑器的光标(Cursor)到顶端，通过点击这里："
 
 #: ../../tutorials/step_by_step/animations.rst:83
 msgid ""
-"Change the logo position to 114,0 and add a keyframe again. With two "
-"keyframes, the animation happens."
+"Change the logo position to 114,0 and add a keyframe again. With two keyframes, "
+"the animation happens."
 msgstr ""
+"改变logo的位置到114,0并再一次添加一个关键帧。有了两个关键帧，动画就产生了。"
 
 #: ../../tutorials/step_by_step/animations.rst:88
 msgid ""
-"Pressing Play on the animation panel will make the logo descend. To test "
-"it by running the scene, the autoplay button can tag the animation to "
-"start automatically when the scene starts:"
+"Pressing Play on the animation panel will make the logo descend. To test it by "
+"running the scene, the autoplay button can tag the animation to start "
+"automatically when the scene starts:"
 msgstr ""
+"按下动画面板的播放(Play)按钮将会使得logo下降出来。为了在运行场景时检验这一点，自"
+"动播放(Autoplay)按钮将会把动画标记为场景开始时就自动开始的动画："
 
 #: ../../tutorials/step_by_step/animations.rst:94
 msgid "And finally, when running the scene, the animation should look like this:"
-msgstr ""
-
+msgstr "最后，当运行场景时，动画应该看起来像这样："
