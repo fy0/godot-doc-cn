@@ -5,61 +5,67 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-24 23:35+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../../tutorials/engine/mouse_and_input_coordinates.rst:4
 msgid "Mouse and input coordinates"
-msgstr ""
+msgstr "鼠标和输入坐标(Mouse and input coordinates)"
 
 #: ../../tutorials/engine/mouse_and_input_coordinates.rst:7
 msgid "About"
-msgstr ""
+msgstr "关于"
 
 #: ../../tutorials/engine/mouse_and_input_coordinates.rst:9
 msgid ""
-"The reason for this small tutorial is to clear up many common mistakes "
-"about input coordinates, obtaining mouse position and screen resolution, "
-"etc."
+"The reason for this small tutorial is to clear up many common mistakes about "
+"input coordinates, obtaining mouse position and screen resolution, etc."
 msgstr ""
+"这篇短小的教程，主要是为了指出、阐明一些常见的错误，这类错误往往与输入坐标、"
+"获取鼠标位置、屏幕分辨率相关。"
 
 #: ../../tutorials/engine/mouse_and_input_coordinates.rst:14
 msgid "Hardware display coordinates"
-msgstr ""
+msgstr "硬件显示坐标系(Hardware display coordinates)"
 
 #: ../../tutorials/engine/mouse_and_input_coordinates.rst:16
 msgid ""
-"Using hardware coordinates makes sense in the case of writing complex UIs"
-" meant to run on PC, such as editors, MMOs, tools, etc. Yet, it does not "
-"make as much sense outside of that scope."
+"Using hardware coordinates makes sense in the case of writing complex UIs "
+"meant to run on PC, such as editors, MMOs, tools, etc. Yet, it does not make "
+"as much sense outside of that scope."
 msgstr ""
+"在绘制复杂的、运行在电脑上的UI时，使用硬件坐标系往往是个明智的选择，比如说在"
+"绘制编辑器、MMO游戏、工具类软件的UI时。不过，如果你不是要做上述这类东西，那么"
+"使用硬件坐标系就不是个好主意了。"
 
 #: ../../tutorials/engine/mouse_and_input_coordinates.rst:21
 msgid "Viewport display coordinates"
-msgstr ""
+msgstr "视窗显示坐标系(Viewport display coordinates)"
 
 #: ../../tutorials/engine/mouse_and_input_coordinates.rst:23
 msgid ""
 "Godot uses viewports to display content, and viewports can be scaled by "
-"several options (see :ref:`doc_multiple_resolutions` tutorial). Use, "
-"then, the functions in nodes to obtain the mouse coordinates and viewport"
-" size, for example:"
+"several options (see :ref:`doc_multiple_resolutions` tutorial). Use, then, "
+"the functions in nodes to obtain the mouse coordinates and viewport size, "
+"for example:"
 msgstr ""
+"Godot使用视窗来显示内容，视窗可以通过一些选项来进行缩放（参见 :ref:"
+"`doc_multiple_resolutions` 教程）。那么，我们也可以使用针对节点的方法，来获得"
+"鼠标的坐标和视窗大小，例如："
 
 #: ../../tutorials/engine/mouse_and_input_coordinates.rst:45
 msgid "Alternatively it's possible to ask the viewport for the mouse position:"
-msgstr ""
-
+msgstr "另外，也可以直接向视窗请求鼠标的位置，如下："

@@ -5,29 +5,29 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-24 23:47+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../../tutorials/2d/canvas_layers.rst:4
 msgid "Canvas layers"
-msgstr ""
+msgstr "画布层(Canvas layers)"
 
 #: ../../tutorials/2d/canvas_layers.rst:7
 msgid "Viewport and Canvas items"
-msgstr ""
+msgstr "视窗与画布项(Viewport and Canvas items)"
 
 #: ../../tutorials/2d/canvas_layers.rst:9
 msgid ""
@@ -37,34 +37,45 @@ msgid ""
 "and they will inherit their transform. This means that when moving the "
 "parent, the children will be moved too."
 msgstr ""
+"一般的2D节点, 如 :ref:`Node2D <class_Node2D>` 或:ref:`Control "
+"<class_Control>` 都继承自:ref:`CanvasItem <class_CanvasItem>`, 这是所有2D"
+"节点的基类。 CanvasItem 按次序地放置在一个树形结构内，它们都会继承其坐标"
+"信息。这意味着，当父节点移动时，子节点也将移动。"
 
 #: ../../tutorials/2d/canvas_layers.rst:16
 msgid ""
-"These nodes are placed as direct or indirect children to a :ref:`Viewport"
-" <class_Viewport>`, and will be displayed through it."
+"These nodes are placed as direct or indirect children to a :ref:"
+"`Viewport <class_Viewport>`, and will be displayed through it."
 msgstr ""
+"这些节点可以直接或间接地放置于:ref:`Viewport <class_Viewport>`内, 并通过"
+"其显示出来。"
 
 #: ../../tutorials/2d/canvas_layers.rst:19
 msgid ""
-"Viewport has a property \"canvas_transform\" "
-":ref:`Viewport.set_canvas_transform() "
-"<class_Viewport_set_canvas_transform>`, which allows to transform all the"
-" CanvasItem hierarchy by a custom :ref:`Matrix32 <class_Matrix32>` "
-"transform. Nodes such as :ref:`Camera2D <class_Camera2D>`, work by "
-"changing that transform."
+"Viewport has a property \"canvas_transform\" :ref:`Viewport."
+"set_canvas_transform() <class_Viewport_set_canvas_transform>`, which "
+"allows to transform all the CanvasItem hierarchy by a custom :ref:"
+"`Matrix32 <class_Matrix32>` transform. Nodes such as :ref:`Camera2D "
+"<class_Camera2D>`, work by changing that transform."
 msgstr ""
+"视窗有一个 \"canvas_transform\" :ref:`Viewport.set_canvas_transform() "
+"<class_Viewport_set_canvas_transform>` 属性，此属性允许通过自定义的 :ref:"
+"`Matrix32 <class_Matrix32>` 设置层级下所有 CanvasItem 的坐标信息。节点，"
+"如:ref:`Camera2D <class_Camera2D>`通过改变这个坐标，同样有效。"
 
 #: ../../tutorials/2d/canvas_layers.rst:25
 msgid ""
 "Changing the canvas transform is useful because it is a lot more "
 "efficient than moving the root canvas item (and hence the whole scene). "
-"Canvas transform is a simple matrix that offsets the whole 2D drawing, so"
-" it's the most efficient way to do scrolling."
+"Canvas transform is a simple matrix that offsets the whole 2D drawing, "
+"so it's the most efficient way to do scrolling."
 msgstr ""
+"设置画布坐标非常有用，因为这比移动节点更加高效。画布坐标只是一个简单的保"
+"存了2D绘图偏移量的矩阵信息，因此这是滚动的最佳方式。"
 
 #: ../../tutorials/2d/canvas_layers.rst:31
 msgid "Not enough..."
-msgstr ""
+msgstr "还不够..."
 
 #: ../../tutorials/2d/canvas_layers.rst:33
 msgid ""
@@ -72,32 +83,38 @@ msgid ""
 "application may not want *everything* transformed by the canvas "
 "transform. Examples of this are:"
 msgstr ""
+"但这还不够。在游戏或应用中经常有 不需要所有的东西都通过canvas_transform移"
+"动 的情况，如："
 
 #: ../../tutorials/2d/canvas_layers.rst:37
 msgid ""
 "**Parallax Backgrounds**: Backgrounds that move slower than the rest of "
 "the stage."
-msgstr ""
+msgstr "**视差滚动**: 背景比舞台上的其他东西移动地更慢。"
 
 #: ../../tutorials/2d/canvas_layers.rst:39
 msgid ""
 "**HUD**: Head's up display, or user interface. If the world moves, the "
 "life counter, score, etc. must stay static."
 msgstr ""
+"**公告板(HUD)**: 显示在角色上方的信息，或者GUI. 当游戏内容移动时，生命计"
+"数，分数等必须保持静止。"
 
 #: ../../tutorials/2d/canvas_layers.rst:41
 msgid ""
 "**Transitions**: Effects used for transitions (fades, blends) may also "
 "want it to remain at a fixed location."
 msgstr ""
+"**过渡效果(Transitions)**: 过渡效果 (渐隐，混合等) 也许需要保持其位置不"
+"变。"
 
 #: ../../tutorials/2d/canvas_layers.rst:44
 msgid "How can these problems be solved in a single scene tree?"
-msgstr ""
+msgstr "在单个场景树中如何解决这些问题？"
 
 #: ../../tutorials/2d/canvas_layers.rst:47
 msgid "CanvasLayers"
-msgstr ""
+msgstr "画布层(CanvasLayers)"
 
 #: ../../tutorials/2d/canvas_layers.rst:49
 msgid ""
@@ -109,6 +126,11 @@ msgid ""
 "their own transform, and do not depend of the transform of other layers. "
 "This allows the UI to be fixed in-place, while the word moves."
 msgstr ""
+"答案是 :ref:`CanvasLayer <class_CanvasLayer>`。CanvasLayers为其所有的子节"
+"点添加了一个2D渲染层用以分割。默认情况下，视窗下的所有子节点都被绘制在 "
+"layer0 上，然而CanvasLayer可在所有标明的 layer 上绘制。编号越大的层将绘制"
+"在越上面（这号理解）。CanvasLayers 同样有其自身的坐标系统，而且不依赖其他"
+"层的坐标，当游戏内容移动时，这个特性可以保持 UI 位置固定。"
 
 #: ../../tutorials/2d/canvas_layers.rst:58
 msgid ""
@@ -116,27 +138,33 @@ msgid ""
 "with a CanvasLayer at layer \"-1\". The screen with the points, life "
 "counter and pause button can also be created at layer \"1\"."
 msgstr ""
+"视差滚动就是一个经典例子。背景绘制在 layer-1，分数、生命和暂停按钮绘制在 "
+"layer1。 "
 
 #: ../../tutorials/2d/canvas_layers.rst:62
 msgid "Here's a diagram of how it looks:"
-msgstr ""
+msgstr "下面的图显示了这个工作流程："
 
 #: ../../tutorials/2d/canvas_layers.rst:66
 msgid ""
-"CanvasLayers are independent of tree order, and they only depend on their"
-" layer number, so they can be instantiated when needed."
+"CanvasLayers are independent of tree order, and they only depend on "
+"their layer number, so they can be instantiated when needed."
 msgstr ""
+"对于树形结构，CanvasLayers 是独立的，不参与排序，它们只受 layer编号的影"
+"响。因此，在需要的时候，尽情实例化他们吧~~"
 
 #: ../../tutorials/2d/canvas_layers.rst:70
 msgid "Performance"
-msgstr ""
+msgstr "性能"
 
 #: ../../tutorials/2d/canvas_layers.rst:72
 msgid ""
 "Even though there shouldn't be any performance limitation, it is not "
 "advised to use excessive amount of layers to arrange drawing order of "
 "nodes. The most optimal way will always be arranging them by tree order. "
-"2d nodes also have a property for controlling their drawing order (see "
-":ref:`Node2D.set_z() <class_Node2D_set_z>`)."
+"2d nodes also have a property for controlling their drawing order (see :"
+"ref:`Node2D.set_z() <class_Node2D_set_z>`)."
 msgstr ""
-
+"即使没有任何性能限制，我们也不建议使用过多的 layer 来绘制节点。最佳方式就"
+"是通树形结构排序来绘制节点。2d节点同样可以通过 :ref:`Node2D.set_z() "
+"<class_Node2D_set_z> 来设置绘制顺序。"

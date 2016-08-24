@@ -5,25 +5,25 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-24 23:45+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../../tutorials/2d/size_and_anchors.rst:4
 msgid "Size and anchors"
-msgstr ""
+msgstr "尺寸与锚点(Size and anchors)"
 
 #: ../../tutorials/2d/size_and_anchors.rst:6
 msgid ""
@@ -32,29 +32,38 @@ msgid ""
 "position and size of each one of them. Unfortunately, it is rarely the "
 "case."
 msgstr ""
+"如果一个游戏只运行在一些分辨率相同的设备上，那就简单了，只需要设置各自的"
+"坐标即可。不幸的是，这种情况几乎没有。"
 
 #: ../../tutorials/2d/size_and_anchors.rst:11
 msgid ""
-"Only TVs nowadays have a standard resolution and aspect ratio. Everything"
-" else, from computer monitors to tablets, portable consoles and mobile "
-"phones have different resolutions and aspect ratios."
+"Only TVs nowadays have a standard resolution and aspect ratio. "
+"Everything else, from computer monitors to tablets, portable consoles "
+"and mobile phones have different resolutions and aspect ratios."
 msgstr ""
+"如今，只有电视拥有标准的分辨率和宽高比。其他设备，从pc到平板，从掌机到手"
+"机都有不同的分辨率和宽高比。"
 
 #: ../../tutorials/2d/size_and_anchors.rst:15
 msgid ""
 "There are several ways to handle this, but for now let's just imagine "
 "that the screen resolution has changed and the controls need to be re-"
-"positioned. Some will need to follow the bottom of the screen, others the"
-" top of the screen, or maybe the right or left margins."
+"positioned. Some will need to follow the bottom of the screen, others "
+"the top of the screen, or maybe the right or left margins."
 msgstr ""
+"解决这些问题有很多方法，但是现在，让我们想象一下，当屏幕分辨率改变时，控"
+"件需要重新定位。一些需要保持在屏幕底部，一些在屏幕顶部、左边或右边等等。"
 
 #: ../../tutorials/2d/size_and_anchors.rst:22
 msgid ""
-"This is done by editing the *margin* properties of controls. Each control"
-" has four margins: left, right, bottom and top. By default all of them "
-"represent a distance in pixels relative to the top-left corner of the "
-"parent control or (in case there is no parent control) the viewport."
+"This is done by editing the *margin* properties of controls. Each "
+"control has four margins: left, right, bottom and top. By default all of "
+"them represent a distance in pixels relative to the top-left corner of "
+"the parent control or (in case there is no parent control) the viewport."
 msgstr ""
+"通过设置控件的 *margin* 属性可以很容易实现。每个控件都有4个边距(margin)："
+"left,right,top,bottom。默认情况下，它们表示控件相对于父级左上角(top-left)"
+"的距离（单位：像素），如果没有父级，则相对于视窗左上角。"
 
 #: ../../tutorials/2d/size_and_anchors.rst:29
 msgid ""
@@ -62,17 +71,19 @@ msgid ""
 "changed to END, the margin values become relative to the bottom-right "
 "corner of the parent control or viewport."
 msgstr ""
+"当水平方向(left,right)或垂直方向(top,bottom)设置为 END 时，magin值就变为"
+"相对于父级或视窗的右下角(bottom-right)定位。（可能描述得不是很清楚，自己"
+"在编辑器里面试一试就会非常明白了）"
 
 #: ../../tutorials/2d/size_and_anchors.rst:35
 msgid ""
 "Here the control is set to expand it's bottom-right corner with that of "
 "the parent, so when re-sizing the parent, the control will always cover "
 "it, leaving a 20 pixel margin:"
-msgstr ""
+msgstr "下面就是右下角定位的例子，控件始终保持20像素的边距："
 
 #: ../../tutorials/2d/size_and_anchors.rst:41
 msgid ""
 "Finally, there is also a ratio option, where 0 means left, 1 means right "
 "and anything in between is interpolated."
-msgstr ""
-
+msgstr "最后，也可以设置比例，0表示最左，1表示最右。"
