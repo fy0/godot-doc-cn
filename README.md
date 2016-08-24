@@ -52,7 +52,7 @@
 
 
 
-## 贡献者
+## 贡献者（按时间排序）
 
 * [fy](https://github.com/fy0)
 
@@ -65,4 +65,6 @@
 * [zhangshiqian1214](https://github.com/zhangshiqian1214)
  
 * [rochesk](https://github.com/rochesk)
+
+* [Saniko](https://github.com/sanikoyes)
 
