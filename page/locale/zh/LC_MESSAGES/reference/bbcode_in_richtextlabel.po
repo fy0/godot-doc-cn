@@ -5,29 +5,29 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-25 22:45+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../../reference/bbcode_in_richtextlabel.rst:4
 msgid "BBCode in RichTextLabel"
-msgstr ""
+msgstr "富文本控件排版(RichTextLabel & BBCode)"
 
 #: ../../reference/bbcode_in_richtextlabel.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #: ../../reference/bbcode_in_richtextlabel.rst:9
 msgid ""
@@ -35,35 +35,39 @@ msgid ""
 "control. It has a built-in API for generating the markup, but can also "
 "parse a BBCode."
 msgstr ""
+":ref:`class_RichTextLabel` 支持显示复杂的图文混排内容，它包含一套内建API"
+"来生成标记语言，语法类似(BBCode)。"
 
 #: ../../reference/bbcode_in_richtextlabel.rst:12
 msgid ""
-"Note that the BBCode tags can also be used to some extent in the "
-":ref:`XML source of the class reference "
-"<doc_updating_the_class_reference>`."
+"Note that the BBCode tags can also be used to some extent in the :ref:"
+"`XML source of the class reference <doc_updating_the_class_reference>`."
 msgstr ""
+"提示：BBCode标签同样适用于编辑器内建:ref:`帮助说明文档 "
+"<doc_updating_the_class_reference>`."
 
 #: ../../reference/bbcode_in_richtextlabel.rst:16
 msgid "Setting up"
-msgstr ""
+msgstr "配置"
 
 #: ../../reference/bbcode_in_richtextlabel.rst:18
 msgid ""
-"For RichTextLabel to work properly, it must be set up. This means loading"
-" the intended fonts in the relevant properties:"
+"For RichTextLabel to work properly, it must be set up. This means "
+"loading the intended fonts in the relevant properties:"
 msgstr ""
+"要让RichTextLabel控件正常工作，我们需要先配置控件属性，比如文本显示字体："
 
 #: ../../reference/bbcode_in_richtextlabel.rst:24
 msgid "Reference"
-msgstr ""
+msgstr "参考"
 
 #: ../../reference/bbcode_in_richtextlabel.rst:57
 msgid "Built-in color names"
-msgstr ""
+msgstr "内建颜色标签"
 
 #: ../../reference/bbcode_in_richtextlabel.rst:59
 msgid "List of valid color names for the [color=<name>] tag:"
-msgstr ""
+msgstr "以下列出控件支持的颜色标签，用法：[color=<name>]："
 
 #: ../../reference/bbcode_in_richtextlabel.rst:61
 msgid "aqua"
@@ -127,11 +131,12 @@ msgstr ""
 
 #: ../../reference/bbcode_in_richtextlabel.rst:78
 msgid "Hexadecimal color codes"
-msgstr ""
+msgstr "十六进制颜色值"
 
 #: ../../reference/bbcode_in_richtextlabel.rst:80
 msgid ""
 "Any valid 6 digit hexadecimal code is supported. e.g: "
 "[color=#ffffff]white[/color]"
 msgstr ""
-
+"同时支持使用任意长度为6的十六进制颜色代码（顺序为 #RRGGBB）表示，如："
+"[color=#ffffff]white[/color]"
