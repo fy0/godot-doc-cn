@@ -5,64 +5,73 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-28 17:32+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../../tutorials/ssl_certificates.rst:4
 msgid "SSL certificates"
-msgstr ""
+msgstr "SSL证书"
 
 #: ../../tutorials/ssl_certificates.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #: ../../tutorials/ssl_certificates.rst:9
 msgid ""
 "It is often desired to use SSL connections for communications to avoid "
-"\"man in the middle\" attacks. Godot has a connection wrapper, "
-":ref:`StreamPeerSSL <class_StreamPeerSSL>`, which can take a regular "
+"\"man in the middle\" attacks. Godot has a connection wrapper, :ref:"
+"`StreamPeerSSL <class_StreamPeerSSL>`, which can take a regular "
 "connection and add security around it. The :ref:`HTTPClient "
 "<class_HTTPClient>` class also supports HTTPS by using this same wrapper."
 msgstr ""
+"SSL 连接经常被用于想要避免“中间人”攻击的通信。Godot 有一个连接封装 :ref:"
+"`StreamPeerSSL <class_StreamPeerSSL>`, 可以在常规连接的基础上增加安全"
+"性。  :ref:`HTTPClient <class_HTTPClient>`  类同样可以通过使用同一个封装"
+"来支持 HTTPS。"
 
 #: ../../tutorials/ssl_certificates.rst:16
 msgid ""
 "For SSL to work, certificates need to be provided. A .crt file must be "
 "specified in the project settings:"
 msgstr ""
+"为了使 SSL 工作，证书是必须提供的。项目设置必须指定一个 .crt 文件。"
 
 #: ../../tutorials/ssl_certificates.rst:21
 msgid ""
-"This file should contain any number of public certificates in "
-"http://en.wikipedia.org/wiki/Privacy-enhanced_Electronic_Mail format."
+"This file should contain any number of public certificates in http://en."
+"wikipedia.org/wiki/Privacy-enhanced_Electronic_Mail format."
 msgstr ""
+"这个文件应该包含许多公开证书，以 http://en.wikipedia.org/wiki/Privacy-"
+"enhanced_Electronic_Mail 这种格式。"
 
 #: ../../tutorials/ssl_certificates.rst:24
 msgid ""
-"Of course, remember to add .crt as filter so the exporter recognizes this"
-" when exporting your project."
+"Of course, remember to add .crt as filter so the exporter recognizes "
+"this when exporting your project."
 msgstr ""
+"当然，记得将 .crt 作为过滤器（filter）来添加，以便于你导出项目的时候打包"
+"器能够识别它。"
 
 #: ../../tutorials/ssl_certificates.rst:29
 msgid "There are two ways to obtain certificates:"
-msgstr ""
+msgstr "有两种方式来获得证书："
 
 #: ../../tutorials/ssl_certificates.rst:32
 msgid "Approach 1: self signed cert"
-msgstr ""
+msgstr "途径1：自签名证书"
 
 #: ../../tutorials/ssl_certificates.rst:34
 msgid ""
@@ -70,19 +79,23 @@ msgid ""
 "key pair, and put the public pair in the .crt file (again, in PEM "
 "format). The private key should go to your server."
 msgstr ""
+"第一个途径是最简单的，就是生成一个公钥私钥对，然后将公钥转换成 .crt 文件"
+"（注意，PEM格式）。私钥搞到你的服务器上。"
 
 #: ../../tutorials/ssl_certificates.rst:38
 msgid ""
-"OpenSSL has `some documentation "
-"<https://www.openssl.org/docs/HOWTO/keys.txt>`__ about this. This "
-"approach also **does not require domain validation** nor requires you to "
-"spend a considerable amount of money in purchasing certificates from a "
-"CA."
+"OpenSSL has `some documentation <https://www.openssl.org/docs/HOWTO/keys."
+"txt>`__ about this. This approach also **does not require domain "
+"validation** nor requires you to spend a considerable amount of money in "
+"purchasing certificates from a CA."
 msgstr ""
+"OpenSSL 有关于这事情的 `一些文档 <https://www.openssl.org/docs/HOWTO/"
+"keys.txt>`__ 。这个办法 **不需要域名验证** 也不强迫你给 CA 交一笔值得考虑"
+"的钱来买证书。"
 
 #: ../../tutorials/ssl_certificates.rst:45
 msgid "Approach 2: CA cert"
-msgstr ""
+msgstr "途径2：CA 证书"
 
 #: ../../tutorials/ssl_certificates.rst:47
 msgid ""
@@ -90,6 +103,8 @@ msgid ""
 "as Verisign, Geotrust, etc. This is a more cumbersome process, but it's "
 "more \"official\" and ensures your identity is clearly represented."
 msgstr ""
+"第二个拿证书的方式是通过数字证书认证机构 (CA) 比如 Verisign, Geotrust, 等"
+"等。这个过程更为麻烦，但是更加“官方”同时能绝对清楚地证明你的数字身份。"
 
 #: ../../tutorials/ssl_certificates.rst:52
 msgid ""
@@ -97,30 +112,35 @@ msgid ""
 "connect to someone else's servers (i.e., connecting to Google or some "
 "other REST API provider via HTTPS) this method is not as useful."
 msgstr ""
+"除非你在大公司里干活，或者需要连接到其他人的服务器（就比如连接到 Google "
+"或者其他的什么使用 HTTPS 方式的 REST API 提供商），不然这法子不太好用。"
 
 #: ../../tutorials/ssl_certificates.rst:56
 msgid ""
-"Also, when using a CA issued cert, **you must enable domain validation**,"
-" to ensure the domain you are connecting to is the one intended, "
-"otherwise any website can issue any certificate in the same CA and it "
-"will work."
+"Also, when using a CA issued cert, **you must enable domain "
+"validation**, to ensure the domain you are connecting to is the one "
+"intended, otherwise any website can issue any certificate in the same CA "
+"and it will work."
 msgstr ""
+"还有，当使用 CA 颁发的证书时，**你必须开启域名验证**，以确保你连接到了你"
+"想要的地方，而不是其他从同一个 CA 能拿到任意证书的站点。"
 
 #: ../../tutorials/ssl_certificates.rst:61
 msgid ""
 "If you are using Linux, you can use the supplied certs file, generally "
 "located in:"
-msgstr ""
+msgstr "如果你在使用 Linux，你可以使用临时(supplied ?)证书文件，一般位于："
 
 #: ../../tutorials/ssl_certificates.rst:68
 msgid ""
 "This file allows HTTPS connections to virtually any website (i.e., "
 "Google, Microsoft, etc.)."
 msgstr ""
+"这个文件允许 HTTPS 连接到几乎所有站点（比如 Google, Microsoft, 等等）"
 
 #: ../../tutorials/ssl_certificates.rst:71
 msgid ""
 "Or just pick any of the more specific certificates there if you are "
 "connecting to a specific one."
 msgstr ""
-
+"或者从这堆证书里选一个更具体的证书，如果你只需要连接到某个特定站点的话。"
