@@ -5,29 +5,29 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-25 23:57+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../../reference/binary_serialization_api.rst:4
 msgid "Binary serialization API"
-msgstr ""
+msgstr "二进制序列化API"
 
 #: ../../reference/binary_serialization_api.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #: ../../reference/binary_serialization_api.rst:9
 msgid ""
@@ -37,10 +37,16 @@ msgid ""
 "well as the packet APIs for :ref:`class_PacketPeer`. This format is not "
 "used for binary scenes and resources."
 msgstr ""
+"Godot内建一套简单易用的序列化API（基于Variant），序列化用于数据类型"
+"（dict/array/object等）和二进制数据流之间的转换，通常用于保存数据（存档）"
+"和网络消息通讯，可以简单的通过 :ref:`class_File` 类的 ``get_var`` 和 "
+"``store_var`` 读取/保存数据，同样 :ref:`class_PacketPeer` 类也支持 "
+"``get_var`` 和 ``store_var`` 接口。\n"
+"注意：本格式不用于保存二进制场景(.scn)文件和资源(.res)文件"
 
 #: ../../reference/binary_serialization_api.rst:16
 msgid "Packet specification"
-msgstr ""
+msgstr "包装格式详解"
 
 #: ../../reference/binary_serialization_api.rst:18
 msgid ""
@@ -48,6 +54,17 @@ msgid ""
 "little endian encoded. All packets have a 4 byte header representing an "
 "integer, specifying the type of data:"
 msgstr ""
+"格式被设计为4字节对齐（长度不够4字节的单元将补充1-3字节的0数据），所有的"
+"值以小端(Little-Endian)的方式储存，所有单元都包含一个长度为4字节的int表示"
+"单元类型：\n"
+"译者注：字节补齐的意思是，假如保存的数据只有1字节，将补齐3字节的0，使得数"
+"据加起来刚好等于4，如下：\n"
+"长度1，补齐3，等于4\n"
+"长度2，补齐2，等于4\n"
+"长度3，补齐1，等于4\n"
+"长度4，不进行补齐\n"
+"长度5，补齐3，等于8（4的倍数）\n"
+"以此类推"
 
 #: ../../reference/binary_serialization_api.rst:23
 #: ../../reference/binary_serialization_api.rst:94
@@ -80,11 +97,11 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:478
 #: ../../reference/binary_serialization_api.rst:493
 msgid "Type"
-msgstr ""
+msgstr "类型"
 
 #: ../../reference/binary_serialization_api.rst:23
 msgid "Value"
-msgstr ""
+msgstr "值"
 
 #: ../../reference/binary_serialization_api.rst:25
 msgid "0"
@@ -456,7 +473,7 @@ msgstr ""
 msgid ""
 "Following this is the actual packet contents, which varies for each type "
 "of packet:"
-msgstr ""
+msgstr "以下详细说明各类型单元的储存方式："
 
 #: ../../reference/binary_serialization_api.rst:88
 msgid "0: null"
@@ -496,7 +513,7 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:478
 #: ../../reference/binary_serialization_api.rst:493
 msgid "Offset"
-msgstr ""
+msgstr "偏移值"
 
 #: ../../reference/binary_serialization_api.rst:94
 #: ../../reference/binary_serialization_api.rst:103
@@ -528,7 +545,7 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:478
 #: ../../reference/binary_serialization_api.rst:493
 msgid "Len"
-msgstr ""
+msgstr "长度"
 
 #: ../../reference/binary_serialization_api.rst:94
 #: ../../reference/binary_serialization_api.rst:103
@@ -560,7 +577,7 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:478
 #: ../../reference/binary_serialization_api.rst:493
 msgid "Description"
-msgstr ""
+msgstr "说明"
 
 #: ../../reference/binary_serialization_api.rst:96
 #: ../../reference/binary_serialization_api.rst:105
@@ -592,6 +609,8 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:96
 msgid "0 for False, 1 for True"
 msgstr ""
+"0表示False\n"
+"1表示True"
 
 #: ../../reference/binary_serialization_api.rst:100
 msgid "2: integer"
@@ -599,7 +618,7 @@ msgstr ""
 
 #: ../../reference/binary_serialization_api.rst:105
 msgid "Signed, 32-Bit Integer"
-msgstr ""
+msgstr "带符号的32位整数"
 
 #: ../../reference/binary_serialization_api.rst:109
 msgid "3: float"
@@ -674,7 +693,7 @@ msgstr ""
 
 #: ../../reference/binary_serialization_api.rst:114
 msgid "IEE 754 32-Bits Float"
-msgstr ""
+msgstr "符合IEE 754标准的32位浮点数"
 
 #: ../../reference/binary_serialization_api.rst:118
 msgid "4: string"
@@ -682,7 +701,7 @@ msgstr ""
 
 #: ../../reference/binary_serialization_api.rst:123
 msgid "String Length (in Bytes)"
-msgstr ""
+msgstr "字符串长度(单位:字节)"
 
 #: ../../reference/binary_serialization_api.rst:125
 #: ../../reference/binary_serialization_api.rst:344
@@ -703,12 +722,12 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:367
 #: ../../reference/binary_serialization_api.rst:456
 msgid "UTF-8 Encoded String"
-msgstr ""
+msgstr "UTF-8格式字符串"
 
 #: ../../reference/binary_serialization_api.rst:128
 #: ../../reference/binary_serialization_api.rst:327
 msgid "This field is padded to 4 bytes."
-msgstr ""
+msgstr "注意：字符串长度单元不足4字节将补齐1-3字节的0"
 
 #: ../../reference/binary_serialization_api.rst:131
 msgid "5: vector2"
@@ -721,7 +740,7 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:469
 #: ../../reference/binary_serialization_api.rst:482
 msgid "X Coordinate"
-msgstr ""
+msgstr "X坐标值"
 
 #: ../../reference/binary_serialization_api.rst:138
 #: ../../reference/binary_serialization_api.rst:149
@@ -730,7 +749,7 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:471
 #: ../../reference/binary_serialization_api.rst:484
 msgid "Y Coordinate"
-msgstr ""
+msgstr "Y坐标值"
 
 #: ../../reference/binary_serialization_api.rst:142
 msgid "6: rect2"
@@ -739,12 +758,12 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:151
 #: ../../reference/binary_serialization_api.rst:230
 msgid "X Size"
-msgstr ""
+msgstr "X长度"
 
 #: ../../reference/binary_serialization_api.rst:153
 #: ../../reference/binary_serialization_api.rst:232
 msgid "Y Size"
-msgstr ""
+msgstr "Y宽度"
 
 #: ../../reference/binary_serialization_api.rst:157
 msgid "7: vector3"
@@ -754,7 +773,7 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:228
 #: ../../reference/binary_serialization_api.rst:486
 msgid "Z Coordinate"
-msgstr ""
+msgstr "Z坐标值"
 
 #: ../../reference/binary_serialization_api.rst:170
 msgid "8: matrix32"
@@ -842,7 +861,7 @@ msgstr ""
 
 #: ../../reference/binary_serialization_api.rst:234
 msgid "Z Size"
-msgstr ""
+msgstr "Z大小"
 
 #: ../../reference/binary_serialization_api.rst:238
 msgid "12: matrix3x3"
@@ -908,22 +927,22 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:299
 #: ../../reference/binary_serialization_api.rst:497
 msgid "Red (0..1)"
-msgstr ""
+msgstr "红色值(R) 范围(0..1)"
 
 #: ../../reference/binary_serialization_api.rst:301
 #: ../../reference/binary_serialization_api.rst:499
 msgid "Green (0..1)"
-msgstr ""
+msgstr "绿色值(G) 范围(0..1)"
 
 #: ../../reference/binary_serialization_api.rst:303
 #: ../../reference/binary_serialization_api.rst:501
 msgid "Blue (0..1)"
-msgstr ""
+msgstr "蓝色值(B) 范围(0..1)"
 
 #: ../../reference/binary_serialization_api.rst:305
 #: ../../reference/binary_serialization_api.rst:503
 msgid "Alpha (0..1)"
-msgstr ""
+msgstr "透明值(A) 范围(0..1)"
 
 #: ../../reference/binary_serialization_api.rst:309
 msgid "15: image"
@@ -931,23 +950,23 @@ msgstr ""
 
 #: ../../reference/binary_serialization_api.rst:314
 msgid "Format (see FORMAT\\_\\* in \"Image\":class_image"
-msgstr ""
+msgstr "图片格式(见 FORMAT\\_\\* in \"Image\":class_image"
 
 #: ../../reference/binary_serialization_api.rst:316
 msgid "Mip-Maps (0 means no mip-maps)."
-msgstr ""
+msgstr "Mip-Maps (0代表不带mip-maps)."
 
 #: ../../reference/binary_serialization_api.rst:318
 msgid "Width (Pixels)"
-msgstr ""
+msgstr "宽度(像素)"
 
 #: ../../reference/binary_serialization_api.rst:320
 msgid "Height (Pixels)"
-msgstr ""
+msgstr "高度(像素)"
 
 #: ../../reference/binary_serialization_api.rst:322
 msgid "Data Length"
-msgstr ""
+msgstr "数据长度"
 
 #: ../../reference/binary_serialization_api.rst:324
 msgid "24..24+DataLength"
@@ -960,7 +979,7 @@ msgstr ""
 
 #: ../../reference/binary_serialization_api.rst:324
 msgid "Image Data"
-msgstr ""
+msgstr "图片数据"
 
 #: ../../reference/binary_serialization_api.rst:330
 msgid "16: node path"
@@ -1038,8 +1057,8 @@ msgstr ""
 
 #: ../../reference/binary_serialization_api.rst:390
 msgid ""
-"Then what follows is, for amount of \"elements\", pairs of key and value,"
-" one after the other, using this same format."
+"Then what follows is, for amount of \"elements\", pairs of key and "
+"value, one after the other, using this same format."
 msgstr ""
 
 #: ../../reference/binary_serialization_api.rst:394
@@ -1170,4 +1189,3 @@ msgstr ""
 #: ../../reference/binary_serialization_api.rst:503
 msgid "8..20+length\\*16"
 msgstr ""
-
