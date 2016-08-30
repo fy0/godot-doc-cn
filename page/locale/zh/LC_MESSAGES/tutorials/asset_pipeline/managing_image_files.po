@@ -5,32 +5,35 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2016-08-30 15:07+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:4
 msgid "Managing image files"
-msgstr ""
+msgstr "管理图片文件"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:6
 msgid ""
-"If you have read the previous tutorials on :ref:`doc_resources` and "
-":ref:`doc_filesystem`, at this point you know that regular image files "
-"(.png, .jpg, etc.) are treated as regular resources in Godot."
+"If you have read the previous tutorials on :ref:`doc_resources` and :ref:"
+"`doc_filesystem`, at this point you know that regular image files (."
+"png, .jpg, etc.) are treated as regular resources in Godot."
 msgstr ""
+"如果你阅读了前面的教程  :ref:`doc_resources` 和 :ref:`doc_filesystem` ，"
+"这时候你已经知道常见图片格式 (.png, .jpg, 等等) 在 Godot 中被视为常规资"
+"源。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:10
 msgid ""
@@ -39,65 +42,80 @@ msgid ""
 "this information and saving the texture back will not have any effect, "
 "since such formats can't contain that information."
 msgstr ""
+"不像是贴图资源（.tex 文件），图片文件不包括用于 tiling (贴图重复)，"
+"mipmaps （纹理映射）或是 filtering 的额外信息。编辑这些信息并重新保存贴图"
+"文件并不会有啥特殊效果，因为图片格式并不能包含这些信息。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:16
 msgid "Image loader"
-msgstr ""
+msgstr "图像加载器"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:18
 msgid ""
-"Loading of images is done by the image loader. The behavior of the loader"
-" for all image files can be changed in the Project Settings dialog (Scene"
-" -> Project Settings). There is a section with values that are used for "
-"all image resources:"
+"Loading of images is done by the image loader. The behavior of the "
+"loader for all image files can be changed in the Project Settings dialog "
+"(Scene -> Project Settings). There is a section with values that are "
+"used for all image resources:"
 msgstr ""
+"图片的加载由图像加载器来完成。加载器对所有图像的行为能够从项目设置对话框 "
+"(Scene -> Project Settings) 中修改。这里有一节作用于所有图像的值设置。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:26
 msgid "Image loader options"
-msgstr ""
+msgstr "图像加载器选项"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:29
 msgid "Filter"
-msgstr ""
+msgstr "过滤器"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:31
 msgid ""
 "Filter is used when the image is stretched more than its original size, "
-"so a texel in the image is bigger than a pixel on the screen. Turning off"
-" the filter produces a retro-like look:"
+"so a texel in the image is bigger than a pixel on the screen. Turning "
+"off the filter produces a retro-like look:"
 msgstr ""
+"过滤器被用于图片拉伸到超出其原本大小的时候，因此一个贴图像素要大于一个在"
+"屏幕上的实际像素。关闭过滤器会得到有些复古风格的图像："
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:38
 msgid "Repeat"
-msgstr ""
+msgstr "重复"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:40
 msgid ""
 "Repeat is mainly used for 3D textures, so it's off by default (textures "
 "are imported with the scenes and usually are not in the project as image "
 "files). When using UV coordinates (something not as common in 2D), and "
-"the UV value goes beyond the 0,0,1,1 rect, the texture repeats instead of"
-" clamping to the edge."
+"the UV value goes beyond the 0,0,1,1 rect, the texture repeats instead "
+"of clamping to the edge."
 msgstr ""
+"重复主要用于 3D 贴图，因此默认是关闭的（贴图被场景所导入且常常不作为图像"
+"文件出现在项目中）。当使用 UV 坐标 （在 2D 中不怎么常见的一个东西），而"
+"且 UV 值超过 0,0,1,1 方块时，贴图将会重复显示而不是被限制于边缘（译注：存"
+"疑，不知道翻译对了么）。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:47
 msgid "Mipmaps"
-msgstr ""
+msgstr "纹理映射"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:49
 msgid ""
 "When the mipmaps option is enabled, Godot will generate mipmaps. Mipmaps "
-"are versions of the image shrunk by half in both axis, recursively, until"
-" the image is 1 pixel of size. When the 3D hardware needs to shrink the "
-"image, it finds the largest mipmap it can scale from, and scales from "
-"there. This improves performance and image quality."
+"are versions of the image shrunk by half in both axis, recursively, "
+"until the image is 1 pixel of size. When the 3D hardware needs to shrink "
+"the image, it finds the largest mipmap it can scale from, and scales "
+"from there. This improves performance and image quality."
 msgstr ""
+"当纹理映射选项开启，Godot 将生成纹理映射数据。纹理映射是图像在每一个轴上"
+"各收缩一半，反复对产生的结果再重复这个过程，直到图像只剩下 1 像素大小这个"
+"过程的结果集合。当 3D 硬件需要收缩图像，只需找到与所需缩放大小最接近的那"
+"份纹理映射数据并应用缩放就可以了。这项技术同时提升了效率和图片质量。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:58
 msgid ""
 "When mipmaps are disabled, images start distorting badly when shrunk "
 "excessively:"
-msgstr ""
+msgstr "若纹理映射关闭，图像会在过度缩小时扭曲变形。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:64
 msgid "Alpha blending"
@@ -105,11 +123,10 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:66
 msgid ""
-"The `blending equation "
-"<http://en.wikipedia.org/wiki/Alpha_compositing>`__ used by applications "
-"like Photoshop is too complex for real-time. There are better "
-"approximations such as `pre-multiplied alpha "
-"<http://blogs.msdn.com/b/shawnhar/archive/2009/11/06/premultiplied-"
+"The `blending equation <http://en.wikipedia.org/wiki/"
+"Alpha_compositing>`__ used by applications like Photoshop is too complex "
+"for real-time. There are better approximations such as `pre-multiplied "
+"alpha <http://blogs.msdn.com/b/shawnhar/archive/2009/11/06/premultiplied-"
 "alpha.aspx?Redirected=true>`__, but they impose more stress in the asset "
 "pipeline. In the end, we are left with textures that have artifacts in "
 "the edges, because apps such as Photoshop store white pixels in "
@@ -157,8 +174,8 @@ msgstr ""
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:101
 msgid ""
 "Importing also allows conversion to other formats (WebP, or RAM "
-"compression) which might be of use in some cases. More information on the"
-" :ref:`doc_importing_textures` page."
+"compression) which might be of use in some cases. More information on "
+"the :ref:`doc_importing_textures` page."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:106
@@ -219,7 +236,6 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:145
 msgid ""
-"Using `optiPNG <http://optipng.sourceforge.net/>` fixes these warnings on"
-" Windows. To fix a PNG inplace do:"
+"Using `optiPNG <http://optipng.sourceforge.net/>` fixes these warnings "
+"on Windows. To fix a PNG inplace do:"
 msgstr ""
-
