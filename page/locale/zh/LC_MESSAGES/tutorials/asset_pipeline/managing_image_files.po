@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: 2016-08-30 15:07+0800\n"
+"PO-Revision-Date: 2016-08-31 18:43+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -43,8 +43,8 @@ msgid ""
 "since such formats can't contain that information."
 msgstr ""
 "不像是贴图资源（.tex 文件），图片文件不包括用于 tiling (贴图重复)，"
-"mipmaps （纹理映射）或是 filtering 的额外信息。编辑这些信息并重新保存贴图"
-"文件并不会有啥特殊效果，因为图片格式并不能包含这些信息。"
+"mipmaps (纹理映射)或是 filtering 的额外信息。编辑这些信息并重新保存贴图文"
+"件并不会有啥特殊效果，因为图片格式并不能包含这些信息。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:16
 msgid "Image loader"
@@ -119,7 +119,7 @@ msgstr "若纹理映射关闭，图像会在过度缩小时扭曲变形。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:64
 msgid "Alpha blending"
-msgstr ""
+msgstr "Alpha 混合"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:66
 msgid ""
@@ -133,12 +133,22 @@ msgid ""
 "completely transparent areas. Such white pixels end up showing thanks to "
 "the texture filter (when active)."
 msgstr ""
+"被像是 PhotoShop 这样的应用程序所使用的 `混合方程 (blending equation) "
+"<http://en.wikipedia.org/wiki/Alpha_compositing>`__ 对实时渲染来说太复杂"
+"了。这有些更好的近似算法比如说  `预乘Alpha (pre-multiplied alpha) "
+"<http://blogs.msdn.com/b/shawnhar/archive/2009/11/06/premultiplied-alpha."
+"aspx?Redirected=true>`__，但是他们给了资源管道更大的压力。最终，我们留下"
+"了贴图边缘的瑕疵(译注: artifacts 不知道怎么翻译)，因为像是 PhotoShop 这样"
+"的应用会在全透明区域放一些白像素。这些白像素最后还得靠纹理过滤器来处理 "
+"(当其它启用时)。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:76
 msgid ""
 "Godot has an option to fix the edges of the image (by painting invisible "
 "pixels the same color as the visible neighbours):"
 msgstr ""
+"Godot 有一个选项来修复图像边缘 (通过绘制与相邻可见像素同色的不可见像"
+"素) 。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:81
 msgid ""
@@ -146,16 +156,21 @@ msgid ""
 "property editor from another node or resource, then go to the object "
 "options and select \"Fix Alpha Edges\", then save it."
 msgstr ""
+"要做到这一点，从资源选项卡打开图像，或者从另一个节点或资源的属性编辑器编"
+"辑它，然后查看对象选项并选中“修复 Alpha 边缘 (Fix Alpha Edges)”，之后保"
+"存。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:87
 msgid ""
 "Since fixing this in so many images can be a little annoying, both "
 "Texture Import and Image Export can also perform this operation."
 msgstr ""
+"由于要逐个修复比较多的图像的话挺烦人的，所以在纹理导入和图像导出时也会显"
+"示这个选项。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:91
 msgid "Texture import"
-msgstr ""
+msgstr "纹理导入"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:93
 msgid ""
@@ -163,6 +178,8 @@ msgid ""
 "Unfortunately, the image loader settings are global. Texture flags also "
 "can't be saved in a regular .png or .jpg file."
 msgstr ""
+"有时候可能会想要改变所有图像上的设置。不幸的是，图像加载器设置是全局的。"
+"纹理标志 (Texture flags) 不能被保存在常规的 .png 或 .jpg 文件中。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:97
 msgid ""
@@ -170,6 +187,8 @@ msgid ""
 "individual flags can be changed. Godot also keeps track of the original "
 "file and will re-import if it changes."
 msgstr ""
+"对于这种情况，图像可以被导入为贴图格式 (.tex)，这样专属于贴图的标志项就能"
+"被修改了。Godot 也会保持跟踪原始文件，在原文件被修改时将被重新导入。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:101
 msgid ""
@@ -177,6 +196,8 @@ msgid ""
 "compression) which might be of use in some cases. More information on "
 "the :ref:`doc_importing_textures` page."
 msgstr ""
+"导入也支持其他的格式 (WebP, 或内存压缩 [RAM compression])，有时候它们可能"
+"会被用到。更多信息请参见 :ref:`doc_importing_textures` 页面。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:106
 msgid "Image export"
