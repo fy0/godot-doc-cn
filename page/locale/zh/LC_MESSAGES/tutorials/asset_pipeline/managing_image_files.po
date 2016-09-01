@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: 2016-08-31 18:43+0800\n"
+"PO-Revision-Date: 2016-09-01 19:02+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -201,7 +201,7 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:106
 msgid "Image export"
-msgstr ""
+msgstr "图像导出"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:108
 msgid ""
@@ -210,14 +210,17 @@ msgid ""
 "Atlas for a set of images. It is also possible to ask the exporter to "
 "scale all images (or selected groups)."
 msgstr ""
+"可以在导出时将图像转换为其他格式 (WebP, 或内存压缩 [RAM compression])，同"
+"时让导出工具创建为一系列图像创建一个图册 (Altas)。如有必要还可以让导出工"
+"具缩放所有的图像 (或者只缩放选中的组)。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:113
 msgid "More information on the :ref:`doc_exporting_images` page."
-msgstr ""
+msgstr "更多信息请参见 :ref:`doc_exporting_images` 页面。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:116
 msgid "Fixing PNGs iCCP chunk"
-msgstr ""
+msgstr "修正 PNG 的 iCCP 块"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:118
 msgid ""
@@ -225,10 +228,12 @@ msgid ""
 "of enforcing iCC profile correctness. This means that it now warns when "
 "it comes across an image with a non-conforming iCC chunk."
 msgstr ""
+"在 libpng 升级到 1.6.23 之后，libpng 在确保 iCC 配置正确方便更加严格。这"
+"意味着它现在遇到不合格的 iCC 块的时候会给出警告。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:122
 msgid "WARNING: _png_warn_function: iCCP: known incorrect sRGB profile"
-msgstr ""
+msgstr "WARNING: _png_warn_function: iCCP: known incorrect sRGB profile"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:124
 msgid ""
@@ -236,27 +241,33 @@ msgid ""
 "correct iCC profile (in some tools this profile can even be manually "
 "changed on export) or using a tool that removes/fixes the iCC chunks."
 msgstr ""
+"这可以被用能导出正确 iCC 配置的 PNG 导出工具来修正 (有些工具甚至可以导出"
+"时进行手动干预) 或者使用工具移除/修复 iCC 块。"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:129
 msgid "Linux/Mac"
-msgstr ""
+msgstr "Linux/Mac"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:130
 msgid ""
 "Using ImageMagicks ``convert`` or ``mogrify`` fixes these warnings. To "
 "fix all PNGs in a project folder do:"
 msgstr ""
+"使用 ImageMagicks 的 ``convert`` 或 ``mogrify`` 工具来修复这些警告。修复"
+"程序目录下所有 PNG 的命令为："
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:137
 msgid "``pngcheck`` is also useful in locating the non-conforming images:"
-msgstr ""
+msgstr "``pngcheck`` 在想要找出非标准图像时也是非常有用的工具："
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:144
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../tutorials/asset_pipeline/managing_image_files.rst:145
 msgid ""
 "Using `optiPNG <http://optipng.sourceforge.net/>` fixes these warnings "
 "on Windows. To fix a PNG inplace do:"
 msgstr ""
+"使用 `optiPNG <http://optipng.sourceforge.net/>` 在 Windows 上修正警告。"
+"修复一个当前路径的 PNG："
