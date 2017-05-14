@@ -40,11 +40,8 @@ The same position as before, when imagined as a vector, has a different
 meaning.
 
 .. image:: /img/tutovec2.png
-
-When imagined as a vector, two properties can be inferred, the
-**direction** and the **magnitude**. Every position in space can be a
-vector, with the exception of the **origin**. This is because
-coordinates (0,0) can't represent direction (magnitude 0).
+ 
+当被视为向量时，我们可以推断出两个属性，**方向(Direction)**和**模(模长，Magnitude)**。空间中每一个位置都可以成为一个向量，除了**原点**。因为(0,0)坐标不能够表示方向（模长为0）。
 
 .. image:: /img/tutovec2b.png
 
