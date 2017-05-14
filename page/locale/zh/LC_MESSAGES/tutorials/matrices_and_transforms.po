@@ -5,70 +5,70 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-14 11:16+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/matrices_and_transforms.rst:4
 msgid "Matrices and transforms"
-msgstr ""
+msgstr "矩阵与变换"
 
 #: ../../tutorials/matrices_and_transforms.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "简介"
 
 #: ../../tutorials/matrices_and_transforms.rst:9
 msgid ""
-"Before reading this tutorial, it is advised to read the previous one "
-"about :ref:`doc_vector_math` as this one is a direct continuation."
+"Before reading this tutorial, it is advised to read the previous one about :"
+"ref:`doc_vector_math` as this one is a direct continuation."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:12
 msgid ""
-"This tutorial will be about *transformations* and will cover a little "
-"about matrices (but not in-depth)."
+"This tutorial will be about *transformations* and will cover a little about "
+"matrices (but not in-depth)."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:15
 msgid ""
-"Transformations are most of the time applied as translation, rotation and"
-" scale so they will be considered as priority here."
+"Transformations are most of the time applied as translation, rotation and "
+"scale so they will be considered as priority here."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:19
 msgid "Oriented coordinate system (OCS)"
-msgstr ""
+msgstr "定位坐标(OCS)"
 
 #: ../../tutorials/matrices_and_transforms.rst:21
 msgid ""
-"Imagine we have a spaceship somewhere in space. In Godot this is easy, "
-"just move the ship somewhere and rotate it:"
+"Imagine we have a spaceship somewhere in space. In Godot this is easy, just "
+"move the ship somewhere and rotate it:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:26
 msgid ""
-"Ok, so in 2D this looks simple, a position and an angle for a rotation. "
-"But remember, we are grown ups here and don't use angles (plus, angles "
-"are not really even that useful when working in 3D)."
+"Ok, so in 2D this looks simple, a position and an angle for a rotation. But "
+"remember, we are grown ups here and don't use angles (plus, angles are not "
+"really even that useful when working in 3D)."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:30
 msgid ""
-"We should realize that at some point, someone *designed* this spaceship. "
-"Be it for 2D in a drawing such as Paint.net, Gimp, Photoshop, etc. or in "
-"3D through a 3D DCC tool such as Blender, Max, Maya, etc."
+"We should realize that at some point, someone *designed* this spaceship. Be "
+"it for 2D in a drawing such as Paint.net, Gimp, Photoshop, etc. or in 3D "
+"through a 3D DCC tool such as Blender, Max, Maya, etc."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:35
@@ -79,8 +79,8 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:40
 msgid ""
-"This means that the tip of the ship has a coordinate, the fin has "
-"another, etc. Be it in pixels (2D) or vertices (3D)."
+"This means that the tip of the ship has a coordinate, the fin has another, "
+"etc. Be it in pixels (2D) or vertices (3D)."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:43
@@ -90,24 +90,24 @@ msgstr ""
 #: ../../tutorials/matrices_and_transforms.rst:47
 msgid ""
 "How did it get there? What moved it and rotated it from the place it was "
-"designed to it's current position? The answer is... a **transform**, the "
-"ship was *transformed* from their original position to the new one. This "
-"allows the ship to be displayed where it is."
+"designed to it's current position? The answer is... a **transform**, the ship "
+"was *transformed* from their original position to the new one. This allows "
+"the ship to be displayed where it is."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:52
 msgid ""
-"But transform is too generic of a term to describe this process. To solve"
-" this puzzle, we will superimpose the ship's original design position at "
-"their current position:"
+"But transform is too generic of a term to describe this process. To solve "
+"this puzzle, we will superimpose the ship's original design position at their "
+"current position:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:58
 msgid ""
-"So, we can see that the \"design space\" has been transformed too. How "
-"can we best represent this transformation? Let's use 3 vectors for this "
-"(in 2D), a unit vector pointing towards X positive, a unit vector "
-"pointing towards Y positive and a translation."
+"So, we can see that the \"design space\" has been transformed too. How can we "
+"best represent this transformation? Let's use 3 vectors for this (in 2D), a "
+"unit vector pointing towards X positive, a unit vector pointing towards Y "
+"positive and a translation."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:65
@@ -118,8 +118,8 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:70
 msgid ""
-"Ok, this is nicer, but it still does not make sense. What do X,Y and "
-"Origin have to do with how the ship got there?"
+"Ok, this is nicer, but it still does not make sense. What do X,Y and Origin "
+"have to do with how the ship got there?"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:73
@@ -128,8 +128,8 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:77
 msgid ""
-"And let's apply the following operation to it (and to all the points in "
-"the ship too, but we'll track the top tip as our reference point):"
+"And let's apply the following operation to it (and to all the points in the "
+"ship too, but we'll track the top tip as our reference point):"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:84
@@ -138,72 +138,69 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:88
 msgid ""
-"This was expected, but then let's do something more interesting. Use the "
-"dot product of X and the point, and add it to the dot product of Y and "
-"the point:"
+"This was expected, but then let's do something more interesting. Use the dot "
+"product of X and the point, and add it to the dot product of Y and the point:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:96
 msgid ""
-"Then what we have is.. wait a minute, it's the ship in it's design "
-"position!"
+"Then what we have is.. wait a minute, it's the ship in it's design position!"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:101
 msgid ""
-"How did this black magic happen? The ship was lost in space, and now it's"
-" back home!"
+"How did this black magic happen? The ship was lost in space, and now it's "
+"back home!"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:104
 msgid ""
-"It might seem strange, but it does have plenty of logic. Remember, as we "
-"have seen in the :ref:`doc_vector_math`, what happened is that the "
-"distance to X axis, and the distance to Y axis were computed. Calculating"
-" distance in a direction or plane was one of the uses for the dot "
-"product. This was enough to obtain back the design coordinates for every "
-"point in the ship."
+"It might seem strange, but it does have plenty of logic. Remember, as we have "
+"seen in the :ref:`doc_vector_math`, what happened is that the distance to X "
+"axis, and the distance to Y axis were computed. Calculating distance in a "
+"direction or plane was one of the uses for the dot product. This was enough "
+"to obtain back the design coordinates for every point in the ship."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:111
 msgid ""
 "So, what he have been working with so far (with X, Y and Origin) is an "
-"*Oriented Coordinate System\\*. X an Y are the **Basis**, and \\*Origin* "
-"is the offset."
+"*Oriented Coordinate System\\*. X an Y are the **Basis**, and \\*Origin* is "
+"the offset."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:116
 msgid "Basis"
-msgstr ""
+msgstr "基础"
 
 #: ../../tutorials/matrices_and_transforms.rst:118
 msgid ""
 "We know what the Origin is. It's where the 0,0 (origin) of the design "
-"coordinate system ended up after being transformed to a new position. "
-"This is why it's called *Origin*, But in practice, it's just an offset to"
-" the new position."
+"coordinate system ended up after being transformed to a new position. This is "
+"why it's called *Origin*, But in practice, it's just an offset to the new "
+"position."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:123
 msgid ""
-"The Basis is more interesting. The basis is the direction of X and Y in "
-"the OCS from the new, transformed location. It tells what has changed, in"
-" either 2D or 3D. The Origin (offset) and Basis (direction) communicate "
-"\"Hey, the original X and Y axes of your design are *right here*, "
-"pointing towards *these directions*.\""
+"The Basis is more interesting. The basis is the direction of X and Y in the "
+"OCS from the new, transformed location. It tells what has changed, in either "
+"2D or 3D. The Origin (offset) and Basis (direction) communicate \"Hey, the "
+"original X and Y axes of your design are *right here*, pointing towards "
+"*these directions*.\""
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:129
 msgid ""
-"So, let's change the representation of the basis. Instead of 2 vectors, "
-"let's use a *matrix*."
+"So, let's change the representation of the basis. Instead of 2 vectors, let's "
+"use a *matrix*."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:134
 msgid ""
-"The vectors are up there in the matrix, horizontally. The next problem "
-"now is that.. what is this matrix thing? Well, we'll assume you've never "
-"heard of a matrix."
+"The vectors are up there in the matrix, horizontally. The next problem now is "
+"that.. what is this matrix thing? Well, we'll assume you've never heard of a "
+"matrix."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:139
@@ -212,10 +209,10 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:141
 msgid ""
-"This tutorial will not explain matrix math (and their operations) in "
-"depth, only its practical use. There is plenty of material for that, "
-"which should be a lot simpler to understand after completing this "
-"tutorial. We'll just explain how to use transforms."
+"This tutorial will not explain matrix math (and their operations) in depth, "
+"only its practical use. There is plenty of material for that, which should be "
+"a lot simpler to understand after completing this tutorial. We'll just "
+"explain how to use transforms."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:147
@@ -224,16 +221,16 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:149
 msgid ""
-":ref:`Matrix32 <class_Matrix32>` is a 3x2 matrix. It has 3 Vector2 "
-"elements and it's used for 2D. The \"X\" axis is the element 0, \"Y\" "
-"axis is the element 1 and \"Origin\" is element 2. It's not divided in "
-"basis/origin for convenience, due to it's simplicity."
+":ref:`Matrix32 <class_Matrix32>` is a 3x2 matrix. It has 3 Vector2 elements "
+"and it's used for 2D. The \"X\" axis is the element 0, \"Y\" axis is the "
+"element 1 and \"Origin\" is element 2. It's not divided in basis/origin for "
+"convenience, due to it's simplicity."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:161
 msgid ""
-"Most operations will be explained with this datatype (Matrix32), but the "
-"same logic applies to 3D."
+"Most operations will be explained with this datatype (Matrix32), but the same "
+"logic applies to 3D."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:165
@@ -258,10 +255,10 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:175
 msgid ""
-"It's easy to guess that an *identity* matrix is just a matrix that aligns"
-" the transform to it's parent coordinate system. It's an *OCS* that "
-"hasn't been translated, rotated or scaled. All transform types in Godot "
-"are created with *identity*."
+"It's easy to guess that an *identity* matrix is just a matrix that aligns the "
+"transform to it's parent coordinate system. It's an *OCS* that hasn't been "
+"translated, rotated or scaled. All transform types in Godot are created with "
+"*identity*."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:181
@@ -270,7 +267,7 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:184
 msgid "Rotation"
-msgstr ""
+msgstr "旋转"
 
 #: ../../tutorials/matrices_and_transforms.rst:186
 msgid "Rotating Matrix32 is done by using the \"rotated\" function:"
@@ -278,12 +275,12 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:196
 msgid "Translation"
-msgstr ""
+msgstr "平移"
 
 #: ../../tutorials/matrices_and_transforms.rst:198
 msgid ""
-"There are two ways to translate a Matrix32, the first one is just moving "
-"the origin:"
+"There are two ways to translate a Matrix32, the first one is just moving the "
+"origin:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:210
@@ -293,45 +290,45 @@ msgstr ""
 #: ../../tutorials/matrices_and_transforms.rst:212
 msgid ""
 "If instead, translation is desired in *local* coordinates of the matrix "
-"(towards where the *basis* is oriented), there is the "
-":ref:`Matrix32.translated() <class_Matrix32_translated>` method:"
+"(towards where the *basis* is oriented), there is the :ref:`Matrix32."
+"translated() <class_Matrix32_translated>` method:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:227
 msgid "Scale"
-msgstr ""
+msgstr "缩放"
 
 #: ../../tutorials/matrices_and_transforms.rst:229
 msgid ""
 "A matrix can be scaled too. Scaling will multiply the basis vectors by a "
-"vector (X vector by x component of the scale, Y vector by y component of "
-"the scale). It will leave the origin alone:"
+"vector (X vector by x component of the scale, Y vector by y component of the "
+"scale). It will leave the origin alone:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:241
 msgid ""
-"These kind of operations in matrices are accumulative. It means every one"
-" starts relative to the previous one. For those that have been living on "
-"this planet long enough, a good reference of how transform works is this:"
+"These kind of operations in matrices are accumulative. It means every one "
+"starts relative to the previous one. For those that have been living on this "
+"planet long enough, a good reference of how transform works is this:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:248
 msgid ""
-"A matrix is used similarly to a turtle. The turtle most likely had a "
-"matrix inside (and you are likely learning this may years *after* "
-"discovering Santa is not real)."
+"A matrix is used similarly to a turtle. The turtle most likely had a matrix "
+"inside (and you are likely learning this may years *after* discovering Santa "
+"is not real)."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:253
 #: ../../tutorials/matrices_and_transforms.rst:482
 msgid "Transform"
-msgstr ""
+msgstr "形变"
 
 #: ../../tutorials/matrices_and_transforms.rst:255
 msgid ""
-"Transform is the act of switching between coordinate systems. To convert "
-"a position (either 2D or 3D) from \"designer\" coordinate system to the "
-"OCS, the \"xform\" method is used."
+"Transform is the act of switching between coordinate systems. To convert a "
+"position (either 2D or 3D) from \"designer\" coordinate system to the OCS, "
+"the \"xform\" method is used."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:263
@@ -344,7 +341,7 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:276
 msgid "Inverse transform"
-msgstr ""
+msgstr "逆变换"
 
 #: ../../tutorials/matrices_and_transforms.rst:278
 msgid ""
@@ -362,25 +359,24 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:298
 msgid "Orthonormal matrices"
-msgstr ""
+msgstr "正交矩阵"
 
 #: ../../tutorials/matrices_and_transforms.rst:300
 msgid ""
-"However, if the Matrix has been scaled (vectors are not unit length), or "
-"the basis vectors are not orthogonal (90°), the inverse transform will "
-"not work."
+"However, if the Matrix has been scaled (vectors are not unit length), or the "
+"basis vectors are not orthogonal (90°), the inverse transform will not work."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:304
 msgid ""
-"In other words, inverse transform is only valid in *orthonormal* "
-"matrices. For this, these cases an affine inverse must be computed."
+"In other words, inverse transform is only valid in *orthonormal* matrices. "
+"For this, these cases an affine inverse must be computed."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:307
 msgid ""
-"The transform, or inverse transform of an identity matrix will return the"
-" position unchanged:"
+"The transform, or inverse transform of an identity matrix will return the "
+"position unchanged:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:316
@@ -389,10 +385,9 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:318
 msgid ""
-"The affine inverse is a matrix that does the inverse operation of another"
-" matrix, no matter if the matrix has scale or the axis vectors are not "
-"orthogonal. The affine inverse is calculated with the affine_inverse() "
-"method:"
+"The affine inverse is a matrix that does the inverse operation of another "
+"matrix, no matter if the matrix has scale or the axis vectors are not "
+"orthogonal. The affine inverse is calculated with the affine_inverse() method:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:330
@@ -405,8 +400,8 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:342
 msgid ""
-"Matrices can be multiplied. Multiplication of two matrices \"chains\" "
-"(concatenates) their transforms."
+"Matrices can be multiplied. Multiplication of two matrices \"chains"
+"\" (concatenates) their transforms."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:345
@@ -415,7 +410,7 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:348
 msgid "Example:"
-msgstr ""
+msgstr "举例："
 
 #: ../../tutorials/matrices_and_transforms.rst:354
 msgid "To make it a little clearer, this:"
@@ -465,8 +460,8 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:414
 msgid ""
-"To make a matrix relative to the parent, use the affine inverse (or "
-"regular inverse for orthonormal matrices)."
+"To make a matrix relative to the parent, use the affine inverse (or regular "
+"inverse for orthonormal matrices)."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:422
@@ -475,19 +470,18 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:429
 msgid ""
-"OK, hopefully this should be enough! Let's complete the tutorial by "
-"moving to 3D matrices."
+"OK, hopefully this should be enough! Let's complete the tutorial by moving to "
+"3D matrices."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:433
 msgid "Matrices & transforms in 3D"
-msgstr ""
+msgstr "3D中的矩阵与变换"
 
 #: ../../tutorials/matrices_and_transforms.rst:435
 msgid ""
-"As mentioned before, for 3D, we deal with 3 :ref:`Vector3 "
-"<class_Vector3>` vectors for the rotation matrix, and an extra one for "
-"the origin."
+"As mentioned before, for 3D, we deal with 3 :ref:`Vector3 <class_Vector3>` "
+"vectors for the rotation matrix, and an extra one for the origin."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:439
@@ -497,8 +491,8 @@ msgstr ""
 #: ../../tutorials/matrices_and_transforms.rst:441
 msgid ""
 "Godot has a special type for a 3x3 matrix, named :ref:`Matrix3 "
-"<class_Matrix3>`. It can be used to represent a 3D rotation and scale. "
-"Sub vectors can be accessed as:"
+"<class_Matrix3>`. It can be used to represent a 3D rotation and scale. Sub "
+"vectors can be accessed as:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:452
@@ -511,7 +505,7 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:466
 msgid "Rotation in 3D"
-msgstr ""
+msgstr "3D旋转"
 
 #: ../../tutorials/matrices_and_transforms.rst:468
 msgid ""
@@ -522,14 +516,14 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:472
 msgid ""
-"The axis for the rotation must be a *normal vector*. As in, a vector that"
-" can point to any direction, but length must be one (1.0)."
+"The axis for the rotation must be a *normal vector*. As in, a vector that can "
+"point to any direction, but length must be one (1.0)."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:484
 msgid ""
-"To add the final component to the mix, Godot provides the :ref:`Transform"
-" <class_Transform>` type. Transform has two members:"
+"To add the final component to the mix, Godot provides the :ref:`Transform "
+"<class_Transform>` type. Transform has two members:"
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:487
@@ -542,12 +536,10 @@ msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:490
 msgid ""
-"Any 3D transform can be represented with Transform, and the separation of"
-" basis and origin makes it easier to work translation and rotation "
-"separately."
+"Any 3D transform can be represented with Transform, and the separation of "
+"basis and origin makes it easier to work translation and rotation separately."
 msgstr ""
 
 #: ../../tutorials/matrices_and_transforms.rst:494
 msgid "An example:"
 msgstr ""
-
