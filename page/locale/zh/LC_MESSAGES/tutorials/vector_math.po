@@ -5,29 +5,29 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-14 10:59+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/vector_math.rst:4
 msgid "Vector math"
-msgstr ""
+msgstr "向量数学"
 
 #: ../../tutorials/vector_math.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "简介"
 
 #: ../../tutorials/vector_math.rst:9
 msgid ""
@@ -37,6 +37,9 @@ msgid ""
 "get the grasp of it and makes programming of complex behaviors much "
 "simpler."
 msgstr ""
+"这个小教程旨在为向量数学做一个简短实用的介绍，对3D和2D游戏都是很有用的。"
+"再重申一次，向量数学对3D*和*2D游戏都是很有用处的。一旦你掌握了它，它就会"
+"成为一个十分不错的工具，而且会使得复杂行为的编写变得更加简单。"
 
 #: ../../tutorials/vector_math.rst:15
 msgid ""
@@ -53,7 +56,7 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:23
 msgid "Coordinate systems (2D)"
-msgstr ""
+msgstr "坐标系(2D)"
 
 #: ../../tutorials/vector_math.rst:25
 msgid ""
@@ -67,8 +70,8 @@ msgstr ""
 msgid ""
 "A position can be anywhere in space. The position (0,0) has a name, it's "
 "called the **origin**. Remember this term well because it has more "
-"implicit uses later. The (0,0) of a n-dimensions coordinate system is the"
-" **origin**."
+"implicit uses later. The (0,0) of a n-dimensions coordinate system is "
+"the **origin**."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:37
@@ -83,13 +86,13 @@ msgstr ""
 msgid ""
 "When imagined as a vector, two properties can be inferred, the "
 "**direction** and the **magnitude**. Every position in space can be a "
-"vector, with the exception of the **origin**. This is because coordinates"
-" (0,0) can't represent direction (magnitude 0)."
+"vector, with the exception of the **origin**. This is because "
+"coordinates (0,0) can't represent direction (magnitude 0)."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:52
 msgid "Direction"
-msgstr ""
+msgstr "方向"
 
 #: ../../tutorials/vector_math.rst:54
 msgid ""
@@ -101,19 +104,19 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:62
 msgid "Magnitude"
-msgstr ""
+msgstr "模长"
 
 #: ../../tutorials/vector_math.rst:64
 msgid ""
 "Finally, the length of the vector is the distance from the origin to the "
 "position. Obtaining the length from a vector is easy, just use the "
-"`Pythagorean Theorem "
-"<http://en.wikipedia.org/wiki/Pythagorean_theorem>`__."
+"`Pythagorean Theorem <http://en.wikipedia.org/wiki/"
+"Pythagorean_theorem>`__."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:74
 msgid "But... angles?"
-msgstr ""
+msgstr "但是……角度呢？"
 
 #: ../../tutorials/vector_math.rst:76
 msgid ""
@@ -125,17 +128,17 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:80
 msgid ""
 "To say truth, angles are not that useful in vector math, and most of the "
-"time they are not dealt with directly. Maybe they work in 2D, but in 3D a"
-" lot of what can usually be done with angles does not work anymore."
+"time they are not dealt with directly. Maybe they work in 2D, but in 3D "
+"a lot of what can usually be done with angles does not work anymore."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:84
 msgid ""
 "Still, using angles is still not an excuse, even for 2D. Most of what "
 "takes a lot of work with angles in 2D, is still much more natural easier "
-"to accomplish with vector math. In vector math, angles are useful only as"
-" measure, but take little part in the math. So, give up the trigonometry "
-"already, prepare to embrace vectors!"
+"to accomplish with vector math. In vector math, angles are useful only "
+"as measure, but take little part in the math. So, give up the "
+"trigonometry already, prepare to embrace vectors!"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:90
@@ -147,15 +150,16 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:95
 msgid "Vectors in Godot"
-msgstr ""
+msgstr "Godot中的向量"
 
 #: ../../tutorials/vector_math.rst:97
 msgid ""
 "To make examples easier, it is worth explaining how vectors are "
-"implemented in GDScript. GDscript has both :ref:`Vector2 <class_Vector2>`"
-" and :ref:`Vector3 <class_Vector3>`, for 2D and 3D math respectively. "
-"Godot uses Vector classes as both position and direction. They also "
-"contain x and y (for 2D) and x, y and z (for 3D) member variables."
+"implemented in GDScript. GDscript has both :ref:`Vector2 "
+"<class_Vector2>` and :ref:`Vector3 <class_Vector3>`, for 2D and 3D math "
+"respectively. Godot uses Vector classes as both position and direction. "
+"They also contain x and y (for 2D) and x, y and z (for 3D) member "
+"variables."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:113
@@ -195,18 +199,18 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:156
 msgid "Perpendicular vectors"
-msgstr ""
+msgstr "正交向量"
 
 #: ../../tutorials/vector_math.rst:158
 msgid ""
-"Rotating a 2D vector 90° degrees to either side, left or right, is really"
-" easy, just swap x and y, then negate either x or y (direction of "
+"Rotating a 2D vector 90° degrees to either side, left or right, is "
+"really easy, just swap x and y, then negate either x or y (direction of "
 "rotation depends on which is negated)."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:164
 msgid "Example:"
-msgstr ""
+msgstr "举例："
 
 #: ../../tutorials/vector_math.rst:174
 msgid ""
@@ -217,7 +221,7 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:179
 msgid "Unit vectors"
-msgstr ""
+msgstr "单位向量"
 
 #: ../../tutorials/vector_math.rst:181
 msgid ""
@@ -244,23 +248,23 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:198
 msgid "Normalization"
-msgstr ""
+msgstr "规格化"
 
 #: ../../tutorials/vector_math.rst:200
 msgid ""
 "Taking any vector and reducing it's **magnitude** to 1.0 while keeping "
 "it's **direction** is called **normalization**. Normalization is "
-"performed by dividing the x and y (and z in 3D) components of a vector by"
-" it's magnitude:"
+"performed by dividing the x and y (and z in 3D) components of a vector "
+"by it's magnitude:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:212
 msgid ""
 "As you might have guessed, if the vector has magnitude 0 (meaning, it's "
-"not a vector but the **origin** also called *null vector*), a division by"
-" zero occurs and the universe goes through a second big bang, except in "
-"reverse polarity and then back. As a result, humanity is safe but Godot "
-"will print an error. Remember! Vector(0,0) can't be normalized!."
+"not a vector but the **origin** also called *null vector*), a division "
+"by zero occurs and the universe goes through a second big bang, except "
+"in reverse polarity and then back. As a result, humanity is safe but "
+"Godot will print an error. Remember! Vector(0,0) can't be normalized!."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:218
@@ -269,7 +273,7 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:225
 msgid "Dot product"
-msgstr ""
+msgstr "数量积(点乘运算)"
 
 #: ../../tutorials/vector_math.rst:227
 msgid ""
@@ -277,8 +281,8 @@ msgid ""
 "Without the dot product, Quake would have never been made. This is the "
 "most important section of the tutorial, so make sure to grasp it "
 "properly. Most people trying to understand vector math give up here "
-"because, despite how simple it is, they can't make head or tails from it."
-" Why? Here's why, it's because..."
+"because, despite how simple it is, they can't make head or tails from "
+"it. Why? Here's why, it's because..."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:234
@@ -300,8 +304,8 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:255
 msgid ""
-"The order of two vectors does *not* matter, ``a.dot(b)`` returns the same"
-" value as ``b.dot(a)``."
+"The order of two vectors does *not* matter, ``a.dot(b)`` returns the "
+"same value as ``b.dot(a)``."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:258
@@ -312,9 +316,9 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:263
 msgid ""
-"And you realize it's time to give up making 3D games or complex 2D games."
-" How can something so simple be so complex? Someone else will have to "
-"make the next Zelda or Call of Duty. Top down RPGs don't look so bad "
+"And you realize it's time to give up making 3D games or complex 2D "
+"games. How can something so simple be so complex? Someone else will have "
+"to make the next Zelda or Call of Duty. Top down RPGs don't look so bad "
 "after all. Yeah I hear someone did pretty will with one of those on "
 "Steam..."
 msgstr ""
@@ -377,15 +381,15 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:307
 msgid "Snake is in position **A**."
-msgstr ""
+msgstr "蛇在位置**A**。"
 
 #: ../../tutorials/vector_math.rst:308
 msgid "The enemy is in position **B**."
-msgstr ""
+msgstr "敌人在位置**B**。"
 
 #: ../../tutorials/vector_math.rst:309
 msgid "The enemy is *facing* towards direction vector **F**."
-msgstr ""
+msgstr "敌人*面朝*向量**F**的方向。"
 
 #: ../../tutorials/vector_math.rst:313
 msgid ""
@@ -401,9 +405,9 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:325
 msgid ""
-"If the dot product between **F** and **BA** is greater than 0, then Snake"
-" will be discovered. This happens because we will be able to tell that "
-"the guard is facing towards him:"
+"If the dot product between **F** and **BA** is greater than 0, then "
+"Snake will be discovered. This happens because we will be able to tell "
+"that the guard is facing towards him:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:334
@@ -425,8 +429,8 @@ msgstr ""
 msgid ""
 "This works the same with all vectors, no matter the magnitude so **unit "
 "vectors** are not the exception. However, using the same property with "
-"unit vectors yields an even more interesting result, as an extra property"
-" is added:"
+"unit vectors yields an even more interesting result, as an extra "
+"property is added:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:348
@@ -437,9 +441,9 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:351
 msgid ""
-"If both vectors are facing towards the exact opposite direction (parallel"
-" to each other, but angle between them is 180°), the resulting scalar is "
-"**-1**."
+"If both vectors are facing towards the exact opposite direction "
+"(parallel to each other, but angle between them is 180°), the resulting "
+"scalar is **-1**."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:355
@@ -466,8 +470,9 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:364
 msgid ""
-"Let's take two unit vectors. The first one is pointing up, the second too"
-" but we will rotate it all the way from up (0°) to down (180° degrees)..."
+"Let's take two unit vectors. The first one is pointing up, the second "
+"too but we will rotate it all the way from up (0°) to down (180° "
+"degrees)..."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:370
@@ -476,8 +481,8 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:374
 msgid ""
-"Aha! It all makes sense now, this is a `Cosine "
-"<http://mathworld.wolfram.com/Cosine.html>`__ function!"
+"Aha! It all makes sense now, this is a `Cosine <http://mathworld.wolfram."
+"com/Cosine.html>`__ function!"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:377
@@ -486,47 +491,47 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:379
 msgid ""
-"The **dot product** between two **unit vectors** is the **cosine** of the"
-" **angle** between those two vectors. So, to obtain the angle between two"
-" vectors, we must do:"
+"The **dot product** between two **unit vectors** is the **cosine** of "
+"the **angle** between those two vectors. So, to obtain the angle between "
+"two vectors, we must do:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:387
 msgid ""
 "What is this useful for? Well obtaining the angle directly is probably "
 "not as useful, but just being able to tell the angle is useful for "
-"reference. One example is in the `Kinematic Character "
-"<https://github.com/godotengine/godot/blob/master/demos/2d/kinematic_char/player.gd#L879>`__"
-" demo, when the character moves in a certain direction then we hit an "
-"object. How to tell if what we hit is the floor?"
+"reference. One example is in the `Kinematic Character <https://github."
+"com/godotengine/godot/blob/master/demos/2d/kinematic_char/player."
+"gd#L879>`__ demo, when the character moves in a certain direction then "
+"we hit an object. How to tell if what we hit is the floor?"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:394
 msgid ""
-"By comparing the normal of the collision point with a previously computed"
-" angle."
+"By comparing the normal of the collision point with a previously "
+"computed angle."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:397
 msgid ""
 "The beauty of this is that the same code works exactly the same and "
-"without modification in `3D "
-"<https://github.com/godotengine/godot/blob/master/demos/3d/kinematic_char/cubio.gd#L57>`__."
-" Vector math is, in a great deal, dimension-amount-independent, so adding"
-" or removing an axis only adds very little complexity."
+"without modification in `3D <https://github.com/godotengine/godot/blob/"
+"master/demos/3d/kinematic_char/cubio.gd#L57>`__. Vector math is, in a "
+"great deal, dimension-amount-independent, so adding or removing an axis "
+"only adds very little complexity."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:404
 msgid "Planes"
-msgstr ""
+msgstr "平面"
 
 #: ../../tutorials/vector_math.rst:406
 msgid ""
 "The dot product has another interesting property with unit vectors. "
-"Imagine that perpendicular to that vector (and through the origin) passes"
-" a plane. Planes divide the entire space into positive (over the plane) "
-"and negative (under the plane), and (contrary to popular belief) you can "
-"also use their math in 2D:"
+"Imagine that perpendicular to that vector (and through the origin) "
+"passes a plane. Planes divide the entire space into positive (over the "
+"plane) and negative (under the plane), and (contrary to popular belief) "
+"you can also use their math in 2D:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:414
@@ -542,17 +547,17 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:421
 msgid ""
 "It's as simple as it looks. The plane passes by the origin and the "
-"surface of it is perpendicular to the unit vector (or *normal*). The side"
-" towards the vector points to is the positive half-space, while the other"
-" side is the negative half-space. In 3D this is exactly the same, except "
-"that the plane is an infinite surface (imagine an infinite, flat sheet of"
-" paper that you can orient and is pinned to the origin) instead of a "
-"line."
+"surface of it is perpendicular to the unit vector (or *normal*). The "
+"side towards the vector points to is the positive half-space, while the "
+"other side is the negative half-space. In 3D this is exactly the same, "
+"except that the plane is an infinite surface (imagine an infinite, flat "
+"sheet of paper that you can orient and is pinned to the origin) instead "
+"of a line."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:430
 msgid "Distance to plane"
-msgstr ""
+msgstr "到平面的距离"
 
 #: ../../tutorials/vector_math.rst:432
 msgid ""
@@ -606,18 +611,18 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:468
 msgid ""
 "Basically, N and D can represent any plane in space, be it for 2D or 3D "
-"(depending on the amount of dimensions of N) and the math is the same for"
-" both. It's the same as before, but D is the distance from the origin to "
-"the plane, travelling in N direction. As an example, imagine you want to "
-"reach a point in the plane, you will just do:"
+"(depending on the amount of dimensions of N) and the math is the same "
+"for both. It's the same as before, but D is the distance from the origin "
+"to the plane, travelling in N direction. As an example, imagine you want "
+"to reach a point in the plane, you will just do:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:478
 msgid ""
-"This will stretch (resize) the normal vector and make it touch the plane."
-" This math might seem confusing, but it's actually much simpler than it "
-"seems. If we want to tell, again, the distance from the point to the "
-"plane, we do the same but adjusting for distance:"
+"This will stretch (resize) the normal vector and make it touch the "
+"plane. This math might seem confusing, but it's actually much simpler "
+"than it seems. If we want to tell, again, the distance from the point to "
+"the plane, we do the same but adjusting for distance:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:487
@@ -655,7 +660,7 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:519
 msgid "Constructing a plane in 2D"
-msgstr ""
+msgstr "在2D中构建一个平面"
 
 #: ../../tutorials/vector_math.rst:521
 msgid ""
@@ -699,16 +704,16 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:566
 msgid ""
 "Here is a simple example of what planes are useful for. Imagine you have "
-"a `convex <http://www.mathsisfun.com/definitions/convex.html>`__ polygon."
-" For example, a rectangle, a trapezoid, a triangle, or just any polygon "
-"where faces that don't bend inwards."
+"a `convex <http://www.mathsisfun.com/definitions/convex.html>`__ "
+"polygon. For example, a rectangle, a trapezoid, a triangle, or just any "
+"polygon where faces that don't bend inwards."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:571
 msgid ""
 "For every segment of the polygon, we compute the plane that passes by "
-"that segment. Once we have the list of planes, we can do neat things, for"
-" example checking if a point is inside the polygon."
+"that segment. Once we have the list of planes, we can do neat things, "
+"for example checking if a point is inside the polygon."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:575
@@ -726,18 +731,18 @@ msgstr ""
 msgid ""
 "Pretty cool, huh? But this gets much better! With a little more effort, "
 "similar logic will let us know when two convex polygons are overlapping "
-"too. This is called the Separating Axis Theorem (or SAT) and most physics"
-" engines use this to detect collision."
+"too. This is called the Separating Axis Theorem (or SAT) and most "
+"physics engines use this to detect collision."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:597
 msgid ""
-"The idea is really simple! With a point, just checking if a plane returns"
-" a positive distance is enough to tell if the point is outside. With "
-"another polygon, we must find a plane where *all the **other** polygon "
-"points* return a positive distance to it. This check is performed with "
-"the planes of A against the points of B, and then with the planes of B "
-"against the points of A:"
+"The idea is really simple! With a point, just checking if a plane "
+"returns a positive distance is enough to tell if the point is outside. "
+"With another polygon, we must find a plane where *all the **other** "
+"polygon points* return a positive distance to it. This check is "
+"performed with the planes of A against the points of B, and then with "
+"the planes of B against the points of A:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:642
@@ -751,7 +756,7 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:649
 msgid "Cross product"
-msgstr ""
+msgstr "向量积(叉乘运算)"
 
 #: ../../tutorials/vector_math.rst:651
 msgid ""
@@ -780,8 +785,8 @@ msgstr ""
 msgid ""
 "The cross product takes two vectors and returns another vector. The "
 "returned third vector is always perpendicular to the first two. The "
-"source vectors, of course, must not be the same, and must not be parallel"
-" or opposite, else the resulting vector will be (0,0,0):"
+"source vectors, of course, must not be the same, and must not be "
+"parallel or opposite, else the resulting vector will be (0,0,0):"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:672
@@ -809,18 +814,18 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:697
 msgid "Area of a triangle"
-msgstr ""
+msgstr "三角形的面积"
 
 #: ../../tutorials/vector_math.rst:699
 msgid ""
-"Cross product can be used to obtain the surface area of a triangle in 3D."
-" Given a triangle consisting of 3 points, **A**, **B** and **C**:"
+"Cross product can be used to obtain the surface area of a triangle in "
+"3D. Given a triangle consisting of 3 points, **A**, **B** and **C**:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:704
 msgid ""
-"Take any of them as a pivot and compute the adjacent vectors to the other"
-" two points. As example, we will use B as a pivot:"
+"Take any of them as a pivot and compute the adjacent vectors to the "
+"other two points. As example, we will use B as a pivot:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:714
@@ -832,13 +837,13 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:723
 msgid ""
 "The length (magnitude) of **P** is the surface area of the parallelogram "
-"built by the two vectors **BA** and **BC**, therefore the surface area of"
-" the triangle is half of it."
+"built by the two vectors **BA** and **BC**, therefore the surface area "
+"of the triangle is half of it."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:732
 msgid "Plane of the triangle"
-msgstr ""
+msgstr "三角形所在平面"
 
 #: ../../tutorials/vector_math.rst:734
 msgid ""
@@ -868,8 +873,8 @@ msgstr ""
 msgid ""
 "In Godot, front-facing triangles are those that, when looking at the "
 "camera, are in clockwise order. Triangles that look Counter-clockwise "
-"when looking at the camera are not drawn (this helps to draw less, so the"
-" back-part of the objects is not drawn)."
+"when looking at the camera are not drawn (this helps to draw less, so "
+"the back-part of the objects is not drawn)."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:760
@@ -892,16 +897,16 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:783
 msgid "Collision detection in 3D"
-msgstr ""
+msgstr "3D中的碰撞检测"
 
 #: ../../tutorials/vector_math.rst:785
 msgid ""
-"This is another bonus bit, a reward for being patient and keeping up with"
-" this long tutorial. Here is another piece of wisdom. This might not be "
-"something with a direct use case (Godot already does collision detection "
-"pretty well) but It's a really cool algorithm to understand anyway, "
-"because it's used by almost all physics engines and collision detection "
-"libraries :)"
+"This is another bonus bit, a reward for being patient and keeping up "
+"with this long tutorial. Here is another piece of wisdom. This might not "
+"be something with a direct use case (Godot already does collision "
+"detection pretty well) but It's a really cool algorithm to understand "
+"anyway, because it's used by almost all physics engines and collision "
+"detection libraries :)"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:792
@@ -922,22 +927,22 @@ msgstr ""
 msgid ""
 "To refresh a bit a separating plane means that all vertices of polygon A "
 "are in one side of the plane, and all vertices of polygon B are in the "
-"other side. This plane is always one of the face-planes of either polygon"
-" A or polygon B."
+"other side. This plane is always one of the face-planes of either "
+"polygon A or polygon B."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:805
 msgid ""
-"In 3D though, there is a problem to this approach, because it is possible"
-" that, in some cases a separating plane can't be found. This is an "
-"example of such situation:"
+"In 3D though, there is a problem to this approach, because it is "
+"possible that, in some cases a separating plane can't be found. This is "
+"an example of such situation:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:811
 msgid ""
 "To avoid it, some extra planes need to be tested as separators, these "
-"planes are the cross product between the edges of polygon A and the edges"
-" of polygon B"
+"planes are the cross product between the edges of polygon A and the "
+"edges of polygon B"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:817
@@ -950,4 +955,3 @@ msgid ""
 "if something in this tutorial is not clear! You should be now ready for "
 "the next challenge... :ref:`doc_matrices_and_transforms`!"
 msgstr ""
-

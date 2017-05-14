@@ -5,29 +5,29 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-14 10:50+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/high_level_multiplayer.rst:4
 msgid "High Level Multiplayer (Godot 2.2+)"
-msgstr ""
+msgstr "高级多玩家"
 
 #: ../../tutorials/high_level_multiplayer.rst:7
 msgid "Why high level?"
-msgstr ""
+msgstr "为什么高级？"
 
 #: ../../tutorials/high_level_multiplayer.rst:9
 msgid ""
@@ -41,8 +41,8 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:14
 msgid ""
-"TCP ensures packets will always arrive, but latency is generally high due"
-" to error correction. It's also quite a complex protocol because it "
+"TCP ensures packets will always arrive, but latency is generally high "
+"due to error correction. It's also quite a complex protocol because it "
 "understands what a \"connection\" is."
 msgstr ""
 
@@ -50,8 +50,8 @@ msgstr ""
 msgid ""
 "UDP is a simpler protocol which only sends packets (no connection "
 "required). The fact it does no error correction makes it pretty quick "
-"(low latency), but it has the disadvantage that packets may be lost along"
-" the way. Added to that, the MTU (maximum packet size) for UDP is "
+"(low latency), but it has the disadvantage that packets may be lost "
+"along the way. Added to that, the MTU (maximum packet size) for UDP is "
 "generally low (only a few hundred bytes), so transmitting larger packets "
 "means splitting them, reorganizing them, retrying if a part fails, etc."
 msgstr ""
@@ -64,10 +64,10 @@ msgstr ""
 msgid ""
 "Before going into how we would like to synchronize a game across the "
 "network, it would be wise to understand how the base network API for "
-"synchronization works. Godot uses a mid-level object "
-":ref:`NetworkedMultiplayerPeer <class_NetworkedMultiplayerPeer>`. This "
-"object can't be created directly, but it's designed so several "
-"implementations can provide it:"
+"synchronization works. Godot uses a mid-level object :ref:"
+"`NetworkedMultiplayerPeer <class_NetworkedMultiplayerPeer>`. This object "
+"can't be created directly, but it's designed so several implementations "
+"can provide it:"
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:26
@@ -150,8 +150,8 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:76
 msgid ""
-"The above signals are called in every connected peer to the server when a"
-" new one connects or disconnects. Is's very useful to keep track of the "
+"The above signals are called in every connected peer to the server when "
+"a new one connects or disconnects. Is's very useful to keep track of the "
 "ids above (clients will connect with non-zero and non-one unique IDs), "
 "while the server is warranted to always use ID=1. These IDs will be "
 "useful mostly for lobby management."
@@ -175,11 +175,11 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:86
 msgid ""
-"Again, all these functions are mainly useful for lobby management, or for"
-" adding/removing players on the fly. For these tasks, the server clearly "
-"has to work as a server and you have do tasks manually such as sending a "
-"new player that connected information about other already connected "
-"players (ie, their names, stats, etc)."
+"Again, all these functions are mainly useful for lobby management, or "
+"for adding/removing players on the fly. For these tasks, the server "
+"clearly has to work as a server and you have do tasks manually such as "
+"sending a new player that connected information about other already "
+"connected players (ie, their names, stats, etc)."
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:90
@@ -243,8 +243,8 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:113
 msgid ""
-"Reliable (call will arrive no matter what, but may take longer because it"
-" will be re-transmitted in fails)"
+"Reliable (call will arrive no matter what, but may take longer because "
+"it will be re-transmitted in fails)"
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:114
@@ -273,8 +273,8 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:175
 msgid ""
-"You might have noticed already something different, which is the usage of"
-" the \"remote\" keyword on the register_player function:"
+"You might have noticed already something different, which is the usage "
+"of the \"remote\" keyword on the register_player function:"
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:181
@@ -294,11 +294,11 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:187
 msgid "remote"
-msgstr ""
+msgstr "远程"
 
 #: ../../tutorials/high_level_multiplayer.rst:188
 msgid "sync"
-msgstr ""
+msgstr "同步"
 
 #: ../../tutorials/high_level_multiplayer.rst:189
 msgid "master"
@@ -341,10 +341,10 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:205
 msgid ""
-"Once enough people has gathered in the Lobby, the server will most likely"
-" want to start the game. This is honestly nothing special in itself, but "
-"we'll explain a few nice tricks that can be done at this point to make "
-"your life much easier."
+"Once enough people has gathered in the Lobby, the server will most "
+"likely want to start the game. This is honestly nothing special in "
+"itself, but we'll explain a few nice tricks that can be done at this "
+"point to make your life much easier."
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:209
@@ -353,10 +353,10 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:211
 msgid ""
-"In most games, each player will likely have it's own scene. Remember that"
-" this is a multiplayer game, so in every peer you need to instance **one "
-"scene for each player connected to it**. For a 4 player game, each peer "
-"needs to instance 4 player nodes."
+"In most games, each player will likely have it's own scene. Remember "
+"that this is a multiplayer game, so in every peer you need to instance "
+"**one scene for each player connected to it**. For a 4 player game, each "
+"peer needs to instance 4 player nodes."
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:214
@@ -398,9 +398,9 @@ msgstr ""
 #: ../../tutorials/high_level_multiplayer.rst:279
 msgid ""
 "In most games, the goal of supporting multiplayer neworking is to make "
-"sure that the game runs synchronized in all the peers playing it. Besides"
-" supplying an RPC and remote member variable set implementation. Godot "
-"adds the concept of master and slave network modes."
+"sure that the game runs synchronized in all the peers playing it. "
+"Besides supplying an RPC and remote member variable set implementation. "
+"Godot adds the concept of master and slave network modes."
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:282
@@ -418,17 +418,17 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:286
 msgid ""
-"The Inherit mode assumes the value of the parent node. If the parent node"
-" is also in this mode, it will go up in the parenthood chain until it "
-"finds a mode. If no mode set is found, Master will be assumed for the "
+"The Inherit mode assumes the value of the parent node. If the parent "
+"node is also in this mode, it will go up in the parenthood chain until "
+"it finds a mode. If no mode set is found, Master will be assumed for the "
 "server and Slave for clients."
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:288
 msgid ""
-"This means that, upon loading scenes, the client is by default the master"
-" and clients are the slaves. Checking that a node is in master mode is "
-"done by calling:"
+"This means that, upon loading scenes, the client is by default the "
+"master and clients are the slaves. Checking that a node is in master "
+"mode is done by calling:"
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:294
@@ -441,8 +441,8 @@ msgstr ""
 msgid ""
 "Here, each time this piece of code is executed on each peer, the peer "
 "makes the node it controls master, and the ones it does not slaves. The "
-"modes for each are different on each peer. To clarify, here is an example"
-" of how this looks in the bomber demo:"
+"modes for each are different on each peer. To clarify, here is an "
+"example of how this looks in the bomber demo:"
 msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:322
@@ -477,9 +477,8 @@ msgstr ""
 
 #: ../../tutorials/high_level_multiplayer.rst:353
 msgid ""
-"This instance, then, calls the \"stun\" function in the same instances of"
-" that same player (but in different peers), and only those which are set "
-"as slave, making the player look stunned in all the peers (as well as the"
-" current, master one)."
+"This instance, then, calls the \"stun\" function in the same instances "
+"of that same player (but in different peers), and only those which are "
+"set as slave, making the player look stunned in all the peers (as well "
+"as the current, master one)."
 msgstr ""
-
