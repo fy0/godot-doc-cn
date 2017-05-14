@@ -31,7 +31,7 @@ version = 'latest'
 # The full version, including alpha/beta/rc tags
 release = 'latest'
 
-language = 'en'
+language = 'zh'
 
 exclude_patterns = ['_build']
 
@@ -71,3 +71,23 @@ latex_documents = [
   (master_doc, 'GodotEngine.tex', 'Godot Engine Documentation',
    'Juan Linietsky, Ariel Manzur and the Godot community', 'manual'),
 ]
+
+# -- Options for locale ---------------------------------------------
+
+locale_dirs = ['locale/']   # path is example but recommended.
+gettext_compact = False     # optional.
+
+# sphinx_intl monkey patch
+from babel.core import Locale
+import sphinx_intl.catalog as c
+
+_origin_dump_po = c.dump_po
+
+def _dump_po(filename, catalog):
+    catalog.locale = Locale.parse('zh')
+    catalog.language_team = 'GoDogeCN'
+    _origin_dump_po(filename, catalog)
+
+module_name = 'sphinx_intl.catalog'
+intl_mod = __import__(module_name, {}, {}, module_name.split('.')[:-1])
+intl_mod.dump_po = _dump_po

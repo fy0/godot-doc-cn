@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-08-24 23:37+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../tutorials/engine/data_paths.rst:4
+msgid "Data paths"
+msgstr "数据路径(Data paths)"
+
+#: ../../tutorials/engine/data_paths.rst:7
+msgid "Path separators"
+msgstr "路径分隔符"
+
+#: ../../tutorials/engine/data_paths.rst:9
+msgid ""
+"For the sake of supporting as many platforms as possible, Godot only "
+"accepts unix style path separators (``/``). These work everywhere, "
+"including Windows."
+msgstr ""
+"为了尽可能多的支持更多的平台着想, Godot仅接受unix风格路径分融符 (``/``). "
+"包括windows在引擎任何地方都一样的."
+
+#: ../../tutorials/engine/data_paths.rst:13
+msgid "A path like: ``C:\\Projects`` will become ``C:/Projects``."
+msgstr "例如：路径: ``C:\\Projects`` 要写成这样 ``C:/Projects``."
+
+#: ../../tutorials/engine/data_paths.rst:16
+msgid "Resource path"
+msgstr "资源路径"
+
+#: ../../tutorials/engine/data_paths.rst:18
+msgid ""
+"As mentioned before. Godot considers that a project exists at any given "
+"folder that contains an \"engine.cfg\" text file, even if such file is "
+"empty."
+msgstr ""
+"就像以前说过的. Godot的工程存在于所给的包含\"engine.cfg\"文本文件的目录,"
+"就算这个目录是空的也一样."
+
+#: ../../tutorials/engine/data_paths.rst:22
+msgid ""
+"Accessing project files can be done by opening any path with ``res://`` "
+"as a base. For example, a texture located in the root of the project "
+"folder may be opened from the following path: ``res://sometexture.png``."
+msgstr ""
+"任何可访问的工程文件都可以通过用``res://``这种路径作为根目录. 打个比方, "
+"一个在根目录下的纹理文件可以用这样的路径名打开: ``res://sometexture."
+"png``."
+
+#: ../../tutorials/engine/data_paths.rst:27
+msgid "Userdata path (persistent data)"
+msgstr "用户路径 (持久化的数据)"
+
+#: ../../tutorials/engine/data_paths.rst:29
+msgid ""
+"While the project is running, it is a very common scenario that the "
+"resource path will be read-only, due to it being inside a package, self "
+"contained executable, or system wide install location."
+msgstr ""
+"当一个工程正在运行, 资源路径是只读的, 这是一个很常见的情形, 由于在一个包"
+"内, 它本身就包含可执行或者系统范围的安装路径."
+
+#: ../../tutorials/engine/data_paths.rst:33
+msgid ""
+"Storing persistent files in such scenarios should be done by using the "
+"``user://`` prefix, for example: ``user://gamesave.txt``."
+msgstr ""
+"持久化存储的文件通常应该用``user://`` 作为前缀, 举个栗子: ``user://"
+"gamesave.txt``."
+
+#: ../../tutorials/engine/data_paths.rst:36
+msgid ""
+"In some devices (for example, mobile ad consoles) this path is unique "
+"for the app. Under desktop operating systems, the engine uses the "
+"typical ~/.Name (check the project name under the settings) in OSX and "
+"Linux, and APPDATA/Name for Windows."
+msgstr ""
+"在许多设备中 (打个比方, 移动广告终端) 对于app这个路径就是惟一的. 在桌面操"
+"作系统中,  在OSX系统和Linux系统中引擎使用经典的 ~/.Name (项目设置检查一"
+"下), 在windows系统中使用 APPDATA/Name."

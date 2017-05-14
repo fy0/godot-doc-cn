@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:4
+msgid "Exporting images"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:6
+msgid ""
+"It is often desired to do an operation to all or a group of images upon "
+"export. Godot provides some tools for this. Examples of such operations "
+"are:"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:10
+msgid ""
+"Converting all images from a lossless format to a lossy one (ie: png -> "
+"WebP) for greater compression."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:12
+msgid ""
+"Shrinking all images to half the size, to create a low resolution build "
+"for smaller screens."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:14
+msgid ""
+"Create an atlas for a group of images and crop them, for higher "
+"performance and less memory usage."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:18
+msgid "Image export options"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:20
+msgid "In the \"Project Export Settings\" dialog, go to the Images tab:"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:24
+msgid ""
+"In this dialog the image extensions for conversion can be selected, and "
+"operations can be performed that apply to all images (except those in "
+"groups, see the next section for those):"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:28
+msgid ""
+"**Convert Image Format**: Probably the most useful operation is to "
+"convert to Lossy (WebP) to save disk space. For lossy, a Quality bar can "
+"set the quality/vs size ratio."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:31
+msgid ""
+"**Shrink**: This allows to shrink all images by a given amount. It's "
+"useful to export a game to half or less resolution for special devices."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:34
+msgid "**Compress Formats**: Allows to select which image exensions to convert."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:37
+msgid ""
+"On export, Godot will perform the desired operation. The first export "
+"might be really slow, but subsequent exports will be fast, as the "
+"converted images will be cached."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:42
+msgid "Image group export options"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:44
+msgid ""
+"This section is similar to the previous one, except it can operate on a "
+"selected group of images. When a image is in a group, the settings from "
+"the global export options are overridden by the ones from the group. An "
+"image can only be in one group at the same time. So if the image is in "
+"another group different to the current one being edited, it will not be "
+"selectable."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:54
+msgid "Atlas"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:56
+msgid ""
+"Grouping images allows a texture atlas to be created. When this mode is "
+"active, a button to preview the resulting atlas becomes available. Make "
+"sure that atlases don't become too big, as some hardware will not support"
+" textures bigger than 2048x2048 pixels. If this happens, just create "
+"another atlas."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/exporting_images.rst:62
+msgid ""
+"The atlas can be useful to speed up drawing of some scenes, as state "
+"changes are minimized when drawing from it (through unlike other engines,"
+" Godot is designed so state changes do not affect it as much). Textures "
+"added to an atlas get cropped (empty spaces around the image are "
+"removed), so this is another reason to use them (save space). If unsure, "
+"though, just leave that option disabled."
+msgstr ""
+

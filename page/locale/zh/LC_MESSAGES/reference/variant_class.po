@@ -1,0 +1,152 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-10-07 00:45+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../reference/variant_class.rst:4
+msgid "Variant class"
+msgstr "泛型类型"
+
+#: ../../reference/variant_class.rst:7
+msgid "About"
+msgstr "关于"
+
+#: ../../reference/variant_class.rst:9
+msgid ""
+"Variant is the most important datatype of Godot, it's the most important "
+"class in the engine. A Variant takes up only 20 bytes and can store almost "
+"any engine datatype inside of it. Variants are rarely used to hold "
+"information for long periods of time, instead they are used mainly for "
+"communication, editing, serialization and generally moving data around."
+msgstr ""
+"泛型是 Godot 最重要的数据类型，也是引擎中最重要的一个类。泛型占据 20 字节并能"
+"在其中储存引擎的几乎所有数据类型。泛型极少用于长期持有信息，反而主要是用来传"
+"递信息、编辑、序列化以及普通的数据移动。"
+
+#: ../../reference/variant_class.rst:16
+msgid "A Variant can:"
+msgstr "泛型可以："
+
+#: ../../reference/variant_class.rst:18
+msgid "Store almost any datatype"
+msgstr "储存绝大部分数据类型"
+
+#: ../../reference/variant_class.rst:19
+msgid ""
+"Perform operations between many variants (GDScript uses Variant as it's "
+"atomic/native datatype)."
+msgstr "在多个泛型中执行操作(GDScript将泛型作为一个原子性/原生数据类型)"
+
+#: ../../reference/variant_class.rst:21
+msgid "Be hashed, so it can be compared quickly to over variants"
+msgstr "被哈希化，因此能够与其他泛型对象快速进行比较。"
+
+#: ../../reference/variant_class.rst:22
+msgid "Be used to convert safely between datatypes"
+msgstr "被用于安全转换数据类型。"
+
+#: ../../reference/variant_class.rst:23
+msgid ""
+"Be used to abstract calling methods and their arguments (Godot exports all "
+"it's functions through variants)"
+msgstr "被用于抽象调用方法以及他们的参数(Godot 通过泛型导出所有函数)"
+
+#: ../../reference/variant_class.rst:25
+msgid "Be used to defer calls or move data between threads."
+msgstr "被用于延迟调用或是在线程间移动数据。"
+
+#: ../../reference/variant_class.rst:26
+msgid "Be serialized as binary and stored to disk, or transferred via network."
+msgstr "被序列化为二进制并保存到硬盘，或者通过网络传输。"
+
+#: ../../reference/variant_class.rst:28
+msgid ""
+"Be serialized to text and use it for printing values and editable settings."
+msgstr "被序列化为文本并用来输出值或者是成为可编辑的选项。"
+
+#: ../../reference/variant_class.rst:30
+msgid "Work as an exported property, so the editor can edit it universally."
+msgstr "如同被导出的属性(property)一样，编辑器基本可以编辑它。"
+
+#: ../../reference/variant_class.rst:31
+msgid "Be used for dictionaries, arrays, parsers, etc."
+msgstr "被用于作为 dictionaries, arrays, parsers 等等"
+
+#: ../../reference/variant_class.rst:33
+msgid ""
+"Basically, thanks to the Variant class, writing Godot itself was a much, "
+"much easier task, as it allows for highly dynamic constructs not common of C+"
+"+ with little effort. Become a friend of Variant today."
+msgstr ""
+"总的来说，感谢有泛型类型，写起 Godot 变得轻松多了。它所具有的高度动态的结构对"
+"C++来说可是难得一见的，当然是在不加很多特技的情况下。与泛型成为朋♂友吧。"
+
+#: ../../reference/variant_class.rst:38 ../../reference/variant_class.rst:59
+msgid "References:"
+msgstr "引用："
+
+#: ../../reference/variant_class.rst:40
+msgid ""
+"`core/variant.h <https://github.com/godotengine/godot/blob/master/core/"
+"variant.h>`__"
+msgstr ""
+
+#: ../../reference/variant_class.rst:43
+msgid "Dictionary and Array"
+msgstr "字典和数组"
+
+#: ../../reference/variant_class.rst:45
+msgid ""
+"Both are implemented using variants. A Dictionary can match any datatype "
+"used as key to any other datatype. An Array just holds an array of Variants. "
+"Of course, a Variant can also hold a Dictionary and an Array inside, making "
+"it even more flexible."
+msgstr ""
+"两者的实现都借助了泛型。字典能够将任意数据类型作为key而指向其他数据类型。数组"
+"(Array)类型则是维护了一个满是泛型对象的队列。当然了，泛型也可以将字典或者数组"
+"装在里面，这样一来使用就更灵活了。"
+
+#: ../../reference/variant_class.rst:50
+msgid ""
+"Both have a shared mode and a COW mode. Scripts often use them in shared "
+"mode (meaning modifications to a container will modify all references to "
+"it), or COW mode (modifications will always alter the local copy, making a "
+"copy of the internal data if necessary, but will not affect the other "
+"copies). In COW mode, Both Dictionary and Array are thread-safe, otherwise a "
+"Mutex should be created to lock if multi thread access is desired."
+msgstr ""
+"两者都使用了共享模式和 COW 模式(译注：COW mode，这是啥？牛模式？)。脚本经常以"
+"共享模式使用它们(意思是修改一个容器将会影响它的所有引用)，或者使用 COW 模式"
+"(修改总是在本地拷贝上进行，如果有需要就做一个拷贝，并不影响其他拷贝[译注：写"
+"时复制吗？不得而知])。在 COW 模式中，字典和数组都是线程安全的，除此之外你想要"
+"多线程访问需要先创建一个互斥锁(Mutex)。"
+
+#: ../../reference/variant_class.rst:61
+msgid ""
+"`core/dictionary.h <https://github.com/godotengine/godot/blob/master/core/"
+"dictionary.h>`__"
+msgstr ""
+
+#: ../../reference/variant_class.rst:62
+msgid ""
+"`core/array.h <https://github.com/godotengine/godot/blob/master/core/array."
+"h>`__"
+msgstr ""

@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../reference/compiling_for_web.rst:4
+msgid "Compiling for the Web"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:9
+msgid "Requirements"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:11
+msgid "To compile export templates for the Web, the following is required:"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:13
+msgid ""
+"`Emscripten SDK <http://emscripten.org/>`__ (Install in a path without "
+"spaces, i.e. not on \"Program Files\")"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:15
+msgid "`Python 2.7+ <https://www.python.org/>`__ (3.0 is untested as of now)"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:17
+msgid "`SCons <http://www.scons.org>`__ build system"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:20
+msgid "Compiling"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:22
+msgid ""
+"Start a terminal and set the environment variable ``EMSCRIPTEN_ROOT`` to "
+"the installation directory of Emscripten::"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:27
+msgid ""
+"If you are on Windows, start a regular prompt or the Emscripten Command "
+"Prompt. Do **not** use the Developer Command Prompt nor any of the ones "
+"that come with Visual Studio. You can set the environment variable in the"
+" system settings or in the prompt itself::"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:34
+msgid ""
+"Now go to the root directory of the engine source code and instruct SCons"
+" to compile for JavaScript. Specify ``target`` as either ``release`` for "
+"a release build or ``release_debug`` for a debug build::"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:41
+msgid ""
+"The engine will now be compiled to JavaScript by Emscripten. If all goes "
+"well, the resulting file will be placed in the ``bin`` subdirectory. Its "
+"name is ``godot.javascript.opt.js`` for release or "
+"``godot.javascript.opt.debug.js`` for debug. Additionally, a file of the "
+"same name but with the extension ``.html.mem`` will be generated."
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:48
+msgid "Building export templates"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:50
+msgid ""
+"After compiling, further steps are required to build the template. The "
+"actual web export template has the form of a zip file containing at least"
+" these 4 files:"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:54
+msgid ""
+"``godot.js`` — This is the file that was just compiled, but under a "
+"different name."
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:57
+#: ../../reference/compiling_for_web.rst:69
+msgid "For the release template::"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:61
+#: ../../reference/compiling_for_web.rst:73
+msgid "For the debug template::"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:65
+msgid ""
+"``godot.mem`` — Another file created during compilation. This file "
+"initially has the same name as the JavaScript file, except ``.js`` is "
+"replaced by ``.html.mem``."
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:77
+msgid "``godot.html`` and"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:78
+msgid ""
+"``godotfs.js`` — Both of these files are located within the Godot Engine "
+"repository, under ``tools/html_fs/``."
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:86
+msgid ""
+"Once these 4 files are assembled, zip them up and your export template is"
+" ready to go. The correct name for the template file is "
+"``javascript_release.zip`` for the release template::"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:92
+msgid "And ``javascript_debug.zip`` for the debug template::"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:96
+msgid ""
+"The resulting files must be placed in the ``templates`` directory in your"
+" Godot user directory::"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:102
+msgid ""
+"If you are writing custom modules or using custom C++ code, you may want "
+"to configure your zip files as custom export templates. This can be done "
+"in the export GUI, using the \"Custom Package\" option. There's no need "
+"to copy the templates in this case — you can simply reference the "
+"resulting files in your Godot source folder, so the next time you build, "
+"the custom templates will already be referenced."
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:110
+msgid "Customizing the HTML page"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:112
+msgid ""
+"Rather than the default ``godot.html`` file from the Godot Engine "
+"repository's ``tools/html_fs/`` directory, it is also possible to use a "
+"custom HTML page. This allows drastic customization of the final web "
+"presentation."
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:116
+msgid ""
+"The JavaScript object ``Module`` is the page's interface to Emscripten. "
+"Check the official documentation for information on how to use it: "
+"https://kripken.github.io/emscripten-site/docs/api_reference/module.html"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:119
+msgid ""
+"The default HTML page offers a good example to start off with, separating"
+" the Emscripten interface logic in the JavaScript ``Module`` object from "
+"the page logic in the ``Presentation`` object."
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:123
+msgid ""
+"When exporting a game, several placeholders in the ``godot.html`` file "
+"are substituted by values dependent on the export:"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:127
+msgid "Placeholder"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:127
+msgid "substituted by"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:129
+msgid "``$GODOT_JS``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:129
+msgid "Name of the compiled Godot Engine JavaScript file"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:132
+msgid "``$GODOT_FS``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:132
+msgid "Name of the filesystem access JavaScript file"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:135
+msgid "``$GODOT_MEM``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:135
+msgid "Name of the memory initialization file"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:137
+msgid "``$GODOT_CANVAS_WIDTH``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:137
+msgid "Integer specifying the initial display width of the game"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:140
+msgid "``$GODOT_CANVAS_HEIGHT``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:140
+msgid "Integer specifying the initial display height of the game"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:143
+msgid "``$GODOT_DEBUG_ENABLED``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:143
+msgid "String ``true`` if debugging, ``false`` otherwise"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:146
+msgid "``$GODOT_CONTROLS_ENABLED``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:146
+msgid ""
+"String ``true`` if ``html/controls_enabled`` is enabled, ``false`` "
+"otherwise"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:149
+msgid "``$GODOT_HEAD_TITLE``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:149
+msgid ""
+"Title of the page, normally used as content of the HTML ``<title>`` "
+"element"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:152
+msgid "``$GODOT_HEAD_INCLUDE``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:152
+msgid ""
+"Custom string to include just before the end of the HTML ``<head>`` "
+"element"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:155
+msgid "``$GODOT_STYLE_FONT_FAMILY``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:155
+msgid "CSS format ``font-family`` to use, without terminating semicolon"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:158
+msgid "``$GODOT_STYLE_INCLUDE``"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:158
+msgid "Custom string to include just before the end of the page's CSS style sheet"
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:162
+msgid ""
+"The first five of the placeholders listed should always be implemented in"
+" the HTML page, since they are important for the correct presentation of "
+"the game. The other placeholders are optional."
+msgstr ""
+
+#: ../../reference/compiling_for_web.rst:166
+msgid ""
+"Finally, the custom HTML page is installed by replacing the existing "
+"``godot.html`` file in the export template with the new one, retaining "
+"the name of the original."
+msgstr ""
+

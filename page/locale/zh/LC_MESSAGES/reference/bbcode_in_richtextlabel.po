@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-08-26 00:04+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:4
+msgid "BBCode in RichTextLabel"
+msgstr "富文本控件排版(RichTextLabel & BBCode)"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:7
+msgid "Introduction"
+msgstr "介绍"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:9
+msgid ""
+":ref:`class_RichTextLabel` allows to display complex text markup in a "
+"control. It has a built-in API for generating the markup, but can also "
+"parse a BBCode."
+msgstr ""
+":ref:`class_RichTextLabel` 支持显示复杂的图文混排内容，它包含一套内建"
+"API来生成标记语言，语法类似(BBCode)。"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:12
+msgid ""
+"Note that the BBCode tags can also be used to some extent in the :ref:"
+"`XML source of the class reference <doc_updating_the_class_reference>`."
+msgstr ""
+"提示：BBCode标签同样适用于编辑器内建的 :ref:`类参考手册 "
+"<doc_updating_the_class_reference>`."
+
+#: ../../reference/bbcode_in_richtextlabel.rst:16
+msgid "Setting up"
+msgstr "配置"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:18
+msgid ""
+"For RichTextLabel to work properly, it must be set up. This means "
+"loading the intended fonts in the relevant properties:"
+msgstr ""
+"要让RichTextLabel控件正常工作，我们需要先配置控件属性，比如文本显示字"
+"体："
+
+#: ../../reference/bbcode_in_richtextlabel.rst:24
+msgid "Reference"
+msgstr "参考"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:57
+msgid "Built-in color names"
+msgstr "内建颜色标签"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:59
+msgid "List of valid color names for the [color=<name>] tag:"
+msgstr "以下列出控件支持的颜色标签，用法：[color=<name>]："
+
+#: ../../reference/bbcode_in_richtextlabel.rst:61
+msgid "aqua"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:62
+msgid "black"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:63
+msgid "blue"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:64
+msgid "fuchsia"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:65
+msgid "gray"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:66
+msgid "green"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:67
+msgid "lime"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:68
+msgid "maroon"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:69
+msgid "navy"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:70
+msgid "purple"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:71
+msgid "red"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:72
+msgid "silver"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:73
+msgid "teal"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:74
+msgid "white"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:75
+msgid "yellow"
+msgstr ""
+
+#: ../../reference/bbcode_in_richtextlabel.rst:78
+msgid "Hexadecimal color codes"
+msgstr "十六进制颜色值"
+
+#: ../../reference/bbcode_in_richtextlabel.rst:80
+msgid ""
+"Any valid 6 digit hexadecimal code is supported. e.g: "
+"[color=#ffffff]white[/color]"
+msgstr ""
+"同时支持使用任意长度为6的十六进制颜色代码（顺序为 #RRGGBB）表示，如："
+"[color=#ffffff]white[/color]"

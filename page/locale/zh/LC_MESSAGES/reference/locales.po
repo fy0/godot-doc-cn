@@ -1,0 +1,1260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-08-23 02:15+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../reference/locales.rst:4
+msgid "Locales"
+msgstr "区域"
+
+#: ../../reference/locales.rst:6
+msgid ""
+"This is the list of supported locales and variants in the engine. It's "
+"based on the Unix standard locale strings:"
+msgstr "这是引擎支持的区域和方言的对应表，基于Linux标准区域字符串："
+
+#: ../../reference/locales.rst:10
+msgid "Locale"
+msgstr "区域"
+
+#: ../../reference/locales.rst:10
+msgid "Language and Variant"
+msgstr "语言和方言"
+
+#: ../../reference/locales.rst:12
+msgid "ar"
+msgstr ""
+
+#: ../../reference/locales.rst:12
+msgid "Arabic"
+msgstr "阿拉伯语"
+
+#: ../../reference/locales.rst:14
+msgid "ar_AE"
+msgstr ""
+
+#: ../../reference/locales.rst:14
+msgid "Arabic (United Arab Emirates)"
+msgstr "阿拉伯语（阿拉伯联合酋长国）"
+
+#: ../../reference/locales.rst:16
+msgid "ar_BH"
+msgstr ""
+
+#: ../../reference/locales.rst:16
+msgid "Arabic (Bahrain)"
+msgstr "阿拉伯语（巴林）"
+
+#: ../../reference/locales.rst:18
+msgid "ar_DZ"
+msgstr ""
+
+#: ../../reference/locales.rst:18
+msgid "Arabic (Algeria)"
+msgstr "阿拉伯语（阿尔及利亚）"
+
+#: ../../reference/locales.rst:20
+msgid "ar_EG"
+msgstr ""
+
+#: ../../reference/locales.rst:20
+msgid "Arabic (Egypt)"
+msgstr "阿拉伯语（埃及）"
+
+#: ../../reference/locales.rst:22
+msgid "ar_IQ"
+msgstr ""
+
+#: ../../reference/locales.rst:22
+msgid "Arabic (Iraq)"
+msgstr "阿拉伯语（伊拉克）"
+
+#: ../../reference/locales.rst:24
+msgid "ar_JO"
+msgstr ""
+
+#: ../../reference/locales.rst:24
+msgid "Arabic (Jordan)"
+msgstr "阿拉伯语（约旦）"
+
+#: ../../reference/locales.rst:26
+msgid "ar_KW"
+msgstr ""
+
+#: ../../reference/locales.rst:26
+msgid "Arabic (Kuwait)"
+msgstr "阿拉伯语（科威特）"
+
+#: ../../reference/locales.rst:28
+msgid "ar_LB"
+msgstr ""
+
+#: ../../reference/locales.rst:28
+msgid "Arabic (Lebanon)"
+msgstr "阿拉伯语（黎巴嫩）"
+
+#: ../../reference/locales.rst:30
+msgid "ar_LY"
+msgstr ""
+
+#: ../../reference/locales.rst:30
+msgid "Arabic (Libya)"
+msgstr "阿拉伯语（利比亚）"
+
+#: ../../reference/locales.rst:32
+msgid "ar_MA"
+msgstr ""
+
+#: ../../reference/locales.rst:32
+msgid "Arabic (Morocco)"
+msgstr "阿拉伯语（摩洛哥）"
+
+#: ../../reference/locales.rst:34
+msgid "ar_OM"
+msgstr ""
+
+#: ../../reference/locales.rst:34
+msgid "Arabic (Oman)"
+msgstr "阿拉伯语（阿曼）"
+
+#: ../../reference/locales.rst:36
+msgid "ar_QA"
+msgstr ""
+
+#: ../../reference/locales.rst:36
+msgid "Arabic (Qatar)"
+msgstr "阿拉伯语（卡塔尔）"
+
+#: ../../reference/locales.rst:38
+msgid "ar_SA"
+msgstr ""
+
+#: ../../reference/locales.rst:38
+msgid "Arabic (Saudi Arabia)"
+msgstr "阿拉伯语（沙特阿拉伯）"
+
+#: ../../reference/locales.rst:40
+msgid "ar_SD"
+msgstr ""
+
+#: ../../reference/locales.rst:40
+msgid "Arabic (Sudan)"
+msgstr "阿拉伯语（巴林）"
+
+#: ../../reference/locales.rst:42
+msgid "ar_SY"
+msgstr ""
+
+#: ../../reference/locales.rst:42
+msgid "Arabic (Syria)"
+msgstr "阿拉伯语（叙利亚）"
+
+#: ../../reference/locales.rst:44
+msgid "ar_TN"
+msgstr ""
+
+#: ../../reference/locales.rst:44
+msgid "Arabic (Tunisia)"
+msgstr "阿拉伯语（突尼斯）"
+
+#: ../../reference/locales.rst:46
+msgid "ar_YE"
+msgstr ""
+
+#: ../../reference/locales.rst:46
+msgid "Arabic (Yemen)"
+msgstr "阿拉伯语（也门）"
+
+#: ../../reference/locales.rst:48
+msgid "be"
+msgstr ""
+
+#: ../../reference/locales.rst:48
+msgid "Belarusian"
+msgstr "白俄罗斯语"
+
+#: ../../reference/locales.rst:50
+msgid "be_BY"
+msgstr ""
+
+#: ../../reference/locales.rst:50
+msgid "Belarusian (Belarus)"
+msgstr "白俄罗斯语（白俄罗斯）"
+
+#: ../../reference/locales.rst:52
+msgid "bg"
+msgstr ""
+
+#: ../../reference/locales.rst:52
+msgid "Bulgarian"
+msgstr "保加利亚语"
+
+#: ../../reference/locales.rst:54
+msgid "bg_BG"
+msgstr ""
+
+#: ../../reference/locales.rst:54
+msgid "Bulgarian (Bulgaria)"
+msgstr "保加利亚语（保加利亚）"
+
+#: ../../reference/locales.rst:56
+msgid "ca"
+msgstr ""
+
+#: ../../reference/locales.rst:56
+msgid "Catalan"
+msgstr "加泰罗尼亚语"
+
+#: ../../reference/locales.rst:58
+msgid "ca_ES"
+msgstr ""
+
+#: ../../reference/locales.rst:58
+msgid "Catalan (Spain)"
+msgstr "加泰罗尼亚语（西班牙）"
+
+#: ../../reference/locales.rst:60
+msgid "cs"
+msgstr ""
+
+#: ../../reference/locales.rst:60
+msgid "Czech"
+msgstr "捷克语"
+
+#: ../../reference/locales.rst:62
+msgid "cs_CZ"
+msgstr ""
+
+#: ../../reference/locales.rst:62
+msgid "Czech (Czech Republic)"
+msgstr "捷克语（捷克共和国）"
+
+#: ../../reference/locales.rst:64
+msgid "da"
+msgstr ""
+
+#: ../../reference/locales.rst:64
+msgid "Danish"
+msgstr "丹麦语"
+
+#: ../../reference/locales.rst:66
+msgid "da_DK"
+msgstr ""
+
+#: ../../reference/locales.rst:66
+msgid "Danish (Denmark)"
+msgstr "丹麦语（丹麦）"
+
+#: ../../reference/locales.rst:68
+msgid "de"
+msgstr ""
+
+#: ../../reference/locales.rst:68
+msgid "German"
+msgstr "德语"
+
+#: ../../reference/locales.rst:70
+msgid "de_AT"
+msgstr ""
+
+#: ../../reference/locales.rst:70
+msgid "German (Austria)"
+msgstr "德国（奥地利）"
+
+#: ../../reference/locales.rst:72
+msgid "de_CH"
+msgstr ""
+
+#: ../../reference/locales.rst:72
+msgid "German (Switzerland)"
+msgstr "德语（瑞士）"
+
+#: ../../reference/locales.rst:74
+msgid "de_DE"
+msgstr ""
+
+#: ../../reference/locales.rst:74
+msgid "German (Germany)"
+msgstr "德语（德国）"
+
+#: ../../reference/locales.rst:76
+msgid "de_LU"
+msgstr ""
+
+#: ../../reference/locales.rst:76
+msgid "German (Luxembourg)"
+msgstr "德语（卢森堡）"
+
+#: ../../reference/locales.rst:78
+msgid "el"
+msgstr ""
+
+#: ../../reference/locales.rst:78
+msgid "Greek"
+msgstr "希腊语"
+
+#: ../../reference/locales.rst:80
+msgid "el_CY"
+msgstr ""
+
+#: ../../reference/locales.rst:80
+msgid "Greek (Cyprus)"
+msgstr "希腊语（塞浦路斯）"
+
+#: ../../reference/locales.rst:82
+msgid "el_GR"
+msgstr ""
+
+#: ../../reference/locales.rst:82
+msgid "Greek (Greece)"
+msgstr "希腊语（希腊）"
+
+#: ../../reference/locales.rst:84
+msgid "en"
+msgstr ""
+
+#: ../../reference/locales.rst:84
+msgid "English"
+msgstr "英语"
+
+#: ../../reference/locales.rst:86
+msgid "en_AU"
+msgstr ""
+
+#: ../../reference/locales.rst:86
+msgid "English (Australia)"
+msgstr "英语（澳大利亚）"
+
+#: ../../reference/locales.rst:88
+msgid "en_CA"
+msgstr ""
+
+#: ../../reference/locales.rst:88
+msgid "English (Canada)"
+msgstr "英语（加拿大）"
+
+#: ../../reference/locales.rst:90
+msgid "en_GB"
+msgstr ""
+
+#: ../../reference/locales.rst:90
+msgid "English (United Kingdom)"
+msgstr "英语（英国）"
+
+#: ../../reference/locales.rst:92
+msgid "en_IE"
+msgstr ""
+
+#: ../../reference/locales.rst:92
+msgid "English (Ireland)"
+msgstr "英语（爱尔兰）"
+
+#: ../../reference/locales.rst:94
+msgid "en_IN"
+msgstr ""
+
+#: ../../reference/locales.rst:94
+msgid "English (India)"
+msgstr "英语（印度）"
+
+#: ../../reference/locales.rst:96
+msgid "en_MT"
+msgstr ""
+
+#: ../../reference/locales.rst:96
+msgid "English (Malta)"
+msgstr "英语（马耳他）"
+
+#: ../../reference/locales.rst:98
+msgid "en_NZ"
+msgstr ""
+
+#: ../../reference/locales.rst:98
+msgid "English (New Zealand)"
+msgstr "英语（新西兰）"
+
+#: ../../reference/locales.rst:100
+msgid "en_PH"
+msgstr ""
+
+#: ../../reference/locales.rst:100
+msgid "English (Philippines)"
+msgstr "英语（菲律宾）"
+
+#: ../../reference/locales.rst:102
+msgid "en_SG"
+msgstr ""
+
+#: ../../reference/locales.rst:102
+msgid "English (Singapore)"
+msgstr "英语（新加坡）"
+
+#: ../../reference/locales.rst:104
+msgid "en_US"
+msgstr ""
+
+#: ../../reference/locales.rst:104
+msgid "English (United States)"
+msgstr "英语（美国）"
+
+#: ../../reference/locales.rst:106
+msgid "en_ZA"
+msgstr ""
+
+#: ../../reference/locales.rst:106
+msgid "English (South Africa)"
+msgstr "英语（南非）"
+
+#: ../../reference/locales.rst:108
+msgid "es"
+msgstr ""
+
+#: ../../reference/locales.rst:108
+msgid "Spanish"
+msgstr "西班牙语"
+
+#: ../../reference/locales.rst:110
+msgid "es_AR"
+msgstr ""
+
+#: ../../reference/locales.rst:110
+msgid "Spanish (Argentina)"
+msgstr "西班牙语（阿根廷）"
+
+#: ../../reference/locales.rst:112
+msgid "es_BO"
+msgstr ""
+
+#: ../../reference/locales.rst:112
+msgid "Spanish (Bolivia)"
+msgstr "西班牙语（玻利维亚）"
+
+#: ../../reference/locales.rst:114
+msgid "es_CL"
+msgstr ""
+
+#: ../../reference/locales.rst:114
+msgid "Spanish (Chile)"
+msgstr "西班牙语（智利）"
+
+#: ../../reference/locales.rst:116
+msgid "es_CO"
+msgstr ""
+
+#: ../../reference/locales.rst:116
+msgid "Spanish (Colombia)"
+msgstr "西班牙语（哥伦比亚）"
+
+#: ../../reference/locales.rst:118
+msgid "es_CR"
+msgstr ""
+
+#: ../../reference/locales.rst:118
+msgid "Spanish (Costa Rica)"
+msgstr "西班牙语（哥斯达黎加）"
+
+#: ../../reference/locales.rst:120
+msgid "es_DO"
+msgstr ""
+
+#: ../../reference/locales.rst:120
+msgid "Spanish (Dominican Republic)"
+msgstr "西班牙语（多米尼加共和国）"
+
+#: ../../reference/locales.rst:122
+msgid "es_EC"
+msgstr ""
+
+#: ../../reference/locales.rst:122
+msgid "Spanish (Ecuador)"
+msgstr "西班牙语（厄瓜多尔）"
+
+#: ../../reference/locales.rst:124
+msgid "es_ES"
+msgstr ""
+
+#: ../../reference/locales.rst:124
+msgid "Spanish (Spain)"
+msgstr "西班牙语（西班牙）"
+
+#: ../../reference/locales.rst:126
+msgid "es_GT"
+msgstr ""
+
+#: ../../reference/locales.rst:126
+msgid "Spanish (Guatemala)"
+msgstr "西班牙语（危地马拉）"
+
+#: ../../reference/locales.rst:128
+msgid "es_HN"
+msgstr ""
+
+#: ../../reference/locales.rst:128
+msgid "Spanish (Honduras)"
+msgstr "西班牙语（洪都拉斯）"
+
+#: ../../reference/locales.rst:130
+msgid "es_MX"
+msgstr ""
+
+#: ../../reference/locales.rst:130
+msgid "Spanish (Mexico)"
+msgstr "西班牙语（墨西哥）"
+
+#: ../../reference/locales.rst:132
+msgid "es_NI"
+msgstr ""
+
+#: ../../reference/locales.rst:132
+msgid "Spanish (Nicaragua)"
+msgstr "西班牙语（尼加拉瓜）"
+
+#: ../../reference/locales.rst:134
+msgid "es_PA"
+msgstr ""
+
+#: ../../reference/locales.rst:134
+msgid "Spanish (Panama)"
+msgstr "西班牙语（巴拿马）"
+
+#: ../../reference/locales.rst:136
+msgid "es_PE"
+msgstr ""
+
+#: ../../reference/locales.rst:136
+msgid "Spanish (Peru)"
+msgstr "西班牙语（秘鲁）"
+
+#: ../../reference/locales.rst:138
+msgid "es_PR"
+msgstr ""
+
+#: ../../reference/locales.rst:138
+msgid "Spanish (Puerto Rico)"
+msgstr "西班牙语（波多黎各）"
+
+#: ../../reference/locales.rst:140
+msgid "es_PY"
+msgstr ""
+
+#: ../../reference/locales.rst:140
+msgid "Spanish (Paraguay)"
+msgstr "西班牙语（巴拉圭）"
+
+#: ../../reference/locales.rst:142
+msgid "es_SV"
+msgstr ""
+
+#: ../../reference/locales.rst:142
+msgid "Spanish (El Salvador)"
+msgstr "西班牙语（萨尔瓦多）"
+
+#: ../../reference/locales.rst:144
+msgid "es_US"
+msgstr ""
+
+#: ../../reference/locales.rst:144
+msgid "Spanish (United States)"
+msgstr "西班牙语（美国）"
+
+#: ../../reference/locales.rst:146
+msgid "es_UY"
+msgstr ""
+
+#: ../../reference/locales.rst:146
+msgid "Spanish (Uruguay)"
+msgstr "西班牙语（乌拉圭）"
+
+#: ../../reference/locales.rst:148
+msgid "es_VE"
+msgstr ""
+
+#: ../../reference/locales.rst:148
+msgid "Spanish (Venezuela)"
+msgstr "西班牙语（委内瑞拉）"
+
+#: ../../reference/locales.rst:150
+msgid "et"
+msgstr ""
+
+#: ../../reference/locales.rst:150
+msgid "Estonian"
+msgstr "爱沙尼亚语"
+
+#: ../../reference/locales.rst:152
+msgid "et_EE"
+msgstr ""
+
+#: ../../reference/locales.rst:152
+msgid "Estonian (Estonia)"
+msgstr "爱沙尼亚语（爱沙尼亚）"
+
+#: ../../reference/locales.rst:154
+msgid "fi"
+msgstr ""
+
+#: ../../reference/locales.rst:154
+msgid "Finnish"
+msgstr "芬兰语"
+
+#: ../../reference/locales.rst:156
+msgid "fi_FI"
+msgstr ""
+
+#: ../../reference/locales.rst:156
+msgid "Finnish (Finland)"
+msgstr "芬兰语（芬兰）"
+
+#: ../../reference/locales.rst:158
+msgid "fr"
+msgstr ""
+
+#: ../../reference/locales.rst:158
+msgid "French"
+msgstr "法语"
+
+#: ../../reference/locales.rst:160
+msgid "fr_BE"
+msgstr ""
+
+#: ../../reference/locales.rst:160
+msgid "French (Belgium)"
+msgstr "法语（比利时）"
+
+#: ../../reference/locales.rst:162
+msgid "fr_CA"
+msgstr ""
+
+#: ../../reference/locales.rst:162
+msgid "French (Canada)"
+msgstr "法语（加拿大）"
+
+#: ../../reference/locales.rst:164
+msgid "fr_CH"
+msgstr ""
+
+#: ../../reference/locales.rst:164
+msgid "French (Switzerland)"
+msgstr "法语（瑞士）"
+
+#: ../../reference/locales.rst:166
+msgid "fr_FR"
+msgstr ""
+
+#: ../../reference/locales.rst:166
+msgid "French (France)"
+msgstr "法语（法国）"
+
+#: ../../reference/locales.rst:168
+msgid "fr_LU"
+msgstr ""
+
+#: ../../reference/locales.rst:168
+msgid "French (Luxembourg)"
+msgstr "德语（卢森堡）"
+
+#: ../../reference/locales.rst:170
+msgid "ga"
+msgstr ""
+
+#: ../../reference/locales.rst:170
+msgid "Irish"
+msgstr "爱尔兰语"
+
+#: ../../reference/locales.rst:172
+msgid "ga_IE"
+msgstr ""
+
+#: ../../reference/locales.rst:172
+msgid "Irish (Ireland)"
+msgstr "爱尔兰语（爱尔兰）"
+
+#: ../../reference/locales.rst:174
+msgid "hi"
+msgstr ""
+
+#: ../../reference/locales.rst:174 ../../reference/locales.rst:176
+msgid "Hindi (India)"
+msgstr "印地语（印度）"
+
+#: ../../reference/locales.rst:176
+msgid "hi_IN"
+msgstr ""
+
+#: ../../reference/locales.rst:178
+msgid "hr"
+msgstr ""
+
+#: ../../reference/locales.rst:178
+msgid "Croatian"
+msgstr "克罗地亚语"
+
+#: ../../reference/locales.rst:180
+msgid "hr_HR"
+msgstr ""
+
+#: ../../reference/locales.rst:180
+msgid "Croatian (Croatia)"
+msgstr "克罗地亚语（克罗地亚）"
+
+#: ../../reference/locales.rst:182
+msgid "hu"
+msgstr ""
+
+#: ../../reference/locales.rst:182
+msgid "Hungarian"
+msgstr "匈牙利语"
+
+#: ../../reference/locales.rst:184
+msgid "hu_HU"
+msgstr ""
+
+#: ../../reference/locales.rst:184
+msgid "Hungarian (Hungary)"
+msgstr "匈牙利语（匈牙利）"
+
+#: ../../reference/locales.rst:186
+msgid "in"
+msgstr ""
+
+#: ../../reference/locales.rst:186
+msgid "Indonesian"
+msgstr "印度尼西亚语"
+
+#: ../../reference/locales.rst:188
+msgid "in_ID"
+msgstr ""
+
+#: ../../reference/locales.rst:188
+msgid "Indonesian (Indonesia)"
+msgstr "印度尼西亚语（印尼）"
+
+#: ../../reference/locales.rst:190
+msgid "is"
+msgstr ""
+
+#: ../../reference/locales.rst:190
+msgid "Icelandic"
+msgstr "冰岛语"
+
+#: ../../reference/locales.rst:192
+msgid "is_IS"
+msgstr ""
+
+#: ../../reference/locales.rst:192
+msgid "Icelandic (Iceland)"
+msgstr "冰岛语（冰岛）"
+
+#: ../../reference/locales.rst:194
+msgid "it"
+msgstr ""
+
+#: ../../reference/locales.rst:194
+msgid "Italian"
+msgstr "意大利语"
+
+#: ../../reference/locales.rst:196
+msgid "it_CH"
+msgstr ""
+
+#: ../../reference/locales.rst:196
+msgid "Italian (Switzerland)"
+msgstr "意大利语（瑞士）"
+
+#: ../../reference/locales.rst:198
+msgid "it_IT"
+msgstr ""
+
+#: ../../reference/locales.rst:198
+msgid "Italian (Italy)"
+msgstr "意大利语（意大利）"
+
+#: ../../reference/locales.rst:200
+msgid "iw"
+msgstr ""
+
+#: ../../reference/locales.rst:200
+msgid "Hebrew"
+msgstr "希伯来语"
+
+#: ../../reference/locales.rst:202
+msgid "iw_IL"
+msgstr ""
+
+#: ../../reference/locales.rst:202
+msgid "Hebrew (Israel)"
+msgstr "希伯来语（以色列）"
+
+#: ../../reference/locales.rst:204
+msgid "ja"
+msgstr ""
+
+#: ../../reference/locales.rst:204
+msgid "Japanese"
+msgstr "日语"
+
+#: ../../reference/locales.rst:206
+msgid "ja_JP"
+msgstr ""
+
+#: ../../reference/locales.rst:206
+msgid "Japanese (Japan)"
+msgstr "日语（日本）"
+
+#: ../../reference/locales.rst:208
+msgid "ja_JP_JP"
+msgstr ""
+
+#: ../../reference/locales.rst:208
+msgid "Japanese (Japan,JP)"
+msgstr "日语（日本，JP）"
+
+#: ../../reference/locales.rst:210
+msgid "ko"
+msgstr ""
+
+#: ../../reference/locales.rst:210
+msgid "Korean"
+msgstr "朝鲜语"
+
+#: ../../reference/locales.rst:212
+msgid "ko_KR"
+msgstr ""
+
+#: ../../reference/locales.rst:212
+msgid "Korean (South Korea)"
+msgstr "朝鲜语（韩国）"
+
+#: ../../reference/locales.rst:214
+msgid "lt"
+msgstr ""
+
+#: ../../reference/locales.rst:214
+msgid "Lithuanian"
+msgstr "立陶宛语"
+
+#: ../../reference/locales.rst:216
+msgid "lt_LT"
+msgstr ""
+
+#: ../../reference/locales.rst:216
+msgid "Lithuanian (Lithuania)"
+msgstr "立陶宛语（立陶宛）"
+
+#: ../../reference/locales.rst:218
+msgid "lv"
+msgstr ""
+
+#: ../../reference/locales.rst:218
+msgid "Latvian"
+msgstr "拉脱维亚语"
+
+#: ../../reference/locales.rst:220
+msgid "lv_LV"
+msgstr ""
+
+#: ../../reference/locales.rst:220
+msgid "Latvian (Latvia)"
+msgstr "拉脱维亚语（拉脱维亚）"
+
+#: ../../reference/locales.rst:222
+msgid "mk"
+msgstr ""
+
+#: ../../reference/locales.rst:222
+msgid "Macedonian"
+msgstr "马其顿语"
+
+#: ../../reference/locales.rst:224
+msgid "mk_MK"
+msgstr ""
+
+#: ../../reference/locales.rst:224
+msgid "Macedonian (Macedonia)"
+msgstr "马其顿语（马其顿）"
+
+#: ../../reference/locales.rst:226
+msgid "ms"
+msgstr ""
+
+#: ../../reference/locales.rst:226
+msgid "Malay"
+msgstr "马来语"
+
+#: ../../reference/locales.rst:228
+msgid "ms_MY"
+msgstr ""
+
+#: ../../reference/locales.rst:228
+msgid "Malay (Malaysia)"
+msgstr "马来语（马来西亚）"
+
+#: ../../reference/locales.rst:230
+msgid "mt"
+msgstr ""
+
+#: ../../reference/locales.rst:230
+msgid "Maltese"
+msgstr "马耳他语"
+
+#: ../../reference/locales.rst:232
+msgid "mt_MT"
+msgstr ""
+
+#: ../../reference/locales.rst:232
+msgid "Maltese (Malta)"
+msgstr "马耳他语（马其他）"
+
+#: ../../reference/locales.rst:234
+msgid "nl"
+msgstr ""
+
+#: ../../reference/locales.rst:234
+msgid "Dutch"
+msgstr "荷兰语"
+
+#: ../../reference/locales.rst:236
+msgid "nl_BE"
+msgstr ""
+
+#: ../../reference/locales.rst:236
+msgid "Dutch (Belgium)"
+msgstr "荷兰语（比利时）"
+
+#: ../../reference/locales.rst:238
+msgid "nl_NL"
+msgstr ""
+
+#: ../../reference/locales.rst:238
+msgid "Dutch (Netherlands)"
+msgstr "荷兰语（荷兰）"
+
+#: ../../reference/locales.rst:240
+msgid "no"
+msgstr ""
+
+#: ../../reference/locales.rst:240
+msgid "Norwegian"
+msgstr "挪威语"
+
+#: ../../reference/locales.rst:242
+msgid "no_NO"
+msgstr ""
+
+#: ../../reference/locales.rst:242
+msgid "Norwegian (Norway)"
+msgstr "挪威语（挪威）"
+
+#: ../../reference/locales.rst:244
+msgid "no_NO_NY"
+msgstr ""
+
+#: ../../reference/locales.rst:244
+msgid "Norwegian (Norway,Nynorsk)"
+msgstr "挪威语（挪威，Nynorsk）"
+
+#: ../../reference/locales.rst:246
+msgid "pl"
+msgstr ""
+
+#: ../../reference/locales.rst:246
+msgid "Polish"
+msgstr "波兰语"
+
+#: ../../reference/locales.rst:248
+msgid "pl_PL"
+msgstr ""
+
+#: ../../reference/locales.rst:248
+msgid "Polish (Poland)"
+msgstr "波兰语（波兰）"
+
+#: ../../reference/locales.rst:250
+msgid "pt"
+msgstr ""
+
+#: ../../reference/locales.rst:250
+msgid "Portuguese"
+msgstr "葡萄牙语"
+
+#: ../../reference/locales.rst:252
+msgid "pt_BR"
+msgstr ""
+
+#: ../../reference/locales.rst:252
+msgid "Portuguese (Brazil)"
+msgstr "葡萄牙语（巴西）"
+
+#: ../../reference/locales.rst:254
+msgid "pt_PT"
+msgstr ""
+
+#: ../../reference/locales.rst:254
+msgid "Portuguese (Portugal)"
+msgstr "葡萄牙语（葡萄牙的）"
+
+#: ../../reference/locales.rst:256
+msgid "ro"
+msgstr ""
+
+#: ../../reference/locales.rst:256
+msgid "Romanian"
+msgstr "罗马尼亚语"
+
+#: ../../reference/locales.rst:258
+msgid "ro_RO"
+msgstr ""
+
+#: ../../reference/locales.rst:258
+msgid "Romanian (Romania)"
+msgstr "罗马尼亚语（罗马尼亚）"
+
+#: ../../reference/locales.rst:260
+msgid "ru"
+msgstr ""
+
+#: ../../reference/locales.rst:260
+msgid "Russian"
+msgstr "俄语"
+
+#: ../../reference/locales.rst:262
+msgid "ru_RU"
+msgstr ""
+
+#: ../../reference/locales.rst:262
+msgid "Russian (Russia)"
+msgstr "俄语（俄罗斯）"
+
+#: ../../reference/locales.rst:264
+msgid "sk"
+msgstr ""
+
+#: ../../reference/locales.rst:264
+msgid "Slovak"
+msgstr "斯洛伐克语"
+
+#: ../../reference/locales.rst:266
+msgid "sk_SK"
+msgstr ""
+
+#: ../../reference/locales.rst:266
+msgid "Slovak (Slovakia)"
+msgstr "斯洛伐克语（斯洛伐克）"
+
+#: ../../reference/locales.rst:268
+msgid "sl"
+msgstr ""
+
+#: ../../reference/locales.rst:268
+msgid "Slovenian"
+msgstr "斯洛文尼亚语"
+
+#: ../../reference/locales.rst:270
+msgid "sl_SI"
+msgstr ""
+
+#: ../../reference/locales.rst:270
+msgid "Slovenian (Slovenia)"
+msgstr "斯洛文尼亚语（斯洛文尼亚）"
+
+#: ../../reference/locales.rst:272
+msgid "sq"
+msgstr ""
+
+#: ../../reference/locales.rst:272
+msgid "Albanian"
+msgstr "阿尔巴尼亚语"
+
+#: ../../reference/locales.rst:274
+msgid "sq_AL"
+msgstr ""
+
+#: ../../reference/locales.rst:274
+msgid "Albanian (Albania)"
+msgstr "阿尔巴尼亚语（阿尔巴尼亚）"
+
+#: ../../reference/locales.rst:276
+msgid "sr"
+msgstr ""
+
+#: ../../reference/locales.rst:276
+msgid "Serbian"
+msgstr "塞尔维亚语"
+
+#: ../../reference/locales.rst:278
+msgid "sr_BA"
+msgstr ""
+
+#: ../../reference/locales.rst:278
+msgid "Serbian (Bosnia and Herzegovina)"
+msgstr "塞尔维亚语（波斯尼亚和黑塞哥维那）"
+
+#: ../../reference/locales.rst:280
+msgid "sr_CS"
+msgstr ""
+
+#: ../../reference/locales.rst:280
+msgid "Serbian (Serbia and Montenegro)"
+msgstr "塞尔维亚语（塞尔维亚和黑山）"
+
+#: ../../reference/locales.rst:282
+msgid "sr_ME"
+msgstr ""
+
+#: ../../reference/locales.rst:282
+msgid "Serbian (Montenegro)"
+msgstr "塞尔维亚语（黑山）"
+
+#: ../../reference/locales.rst:284
+msgid "sr_RS"
+msgstr ""
+
+#: ../../reference/locales.rst:284
+msgid "Serbian (Serbia)"
+msgstr "塞尔维亚语（塞尔维亚）"
+
+#: ../../reference/locales.rst:286
+msgid "sv"
+msgstr ""
+
+#: ../../reference/locales.rst:286
+msgid "Swedish"
+msgstr "瑞典语"
+
+#: ../../reference/locales.rst:288
+msgid "sv_SE"
+msgstr ""
+
+#: ../../reference/locales.rst:288
+msgid "Swedish (Sweden)"
+msgstr "瑞典语（瑞典）"
+
+#: ../../reference/locales.rst:290
+msgid "th"
+msgstr ""
+
+#: ../../reference/locales.rst:290
+msgid "Thai"
+msgstr "泰语"
+
+#: ../../reference/locales.rst:292
+msgid "th_TH"
+msgstr ""
+
+#: ../../reference/locales.rst:292
+msgid "Thai (Thailand)"
+msgstr "泰语（泰国）"
+
+#: ../../reference/locales.rst:294
+msgid "th_TH_TH"
+msgstr ""
+
+#: ../../reference/locales.rst:294
+msgid "Thai (Thailand,TH)"
+msgstr "泰语（泰国，TH）"
+
+#: ../../reference/locales.rst:296
+msgid "tr"
+msgstr ""
+
+#: ../../reference/locales.rst:296
+msgid "Turkish"
+msgstr "土耳其语"
+
+#: ../../reference/locales.rst:298
+msgid "tr_TR"
+msgstr ""
+
+#: ../../reference/locales.rst:298
+msgid "Turkish (Turkey)"
+msgstr "土耳其语（土耳其）"
+
+#: ../../reference/locales.rst:300
+msgid "uk"
+msgstr ""
+
+#: ../../reference/locales.rst:300
+msgid "Ukrainian"
+msgstr "乌克兰语"
+
+#: ../../reference/locales.rst:302
+msgid "uk_UA"
+msgstr ""
+
+#: ../../reference/locales.rst:302
+msgid "Ukrainian (Ukraine)"
+msgstr "乌克兰语（乌克兰）"
+
+#: ../../reference/locales.rst:304
+msgid "vi"
+msgstr ""
+
+#: ../../reference/locales.rst:304
+msgid "Vietnamese"
+msgstr "越南语"
+
+#: ../../reference/locales.rst:306
+msgid "vi_VN"
+msgstr ""
+
+#: ../../reference/locales.rst:306
+msgid "Vietnamese (Vietnam)"
+msgstr "越南语（越南）"
+
+#: ../../reference/locales.rst:308
+msgid "zh"
+msgstr ""
+
+#: ../../reference/locales.rst:308
+msgid "Chinese"
+msgstr "中文"
+
+#: ../../reference/locales.rst:310
+msgid "zh_CN"
+msgstr ""
+
+#: ../../reference/locales.rst:310
+msgid "Chinese (China)"
+msgstr "中文（中国）"
+
+#: ../../reference/locales.rst:312
+msgid "zh_HK"
+msgstr ""
+
+#: ../../reference/locales.rst:312
+msgid "Chinese (Hong Kong)"
+msgstr "中文（香港）"
+
+#: ../../reference/locales.rst:314
+msgid "zh_SG"
+msgstr ""
+
+#: ../../reference/locales.rst:314
+msgid "Chinese (Singapore)"
+msgstr "中文（新加坡）"
+
+#: ../../reference/locales.rst:316
+msgid "zh_TW"
+msgstr ""
+
+#: ../../reference/locales.rst:316
+msgid "Chinese (Taiwan)"
+msgstr "中文（台湾）"

@@ -1,4 +1,4 @@
-国际化
+Internationalization
 ====================
 
 .. toctree::
@@ -6,4 +6,3 @@
    :name: toc-i18n
 
    internationalizing_games
-

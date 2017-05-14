@@ -1,33 +1,39 @@
 .. _doc_data_paths:
 
-数据路径
+Data paths
 ==========
 
-路径分隔符
+Path separators
 ---------------
 
-为了尽可能多的支持更多的平台着想, Godot仅接受unix风格路径分融符 (``/``). 
-包括windows在引擎任何地方都一样的.
+For the sake of supporting as many platforms as possible, Godot only
+accepts unix style path separators (``/``). These work everywhere,
+including Windows.
 
-有一个路径: ``C:\Projects`` 要写成这样 ``C:/Projects``.
+A path like: ``C:\Projects`` will become ``C:/Projects``.
 
-资源路径
+Resource path
 -------------
 
-就像以前说过的. Godot的工程存在于所给的包含"engine.cfg"文本文件的目录,
-就算这个目录是空的也一样.
+As mentioned before. Godot considers that a project exists at any
+given folder that contains an "engine.cfg" text file, even if such
+file is empty.
 
-任何可访问的工程文件都可以通过用``res://``这种路径作为根目录. 打个比方, 
-一个在根目录下的纹理文件可以用这样的路径名打开: ``res://sometexture.png``.
+Accessing project files can be done by opening any path with ``res://``
+as a base. For example, a texture located in the root of the project
+folder may be opened from the following path: ``res://sometexture.png``.
 
-用户路径 (持久化的数据)
+Userdata path (persistent data)
 -------------------------------
 
-当一个工程正在运行, 资源路径是只读的, 这是一个很常见的情形, 由于在一个包内, 
-它本身就包含可执行或者系统范围的安装路径.
+While the project is running, it is a very common scenario that the
+resource path will be read-only, due to it being inside a package,
+self contained executable, or system wide install location.
 
-持久化存储的文件通常应该用``user://`` 作为前缀, 举个栗子: ``user://gamesave.txt``.
+Storing persistent files in such scenarios should be done by using the
+``user://`` prefix, for example: ``user://gamesave.txt``.
 
-在许多设备中 (打个比方, 移动广告终端) 对于app这个路径就是惟一的. 
-在桌面操作系统中,  在OSX系统和Linux系统中引擎使用经典的 ~/.Name (项目设置检查一下), 
-在windows系统中使用 APPDATA/Name.
+In some devices (for example, mobile ad consoles) this path is unique
+for the app. Under desktop operating systems, the engine uses the
+typical ~/.Name (check the project name under the settings) in OSX and
+Linux, and APPDATA/Name for Windows.

@@ -1,0 +1,76 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:4
+msgid "One-click deploy"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:7
+msgid "Sounds good, what is it?"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:9
+msgid ""
+"This feature will pop up automatically once a platform is properly "
+"configured and a supported device is connected to the computer. Since "
+"things can go wrong at many levels (platform may not be configured "
+"correctly, SDK may incorrectly installed, device may be improperly "
+"configured, kitty ate the USB cable, etc.), it's good to let the user "
+"know that it exists."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:16
+msgid ""
+"Some platforms (at the time of this writing, only Android and Blackberry "
+"10) can detect when a USB device is connected to the computer, and offer "
+"the user to automatically export, install and run the project (in debug "
+"mode) on the device. This feature is called, in industry buzz-words, "
+"\"One Click Deploy\" (though, it's technically two clicks...)."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:23
+msgid "Steps for one-click deploy"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:25
+msgid "Configure target platform."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:26
+msgid ""
+"Configure device (make sure it's in developer mode, likes the computer, "
+"usb is recognized, usb cable is plugged, etc.)."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:28
+msgid "Connect the device.."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:29
+msgid "And voila!"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/one-click_deploy.rst:33
+msgid "Click once.. and deploy!"
+msgstr ""
+

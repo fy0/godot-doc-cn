@@ -1,97 +1,101 @@
 .. _doc_singletons_autoload:
 
-单例(Singletons)(自动载入)
+Singletons (AutoLoad)
 =====================
 
-介绍
+Introduction
 ------------
 
-场景单例(Scene Singletons)是非常有用的东西，因为它们代表一个非常普遍的使用情形，但是在最开始他们的价值在哪里不甚清晰。
+Scene singletons are very useful, catering to a common use case where you need
+to store persistent information between scenes.
 
-场景系统非常的有用，但是它自己还有一些缺点：
+Albeit very powerful, the scene system by itself has a few drawbacks:
 
--  两个场景之间没有存储信息(比如核心(core)、包含的物件)的"共同"位置。
--  当持有那些信息时，我们可以去创建一个载入其他场景作为子级并释放它们的场景，但接下来如果完成了，我们不可以单独运行一个场景并期待它能够工作。
--  我们还可以在磁盘中的
-   \`user://\` 下存储持续性的信息并让场景总载入它，但是在切换场景时载入/保存是相当笨拙的。
+-  There is no common place to store information (e.g. a player's items etc.)
+   required by more than one scene.
+-  While it is possible for a scene that loads and unloads other scenes as 
+   its children to store information common to these child scenes, it is no 
+   longer possible to run these scenes by themselves and expect them to work 
+   correctly.
+-  While information can be stored to disk in \`user://\` and this information 
+   can be loaded by scenes that require it, continuously saving and loading this 
+   data when changing scenes is cumbersome and may be slow.
 
-所以在使用Godot一会之后，这就变得明晰了，有必要具备场景的局部：
+However there is still a need in Godot to create parts of a scene that:
 
--  总被装在，无论场景何时从编辑器被打开。
--  能够存留全局变量(Global Variables)，比如玩家信息、物品、金钱等。
--  能够处理场景的切换和切换效果。
--  就是一种行为上类似于一个单例类的东西，因为GDScript有意地不支持全局变量。
+-  Are always loaded, no matter which scene is opened from the editor
+-  Can store global variables, such as player information, items, money
+   etc. and share information between scenes
+-  Can handle switching scenes and transitions
+-  Acts like a singleton, since GDScript does not support global variables by design.
 
-基于这些原因，自动载入节点的选项和脚本就存在了。
+Auto-loading nodes and scripts caters to this need.
 
-自动载入(AutoLoad)
+AutoLoad
 --------
 
-AutoLoad 可以是一个场景、或者一个继承了一个节点（一个将要被创建然后会为它设置脚本的节点）的脚本。它们可以在 Scene > Project Settings > AutoLoad标签页下被添加到工程中。
-AutoLoad can be a scene, or a script that inherits from Node (a Node
-will be created and the script will be set to it). They are added to the
-project in the Scene > Project Settings > AutoLoad tab.
+You can use AutoLoad to load a scene, or a script that inherits from Node (a Node
+will be created and the script will be set to it). 
 
-每一个自动载入项
-Each autoload needs a name, this name will be the node name, and the
-node will be always added to the root viewport before any scene is
-loaded.
+To autoload a scene or script, select Scene > Project Settings from the menu and switch
+to the AutoLoad tab. Each entry in the list requires a name, which is used as the name
+of the node, and the node is always added to the root viewport before any other scenes 
+are loaded.
 
 .. image:: /img/singleton.png
 
-This means, that a for a singleton named "playervariables", any node can
-access it by requesting:
+This means that any node can access a singleton named "playervariables" with:
 
 ::
 
-    var player_vars = get_node("/root/playervariables")
+   var player_vars = get_node("/root/playervariables")
 
 Custom scene switcher
 ---------------------
 
-This short tutorial will explain how to make a scene switcher by using
+This short tutorial will explain how to make a scene switcher using
 autoload. For simple scene switching, the
 :ref:`SceneTree.change_scene() <class_SceneTree_change_scene>`
 method suffices (described in :ref:`doc_scene_tree`), so this method is for
-more complex behaviors when switching scenes.
+more complex behavior when switching between scenes.
 
 First download the template from here:
 :download:`autoload.zip </files/autoload.zip>`, then open it.
 
 Two scenes are present, scene_a.scn and scene_b.scn on an otherwise
 empty project. Each are identical and contain a button connected to a
-callback for going to the opposite scene. When the project runs, it
-starts in scene_a.scn. However, this does nothing and pressing the
+callback for switching to the other scene. When the project runs, it
+starts in scene_a.scn. However, this currently does nothing and pressing the
 button does not work.
 
 global.gd
 ---------
 
-First of all, create a global.gd script. The easier way to create a
+First of all, create a global.gd script. The easy way to create a
 resource from scratch is from the resources tab:
 
 .. image:: /img/newscript.png
 
-Save the script to a file global.gd:
+Save the script as `global.gd`:
 
 .. image:: /img/saveasscript.png
 
-The script should be opened in the script editor. Next step will be
-adding it to autoload, for this, go to: Scene [STRIKEOUT:> Project
-Settings]> AutoLoad and add a new autoload with name "global" that
+The script should open in the script editor. The next step is to add
+it to AutoLoad list. Select Scene > Project Settings from the menu,
+switch to the AutoLoad tab and add a new entry with name "global" that
 points to this file:
 
 .. image:: /img/addglobal.png
 
-Now, when any scene is run, the script will be always loaded.
+Now, whenever you run any of your scenes, the script is always loaded.
 
-So, going back to it, In the _ready() function, the current scene
-will be fetched. Both the current scene and global.gd are children of
+Returning to our script, the current scene needs to be fetched in the 
+`_ready()` function. Both the current scene and `global.gd` are children of
 root, but the autoloaded nodes are always first. This means that the
 last child of root is always the loaded scene.
 
-Also, make sure that global.gd extends from Node, otherwise it won't be
-loaded.
+Note: Make sure that global.gd extends Node, otherwise it won't be
+loaded!
 
 ::
 
@@ -103,8 +107,8 @@ loaded.
             var root = get_tree().get_root()
             current_scene = root.get_child( root.get_child_count() -1 )
 
-Next, is the function for changing scene. This function will erase the
-current scene and replace it by the requested one.
+Next up is the function for changing the scene. This function frees the
+current scene and replaces it with the requested one.
 
 ::
 
@@ -145,8 +149,8 @@ situation of having the current scene being deleted while being used
 (code from functions of it being run), so using
 :ref:`Object.call_deferred() <class_Object_call_deferred>`
 is desired at this point. The result is that execution of the commands
-in the second function will happen at an immediate later time when no
-code from the current scene is running.
+in the second function will happen at a later time when no code from
+the current scene is running.
 
 Finally, all that is left is to fill the empty functions in scene_a.gd
 and scene_b.gd:
@@ -167,8 +171,8 @@ and
     func _on_goto_scene_pressed():
             get_node("/root/global").goto_scene("res://scene_a.scn")
 
-Finally, by running the project it's possible to switch between both
-scenes by pressing the button!
+Now if you run the project, you can switch between both scenes by pressing
+the button!
 
-(To load scenes with a progress bar, check out the next tutorial,
-:ref:`doc_background_loading`)
+To load scenes with a progress bar, check out the next tutorial,
+:ref:`doc_background_loading`

@@ -1,23 +1,38 @@
 .. _doc_filesystem:
 
-文件系统(File System)
+File system
 ==========
 
-介绍
+Introduction
 ------------
 
-文件系统是引擎开发中又一个热门的话题。文件系统管理了资源当如何储存和获取的问题。一个设计精良的文件系统也允许了多个开发者在协作开发时编辑相同的源文件和资源。
+File systems are yet another hot topic in engine development. The
+file system manages how the assets are stored, and how they are accessed.
+A well designed file system also allows multiple developers to edit the
+same source files and assets while collaborating together.
 
-Godot引擎的早期版本(以及在被命名为Godot之前的前代版本)使用了一个数据库(Database)。资源被存在其中并被分配一个ID。其他方式也尝试过，比如本地数据库、带有元数据(Metadata)的文件等。最终还是简单的方式胜出了而且现在Godot把所有的资源作为文件存在文件系统中。
+Initial versions of the Godot engine (and previous iterations before it was
+named Godot) used a database. Assets were stored in it and assigned an
+ID. Other approaches were tried as well, such as local databases, files with
+metadata, etc. In the end the simple approach won and now Godot stores
+all assets as files in the file system.
 
-实现
+Implementation
 --------------
 
-文件系统在磁盘上存储了资源。任何事物，上至一个脚本下至一个场景或者一个PNG图像都可以是引擎的一个资源。如果一个资源包含的属性引用着磁盘上其他资源，那么那些资源的路径也会被包含进去。如果一个资源有内置的子资源，那么这些资源会和所有捆绑的子资源一同存在一个单独的文件中。比如说，一个字体(Font)经常和一个字体贴图(Font Textures)捆绑在一起。
+The file system stores resources on disk. Anything, from a script, to a scene or a
+PNG image is a resource to the engine. If a resource contains properties
+that reference other resources on disk, the paths to those resources are also
+included. If a resource has sub-resources that are built-in, the resource is
+saved in a single file together with all the bundled sub-resources. For
+example, a font resource is often bundled together with the font textures.
 
-总的来说，Godot的文件系统避免使用元数据文件。原因很简单，因为有资源管理器(Asset Manager)和版本控制器(VCS,Version Controlling System)比我们能实现的其他东西都要好，因此Godot尽最大努力去和SVN、Git、Mercurial、Perforce等一同工作。
+In general the the Godot file system avoids using metadata files. The reason for
+this is simple, existing asset managers and VCSs are just much better than
+anything we can implement, so Godot tries the best to play along with SVN,
+Git, Mercurial, Perforce, etc.
 
-一个文件系统内容的例子：
+Example of a file system contents:
 
 ::
 
@@ -30,39 +45,67 @@ Godot引擎的早期版本(以及在被命名为Godot之前的前代版本)使�
 engine.cfg
 ----------
 
-engine.cfg文件是工程的描述文件(Project Description File)，并且它总能在工程的根目录下被找到，事实上它的位置决定了根目录的位置。它是Godot在打开一个工程时首先查找的文件。
+The engine.cfg file is the project description file, and it is always found at
+the root of the project, in fact it's location defines where the root is. This
+is the first file that Godot looks for when opening a project.
 
-这个文件以纯文本(Plain Text)的形式涵盖了工程的配置(Configuration)，以一个win.ini的格式。即使是一个空的engine.cfg也能够充当一个空白工程的基本定义。
+This file contains the project configuration in plain text, using the win.ini
+format. Even an empty engine.cfg can function as a basic definition of a blank
+project.
 
-路径分隔符(Path delimiter)
+Path delimiter
 -------------------
 
-Godot只支持"/"作为路径分隔符。这是出于可移植性的原因。所有的操作系统都支持这一点，即使是Windows，所以像"C:\project\engine.cfg"这样的路径应当改为"C:/project/engine.cfg"。
+Godot only supports ``/`` as a path delimiter. This is done for
+portability reasons. All operating systems support this, even Windows,
+so a path such as ``c:\project\engine.cfg`` needs to be typed as
+``c:/project/engine.cfg``.
 
-资源路径(Resource Path)
+Resource path
 -------------
 
-当尝试获取一个资源时，使用主操作系统的文件系统布局可谓是非常的笨拙而且不可移植。为了解决这个问题，一个特殊的路径"res://"诞生了。
+When accessing resources, using the host OS file system layout can be
+cumbersome and non-portable. To solve this problem, the special path
+``res://`` was created.
 
-路径"res://"将总是指向工程的根目录(engine.cfg所在的位置，因此事实上，"res://engine.cfg"总是有效的)。
+The path ``res://`` will always point at the project root (where
+engine.cfg is located, so in fact ``res://engine.cfg`` is always
+valid).
 
-当工程局部地从编辑器运行的时候，文件系统只支持读取(Read)和写入(Write)。当被导出或者在不同的设备(比如电话或者控制台或者DVD上)上运行时文件将变为只读(Read-only)的而写入不再被允许。
+This file system is read-write only when running the project locally from
+the editor. When exported or when running on different devices (such as
+phones or consoles, or running from DVD), the file system will become
+read-only and writing will no longer be permitted.
 
-用户路径(User Path)
+User path
 ---------
 
-向磁盘写入通常依旧是必要的因为各种任务诸如保存游戏状态或者下载内容包等。为此，引擎确保了一个特殊的路径"user://"总是可写入(Writable)的。
+Writing to disk is still often needed for various tasks such as saving game
+state or downloading content packs. To this end, the engine ensures that there is a
+special path ``user://`` that is always writable.
 
-主文件系统(Host File System,也称主机文件系统)
+Host file system
 ---------------
 
-此外，主文件系统路径也可用，但并不推荐这样做因为对于一个被发布的产品我们无法保证在其他所有平台上都有这些路径。然而在Godot中编写开发工具的时候使用主文件系统非常有用！
+Alternatively host file system paths can also be used, but this is not recommended
+for a released product as these paths are not guaranteed to work on all platforms.
+However, using host file system paths can be very useful when writing development
+tools in Godot!
 
-缺点
+Drawbacks
 ---------
 
-这种简单的文件系统设计有一些局限性。第一个问题就是移动资源(重命名或者从一个路径移动到另一个)将会破坏这些资源的引用。这些引用必须被重新定义指向新的资源位置。
+There are some drawbacks to this simple file system design. The first issue is that
+moving assets around (renaming them or moving them from one path to another inside
+the project) will break existing references to these assets. These references will
+have to be re-defined to point at the new asset location.
 
-第二个就是在Windows和OSX下文件和路径名是对大小写不敏感的。如果一个工作在一个对大小写不敏感的主机文件系统的开发者保存了一个"myfile.PNG"但是把它当成"myfile.png"，这可能在他们的平台上正常运行，但在其他平台，比如Linux、Android上不一定能正常运行。这也同样适用于使用一个压缩包来存储所有文件导出的二进制文件。
+The second is that under Windows and OSX file and path names are case insensitive.
+If a developer working in a case insensitive host file system saves an asset as "myfile.PNG",
+but then references it as "myfile.png", it will work just fine on their platorm, but not
+on other platforms, such as Linux, Android, etc. This may also apply to exported binaries,
+which use a compressed package to store all files.
 
-在使用Godot时，推荐你的团队为文件清晰地定义一个命名惯例！最不济就只允许小写的文件和路径名。
+It is recommend that your team clearly defines a naming convention for files when
+working with Godot! One simple fool-proof convention is to only allow lowercase
+file and path names.

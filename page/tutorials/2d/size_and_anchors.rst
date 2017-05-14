@@ -1,27 +1,42 @@
 .. _doc_size_and_anchors:
 
-尺寸与锚点
+Size and anchors
 ----------------
 
-如果一个游戏只运行在一些分辨率相同的设备上，那就简单了，只需要设置各自的坐标即可。不幸的是，这种情况几乎没有。
+If a game was to be always run in the same device and at the same
+resolution, positioning controls would be a simple matter of setting the
+position and size of each one of them. Unfortunately, it is rarely the
+case.
 
-如今，只有电视拥有标准的分辨率和宽高比。其他设备，从pc到平板，从掌机到手机都有不同的分辨率和宽高比。
+Only TVs nowadays have a standard resolution and aspect ratio.
+Everything else, from computer monitors to tablets, portable consoles
+and mobile phones have different resolutions and aspect ratios.
 
-解决这些问题有很多方法，但是现在，让我们想象一下，当屏幕分辨率改变时，控件需要重新定位。一些需要保持在屏幕底部，一些在屏幕顶部、左边或右边等等。
+There are several ways to handle this, but for now let's just imagine
+that the screen resolution has changed and the controls need to be
+re-positioned. Some will need to follow the bottom of the screen, others
+the top of the screen, or maybe the right or left margins.
 
 .. image:: /img/anchors.png
 
-通过设置控件的 *margin* 属性可以很容易实现。每个控件都有4个边距(margin)：left,right,top,bottom。默认情况下，它们表示控件相对于父级左上角(top-left)的距离（单位：像素），如果没有父级，则相对于视窗左上角。
+This is done by editing the *margin* properties of controls. Each
+control has four margins: left, right, bottom and top. By default all of
+them represent a distance in pixels relative to the top-left corner of
+the parent control or (in case there is no parent control) the viewport.
 
 .. image:: /img/margin.png
 
-当水平方向(left,right)或垂直方向(top,bottom)设置为 END 时，magin值就变为相对于父级或视窗的右下角(bottom-right)定位。
-（可能描述得不是很清楚，自己在编辑器里面试一试就会非常明白了）
+When horizontal (left,right) and/or vertical (top,bottom) anchors are
+changed to END, the margin values become relative to the bottom-right
+corner of the parent control or viewport.
 
 .. image:: /img/marginend.png
 
-下面就是右下角定位的例子，控件始终保持20像素的边距：
+Here the control is set to expand it's bottom-right corner with that of
+the parent, so when re-sizing the parent, the control will always cover
+it, leaving a 20 pixel margin:
 
 .. image:: /img/marginaround.png
 
-最后，也可以设置比例，0表示最左，1表示最右。
+Finally, there is also a ratio option, where 0 means left, 1 means right
+and anything in between is interpolated.

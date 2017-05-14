@@ -1,0 +1,105 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:4
+msgid "Importing 3D meshes"
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:9
+msgid ""
+"Godot supports a flexible and powerful :ref:`3D scene importer "
+"<doc_importing_3d_scenes>` that allows for full scene importing. For a "
+"lot of artists and developers this is more than enough. However, many do "
+"not like this workflow as much and prefer to import individual 3D Meshes "
+"and build the scenes inside the Godot 3D editor themselves. (Note that "
+"for more advanced features such as skeletal animation, there is no option"
+" to the 3D Scene Importer)."
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:16
+msgid ""
+"The 3D mesh import workflow is simple and works using the OBJ file "
+"format. The imported meshes result in a .msh binary file which the user "
+"can put into a :ref:`class_meshinstance`, which in turn can be placed "
+"somewhere in the edited scene."
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:22
+msgid "Importing"
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:24
+msgid "Importing is done through the Import 3D Mesh menu:"
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:28
+msgid "Which opens the Mesh import window:"
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:32
+msgid ""
+"This dialog allows the import of one more more OBJ files into a target "
+"path. OBJ files are converted to .msh files. Files are imported without "
+"any material on them, material has to be added by the user (see the "
+":ref:`doc_fixed_materials` tutorial). If the external OBJ file is changed"
+" it will be re-imported, while keeping the newly assigned material."
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:39
+msgid "Options"
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:41
+msgid ""
+"A few options are present. Normals are needed for regular shading, while "
+"Tangents are needed if you plan to use normal-mapping on the material. In"
+" general, OBJ files describe how to be shaded very well, but an option to"
+" force smooth shading is available."
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:46
+msgid ""
+"Finally, there is an option to weld vertices. Given OBJ files are text-"
+"based, it is common to find some of these with vertices that do not "
+"match, which results in strange shading. The weld vertices option merges "
+"vertices that are too close to keep proper smooth shading."
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:52
+msgid "Usage"
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:54
+msgid ""
+"Mesh resources (what this importer imports to) are used inside "
+"MeshInstance nodes. Simply set them to the Mesh property of them."
+msgstr ""
+
+#: ../../tutorials/3d/importing_3d_meshes.rst:59
+msgid "And that is it."
+msgstr ""
+

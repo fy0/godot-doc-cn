@@ -1,0 +1,213 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:4
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:91
+msgid "Importing audio samples"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:7
+msgid "Why importing?"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:9
+msgid ""
+"Importing Audio Samples into the game engine is a process that should be "
+"easier than it really is. Most readers are probably thinking \"Why not "
+"just copy the wav files to a folder inside the project and be over with "
+"it?\""
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:14
+msgid ""
+"It's not usually that simple. Most game engines use uncompressed audio "
+"(in memory, at least) for sound effects. The reason for this is because "
+"it's really cheap to play back and resample. Compressed streamed audio "
+"(such as ogg files) takes a large amount of processor to decode so no "
+"more than one or two are streamed simultaneously. However, with sound "
+"effects, one expects a dozen of them to be playing at the same time in "
+"several situations."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:22
+msgid ""
+"Because of this, sound effects are loaded uncompressed into memory, and "
+"here is where the problems begin."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:25
+msgid ""
+"As is usual with graphics, the situation where programmers don't really "
+"know about audio and audio engineers don't know about programming is also"
+" common in the industry. This leads to a scenario where a project ends up"
+" wasting resources unnecessarily."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:30
+msgid ""
+"To be more precise, SFX artists tend to work with audio formats that give"
+" them a lot of room for tweaking the audio with a low noise floor and "
+"minimum aliasing, such as 96kHz, 24 bits. In many cases, they work in "
+"stereo too. Added to that, many times they add effects with an infinite "
+"or really long fadeout, such as reverb, which leads to apparent trailing "
+"silences. Finally, many DAWs also add silence at the beginning when "
+"normalizing to wav."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:38
+msgid ""
+"These often result in extremely large files to integration into a game "
+"engine with sound effects taking dozens of megabytes."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:42
+msgid "How much does quality matter?"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:44
+msgid ""
+"First of all, it is important to know that Godot has an internal reverb "
+"generator. Sound effects can go to four different setups (small, medium "
+"and large room, as well as hall), with different send amounts. This saves"
+" SFX artists the need to add reverb to the sound effects, reducing their "
+"size greatly and ensuring correct trimming. Say no to SFX with baked "
+"reverb!"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:53
+msgid ""
+"Another common problem is that, while it's useful for working inside a "
+"DAW, high bit depths (24 bits) and high sampling rate (96kHz) are "
+"completely unnecessary for use in a game, as there is no `audible "
+"difference <http://www.youtube.com/watch?v=cIQ9IXSUzuM>`__. If positional"
+" sound is going to be used (for 2D and 3D), the panning and stereo reverb"
+" will be provided by the engine, so there is little need for stereo "
+"sound. How does this affect the resource usage? Look at the following "
+"comparison:"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:63
+msgid "Format"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:63
+msgid "1 Second of Audio"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:63
+msgid "Frame Size"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:65
+msgid "24 bits, 96 kHz, Stereo"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:65
+msgid "576kb"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:65
+msgid "12"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:67
+msgid "16 bits, 44 kHz, Mono"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:67
+msgid "88kb"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:67
+msgid "2"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:69
+msgid "16 bits, IMA-ADPCM"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:69
+msgid "22kb"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:69
+msgid "1/2"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:72
+msgid ""
+"As seen, for being no audible difference, the 16 bits, 44kHz, mono "
+"conversion takes *6 times less memory* than the 24 bits, 96kHz, Stereo "
+"version. The IMA-ADPCM version (using computationally-light audio "
+"compression) takes *24 times less memory* than what was exported from the"
+" DAW."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:78
+msgid "Trimming"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:80
+msgid ""
+"One last issue that happens often is that the waveform files received "
+"have silences at the beginning and at the end. These are inserted by DAWs"
+" when saving to a waveform, increase their size unnecessarily and add "
+"latency to the moment they are played back. Trimming them solves this, "
+"but it takes effort for the SFX artist, as they have to do it in a "
+"separate application. In the worst case, they may not even know the "
+"silences are being added."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:93
+msgid ""
+"Godot has a simple screen for importing audio samples to the engine. SFX "
+"artists only have to save the wav files to a folder outside the project, "
+"and the import dialog will fix the files for inclusion, as well as doing "
+"it automatically every time they are modified and re-imported."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:100
+msgid ""
+"In this screen, the quality of the audio can be limited to what is "
+"needed, and trimming is done automatically. In addition, several samples "
+"can be loaded and batch-converted, just as textures can."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:105
+msgid "Looping"
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:107
+msgid ""
+"Godot supports looping in the samples (Tools such as Sound Forge or "
+"Audition can add loop points to wav files). This is useful for sound "
+"effects such as engines, machine guns, etc. Ping-pong looping is also "
+"supported."
+msgstr ""
+
+#: ../../tutorials/asset_pipeline/importing_audio_samples.rst:112
+msgid ""
+"As an alternative, the import screen has a \"loop\" option that enables "
+"looping for the entire sample when importing."
+msgstr ""
+

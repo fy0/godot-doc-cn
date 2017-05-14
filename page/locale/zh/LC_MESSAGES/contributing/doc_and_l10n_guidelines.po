@@ -1,0 +1,188 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:4
+msgid "Documentation and localisation guidelines"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:6
+msgid ""
+"This page describes the rules to follow if you want to contribute Godot "
+"Engine by writing documentation or translating existing documentation."
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:10
+msgid "What is a good documentation?"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:12
+msgid ""
+"A good documentation is well written in plain English and well-formed "
+"sentences. It is clear and objective."
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:15
+msgid ""
+"A documentation page is not a tutorial page. We differentiate these "
+"concepts by these definitions :"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:18
+msgid ""
+"tutorial : a page aiming at explaining how to use one or more concepts in"
+" Godot Editor in order to achieve a specific goal with a learning purpose"
+" (ie. \"make a simple 2d Pong game\", \"apply forces to an object\"...)"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:22
+msgid ""
+"documentation : a page describing precisely one and only one concept at "
+"the time, if possible exhaustively (ie. the list of methods of the Sprite"
+" class for example)."
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:26
+msgid ""
+"You are free to write the kind of documentation you wish, as long as you "
+"respect the following rules."
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:30
+msgid "Create a new wiki page"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:32
+msgid "**TODO: Needs review for Sphinx doc**"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:34
+msgid ""
+"Creating a new documentation page or tutorial page is easy. The following"
+" rules must be respected:"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:37
+msgid "Choose a short and explicit title"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:38
+msgid "Respect the grammar and orthography"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:39
+msgid "Make use of the :ref:`doc_wiki_syntax`"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:41
+msgid ""
+"Try to structure your page in order to enable users to include a page "
+"directly in another page or even forum posts using the include wiki "
+"syntax. For example, the syntax to include the page you are reading is :"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:51
+msgid "Titles"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:53
+msgid ""
+"Please always begin pages with their title and a reference based on the "
+"file name (which should ideally be the same as the page title):"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:63
+msgid ""
+"Also, avoid American CamelCase titles: titles' first word should begin "
+"with a capitalized letter, and every following word should not. Thus, "
+"this is a good example:"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:67
+msgid "Insert your title here And this is a bad example:"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:69
+msgid "Insert Your Title Here"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:71
+msgid ""
+"Only project names (and people names) should have capitalized first "
+"letter. This is good:"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:74
+msgid "Starting up with Godot Engine and this is bad:"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:76
+msgid "Starting up with godot engine"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:79
+msgid "Note for non-English authors"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:81
+msgid ""
+"For the moment, we will not pull contributed pages that have no English "
+"counterpart. We aim at providing a tool helping translators and writers "
+"to determine whether certain languages have pages that do not exist in "
+"other languages, but this is not done yet. When it is done, we will open "
+"the documentation to new contributions."
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:84
+msgid "Please be patient, we are working on it ;) ."
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:98
+msgid "Translating existing pages"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:100
+msgid "**New guidelines will come soon !**"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:132
+msgid "Important changes and discussions"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:134
+msgid ""
+"You are welcome to correct mistakes or styles to respect these "
+"guidelines. However, in case of important changes, please do not start a "
+"discussion on this page: use the forum, create a new topic with a link to"
+" the incriminated page and start discussing there about your remarks."
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:140
+msgid "Licence"
+msgstr ""
+
+#: ../../contributing/doc_and_l10n_guidelines.rst:142
+msgid ""
+"This wiki and every page it contains is published under the terms of the "
+"Creative Commons BY 3.0 license."
+msgstr ""
+

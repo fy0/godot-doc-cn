@@ -1,0 +1,273 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-09-30 19:17+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:4
+msgid "Managing image files"
+msgstr "管理图片文件"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:6
+msgid ""
+"If you have read the previous tutorials on :ref:`doc_resources` and :ref:"
+"`doc_filesystem`, at this point you know that regular image files (."
+"png, .jpg, etc.) are treated as regular resources in Godot."
+msgstr ""
+"如果你阅读了前面的教程  :ref:`doc_resources` 和 :ref:`doc_filesystem` ，"
+"这时候你已经知道常见图片格式 (.png, .jpg, 等等) 在 Godot 中被视为常规资"
+"源。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:10
+msgid ""
+"Unlike texture resources (.tex files), image files contain no extra "
+"information on tiling (texture repeat), mipmaps or filtering. Editing "
+"this information and saving the texture back will not have any effect, "
+"since such formats can't contain that information."
+msgstr ""
+"不像是贴图资源 (.tex 文件)，图片文件不包括用于 tiling (贴图重复)，"
+"mipmaps (纹理映射)或是 filtering 的额外信息。编辑这些信息并重新保存贴图文"
+"件并不会有啥特殊效果，因为图片格式并不能包含这些信息。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:16
+msgid "Image loader"
+msgstr "图像加载器"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:18
+msgid ""
+"Loading of images is done by the image loader. The behavior of the "
+"loader for all image files can be changed in the Project Settings dialog "
+"(Scene -> Project Settings). There is a section with values that are "
+"used for all image resources:"
+msgstr ""
+"图片的加载由图像加载器来完成。加载器对所有图像的行为能够从项目设置对话框 "
+"(Scene -> Project Settings) 中修改。这里有一节作用于所有图像的值设置。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:26
+msgid "Image loader options"
+msgstr "图像加载器选项"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:29
+msgid "Filter"
+msgstr "过滤器"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:31
+msgid ""
+"Filter is used when the image is stretched more than its original size, "
+"so a texel in the image is bigger than a pixel on the screen. Turning "
+"off the filter produces a retro-like look:"
+msgstr ""
+"过滤器被用于图片拉伸到超出其原本大小的时候，因此一个贴图像素要大于一个在"
+"屏幕上的实际像素。关闭过滤器会得到有些复古风格的图像："
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:38
+msgid "Repeat"
+msgstr "重复"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:40
+msgid ""
+"Repeat is mainly used for 3D textures, so it's off by default (textures "
+"are imported with the scenes and usually are not in the project as image "
+"files). When using UV coordinates (something not as common in 2D), and "
+"the UV value goes beyond the 0,0,1,1 rect, the texture repeats instead "
+"of clamping to the edge."
+msgstr ""
+"重复主要用于 3D 贴图，因此默认是关闭的 (贴图被场景所导入且常常不作为图像"
+"文件出现在项目中)。当使用 UV 坐标 (在 2D 中不怎么常见的一个东西)，而且 "
+"UV 值超出 0,0,1,1 矩形区域时，贴图将会重复显示而不是被限制于边缘 (译注："
+"存疑，不知道翻译对了么)。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:47
+msgid "Mipmaps"
+msgstr "Mipmaps (纹理映射)"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:49
+msgid ""
+"When the mipmaps option is enabled, Godot will generate mipmaps. Mipmaps "
+"are versions of the image shrunk by half in both axis, recursively, "
+"until the image is 1 pixel of size. When the 3D hardware needs to shrink "
+"the image, it finds the largest mipmap it can scale from, and scales "
+"from there. This improves performance and image quality."
+msgstr ""
+"当 mipmaps 选项开启，Godot 将生成 mipmaps。mipmaps 是图像在每一个轴上同时"
+"反复对折，直到图像只剩下 1 像素大小这个过程的结果集合。当 3D 硬件需要收缩"
+"图像时，只需找到与所需缩放大小最接近的那份 mipmap 数据并应用缩放就可以"
+"了。这项技术同时兼顾了性能和图片质量。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:58
+msgid ""
+"When mipmaps are disabled, images start distorting badly when shrunk "
+"excessively:"
+msgstr "若纹理映射关闭，图像会在过度缩小时扭曲变形。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:64
+msgid "Alpha blending"
+msgstr "Alpha 混合"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:66
+msgid ""
+"The `blending equation <http://en.wikipedia.org/wiki/"
+"Alpha_compositing>`__ used by applications like Photoshop is too complex "
+"for real-time. There are better approximations such as `pre-multiplied "
+"alpha <http://blogs.msdn.com/b/shawnhar/archive/2009/11/06/premultiplied-"
+"alpha.aspx?Redirected=true>`__, but they impose more stress in the asset "
+"pipeline. In the end, we are left with textures that have artifacts in "
+"the edges, because apps such as Photoshop store white pixels in "
+"completely transparent areas. Such white pixels end up showing thanks to "
+"the texture filter (when active)."
+msgstr ""
+"被像是 PhotoShop 这样的应用程序所使用的 `混合方程 (blending equation) "
+"<http://en.wikipedia.org/wiki/Alpha_compositing>`__ 对实时渲染来说太复杂"
+"了。这有些更好的近似算法比如说  `预乘Alpha (pre-multiplied alpha) "
+"<http://blogs.msdn.com/b/shawnhar/archive/2009/11/06/premultiplied-alpha."
+"aspx?Redirected=true>`__，但是他们给了资源管道更大的压力。最终，我们留下"
+"了贴图边缘的瑕疵(译注: artifacts 不知道怎么翻译)，因为像是 PhotoShop 这样"
+"的应用会在全透明区域放一些白像素。这些白像素最后还得靠纹理过滤器来处理 "
+"(当它启用时)。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:76
+msgid ""
+"Godot has an option to fix the edges of the image (by painting invisible "
+"pixels the same color as the visible neighbours):"
+msgstr ""
+"Godot 有一个选项来修复图像边缘 (通过绘制与相邻可见像素同色的不可见像"
+"素) 。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:81
+msgid ""
+"To do this, open the image from the resources tab, or edit it from the "
+"property editor from another node or resource, then go to the object "
+"options and select \"Fix Alpha Edges\", then save it."
+msgstr ""
+"要做到这一点，从资源选项卡打开图像，或者从另一个节点或资源的属性编辑器编"
+"辑它，然后查看对象选项并选中“修复 Alpha 边缘 (Fix Alpha Edges)”，之后保"
+"存。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:87
+msgid ""
+"Since fixing this in so many images can be a little annoying, both "
+"Texture Import and Image Export can also perform this operation."
+msgstr ""
+"由于要逐个修复比较多的图像的话挺烦人的，所以在纹理导入和图像导出时也会显"
+"示这个选项。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:91
+msgid "Texture import"
+msgstr "纹理导入"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:93
+msgid ""
+"Sometimes, it might be desired to change the above settings per image. "
+"Unfortunately, the image loader settings are global. Texture flags also "
+"can't be saved in a regular .png or .jpg file."
+msgstr ""
+"有时候可能会想要改变所有图像上的设置。不幸的是，图像加载器设置是全局的。"
+"纹理标志 (Texture flags) 不能被保存在常规的 .png 或 .jpg 文件中。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:97
+msgid ""
+"For such cases, the image can be imported as a texture (.tex), where the "
+"individual flags can be changed. Godot also keeps track of the original "
+"file and will re-import if it changes."
+msgstr ""
+"对于这种情况，图像可以被导入为贴图格式 (.tex)，这样专属于贴图的标志项就能"
+"被修改了。Godot 也会保持跟踪原始文件，在原文件被修改时将被重新导入。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:101
+msgid ""
+"Importing also allows conversion to other formats (WebP, or RAM "
+"compression) which might be of use in some cases. More information on "
+"the :ref:`doc_importing_textures` page."
+msgstr ""
+"导入也支持其他的格式 (WebP, 或内存压缩 [RAM compression])，有时候它们可能"
+"会被用到。更多信息请参见 :ref:`doc_importing_textures` 页面。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:106
+msgid "Image export"
+msgstr "图像导出"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:108
+msgid ""
+"It is also possible to convert images to other formats (WebP or RAM "
+"compression) on export, as well as instructing the exporter to create an "
+"Atlas for a set of images. It is also possible to ask the exporter to "
+"scale all images (or selected groups)."
+msgstr ""
+"可以在导出时将图像转换为其他格式 (WebP, 或内存压缩 [RAM compression])，同"
+"时让导出工具创建为一系列图像创建一个图册 (Altas)。如有必要还可以让导出工"
+"具缩放所有的图像 (或者只缩放选中的组)。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:113
+msgid "More information on the :ref:`doc_exporting_images` page."
+msgstr "更多信息请参见 :ref:`doc_exporting_images` 页面。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:116
+msgid "Fixing PNGs iCCP chunk"
+msgstr "修正 PNG 的 iCCP 块"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:118
+msgid ""
+"With the upgrade of libpng to 1.6.23, libpng became more strict in terms "
+"of enforcing iCC profile correctness. This means that it now warns when "
+"it comes across an image with a non-conforming iCC chunk."
+msgstr ""
+"在 libpng 升级到 1.6.23 之后，libpng 在确保 iCC 配置正确方便更加严格。这"
+"意味着它现在遇到不合格的 iCC 块的时候会给出警告。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:122
+msgid "WARNING: _png_warn_function: iCCP: known incorrect sRGB profile"
+msgstr "WARNING: _png_warn_function: iCCP: known incorrect sRGB profile"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:124
+msgid ""
+"This can be fixed by either using a tool that exports PNGs with the "
+"correct iCC profile (in some tools this profile can even be manually "
+"changed on export) or using a tool that removes/fixes the iCC chunks."
+msgstr ""
+"这可以被用能导出正确 iCC 配置的 PNG 导出工具来修正 (有些工具甚至可以导出"
+"时进行手动干预) 或者使用工具移除/修复 iCC 块。"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:129
+msgid "Linux/Mac"
+msgstr "Linux/Mac"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:130
+msgid ""
+"Using ImageMagicks ``convert`` or ``mogrify`` fixes these warnings. To "
+"fix all PNGs in a project folder do:"
+msgstr ""
+"使用 ImageMagicks 的 ``convert`` 或 ``mogrify`` 工具来修复这些警告。修复"
+"程序目录下所有 PNG 的命令为："
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:137
+msgid "``pngcheck`` is also useful in locating the non-conforming images:"
+msgstr "``pngcheck`` 在想要找出非标准图像时也是非常有用的工具："
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:144
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../tutorials/asset_pipeline/managing_image_files.rst:145
+msgid ""
+"Using `optiPNG <http://optipng.sourceforge.net/>` fixes these warnings "
+"on Windows. To fix a PNG inplace do:"
+msgstr ""
+"使用 `optiPNG <http://optipng.sourceforge.net/>` 在 Windows 上修正警告。"
+"修复一个当前路径的 PNG："

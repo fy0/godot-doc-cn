@@ -1,0 +1,331 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-08-24 23:28+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../tutorials/engine/viewports.rst:4
+msgid "Viewports"
+msgstr "视图(Viewports)"
+
+#: ../../tutorials/engine/viewports.rst:7
+msgid "Introduction"
+msgstr "简介"
+
+#: ../../tutorials/engine/viewports.rst:9
+msgid ""
+"Godot has a small but very useful feature called viewports. Viewports are, as "
+"they name implies, rectangles where the world is drawn. They have three main "
+"uses, but can flexibly adapted to a lot more. All this is done via the :ref:"
+"`Viewport <class_Viewport>` node."
+msgstr ""
+"Godot有一个小巧却非常有用的特点，称为视图(viewport)。顾名思义，视图就是用来描绘"
+"游戏世界的一个长方形区域。视图有三个主要的应用，不过也可以很灵活的应用到更多方"
+"面。所有的应用都是通过视图节点( :ref:`Viewport <class_Viewport>` )实现的。"
+
+#: ../../tutorials/engine/viewports.rst:16
+msgid "The main uses in question are:"
+msgstr "上面提到的三个主要应用如下："
+
+#: ../../tutorials/engine/viewports.rst:18
+msgid ""
+"**Scene Root**: The root of the active scene is always a Viewport. This is what "
+"displays the scenes created by the user. (You should know this by having read "
+"previous tutorials!)"
+msgstr ""
+"**场景根节点(Scence Root)**: 当前活跃场景的根总是一个视图。这个视图负责展示用户"
+"所创建的场景。（看了前面的教程你应该已经知道这个了！）"
+
+#: ../../tutorials/engine/viewports.rst:21
+msgid ""
+"**Sub-Viewports**: These can be created when a Viewport is a child of a :ref:"
+"`Control <class_Control>`."
+msgstr ""
+"**子视图(Sub-viewport)**: 当视图是控制节点（:ref:`Control <class_Control>`）的子"
+"节点时，可以创建子视图。"
+
+#: ../../tutorials/engine/viewports.rst:23
+msgid ""
+"**Render Targets**: Viewports can be set to \"RenderTarget\" mode. This means "
+"that the viewport is not directly visible, but it's contents can be accessed "
+"via a :ref:`Texture <class_Texture>`."
+msgstr ""
+"**渲染目标(Render Targets)**: 视图可以设定为“渲染目标(RenderTarget)”模式。这表示"
+"视图不能直接被看到，但是它的内容可以通过材质(:ref:`Texture <class_Texture>`) 获"
+"取。"
+
+#: ../../tutorials/engine/viewports.rst:28
+msgid "Input"
+msgstr "输入(Input)"
+
+#: ../../tutorials/engine/viewports.rst:30
+msgid ""
+"Viewports are also responsible of delivering properly adjusted and scaled input "
+"events to all it's children nodes. Both the root viewport and sub-viewports do "
+"this automatically, but render targets do not. Because of this, the user must "
+"do it manually via the :ref:`Viewport.input() <class_Viewport_input>` function "
+"if needed."
+msgstr ""
+"视图还可以用来将调整、缩放过的输入事件传递给它的子节点。根视图和子视图会自动执行"
+"这种传达，但是渲染目标模式下的视图不会自动执行。因此，如果需要渲染目标模式的视图"
+"也执行这种传递，用户必须手动调用:ref:`Viewport.input() <class_Viewport_input>` "
+"方法来达到目的。"
+
+#: ../../tutorials/engine/viewports.rst:37
+msgid "Listener"
+msgstr "监听者(Listener)"
+
+#: ../../tutorials/engine/viewports.rst:39
+msgid ""
+"Godot supports 3D sound (in both 2D and 3D nodes), more on this can be found in "
+"another tutorial (one day..). For this type of sound to be audible, the "
+"viewport needs to be enabled as a listener (for 2D or 3D). If you are using a "
+"custom viewport to display your world, don't forget to enable this!"
+msgstr ""
+"Godot支持3D声音（2D节点和3D节点都支持），关于这一点将在另外一篇教程中详细讨论"
+"（不知道哪天……）。为了让这类声音能够被人听到，视图需要启用监听者（可以支持2D和"
+"3D）。如果你使用自定义的视图来展示你的世界，别忘了启用Listener哦！\n"
+"\n"
+"译者注：注意此处listener并非指监听器"
+
+#: ../../tutorials/engine/viewports.rst:46
+msgid "Cameras (2D & 3D)"
+msgstr "摄像机(2D & 3D)"
+
+#: ../../tutorials/engine/viewports.rst:48
+msgid ""
+"When using a 2D or 3D :ref:`Camera <class_Camera>` / :ref:`Camera2D "
+"<class_Camera2D>`, cameras will always display on the closest parent viewport "
+"(going towards the root). For example, in the following hierarchy:"
+msgstr ""
+"当使用2D或者3D的摄像机节点(:ref:`Camera <class_Camera>`/:ref:"
+"`Camera2D<class_Camera2D>`)时，该摄像机节点总是会显示在最近的父视图节点上（向根"
+"节点方向的最近）。例如，在下面的这种结构中："
+
+#: ../../tutorials/engine/viewports.rst:53 ../../tutorials/engine/viewports.rst:61
+#: ../../tutorials/engine/viewports.rst:148
+msgid "Viewport"
+msgstr "视图(Viewport)"
+
+#: ../../tutorials/engine/viewports.rst:55 ../../tutorials/engine/viewports.rst:59
+msgid "Camera"
+msgstr "摄像机(Camera)"
+
+#: ../../tutorials/engine/viewports.rst:57
+msgid "Camera will display on the parent viewport, but in the following one:"
+msgstr "视图(Viewport)"
+
+#: ../../tutorials/engine/viewports.rst:63
+msgid "It will not (or may display in the root viewport if this is a subscene)."
+msgstr ""
+"这里的摄像机节点就不会显示在例子中的视图节点上（如果这是一个子场景的话，可能它会"
+"显示在根视图节点上）"
+
+#: ../../tutorials/engine/viewports.rst:65
+msgid ""
+"There can be only one active camera per viewport, so if there is more than one, "
+"make sure that the desired one has the \"current\" property set, or make it the "
+"current camera by calling:"
+msgstr ""
+"每个视图都只能有一个活跃中的摄像机节点，所以如果你的视图有多于一个摄像机节点，请"
+"确保你想用的那个摄像机节点被设置了“当前(current)”属性。或者，你也可以通过如下方"
+"法来设定当前摄像机："
+
+#: ../../tutorials/engine/viewports.rst:74
+msgid "Scale & stretching"
+msgstr "缩放和拉伸(Scale & stretching)"
+
+#: ../../tutorials/engine/viewports.rst:76
+msgid ""
+"Viewports have a \"rect\" property. X and Y are often not used (only the root "
+"viewport really uses them), while WIDTH AND HEIGHT represent the size of the "
+"viewport in pixels. For Sub-Viewports, these values are overridden by the ones "
+"from the parent control, but for render targets this sets their resolution."
+msgstr ""
+"视图具有\"矩形（rect）\"属性。\"矩形\"属性中的X和Y这两个值不常用（通常只有根视图"
+"会使用这两个值；译注：这两个值是用来描述视图位置的），但是宽度（WIDTH）和高度"
+"（HEIGHT）这两个值很常用，这两个值是以像素为单位描述视图大小的。对于子视图节点，"
+"这些值会被父控制节点的对应值所覆盖；而对于\"渲染目标\"模式的视图，这些值设定了分"
+"辨率。"
+
+#: ../../tutorials/engine/viewports.rst:82
+msgid ""
+"It is also possible to scale the 2D content and make it believe the viewport "
+"resolution is other than the one specified in the rect, by calling:"
+msgstr ""
+"我们也可以调用一些方法来缩放（视图中的）2D内容，使视图的分辨率不同于在\"矩形\"属"
+"性中设定的值。这些方法如下： "
+
+#: ../../tutorials/engine/viewports.rst:91
+msgid ""
+"The root viewport uses this for the stretch options in the project settings."
+msgstr "根视图可在项目设置（project settings）中，使用这些方法来设置其拉伸选项。"
+
+#: ../../tutorials/engine/viewports.rst:95
+msgid "Worlds"
+msgstr "世界(Worlds)"
+
+#: ../../tutorials/engine/viewports.rst:97
+msgid ""
+"For 3D, a Viewport will contain a :ref:`World <class_World>`. This is basically "
+"the universe that links physics and rendering together. Spatial-base nodes will "
+"register using the World of the closest viewport. By default, newly created "
+"viewports do not contain a World but use the same as a parent viewport (root "
+"viewport does contain one though, which is the one objects are rendered to by "
+"default). A world can be set in a viewport using the \"world\" property, and "
+"that will separate all children nodes of that viewport from interacting with "
+"the parent viewport world. This is specially useful in scenarios where, for "
+"example, you might want to show a separate character in 3D imposed over the "
+"game (like in Starcraft)."
+msgstr ""
+"对于3D来讲，视图会包含世界（:ref:`World <class_World>`）资源。世界是将物体与渲染"
+"绑定在一起的一个宇宙。基于空间的节点，会绑定在离它最近的视图节点的世界上。默认"
+"地，新建的视图节点都不包含独立的世界，而是使用其父视图的世界（当然，默认情况下，"
+"根视图会带有一个世界，也就是展示出所有对象的那个）。世界可以通过视图的“世界”属性"
+"来创建；一旦一个世界被创建在某个视图节点上，该视图的所有子节点都会停止与该视图的"
+"父视图的世界进行交互。当你想要强制以3D展示一个独立的角色时，这个特性会非常有用"
+"（就像在《星际争霸1》中那样）。"
+
+#: ../../tutorials/engine/viewports.rst:109
+msgid ""
+"As a helper for situations where you want to create viewports that display "
+"single objects and don't want to create a world, viewport has the option to use "
+"it's own World. This is very useful when you want to instance 3D characters or "
+"objects in the 2D world."
+msgstr ""
+"有时候你想要创建只展示单个对象的视图节点，又不想为它创建世界；视图对此提供了很好"
+"的支持，视图可以被设置为使用自己的世界。当你想在2D世界中，实例化3D角色或对象时，"
+"这点会非常有用。"
+
+#: ../../tutorials/engine/viewports.rst:114
+msgid ""
+"For 2D, each Viewport always contains it's own :ref:`World2D <class_World2D>`. "
+"This suffices in most cases, but in case sharing them may be desired, it is "
+"possible to do so by calling the viewport API manually."
+msgstr ""
+"对于2D来讲，，每个视图都会包含自己的世界2D（:ref:`World2D <class_World2D>`）资"
+"源。在大多数情况下，这就够用了；不过你可能也会需要（在视图间）分享世界，分享世界"
+"可以通过手动调用视图API来实现。"
+
+#: ../../tutorials/engine/viewports.rst:119
+msgid "Capture"
+msgstr "捕捉(Capture)"
+
+#: ../../tutorials/engine/viewports.rst:121
+msgid ""
+"It is possible to query a capture of the viewport contents. For the root "
+"viewport this is effectively a screen capture. This is done with the following "
+"API:"
+msgstr ""
+"我们也可以捕捉视图节点的内容。对于根视图，实际上就等于截屏。捕捉可以通过调用如下"
+"API实现："
+
+#: ../../tutorials/engine/viewports.rst:130
+msgid ""
+"After a frame or two (check _process()), the capture will be ready, get it back "
+"by using:"
+msgstr ""
+"在一两帧之后，捕捉就完成了(check _process())。我们可以使用下面的方法来取得捕捉内"
+"容："
+
+#: ../../tutorials/engine/viewports.rst:137
+msgid ""
+"If the returned image is empty, capture still didn't happen, wait a little "
+"more, as this API is asyncronous."
+msgstr ""
+"如果上面方法返回的图像是空的，那捕捉可能还没进行；多等一会再试一下，因为这个API"
+"是异步的。"
+
+#: ../../tutorials/engine/viewports.rst:141
+msgid "Sub-viewport"
+msgstr "子视图(Sub-viewport)"
+
+#: ../../tutorials/engine/viewports.rst:143
+msgid ""
+"If the viewport is a child of a control, it will become active and display "
+"anything it has inside. The layout is something like this:"
+msgstr ""
+"如果视图节点是一个控制节点的子节点，它将活跃起来，展示它所包含的内容。这个布局看"
+"起来会像这样："
+
+#: ../../tutorials/engine/viewports.rst:146
+msgid "Control"
+msgstr "控件(Control)"
+
+#: ../../tutorials/engine/viewports.rst:150
+msgid "The viewport will cover the area of it's parent control completely."
+msgstr "视图(Viewport)"
+
+#: ../../tutorials/engine/viewports.rst:155
+msgid "Render target"
+msgstr "上面的视图节点会完全覆盖其父控制节点的区域。"
+
+#: ../../tutorials/engine/viewports.rst:157
+msgid ""
+"To set as a render target, just toggle the \"render target\" property of the "
+"viewport to enabled. Note that whatever is inside will not be visible in the "
+"scene editor. To display the contents, the render target texture must be used. "
+"This can be requested via code using (for example):"
+msgstr "渲染目标(Render target)"
+
+#: ../../tutorials/engine/viewports.rst:168
+msgid ""
+"By default, re-rendering of the render target happens when the render target "
+"texture has been drawn in a frame. If visible, it will be rendered, otherwise "
+"it will not. This behavior can be changed to manual rendering (once), or always "
+"render, no matter if visible or not."
+msgstr ""
+"只要将视图的“渲染目标(render target)”属性开启，它就被设置成了渲染目标。注意，此"
+"时，视图内包含的内容不能在场景编辑器中看到。只有渲染目标贴图被使用了，视图包含的"
+"内容才能被看到。可以通过下面的代码，来使用渲染目标贴图（这里只是例子）："
+
+#: ../../tutorials/engine/viewports.rst:173
+msgid ""
+"A few classes are created to make this easier in most common cases inside the "
+"editor:"
+msgstr ""
+"默认地，当渲染目标贴图在一帧中被绘制后，渲染目标就会被重新渲染一次：如果渲染目标"
+"被设置为可见，它就会被渲染；如果设置为不可见，它就不会被渲染。上述渲染方式可以变"
+"更设置为：手动渲染（一次）；或总是渲染，不管设置为可见或不可见。"
+
+#: ../../tutorials/engine/viewports.rst:176
+msgid ":ref:`ViewportSprite <class_ViewportSprite>` (for 2D)."
+msgstr "为了让渲染目标针对常见情况使用起来更简便，我们在编辑器内设置了几个类："
+
+#: ../../tutorials/engine/viewports.rst:177
+msgid "ViewportQuad (for 3D)."
+msgstr "ViewportQuad (for 3D)."
+
+#: ../../tutorials/engine/viewports.rst:178
+msgid "ViewportFrame (for GUI)."
+msgstr "ViewportFrame (for GUI)."
+
+#: ../../tutorials/engine/viewports.rst:180
+msgid "*TODO: Review the doc, ViewportQuad and ViewportFrame don't exist in 2.0.*"
+msgstr "*TODO：重新编辑文档，ViewportQuad和ViewportFrame在2.0中已删除。*"
+
+#: ../../tutorials/engine/viewports.rst:182
+msgid ""
+"Make sure to check the viewport demos! Viewport folder in the demos archive "
+"available to download, or https://github.com/godotengine/godot-demo-projects/"
+"tree/master/viewport"
+msgstr ""
+"别忘了去看看视图的demo！Demo存档中的视图文件夹可以下载，或者访问\n"
+"https://github.com/godotengine/godot/tree/master/demos/viewport"

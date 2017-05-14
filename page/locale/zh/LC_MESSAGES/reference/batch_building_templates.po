@@ -1,0 +1,39 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-08-25 22:34+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../reference/batch_building_templates.rst:4
+msgid "Batch building templates"
+msgstr "批量生成导出模板(Export templates)"
+
+#: ../../reference/batch_building_templates.rst:6
+msgid ""
+"The following is almost the same script that we use to build all the "
+"export templates that go to the website. If you want to build or roll "
+"them yourself, this might be of use."
+msgstr ""
+"以下脚本是我们用来批量编译生成所有平台导出模板并放在官方网站提供下载，"
+"如果你想要编译自己的导出模板文件，这些脚本也许对你有用。"
+
+#: ../../reference/batch_building_templates.rst:10
+msgid "(note: Apple stuff is missing)"
+msgstr "(备注：Apple/IOS 平台目前暂不支持 导出模板)"

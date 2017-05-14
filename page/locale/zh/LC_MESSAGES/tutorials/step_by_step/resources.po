@@ -1,0 +1,260 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-08-24 22:53+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../tutorials/step_by_step/resources.rst:4
+msgid "Resources"
+msgstr "资源(Resource)"
+
+#: ../../tutorials/step_by_step/resources.rst:7
+msgid "Nodes and resources"
+msgstr "节点和资源"
+
+#: ../../tutorials/step_by_step/resources.rst:9
+msgid ""
+"So far, :ref:`Nodes <class_Node>` have been the most important datatype "
+"in Godot, as most of the behaviors and features of the engine are "
+"implemented through them. There is, though, another datatype that is "
+"equally as important. That is :ref:`Resource <class_Resource>`."
+msgstr ""
+"到目前为止， :ref:`Node <class_Node>`\n"
+"已经成为了Godot中最重要的数据类型（Datatype），因为引擎的绝大多数行为和特"
+"性都是通过他们实现的。尽管如此，还有另外一种数据类型也是同样地重要，那就"
+"是\n"
+":ref:`Resource <class_Resource>`."
+
+#: ../../tutorials/step_by_step/resources.rst:15
+msgid ""
+"Where *Nodes* focus on behaviors, such as drawing a sprite, drawing a 3D "
+"model, physics, GUI controls, etc,"
+msgstr ""
+"节点关注在行为上，比如绘制一个精灵、绘制一个3D模型、物理、GUI控制等，"
+
+#: ../../tutorials/step_by_step/resources.rst:18
+msgid ""
+"**Resources** are mere **data containers**. This means that they don't "
+"do any action nor process any information. Resources just contain data."
+msgstr ""
+"**资源** 仅仅是 **数据容器(Data Container)**，这意味着他们既没有任何动作"
+"也不生成任何信息。资源仅仅包含着数据而已。"
+
+#: ../../tutorials/step_by_step/resources.rst:22
+msgid ""
+"Examples of resources are :ref:`Texture <class_Texture>`, :ref:`Script "
+"<class_Script>`, :ref:`Mesh <class_Mesh>`, :ref:`Animation "
+"<class_Animation>`, :ref:`Sample <class_Sample>`, :ref:`AudioStream "
+"<class_AudioStream>`, :ref:`Font <class_Font>`, :ref:`Translation "
+"<class_Translation>`, etc."
+msgstr ""
+"资源的样本有：\n"
+":ref:`Texture <class_Texture>`,\n"
+":ref:`Script <class_Script>`,\n"
+":ref:`Mesh <class_Mesh>`,\n"
+":ref:`Animation <class_Animation>`,\n"
+":ref:`Sample <class_Sample>`,\n"
+":ref:`AudioStream <class_AudioStream>`,\n"
+":ref:`Font <class_Font>`,\n"
+":ref:`Translation <class_Translation>`,\n"
+"等等。"
+
+#: ../../tutorials/step_by_step/resources.rst:33
+msgid ""
+"When Godot saves or loads (from disk) a scene (.scn or .xml), an image "
+"(png, jpg), a script (.gd) or pretty much anything, that file is "
+"considered a resource."
+msgstr ""
+"当Godot（从硬盘）保存或载入一个场景（.scn或者.xml）、一个图片（png，"
+"jpg）、一个脚本（.gd）或者其他什么类似的东西，那个文件就被称为一个资源。"
+
+#: ../../tutorials/step_by_step/resources.rst:37
+msgid ""
+"When a resource is loaded from disk, **it is always loaded once**. That "
+"means, if there is a copy of that resource already loaded in memory, "
+"trying to load the resource again will just return the same copy again "
+"and again. This corresponds with the fact that resources are just data "
+"containers, so there is no need to have them duplicated."
+msgstr ""
+"当一个资源被从磁盘里载入时，**它永远只被载入一次**。那也就意味着，如果在"
+"内存中已经有一份该资源被载入了，尝试再次载入该资源将只返回相同的那份资"
+"源。这与资源只是数据容器这一事实相对应，因此没必要去让他们存在多个副本。"
+
+#: ../../tutorials/step_by_step/resources.rst:43
+msgid ""
+"Typically, every object in Godot (Node, Resource, or anything else) can "
+"export properties, properties can be of many types (like a string, "
+"integer, Vector2, etc) and one of those types can be a resource. This "
+"means that both nodes and resources can contain resources as properties. "
+"To make it a little more visual:"
+msgstr ""
+"通常地，Godot中每一个对象（节点、资源或者别的东西）都能够导出属性"
+"（Properties），属性可以是许多种类型（例如一个字符串（String）、整数"
+"（Integers）、2D向量（Vector2）等）并且这些类型中每一个都能成为一个资源。"
+"这意味着节点和资源都可以包含资源作为属性。\n"
+"为了使它更加的直观一点："
+
+#: ../../tutorials/step_by_step/resources.rst:52
+msgid "External vs built-in"
+msgstr "外部与内置"
+
+#: ../../tutorials/step_by_step/resources.rst:54
+msgid ""
+"The resource properties can reference resources in two ways, *external* "
+"(on disk) or **built-in**."
+msgstr "资源属性可以以两种方式引用资源，*外部*（磁盘）或**内置**。"
+
+#: ../../tutorials/step_by_step/resources.rst:57
+msgid ""
+"To be more specific, here's a :ref:`Texture <class_Texture>` in a :ref:"
+"`Sprite <class_Sprite>` node:"
+msgstr ""
+"为了更具体一些，在一个 :ref:`Sprite <class_Sprite>` 节点中有一个 :ref:"
+"`Texture <class_Texture>`："
+
+#: ../../tutorials/step_by_step/resources.rst:62
+msgid ""
+"Pressing the the \">\" button the right side of the preview, allows to "
+"view and edit the resources properties. One of the properties (path) "
+"shows where it came from. In this case, it came from a png image."
+msgstr ""
+"按下预览右侧的\">\"按钮将允许查看并编辑资源属性。其中有一个属性（即path属"
+"性）显示了它来自于哪里。在这个案例中，它来自于一个png图片。"
+
+#: ../../tutorials/step_by_step/resources.rst:68
+msgid ""
+"When the resource comes from a file, it is considered an *external* "
+"resource. If the path property is erased (or never had a path to begin "
+"with), it is then considered a built-in resource."
+msgstr ""
+"当资源来自于一个文件时，它被认为是一个*外部*的资源。如果这个 path（路径）"
+"属性被擦除了（或者开始就没有一个路径），那么他就被认为是一个内置的资源。"
+
+#: ../../tutorials/step_by_step/resources.rst:72
+msgid ""
+"For example, if the path \\`\"res://robi.png\"\\` is erased from the "
+"\"path\" property in the above example, and then the scene is saved, the "
+"resource will be saved inside the .scn scene file, no longer referencing "
+"the external \"robi.png\". However, even if saved as built-in, and even "
+"though the scene can be instanced multiple times, the resource will "
+"still always be loaded once. That means, different Robi robot scenes "
+"instanced at the same time will still share the same image."
+msgstr ""
+"比如说，如果路径\\`\"res://robi.png\"\\`从上述范例中\"path\"属性被抹消，"
+"那么接下来当这个场景被保存，资源就会被存到.scn场景文件里，不再引用外部的"
+"\"robi.png\"。然而，即使被存为内置资源，尽管这个场景可以被实例化多次，资"
+"源将仍然只载入一次。那意味着，同时被实例化的不同的Robi机器人场景将分享相"
+"同的图片。"
+
+#: ../../tutorials/step_by_step/resources.rst:81
+msgid "Loading resources from code"
+msgstr "使用代码载入资源"
+
+#: ../../tutorials/step_by_step/resources.rst:83
+msgid ""
+"Loading resources from code is easy, there are two ways to do it. The "
+"first is to use load(), like this:"
+msgstr ""
+"使用代码载入资源非常简单，有两种方式都能够完成此事。第一种是使用 load() "
+"函数，就像这样："
+
+#: ../../tutorials/step_by_step/resources.rst:92
+msgid ""
+"The second way is more optimal, but only works with a string constant "
+"parameter, because it loads the resource at compile-time."
+msgstr ""
+"第二种方式要更理想，但是参数必须是一个字符串常量才能工作，因为它将在编译"
+"时载入资源。"
+
+#: ../../tutorials/step_by_step/resources.rst:102
+msgid "Loading scenes"
+msgstr "加载场景"
+
+#: ../../tutorials/step_by_step/resources.rst:104
+msgid ""
+"Scenes are also resources, but there is a catch. Scenes saved to disk "
+"are resources of type :ref:`PackedScene <class_PackedScene>`, this means "
+"that the scene is packed inside a resource."
+msgstr ""
+"场景同样也是资源，但有点特别。场景会以 :ref:`PackedScene "
+"<class_PackedScene>` 这种资源类型保存到硬盘。这意味着场景会被打包进一份资"
+"源之内。"
+
+#: ../../tutorials/step_by_step/resources.rst:108
+msgid ""
+"To obtain an instance of the scene, the method :ref:`PackedScene."
+"instance() <class_PackedScene_instance>` must be used."
+msgstr ""
+"如果想要获得场景的实例(instance)，必须使用这个方法：:ref:`PackedScene."
+"instance() <class_PackedScene_instance>`"
+
+#: ../../tutorials/step_by_step/resources.rst:118
+msgid ""
+"This method creates the nodes in hierarchy, configures them (sets all "
+"the properties) and returns the root node of the scene, which can be "
+"added to any other node."
+msgstr ""
+"这个方法能创建场景树每一层的节点，初始化它们(包括设定所有属性)同时返回场"
+"景的根节点。根节点能被添加为其他任意节点的子节点。"
+
+#: ../../tutorials/step_by_step/resources.rst:122
+msgid ""
+"The approach has several advantages. As the :ref:`PackedScene.instance() "
+"<class_PackedScene_instance>` function is pretty fast, adding extra "
+"content to the scene can be done efficiently. New enemies, bullets, "
+"effects, etc can be added or removed quickly, without having to load "
+"them again from disk each time. It is important to remember that, as "
+"always, images, meshes, etc are all shared between the scene instances."
+msgstr ""
+"下面这个方法有若干优点：:ref:`PackedScene.instance() "
+"<class_PackedScene_instance>` 函数执行地非常快，能够高效的往场景里添加额"
+"外内容(extra content)。新的敌人、子弹、特效等等能够被快速添加或移除，而不"
+"需要每次都从硬盘上读取。记住这点，这非常重要：同样的，图片、网格(meshes)"
+"以及其他全部都是在场景实例间共享的。"
+
+#: ../../tutorials/step_by_step/resources.rst:131
+msgid "Freeing resources"
+msgstr "释放资源"
+
+#: ../../tutorials/step_by_step/resources.rst:133
+msgid ""
+"Resource extends from :ref:`Reference <class_Reference>`. As such, when "
+"a resource is no longer in use, it will automatically free itself. "
+"Since, in most cases, Resources are contained in Nodes, scripts or other "
+"resources, when a node is removed or freed, all the children resources "
+"are freed too."
+msgstr ""
+"资源类(Resource)都继承自 :ref:`Reference <class_Reference>` 。因此，当一"
+"个资源不再使用的时候，他将自动被释放。因为在大多数情况下资源被包含在节"
+"点、脚本或者其他资源中，当一个节点被移除或者释放时，作为其子节点的资源也"
+"跟着被释放了。"
+
+#: ../../tutorials/step_by_step/resources.rst:140
+msgid "Scripting"
+msgstr "脚本"
+
+#: ../../tutorials/step_by_step/resources.rst:142
+msgid ""
+"Like any object in Godot, not just nodes, resources can be scripted too. "
+"However, there isn't generally much of a win, as resources are just data "
+"containers."
+msgstr ""
+"如同 Godot 中的其他对象（而不仅仅是Nodes）一般，资源也是可以附加脚本的。"
+"但这通常没什么卵用，因为资源只是数据容器罢了。"

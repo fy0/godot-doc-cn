@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-08-24 23:15+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../tutorials/step_by_step/splash_screen.rst:4
+msgid "Splash screen"
+msgstr "启动画面(Splash Screen)"
+
+#: ../../tutorials/step_by_step/splash_screen.rst:7
+msgid "Tutorial"
+msgstr "教程"
+
+#: ../../tutorials/step_by_step/splash_screen.rst:9
+msgid ""
+"This will be a simple tutorial to cement the basic idea of how the GUI "
+"subsystem works. The goal will be to create a really simple, static "
+"splash screen."
+msgstr ""
+"这将是一个简单的教程来巩固关于GUI子系统如何工作的基本想法。目标是去创建一"
+"个十足简单的、静态的启动画面(译注：启动画面一说溅射屏幕，本文统一译为启动"
+"画面)。"
+
+#: ../../tutorials/step_by_step/splash_screen.rst:13
+msgid ""
+"Following is a file with the assets that will be used. These can be "
+"added directly to your project folder—no need to import them:"
+msgstr ""
+"下图是一个包含着接下来要用的资源的文件。这些东西可以直接添加到你的工程文"
+"件夹中——无需导入它们："
+
+#: ../../tutorials/step_by_step/splash_screen.rst:15
+msgid ":download:`robisplash_assets.zip </files/robisplash_assets.zip>`."
+msgstr ":download:`robisplash_assets.zip </files/robisplash_assets.zip>`."
+
+#: ../../tutorials/step_by_step/splash_screen.rst:18
+msgid "Setting up"
+msgstr "配置"
+
+#: ../../tutorials/step_by_step/splash_screen.rst:20
+msgid ""
+"Set the display resolution to 800x450 in Project Settings, and set up a "
+"new scene like this:"
+msgstr "在工程设定中设定显示分辨率为800×450，然后像这样建立一个新场景："
+
+#: ../../tutorials/step_by_step/splash_screen.rst:26
+msgid ""
+"The nodes 'background\" and \"logo\" are of :ref:`TextureFrame "
+"<class_TextureFrame>` type. These have a special property for setting "
+"the texture to be displayed, just load the corresponding file."
+msgstr ""
+"节点\"background\"和\"logo\"属于 :ref:`贴图框(TextureFrame) "
+"<class_TextureFrame>`类型。这些东西有一个特殊的属性来设定待显示的贴图，只"
+"需要载入相应的文件。"
+
+#: ../../tutorials/step_by_step/splash_screen.rst:32
+msgid ""
+"The node \"start\" is a :ref:`TextureButton <class_TextureButton>`, it "
+"takes several images for different states, but only the normal and "
+"pressed will be supplied in this example:"
+msgstr ""
+"节点\"start\"是一个 :ref:`贴图按钮(TextureButton) "
+"<class_TextureButton>`，它为自己的不同状态取得几张图像，但在这个范例中，"
+"我们只提供正常的和按下的："
+
+#: ../../tutorials/step_by_step/splash_screen.rst:38
+msgid ""
+"Finally, the node \"copyright\" is a :ref:`Label <class_Label>`. Labels "
+"can be set a custom font by editing the following property:"
+msgstr ""
+"最后，节点\"copyright\"是一个 :ref:`标签(Label) <class_Label>`。标签可以"
+"通过下面的属性被设定一个自定义字体："
+
+#: ../../tutorials/step_by_step/splash_screen.rst:43
+msgid ""
+"As a side note, the font was imported from a TTF, see :ref:"
+"`doc_importing_fonts`."
+msgstr "附注，字体由一个TTF文件导入进来，见 :ref:`doc_importing_fonts`。"

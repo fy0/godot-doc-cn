@@ -264,14 +264,16 @@ considered a comment.
 
     # This is a comment
 
-Multi-line comments can be created using """ (three quotes in a row) at
-the beginning and end of a block of text.
-
-::
-
-    """ Everything on these 
-    lines is considered
-    a comment """
+..  Uncomment me if/when https://github.com/godotengine/godot/issues/1320 gets fixed
+    
+    Multi-line comments can be created using """ (three quotes in a row) at
+    the beginning and end of a block of text.
+    
+    ::
+    
+        """ Everything on these 
+        lines is considered
+        a comment """
 
 Built-in types
 --------------
@@ -308,6 +310,8 @@ Used to contain a floating point value (real numbers).
 
 A sequence of characters in `Unicode format <https://en.wikipedia.org/wiki/Unicode>`_. Strings can contain the
 `standard C escape sequences <https://en.wikipedia.org/wiki/Escape_sequences_in_C>`_.
+GDScript supports :ref:`format strings aka printf functionality
+<doc_gdscript_printf>`.
 
 Vector built-in types
 ~~~~~~~~~~~~~~~~~~~~~
@@ -415,14 +419,17 @@ Container built-in types
 
 Generic sequence of arbitrary object types, including other arrays or dictionaries (see below). 
 The array can resize dynamically. Arrays are indexed starting from index ``0``.
+Starting with Godot 2.1, indices may be negative like in Python, to count from the end.
 
 ::
 
     var arr=[]
     arr=[1, 2, 3]
-    var b = arr[1] # this is 2
-    arr[0] = "Hi!" # replacing value 1 with "Hi"
-    arr.append(4)  # array is now ["Hi", 2, 3, 4]
+    var b = arr[1]            # this is 2
+    var c = arr[arr.size()-1] # this is 3
+    var d = arr[-1]           # same as the previous line, but shorter
+    arr[0] = "Hi!"            # replacing value 1 with "Hi"
+    arr.append(4)             # array is now ["Hi", 2, 3, 4]
 
 GDScript arrays are allocated linearly in memory for speed. Very
 large arrays (more than tens of thousands of elements) may however cause
@@ -434,7 +441,7 @@ arrays. They are therefore only recommended to use for very large data sets:
 - :ref:`ByteArray <class_ByteArray>`: An array of bytes (integers from 0 to 255).
 - :ref:`IntArray <class_IntArray>`: An array of integers.
 - :ref:`FloatArray <class_FloatArray>`: An array of floats.
-- :ref:`StringArray <class_StringArray>`: An array strings.
+- :ref:`StringArray <class_StringArray>`: An array of strings.
 - :ref:`Vector2Array <class_Vector2Array>`: An array of :ref:`Vector2 <class_Vector2>` objects.
 - :ref:`Vector3Array <class_Vector3Array>`: An array of :ref:`Vector3 <class_Vector3>` objects.
 - :ref:`ColorArray <class_ColorArray>`: An array of :ref:`Color <class_Color>` objects.
@@ -1135,6 +1142,8 @@ signal is received, execution will recommence. Here are some examples:
     # Resume execution when animation is done playing:
     yield( get_node("AnimationPlayer"), "finished" )
 
+    # Wait 5 seconds, then resume execution (Godot 2.2+)
+    yield( get_tree().create_timer(5.0), "timeout" )
 
 Onready keyword
 ~~~~~~~~~~~~~~~

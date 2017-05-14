@@ -1,0 +1,1191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: 2016-08-25 23:57+0800\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 1.8.8\n"
+
+#: ../../reference/binary_serialization_api.rst:4
+msgid "Binary serialization API"
+msgstr "二进制序列化API"
+
+#: ../../reference/binary_serialization_api.rst:7
+msgid "Introduction"
+msgstr "介绍"
+
+#: ../../reference/binary_serialization_api.rst:9
+msgid ""
+"Godot has a simple serialization API based on Variant. It's used for "
+"converting data types to an array of bytes efficiently. This API is used "
+"in the functions ``get_var`` and ``store_var`` of :ref:`class_File` as "
+"well as the packet APIs for :ref:`class_PacketPeer`. This format is not "
+"used for binary scenes and resources."
+msgstr ""
+"Godot内建一套简单易用的序列化API（基于Variant），序列化用于数据类型"
+"（dict/array/object等）和二进制数据流之间的转换，通常用于保存数据（存档）"
+"和网络消息通讯，可以简单的通过 :ref:`class_File` 类的 ``get_var`` 和 "
+"``store_var`` 读取/保存数据，同样 :ref:`class_PacketPeer` 类也支持 "
+"``get_var`` 和 ``store_var`` 接口。\n"
+"注意：本格式不用于保存二进制场景(.scn)文件和资源(.res)文件"
+
+#: ../../reference/binary_serialization_api.rst:16
+msgid "Packet specification"
+msgstr "包装格式详解"
+
+#: ../../reference/binary_serialization_api.rst:18
+msgid ""
+"The packet is designed to be always padded to 4 bytes. All values are "
+"little endian encoded. All packets have a 4 byte header representing an "
+"integer, specifying the type of data:"
+msgstr ""
+"格式被设计为4字节对齐（长度不够4字节的单元将补充1-3字节的0数据），所有的"
+"值以小端(Little-Endian)的方式储存，所有单元都包含一个长度为4字节的int表示"
+"单元类型：\n"
+"译者注：字节补齐的意思是，假如保存的数据只有1字节，将补齐3字节的0，使得数"
+"据加起来刚好等于4，如下：\n"
+"长度1，补齐3，等于4\n"
+"长度2，补齐2，等于4\n"
+"长度3，补齐1，等于4\n"
+"长度4，不进行补齐\n"
+"长度5，补齐3，等于8（4的倍数）\n"
+"以此类推"
+
+#: ../../reference/binary_serialization_api.rst:23
+#: ../../reference/binary_serialization_api.rst:94
+#: ../../reference/binary_serialization_api.rst:103
+#: ../../reference/binary_serialization_api.rst:112
+#: ../../reference/binary_serialization_api.rst:121
+#: ../../reference/binary_serialization_api.rst:134
+#: ../../reference/binary_serialization_api.rst:145
+#: ../../reference/binary_serialization_api.rst:160
+#: ../../reference/binary_serialization_api.rst:173
+#: ../../reference/binary_serialization_api.rst:192
+#: ../../reference/binary_serialization_api.rst:207
+#: ../../reference/binary_serialization_api.rst:222
+#: ../../reference/binary_serialization_api.rst:241
+#: ../../reference/binary_serialization_api.rst:266
+#: ../../reference/binary_serialization_api.rst:297
+#: ../../reference/binary_serialization_api.rst:312
+#: ../../reference/binary_serialization_api.rst:333
+#: ../../reference/binary_serialization_api.rst:342
+#: ../../reference/binary_serialization_api.rst:353
+#: ../../reference/binary_serialization_api.rst:363
+#: ../../reference/binary_serialization_api.rst:385
+#: ../../reference/binary_serialization_api.rst:397
+#: ../../reference/binary_serialization_api.rst:409
+#: ../../reference/binary_serialization_api.rst:422
+#: ../../reference/binary_serialization_api.rst:433
+#: ../../reference/binary_serialization_api.rst:444
+#: ../../reference/binary_serialization_api.rst:452
+#: ../../reference/binary_serialization_api.rst:465
+#: ../../reference/binary_serialization_api.rst:478
+#: ../../reference/binary_serialization_api.rst:493
+msgid "Type"
+msgstr "类型"
+
+#: ../../reference/binary_serialization_api.rst:23
+msgid "Value"
+msgstr "值"
+
+#: ../../reference/binary_serialization_api.rst:25
+msgid "0"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:25
+msgid "null"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:27
+#: ../../reference/binary_serialization_api.rst:324
+#: ../../reference/binary_serialization_api.rst:413
+msgid "1"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:27
+msgid "bool"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:29
+msgid "2"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:29
+msgid "integer"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:31
+msgid "3"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:31
+msgid "float"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:33
+#: ../../reference/binary_serialization_api.rst:96
+#: ../../reference/binary_serialization_api.rst:105
+#: ../../reference/binary_serialization_api.rst:114
+#: ../../reference/binary_serialization_api.rst:123
+#: ../../reference/binary_serialization_api.rst:136
+#: ../../reference/binary_serialization_api.rst:138
+#: ../../reference/binary_serialization_api.rst:147
+#: ../../reference/binary_serialization_api.rst:149
+#: ../../reference/binary_serialization_api.rst:151
+#: ../../reference/binary_serialization_api.rst:153
+#: ../../reference/binary_serialization_api.rst:162
+#: ../../reference/binary_serialization_api.rst:164
+#: ../../reference/binary_serialization_api.rst:166
+#: ../../reference/binary_serialization_api.rst:175
+#: ../../reference/binary_serialization_api.rst:177
+#: ../../reference/binary_serialization_api.rst:179
+#: ../../reference/binary_serialization_api.rst:181
+#: ../../reference/binary_serialization_api.rst:183
+#: ../../reference/binary_serialization_api.rst:185
+#: ../../reference/binary_serialization_api.rst:194
+#: ../../reference/binary_serialization_api.rst:196
+#: ../../reference/binary_serialization_api.rst:198
+#: ../../reference/binary_serialization_api.rst:200
+#: ../../reference/binary_serialization_api.rst:209
+#: ../../reference/binary_serialization_api.rst:211
+#: ../../reference/binary_serialization_api.rst:213
+#: ../../reference/binary_serialization_api.rst:215
+#: ../../reference/binary_serialization_api.rst:224
+#: ../../reference/binary_serialization_api.rst:226
+#: ../../reference/binary_serialization_api.rst:228
+#: ../../reference/binary_serialization_api.rst:230
+#: ../../reference/binary_serialization_api.rst:232
+#: ../../reference/binary_serialization_api.rst:234
+#: ../../reference/binary_serialization_api.rst:243
+#: ../../reference/binary_serialization_api.rst:245
+#: ../../reference/binary_serialization_api.rst:247
+#: ../../reference/binary_serialization_api.rst:249
+#: ../../reference/binary_serialization_api.rst:251
+#: ../../reference/binary_serialization_api.rst:253
+#: ../../reference/binary_serialization_api.rst:255
+#: ../../reference/binary_serialization_api.rst:257
+#: ../../reference/binary_serialization_api.rst:259
+#: ../../reference/binary_serialization_api.rst:268
+#: ../../reference/binary_serialization_api.rst:270
+#: ../../reference/binary_serialization_api.rst:272
+#: ../../reference/binary_serialization_api.rst:274
+#: ../../reference/binary_serialization_api.rst:276
+#: ../../reference/binary_serialization_api.rst:278
+#: ../../reference/binary_serialization_api.rst:280
+#: ../../reference/binary_serialization_api.rst:282
+#: ../../reference/binary_serialization_api.rst:284
+#: ../../reference/binary_serialization_api.rst:286
+#: ../../reference/binary_serialization_api.rst:288
+#: ../../reference/binary_serialization_api.rst:290
+#: ../../reference/binary_serialization_api.rst:299
+#: ../../reference/binary_serialization_api.rst:301
+#: ../../reference/binary_serialization_api.rst:303
+#: ../../reference/binary_serialization_api.rst:305
+#: ../../reference/binary_serialization_api.rst:314
+#: ../../reference/binary_serialization_api.rst:316
+#: ../../reference/binary_serialization_api.rst:318
+#: ../../reference/binary_serialization_api.rst:320
+#: ../../reference/binary_serialization_api.rst:322
+#: ../../reference/binary_serialization_api.rst:335
+#: ../../reference/binary_serialization_api.rst:355
+#: ../../reference/binary_serialization_api.rst:357
+#: ../../reference/binary_serialization_api.rst:365
+#: ../../reference/binary_serialization_api.rst:387
+#: ../../reference/binary_serialization_api.rst:399
+#: ../../reference/binary_serialization_api.rst:411
+#: ../../reference/binary_serialization_api.rst:424
+#: ../../reference/binary_serialization_api.rst:426
+#: ../../reference/binary_serialization_api.rst:435
+#: ../../reference/binary_serialization_api.rst:437
+#: ../../reference/binary_serialization_api.rst:446
+#: ../../reference/binary_serialization_api.rst:454
+#: ../../reference/binary_serialization_api.rst:467
+#: ../../reference/binary_serialization_api.rst:469
+#: ../../reference/binary_serialization_api.rst:471
+#: ../../reference/binary_serialization_api.rst:480
+#: ../../reference/binary_serialization_api.rst:482
+#: ../../reference/binary_serialization_api.rst:484
+#: ../../reference/binary_serialization_api.rst:486
+#: ../../reference/binary_serialization_api.rst:495
+#: ../../reference/binary_serialization_api.rst:497
+#: ../../reference/binary_serialization_api.rst:499
+#: ../../reference/binary_serialization_api.rst:501
+#: ../../reference/binary_serialization_api.rst:503
+msgid "4"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:33
+msgid "string"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:35
+msgid "5"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:35
+msgid "vector2"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:37
+msgid "6"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:37
+msgid "rect2"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:39
+msgid "7"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:39
+msgid "vector3"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:41
+#: ../../reference/binary_serialization_api.rst:125
+#: ../../reference/binary_serialization_api.rst:138
+#: ../../reference/binary_serialization_api.rst:149
+#: ../../reference/binary_serialization_api.rst:164
+#: ../../reference/binary_serialization_api.rst:177
+#: ../../reference/binary_serialization_api.rst:196
+#: ../../reference/binary_serialization_api.rst:211
+#: ../../reference/binary_serialization_api.rst:226
+#: ../../reference/binary_serialization_api.rst:245
+#: ../../reference/binary_serialization_api.rst:270
+#: ../../reference/binary_serialization_api.rst:301
+#: ../../reference/binary_serialization_api.rst:316
+#: ../../reference/binary_serialization_api.rst:344
+#: ../../reference/binary_serialization_api.rst:357
+msgid "8"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:41
+msgid "matrix32"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:43
+msgid "9"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:43
+msgid "plane"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:45
+msgid "10"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:45
+msgid "quaternion"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:47
+msgid "11"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:47
+msgid "aabb (rect3)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:49
+#: ../../reference/binary_serialization_api.rst:151
+#: ../../reference/binary_serialization_api.rst:166
+#: ../../reference/binary_serialization_api.rst:179
+#: ../../reference/binary_serialization_api.rst:198
+#: ../../reference/binary_serialization_api.rst:213
+#: ../../reference/binary_serialization_api.rst:228
+#: ../../reference/binary_serialization_api.rst:247
+#: ../../reference/binary_serialization_api.rst:272
+#: ../../reference/binary_serialization_api.rst:303
+#: ../../reference/binary_serialization_api.rst:318
+msgid "12"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:49
+msgid "matrix3x3"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:51
+msgid "13"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:51
+msgid "transform (matrix 4x3)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:53
+msgid "14"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:53
+msgid "color"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:55
+msgid "15"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:55
+msgid "image"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:57
+#: ../../reference/binary_serialization_api.rst:153
+#: ../../reference/binary_serialization_api.rst:181
+#: ../../reference/binary_serialization_api.rst:200
+#: ../../reference/binary_serialization_api.rst:215
+#: ../../reference/binary_serialization_api.rst:230
+#: ../../reference/binary_serialization_api.rst:249
+#: ../../reference/binary_serialization_api.rst:274
+#: ../../reference/binary_serialization_api.rst:305
+#: ../../reference/binary_serialization_api.rst:320
+msgid "16"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:57
+msgid "node path"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:59
+msgid "17"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:59
+msgid "rid (unsupported)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:61
+msgid "18"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:61
+msgid "object (unsupported)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:63
+msgid "19"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:63
+msgid "input event"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:65
+#: ../../reference/binary_serialization_api.rst:183
+#: ../../reference/binary_serialization_api.rst:232
+#: ../../reference/binary_serialization_api.rst:251
+#: ../../reference/binary_serialization_api.rst:276
+#: ../../reference/binary_serialization_api.rst:322
+msgid "20"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:65
+msgid "dictionary"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:67
+msgid "21"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:67
+msgid "array"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:69
+msgid "22"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:69
+msgid "ByteArray"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:71
+msgid "23"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:71
+msgid "IntArray"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:73
+#: ../../reference/binary_serialization_api.rst:185
+#: ../../reference/binary_serialization_api.rst:234
+#: ../../reference/binary_serialization_api.rst:253
+#: ../../reference/binary_serialization_api.rst:278
+msgid "24"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:73
+msgid "FloatArray"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:75
+msgid "25"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:75
+msgid "StringArray"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:77
+msgid "26"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:77
+msgid "Vector2Array"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:79
+msgid "27"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:79
+msgid "Vector3Array"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:81
+#: ../../reference/binary_serialization_api.rst:255
+#: ../../reference/binary_serialization_api.rst:280
+msgid "28"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:81
+msgid "ColorArray"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:84
+msgid ""
+"Following this is the actual packet contents, which varies for each type "
+"of packet:"
+msgstr "以下详细说明各类型单元的储存方式："
+
+#: ../../reference/binary_serialization_api.rst:88
+msgid "0: null"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:91
+msgid "1: bool"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:94
+#: ../../reference/binary_serialization_api.rst:103
+#: ../../reference/binary_serialization_api.rst:112
+#: ../../reference/binary_serialization_api.rst:121
+#: ../../reference/binary_serialization_api.rst:134
+#: ../../reference/binary_serialization_api.rst:145
+#: ../../reference/binary_serialization_api.rst:160
+#: ../../reference/binary_serialization_api.rst:173
+#: ../../reference/binary_serialization_api.rst:192
+#: ../../reference/binary_serialization_api.rst:207
+#: ../../reference/binary_serialization_api.rst:222
+#: ../../reference/binary_serialization_api.rst:241
+#: ../../reference/binary_serialization_api.rst:266
+#: ../../reference/binary_serialization_api.rst:297
+#: ../../reference/binary_serialization_api.rst:312
+#: ../../reference/binary_serialization_api.rst:333
+#: ../../reference/binary_serialization_api.rst:342
+#: ../../reference/binary_serialization_api.rst:353
+#: ../../reference/binary_serialization_api.rst:363
+#: ../../reference/binary_serialization_api.rst:385
+#: ../../reference/binary_serialization_api.rst:397
+#: ../../reference/binary_serialization_api.rst:409
+#: ../../reference/binary_serialization_api.rst:422
+#: ../../reference/binary_serialization_api.rst:433
+#: ../../reference/binary_serialization_api.rst:444
+#: ../../reference/binary_serialization_api.rst:452
+#: ../../reference/binary_serialization_api.rst:465
+#: ../../reference/binary_serialization_api.rst:478
+#: ../../reference/binary_serialization_api.rst:493
+msgid "Offset"
+msgstr "偏移值"
+
+#: ../../reference/binary_serialization_api.rst:94
+#: ../../reference/binary_serialization_api.rst:103
+#: ../../reference/binary_serialization_api.rst:112
+#: ../../reference/binary_serialization_api.rst:121
+#: ../../reference/binary_serialization_api.rst:134
+#: ../../reference/binary_serialization_api.rst:145
+#: ../../reference/binary_serialization_api.rst:160
+#: ../../reference/binary_serialization_api.rst:173
+#: ../../reference/binary_serialization_api.rst:192
+#: ../../reference/binary_serialization_api.rst:207
+#: ../../reference/binary_serialization_api.rst:222
+#: ../../reference/binary_serialization_api.rst:241
+#: ../../reference/binary_serialization_api.rst:266
+#: ../../reference/binary_serialization_api.rst:297
+#: ../../reference/binary_serialization_api.rst:312
+#: ../../reference/binary_serialization_api.rst:333
+#: ../../reference/binary_serialization_api.rst:342
+#: ../../reference/binary_serialization_api.rst:353
+#: ../../reference/binary_serialization_api.rst:363
+#: ../../reference/binary_serialization_api.rst:385
+#: ../../reference/binary_serialization_api.rst:397
+#: ../../reference/binary_serialization_api.rst:409
+#: ../../reference/binary_serialization_api.rst:422
+#: ../../reference/binary_serialization_api.rst:433
+#: ../../reference/binary_serialization_api.rst:444
+#: ../../reference/binary_serialization_api.rst:452
+#: ../../reference/binary_serialization_api.rst:465
+#: ../../reference/binary_serialization_api.rst:478
+#: ../../reference/binary_serialization_api.rst:493
+msgid "Len"
+msgstr "长度"
+
+#: ../../reference/binary_serialization_api.rst:94
+#: ../../reference/binary_serialization_api.rst:103
+#: ../../reference/binary_serialization_api.rst:112
+#: ../../reference/binary_serialization_api.rst:121
+#: ../../reference/binary_serialization_api.rst:134
+#: ../../reference/binary_serialization_api.rst:145
+#: ../../reference/binary_serialization_api.rst:160
+#: ../../reference/binary_serialization_api.rst:173
+#: ../../reference/binary_serialization_api.rst:192
+#: ../../reference/binary_serialization_api.rst:207
+#: ../../reference/binary_serialization_api.rst:222
+#: ../../reference/binary_serialization_api.rst:241
+#: ../../reference/binary_serialization_api.rst:266
+#: ../../reference/binary_serialization_api.rst:297
+#: ../../reference/binary_serialization_api.rst:312
+#: ../../reference/binary_serialization_api.rst:333
+#: ../../reference/binary_serialization_api.rst:342
+#: ../../reference/binary_serialization_api.rst:353
+#: ../../reference/binary_serialization_api.rst:363
+#: ../../reference/binary_serialization_api.rst:385
+#: ../../reference/binary_serialization_api.rst:397
+#: ../../reference/binary_serialization_api.rst:409
+#: ../../reference/binary_serialization_api.rst:422
+#: ../../reference/binary_serialization_api.rst:433
+#: ../../reference/binary_serialization_api.rst:444
+#: ../../reference/binary_serialization_api.rst:452
+#: ../../reference/binary_serialization_api.rst:465
+#: ../../reference/binary_serialization_api.rst:478
+#: ../../reference/binary_serialization_api.rst:493
+msgid "Description"
+msgstr "说明"
+
+#: ../../reference/binary_serialization_api.rst:96
+#: ../../reference/binary_serialization_api.rst:105
+#: ../../reference/binary_serialization_api.rst:123
+#: ../../reference/binary_serialization_api.rst:314
+#: ../../reference/binary_serialization_api.rst:316
+#: ../../reference/binary_serialization_api.rst:318
+#: ../../reference/binary_serialization_api.rst:320
+#: ../../reference/binary_serialization_api.rst:322
+#: ../../reference/binary_serialization_api.rst:335
+#: ../../reference/binary_serialization_api.rst:355
+#: ../../reference/binary_serialization_api.rst:357
+#: ../../reference/binary_serialization_api.rst:365
+#: ../../reference/binary_serialization_api.rst:387
+#: ../../reference/binary_serialization_api.rst:399
+#: ../../reference/binary_serialization_api.rst:411
+#: ../../reference/binary_serialization_api.rst:424
+#: ../../reference/binary_serialization_api.rst:426
+#: ../../reference/binary_serialization_api.rst:435
+#: ../../reference/binary_serialization_api.rst:437
+#: ../../reference/binary_serialization_api.rst:446
+#: ../../reference/binary_serialization_api.rst:454
+#: ../../reference/binary_serialization_api.rst:467
+#: ../../reference/binary_serialization_api.rst:480
+#: ../../reference/binary_serialization_api.rst:495
+msgid "Integer"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:96
+msgid "0 for False, 1 for True"
+msgstr ""
+"0表示False\n"
+"1表示True"
+
+#: ../../reference/binary_serialization_api.rst:100
+msgid "2: integer"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:105
+msgid "Signed, 32-Bit Integer"
+msgstr "带符号的32位整数"
+
+#: ../../reference/binary_serialization_api.rst:109
+msgid "3: float"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:114
+#: ../../reference/binary_serialization_api.rst:136
+#: ../../reference/binary_serialization_api.rst:138
+#: ../../reference/binary_serialization_api.rst:147
+#: ../../reference/binary_serialization_api.rst:149
+#: ../../reference/binary_serialization_api.rst:151
+#: ../../reference/binary_serialization_api.rst:153
+#: ../../reference/binary_serialization_api.rst:162
+#: ../../reference/binary_serialization_api.rst:164
+#: ../../reference/binary_serialization_api.rst:166
+#: ../../reference/binary_serialization_api.rst:175
+#: ../../reference/binary_serialization_api.rst:177
+#: ../../reference/binary_serialization_api.rst:179
+#: ../../reference/binary_serialization_api.rst:181
+#: ../../reference/binary_serialization_api.rst:183
+#: ../../reference/binary_serialization_api.rst:185
+#: ../../reference/binary_serialization_api.rst:194
+#: ../../reference/binary_serialization_api.rst:196
+#: ../../reference/binary_serialization_api.rst:198
+#: ../../reference/binary_serialization_api.rst:200
+#: ../../reference/binary_serialization_api.rst:209
+#: ../../reference/binary_serialization_api.rst:211
+#: ../../reference/binary_serialization_api.rst:213
+#: ../../reference/binary_serialization_api.rst:215
+#: ../../reference/binary_serialization_api.rst:224
+#: ../../reference/binary_serialization_api.rst:226
+#: ../../reference/binary_serialization_api.rst:228
+#: ../../reference/binary_serialization_api.rst:230
+#: ../../reference/binary_serialization_api.rst:232
+#: ../../reference/binary_serialization_api.rst:234
+#: ../../reference/binary_serialization_api.rst:243
+#: ../../reference/binary_serialization_api.rst:245
+#: ../../reference/binary_serialization_api.rst:247
+#: ../../reference/binary_serialization_api.rst:249
+#: ../../reference/binary_serialization_api.rst:251
+#: ../../reference/binary_serialization_api.rst:253
+#: ../../reference/binary_serialization_api.rst:255
+#: ../../reference/binary_serialization_api.rst:257
+#: ../../reference/binary_serialization_api.rst:259
+#: ../../reference/binary_serialization_api.rst:268
+#: ../../reference/binary_serialization_api.rst:270
+#: ../../reference/binary_serialization_api.rst:272
+#: ../../reference/binary_serialization_api.rst:274
+#: ../../reference/binary_serialization_api.rst:276
+#: ../../reference/binary_serialization_api.rst:278
+#: ../../reference/binary_serialization_api.rst:280
+#: ../../reference/binary_serialization_api.rst:282
+#: ../../reference/binary_serialization_api.rst:284
+#: ../../reference/binary_serialization_api.rst:286
+#: ../../reference/binary_serialization_api.rst:288
+#: ../../reference/binary_serialization_api.rst:290
+#: ../../reference/binary_serialization_api.rst:299
+#: ../../reference/binary_serialization_api.rst:301
+#: ../../reference/binary_serialization_api.rst:303
+#: ../../reference/binary_serialization_api.rst:305
+#: ../../reference/binary_serialization_api.rst:469
+#: ../../reference/binary_serialization_api.rst:471
+#: ../../reference/binary_serialization_api.rst:482
+#: ../../reference/binary_serialization_api.rst:484
+#: ../../reference/binary_serialization_api.rst:486
+#: ../../reference/binary_serialization_api.rst:497
+#: ../../reference/binary_serialization_api.rst:499
+#: ../../reference/binary_serialization_api.rst:501
+#: ../../reference/binary_serialization_api.rst:503
+msgid "Float"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:114
+msgid "IEE 754 32-Bits Float"
+msgstr "符合IEE 754标准的32位浮点数"
+
+#: ../../reference/binary_serialization_api.rst:118
+msgid "4: string"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:123
+msgid "String Length (in Bytes)"
+msgstr "字符串长度(单位:字节)"
+
+#: ../../reference/binary_serialization_api.rst:125
+#: ../../reference/binary_serialization_api.rst:344
+#: ../../reference/binary_serialization_api.rst:367
+#: ../../reference/binary_serialization_api.rst:456
+msgid "X"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:125
+#: ../../reference/binary_serialization_api.rst:344
+#: ../../reference/binary_serialization_api.rst:367
+#: ../../reference/binary_serialization_api.rst:456
+msgid "Bytes"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:125
+#: ../../reference/binary_serialization_api.rst:344
+#: ../../reference/binary_serialization_api.rst:367
+#: ../../reference/binary_serialization_api.rst:456
+msgid "UTF-8 Encoded String"
+msgstr "UTF-8格式字符串"
+
+#: ../../reference/binary_serialization_api.rst:128
+#: ../../reference/binary_serialization_api.rst:327
+msgid "This field is padded to 4 bytes."
+msgstr "注意：字符串长度单元不足4字节将补齐1-3字节的0"
+
+#: ../../reference/binary_serialization_api.rst:131
+msgid "5: vector2"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:136
+#: ../../reference/binary_serialization_api.rst:147
+#: ../../reference/binary_serialization_api.rst:162
+#: ../../reference/binary_serialization_api.rst:224
+#: ../../reference/binary_serialization_api.rst:469
+#: ../../reference/binary_serialization_api.rst:482
+msgid "X Coordinate"
+msgstr "X坐标值"
+
+#: ../../reference/binary_serialization_api.rst:138
+#: ../../reference/binary_serialization_api.rst:149
+#: ../../reference/binary_serialization_api.rst:164
+#: ../../reference/binary_serialization_api.rst:226
+#: ../../reference/binary_serialization_api.rst:471
+#: ../../reference/binary_serialization_api.rst:484
+msgid "Y Coordinate"
+msgstr "Y坐标值"
+
+#: ../../reference/binary_serialization_api.rst:142
+msgid "6: rect2"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:151
+#: ../../reference/binary_serialization_api.rst:230
+msgid "X Size"
+msgstr "X长度"
+
+#: ../../reference/binary_serialization_api.rst:153
+#: ../../reference/binary_serialization_api.rst:232
+msgid "Y Size"
+msgstr "Y宽度"
+
+#: ../../reference/binary_serialization_api.rst:157
+msgid "7: vector3"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:166
+#: ../../reference/binary_serialization_api.rst:228
+#: ../../reference/binary_serialization_api.rst:486
+msgid "Z Coordinate"
+msgstr "Z坐标值"
+
+#: ../../reference/binary_serialization_api.rst:170
+msgid "8: matrix32"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:175
+#: ../../reference/binary_serialization_api.rst:243
+#: ../../reference/binary_serialization_api.rst:268
+msgid "[0][0]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:177
+#: ../../reference/binary_serialization_api.rst:245
+#: ../../reference/binary_serialization_api.rst:270
+msgid "[0][1]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:179
+#: ../../reference/binary_serialization_api.rst:249
+#: ../../reference/binary_serialization_api.rst:274
+msgid "[1][0]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:181
+#: ../../reference/binary_serialization_api.rst:251
+#: ../../reference/binary_serialization_api.rst:276
+msgid "[1][1]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:183
+#: ../../reference/binary_serialization_api.rst:255
+#: ../../reference/binary_serialization_api.rst:280
+msgid "[2][0]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:185
+#: ../../reference/binary_serialization_api.rst:257
+#: ../../reference/binary_serialization_api.rst:282
+msgid "[2][1]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:189
+msgid "9: plane"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:194
+msgid "Normal X"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:196
+msgid "Normal Y"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:198
+msgid "Normal Z"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:200
+msgid "Distance"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:204
+msgid "10: quaternion"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:209
+msgid "Imaginary X"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:211
+msgid "Imaginary Y"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:213
+msgid "Imaginary Z"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:215
+msgid "Real W"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:219
+msgid "11: aabb (rect3)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:234
+msgid "Z Size"
+msgstr "Z大小"
+
+#: ../../reference/binary_serialization_api.rst:238
+msgid "12: matrix3x3"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:247
+#: ../../reference/binary_serialization_api.rst:272
+msgid "[0][2]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:253
+#: ../../reference/binary_serialization_api.rst:278
+msgid "[1][2]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:257
+#: ../../reference/binary_serialization_api.rst:282
+msgid "32"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:259
+#: ../../reference/binary_serialization_api.rst:284
+msgid "36"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:259
+#: ../../reference/binary_serialization_api.rst:284
+msgid "[2][2]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:263
+msgid "13: transform (matrix 4x3)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:286
+msgid "40"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:286
+msgid "[3][0]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:288
+msgid "44"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:288
+msgid "[3][1]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:290
+msgid "48"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:290
+msgid "[3][2]"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:294
+msgid "14: color"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:299
+#: ../../reference/binary_serialization_api.rst:497
+msgid "Red (0..1)"
+msgstr "红色值(R) 范围(0..1)"
+
+#: ../../reference/binary_serialization_api.rst:301
+#: ../../reference/binary_serialization_api.rst:499
+msgid "Green (0..1)"
+msgstr "绿色值(G) 范围(0..1)"
+
+#: ../../reference/binary_serialization_api.rst:303
+#: ../../reference/binary_serialization_api.rst:501
+msgid "Blue (0..1)"
+msgstr "蓝色值(B) 范围(0..1)"
+
+#: ../../reference/binary_serialization_api.rst:305
+#: ../../reference/binary_serialization_api.rst:503
+msgid "Alpha (0..1)"
+msgstr "透明值(A) 范围(0..1)"
+
+#: ../../reference/binary_serialization_api.rst:309
+msgid "15: image"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:314
+msgid "Format (see FORMAT\\_\\* in \"Image\":class_image"
+msgstr "图片格式(见 FORMAT\\_\\* in \"Image\":class_image"
+
+#: ../../reference/binary_serialization_api.rst:316
+msgid "Mip-Maps (0 means no mip-maps)."
+msgstr "Mip-Maps (0代表不带mip-maps)."
+
+#: ../../reference/binary_serialization_api.rst:318
+msgid "Width (Pixels)"
+msgstr "宽度(像素)"
+
+#: ../../reference/binary_serialization_api.rst:320
+msgid "Height (Pixels)"
+msgstr "高度(像素)"
+
+#: ../../reference/binary_serialization_api.rst:322
+msgid "Data Length"
+msgstr "数据长度"
+
+#: ../../reference/binary_serialization_api.rst:324
+msgid "24..24+DataLength"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:324
+#: ../../reference/binary_serialization_api.rst:413
+msgid "Byte"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:324
+msgid "Image Data"
+msgstr "图片数据"
+
+#: ../../reference/binary_serialization_api.rst:330
+msgid "16: node path"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:335
+msgid ""
+"String Length, or New Format (val&0x80000000!=0 and "
+"NameCount=val&0x7FFFFFFF)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:339
+msgid "For old format:"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:347
+msgid "Padded to 4 bytes."
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:350
+msgid "For new format:"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:355
+msgid "Sub-Name Count"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:357
+msgid "Flags (absolute: val&1 != 0 )"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:360
+msgid "For each Name and Sub-Name"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:365
+#: ../../reference/binary_serialization_api.rst:454
+msgid "X+0"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:365
+#: ../../reference/binary_serialization_api.rst:454
+msgid "String Length"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:367
+#: ../../reference/binary_serialization_api.rst:456
+msgid "X+4"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:370
+msgid "Every name string is padded to 4 bytes."
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:373
+msgid "17: rid (unsupported)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:376
+msgid "18: object (unsupported)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:379
+msgid "19: input event"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:382
+msgid "20: dictionary"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:387
+#: ../../reference/binary_serialization_api.rst:399
+msgid "val&0x7FFFFFFF = elements, val&0x80000000 = shared (bool)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:390
+msgid ""
+"Then what follows is, for amount of \"elements\", pairs of key and "
+"value, one after the other, using this same format."
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:394
+msgid "21: array"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:402
+msgid ""
+"Then what follows is, for amount of \"elements\", values one after the "
+"other, using this same format."
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:406
+msgid "22: :ref:`class_ByteArray`"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:411
+msgid "Array Length (Bytes)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:413
+msgid "8..8+length"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:413
+msgid "Byte (0..255)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:416
+msgid "The array data is padded to 4 bytes."
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:419
+msgid "23: :ref:`class_IntArray`"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:424
+msgid "Array Length (Integers)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:426
+#: ../../reference/binary_serialization_api.rst:437
+msgid "8..8+length\\*4"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:426
+msgid "32 Bits Signed Integer"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:430
+msgid "24: :ref:`class_FloatArray`"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:435
+msgid "Array Length (Floats)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:437
+msgid "32 Bits IEE 754 Float"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:441
+msgid "25: :ref:`class_StringArray`"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:446
+msgid "Array Length (Strings)"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:449
+msgid "For each String:"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:459
+msgid "Every string is is padded to 4 bytes."
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:462
+msgid "26: :ref:`class_Vector2Array`"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:467
+#: ../../reference/binary_serialization_api.rst:480
+#: ../../reference/binary_serialization_api.rst:495
+msgid "Array Length"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:469
+msgid "8..8+length\\*8"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:471
+msgid "8..12+length\\*8"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:475
+msgid "27: :ref:`class_Vector3Array`"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:482
+msgid "8..8+length\\*12"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:484
+msgid "8..12+length\\*12"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:486
+msgid "8..16+length\\*12"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:490
+msgid "28: :ref:`class_ColorArray`"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:497
+msgid "8..8+length\\*16"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:499
+msgid "8..12+length\\*16"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:501
+msgid "8..16+length\\*16"
+msgstr ""
+
+#: ../../reference/binary_serialization_api.rst:503
+msgid "8..20+length\\*16"
+msgstr ""

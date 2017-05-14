@@ -1,0 +1,165 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/engine/project_organization.rst:4
+msgid "Project organization"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:9
+msgid ""
+"This tutorial is aimed to propose a simple workflow on how to organize "
+"projects. Since Godot allows the programmer to use the file-system as he "
+"or she pleases, figuring out a way to organize the projects when starting"
+" to use the engine can be a little challenging. Because of this, a simple"
+" workflow will be described, which can be used or not, but should work as"
+" a starting point."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:16
+msgid ""
+"Additionally, using version control can be challenging so this "
+"proposition will include that too."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:20
+msgid "Organization"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:22
+msgid ""
+"Other game engines often work by having an asset database, were you can "
+"browse images, models, sounds, etc. Godot is more scene-based in nature "
+"so most of the time the assets are bundled inside the scenes or just "
+"exist as files but are referenced from scenes."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:28
+msgid "Importing & game folder"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:30
+msgid ""
+"It is very often necessary to use asset importing in Godot. As the source"
+" assets for importing are also recognized as resources by the engine, "
+"this can become a problem if both are inside the project folder, because "
+"at the time of export the exporter will recognize them and export both."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:36
+msgid ""
+"To solve this, it is a good practice to have your game folder inside "
+"another folder (the actual project folder). This allows to have the game "
+"assets separated from the source assets, and also allows to use version "
+"control (such as svn or git) for both. Here is an example:"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:49
+msgid "Then also, the game itself is, in this case, inside a game/ folder:"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:61
+msgid "Following this layout, many things can be done:"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:63
+msgid "The whole project is still inside a folder (myproject/)."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:64
+msgid ""
+"Exporting the project will not export the .wav and .png files which were "
+"imported."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:66
+msgid ""
+"myproject/ can be put directly inside a VCS (like svn or git) for version"
+" control, both game and source assets are kept track of."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:68
+msgid ""
+"If a team is working on the project, assets can be re-imported by other "
+"project members, because Godot keeps track of source assets using "
+"relative paths."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:73
+msgid "Scene organization"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:75
+msgid ""
+"Inside the game folder, a question that often arises is how to organize "
+"the scenes in the filesystem. Many developers try asset-type based "
+"organization and end up having a mess after a while, so the best answer "
+"is probably to organize them based on how the game works and not based on"
+" asset type. Here are some examples."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:81
+msgid ""
+"If you were organizing your project based on asset type, it would look "
+"like this:"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:95
+msgid ""
+"Which is generally a bad idea. When a project starts growing beyond a "
+"certain point, this becomes unmanageable. It's really difficult to tell "
+"what belongs to what."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:99
+msgid ""
+"It's generally a better idea to use game-context based organization, "
+"something like this:"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:119
+msgid ""
+"This model or similar models allows projects to grow to really large "
+"sizes and still be completely manageable. Notice that everything is based"
+" on parts of the game that can be named or described, like the settings "
+"screen or the valley. Since everything in Godot is done with scenes, and "
+"everything that can be named or described can be a scene, this workflow "
+"is very smooth and easygoing."
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:127
+msgid "Cache files"
+msgstr ""
+
+#: ../../tutorials/engine/project_organization.rst:129
+msgid ""
+"Godot uses a hidden file called \".fscache\" at the root of the project. "
+"On it, it caches project files and is used to quickly know when one is "
+"modified. Make sure to **not commit this file** to git or svn, as it "
+"contains local information and might confuse another editor instance in "
+"another computer."
+msgstr ""
+

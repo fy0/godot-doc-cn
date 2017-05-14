@@ -1,0 +1,953 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2014-2016, Juan Linietsky, Ariel Manzur and the Godot
+# community (CC BY 3.0)
+# This file is distributed under the same license as the Godot Engine
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Godot Engine latest\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-08-22 23:27+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: zh\n"
+"Language-Team: GoDogeCN\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.3.4\n"
+
+#: ../../tutorials/vector_math.rst:4
+msgid "Vector math"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:7
+msgid "Introduction"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:9
+msgid ""
+"This small tutorial aims to be a short and practical introduction to "
+"vector math, useful for 3D but also 2D games. Again, vector math is not "
+"only useful for 3D but *also* 2D games. It is an amazing tool once you "
+"get the grasp of it and makes programming of complex behaviors much "
+"simpler."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:15
+msgid ""
+"It often happens that young programmers rely too much on the *incorrect* "
+"math for solving a wide array of problems, for example using only "
+"trigonometry instead of vector of math for 2D games."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:19
+msgid ""
+"This tutorial will focus on practical usage, with immediate application "
+"to the art of game programming."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:23
+msgid "Coordinate systems (2D)"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:25
+msgid ""
+"Typically, we define coordinates as an (x,y) pair, x representing the "
+"horizontal offset and y the vertical one. This makes sense given the "
+"screen is just a rectangle in two dimensions. As an example, here is a "
+"position in 2D space:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:32
+msgid ""
+"A position can be anywhere in space. The position (0,0) has a name, it's "
+"called the **origin**. Remember this term well because it has more "
+"implicit uses later. The (0,0) of a n-dimensions coordinate system is the"
+" **origin**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:37
+msgid ""
+"In vector math, coordinates have two different uses, both equally "
+"important. They are used to represent a *position* but also a *vector*. "
+"The same position as before, when imagined as a vector, has a different "
+"meaning."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:44
+msgid ""
+"When imagined as a vector, two properties can be inferred, the "
+"**direction** and the **magnitude**. Every position in space can be a "
+"vector, with the exception of the **origin**. This is because coordinates"
+" (0,0) can't represent direction (magnitude 0)."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:52
+msgid "Direction"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:54
+msgid ""
+"Direction is simply towards where the vector points to. Imagine an arrow "
+"that starts at the **origin** and goes towards a [STRIKEOUT:position]. "
+"The tip of the arrow is in the position, so it always points outwards, "
+"away from the origin. Imagining vectors as arrows helps a lot."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:62
+msgid "Magnitude"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:64
+msgid ""
+"Finally, the length of the vector is the distance from the origin to the "
+"position. Obtaining the length from a vector is easy, just use the "
+"`Pythagorean Theorem "
+"<http://en.wikipedia.org/wiki/Pythagorean_theorem>`__."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:74
+msgid "But... angles?"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:76
+msgid ""
+"But why not using an *angle*? After all, we could also think of a vector "
+"as an angle and a magnitude, instead of a direction and a magnitude. "
+"Angles also are a more familiar concept."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:80
+msgid ""
+"To say truth, angles are not that useful in vector math, and most of the "
+"time they are not dealt with directly. Maybe they work in 2D, but in 3D a"
+" lot of what can usually be done with angles does not work anymore."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:84
+msgid ""
+"Still, using angles is still not an excuse, even for 2D. Most of what "
+"takes a lot of work with angles in 2D, is still much more natural easier "
+"to accomplish with vector math. In vector math, angles are useful only as"
+" measure, but take little part in the math. So, give up the trigonometry "
+"already, prepare to embrace vectors!"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:90
+msgid ""
+"In any case, obtaining an angle from a vector is easy and can be "
+"accomplished with trig... er, what was that? I mean, the :ref:`atan2() "
+"<class_@GDScript_atan2>` function."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:95
+msgid "Vectors in Godot"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:97
+msgid ""
+"To make examples easier, it is worth explaining how vectors are "
+"implemented in GDScript. GDscript has both :ref:`Vector2 <class_Vector2>`"
+" and :ref:`Vector3 <class_Vector3>`, for 2D and 3D math respectively. "
+"Godot uses Vector classes as both position and direction. They also "
+"contain x and y (for 2D) and x, y and z (for 3D) member variables."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:113
+msgid ""
+"When operating with vectors, it is not necessary to operate on the "
+"members directly (in fact this is much slower). Vectors support regular "
+"arithmetic operations:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:123
+msgid "It is the same as doing:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:131
+msgid "Except the former is way more efficient and readable."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:133
+msgid ""
+"Regular arithmetic operations such as addition, subtraction, "
+"multiplication and division are supported."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:136
+msgid ""
+"Vector multiplication and division can also be mixed with single-digit "
+"numbers, also named **scalars**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:145
+msgid "Which is the same as doing"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:153
+msgid "Except, again, the former is way more efficient and readable."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:156
+msgid "Perpendicular vectors"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:158
+msgid ""
+"Rotating a 2D vector 90° degrees to either side, left or right, is really"
+" easy, just swap x and y, then negate either x or y (direction of "
+"rotation depends on which is negated)."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:164
+msgid "Example:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:174
+msgid ""
+"This is a handy trick that is often of use. It is impossible to do with "
+"3D vectors, because there are an infinite amount of perpendicular "
+"vectors."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:179
+msgid "Unit vectors"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:181
+msgid ""
+"Ok, so we know what a vector is. It has a **direction** and a "
+"**magnitude**. We also know how to use them in Godot. The next step is "
+"learning about **unit vectors**. Any vector with **magnitude** of length "
+"1 is considered a **unit vector**. In 2D, imagine drawing a circle of "
+"radius one. That circle contains all unit vectors in existence for 2 "
+"dimensions:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:190
+msgid ""
+"So, what is so special about unit vectors? Unit vectors are amazing. In "
+"other words, unit vectors have **several, very useful properties**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:193
+msgid ""
+"Can't wait to know more about the fantastic properties of unit vectors, "
+"but one step at a time. So, how is a unit vector created from a regular "
+"vector?"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:198
+msgid "Normalization"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:200
+msgid ""
+"Taking any vector and reducing it's **magnitude** to 1.0 while keeping "
+"it's **direction** is called **normalization**. Normalization is "
+"performed by dividing the x and y (and z in 3D) components of a vector by"
+" it's magnitude:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:212
+msgid ""
+"As you might have guessed, if the vector has magnitude 0 (meaning, it's "
+"not a vector but the **origin** also called *null vector*), a division by"
+" zero occurs and the universe goes through a second big bang, except in "
+"reverse polarity and then back. As a result, humanity is safe but Godot "
+"will print an error. Remember! Vector(0,0) can't be normalized!."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:218
+msgid "Of course, Vector2 and Vector3 already provide a method to do this:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:225
+msgid "Dot product"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:227
+msgid ""
+"OK, the **dot product** is the most important part of vector math. "
+"Without the dot product, Quake would have never been made. This is the "
+"most important section of the tutorial, so make sure to grasp it "
+"properly. Most people trying to understand vector math give up here "
+"because, despite how simple it is, they can't make head or tails from it."
+" Why? Here's why, it's because..."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:234
+msgid "The dot product takes two vectors and returns a **scalar**:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:240
+msgid ""
+"Yes, pretty much that. Multiply **x** from vector **a** by **x** from "
+"vector **b**. Do the same with y and add it together. In 3D it's pretty "
+"much the same:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:248
+msgid ""
+"I know, it's totally meaningless! You can even do it with a built-in "
+"function:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:255
+msgid ""
+"The order of two vectors does *not* matter, ``a.dot(b)`` returns the same"
+" value as ``b.dot(a)``."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:258
+msgid ""
+"This is where despair begins and books and tutorials show you this "
+"formula:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:263
+msgid ""
+"And you realize it's time to give up making 3D games or complex 2D games."
+" How can something so simple be so complex? Someone else will have to "
+"make the next Zelda or Call of Duty. Top down RPGs don't look so bad "
+"after all. Yeah I hear someone did pretty will with one of those on "
+"Steam..."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:269
+msgid ""
+"So this is your moment, this is your time to shine. **DO NOT GIVE UP**! "
+"At this point, this tutorial will take a sharp turn and focus on what "
+"makes the dot product useful. This is, **why** it is useful. We will "
+"focus one by one in the use cases for the dot product, with real-life "
+"applications. No more formulas that don't make any sense. Formulas will "
+"make sense *once you learn* what they are useful for."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:277
+msgid "Siding"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:279
+msgid ""
+"The first useful and most important property of the dot product is to "
+"check what side stuff is looking at. Let's imagine we have any two "
+"vectors, **a** and **b**. Any **direction** or **magnitude** (neither "
+"**origin**). Does not matter what they are, but let's imagine we compute "
+"the dot product between them."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:289
+msgid ""
+"The operation will return a single floating point number (but since we "
+"are in vector world, we call them **scalar**, will keep using that term "
+"from now on). This number will tell us the following:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:293
+msgid ""
+"If the number is greater than zero, both are looking towards the same "
+"direction (the angle between them is < 90° degrees)."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:295
+msgid ""
+"If the number is less than zero, both are looking towards opposite "
+"direction (the angle between them is > 90° degrees)."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:297
+msgid ""
+"If the number is zero, vectors are shaped in L (the angle between them "
+"*is* 90° degrees)."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:302
+msgid ""
+"So let's think of a real use-case scenario. Imagine Snake is going "
+"through a forest, and then there is an enemy nearby. How can we quickly "
+"tell if the enemy has seen discovered Snake? In order to discover him, "
+"the enemy must be able to *see* Snake. Let's say, then that:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:307
+msgid "Snake is in position **A**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:308
+msgid "The enemy is in position **B**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:309
+msgid "The enemy is *facing* towards direction vector **F**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:313
+msgid ""
+"So, let's create a new vector **BA** that goes from the guard (**B**) to "
+"Snake (**A**), by subtracting the two:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:322
+msgid ""
+"Ideally, if the guard was looking straight towards snake, to make eye to "
+"eye contact, it would do it in the same direction as vector BA."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:325
+msgid ""
+"If the dot product between **F** and **BA** is greater than 0, then Snake"
+" will be discovered. This happens because we will be able to tell that "
+"the guard is facing towards him:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:334
+msgid "Seems Snake is safe so far."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:337
+msgid "Siding with unit vectors"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:339
+msgid ""
+"Ok, so now we know that dot product between two vectors will let us know "
+"if they are looking towards the same side, opposite sides or are just "
+"perpendicular to each other."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:343
+msgid ""
+"This works the same with all vectors, no matter the magnitude so **unit "
+"vectors** are not the exception. However, using the same property with "
+"unit vectors yields an even more interesting result, as an extra property"
+" is added:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:348
+msgid ""
+"If both vectors are facing towards the exact same direction (parallel to "
+"each other, angle between them is 0°), the resulting scalar is **1**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:351
+msgid ""
+"If both vectors are facing towards the exact opposite direction (parallel"
+" to each other, but angle between them is 180°), the resulting scalar is "
+"**-1**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:355
+msgid ""
+"This means that dot product between unit vectors is always between the "
+"range of 1 and -1. So Again..."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:358
+msgid "If their angle is **0°** dot product is **1**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:359
+msgid "If their angle is **90°**, then dot product is **0**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:360
+msgid "If their angle is **180°**, then dot product is **-1**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:362
+msgid "Uh.. this is oddly familiar... seen this before... where?"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:364
+msgid ""
+"Let's take two unit vectors. The first one is pointing up, the second too"
+" but we will rotate it all the way from up (0°) to down (180° degrees)..."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:370
+msgid "While plotting the resulting scalar!"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:374
+msgid ""
+"Aha! It all makes sense now, this is a `Cosine "
+"<http://mathworld.wolfram.com/Cosine.html>`__ function!"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:377
+msgid "We can say that, then, as a rule..."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:379
+msgid ""
+"The **dot product** between two **unit vectors** is the **cosine** of the"
+" **angle** between those two vectors. So, to obtain the angle between two"
+" vectors, we must do:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:387
+msgid ""
+"What is this useful for? Well obtaining the angle directly is probably "
+"not as useful, but just being able to tell the angle is useful for "
+"reference. One example is in the `Kinematic Character "
+"<https://github.com/godotengine/godot/blob/master/demos/2d/kinematic_char/player.gd#L879>`__"
+" demo, when the character moves in a certain direction then we hit an "
+"object. How to tell if what we hit is the floor?"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:394
+msgid ""
+"By comparing the normal of the collision point with a previously computed"
+" angle."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:397
+msgid ""
+"The beauty of this is that the same code works exactly the same and "
+"without modification in `3D "
+"<https://github.com/godotengine/godot/blob/master/demos/3d/kinematic_char/cubio.gd#L57>`__."
+" Vector math is, in a great deal, dimension-amount-independent, so adding"
+" or removing an axis only adds very little complexity."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:404
+msgid "Planes"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:406
+msgid ""
+"The dot product has another interesting property with unit vectors. "
+"Imagine that perpendicular to that vector (and through the origin) passes"
+" a plane. Planes divide the entire space into positive (over the plane) "
+"and negative (under the plane), and (contrary to popular belief) you can "
+"also use their math in 2D:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:414
+msgid ""
+"Unit vectors that are perpendicular to a surface (so, they describe the "
+"orientation of the surface) are called **unit normal vectors**. Though, "
+"usually they are just abbreviated as \\*normals. Normals appear in "
+"planes, 3D geometry (to determine where each face or vertex is siding), "
+"etc. A **normal** *is* a **unit vector**, but it's called *normal* "
+"because of it's usage. (Just like we call Origin to (0,0)!)."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:421
+msgid ""
+"It's as simple as it looks. The plane passes by the origin and the "
+"surface of it is perpendicular to the unit vector (or *normal*). The side"
+" towards the vector points to is the positive half-space, while the other"
+" side is the negative half-space. In 3D this is exactly the same, except "
+"that the plane is an infinite surface (imagine an infinite, flat sheet of"
+" paper that you can orient and is pinned to the origin) instead of a "
+"line."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:430
+msgid "Distance to plane"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:432
+msgid ""
+"Now that it's clear what a plane is, let's go back to the dot product. "
+"The dot product between a **unit vector** and any **point in space** "
+"(yes, this time we do dot product between vector and position), returns "
+"the **distance from the point to the plane**:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:441
+msgid ""
+"But not just the absolute distance, if the point is in the negative half "
+"space the distance will be negative, too:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:446
+msgid "This allows us to tell which side of the plane a point is."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:449
+msgid "Away from the origin"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:451
+msgid ""
+"I know what you are thinking! So far this is nice, but *real* planes are "
+"everywhere in space, not only passing through the origin. You want real "
+"*plane* action and you want it *now*."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:455
+msgid ""
+"Remember that planes not only split space in two, but they also have "
+"*polarity*. This means that it is possible to have perfectly overlapping "
+"planes, but their negative and positive half-spaces are swapped."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:459
+msgid ""
+"With this in mind, let's describe a full plane as a **normal** *N* and a "
+"**distance from the origin** scalar *D*. Thus, our plane is represented "
+"by N and D. For example:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:465
+msgid ""
+"For 3D math, Godot provides a :ref:`Plane <class_Plane>` built-in type "
+"that handles this."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:468
+msgid ""
+"Basically, N and D can represent any plane in space, be it for 2D or 3D "
+"(depending on the amount of dimensions of N) and the math is the same for"
+" both. It's the same as before, but D is the distance from the origin to "
+"the plane, travelling in N direction. As an example, imagine you want to "
+"reach a point in the plane, you will just do:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:478
+msgid ""
+"This will stretch (resize) the normal vector and make it touch the plane."
+" This math might seem confusing, but it's actually much simpler than it "
+"seems. If we want to tell, again, the distance from the point to the "
+"plane, we do the same but adjusting for distance:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:487
+msgid "The same thing, using a built-in function:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:493
+msgid "This will, again, return either a positive or negative distance."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:495
+msgid ""
+"Flipping the polarity of the plane is also very simple, just negate both "
+"N and D. This will result in a plane in the same position, but with "
+"inverted negative and positive half spaces:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:504
+msgid ""
+"Of course, Godot also implements this operator in :ref:`Plane "
+"<class_Plane>`, so doing:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:511
+msgid "Will work as expected."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:513
+msgid ""
+"So, remember, a plane is just that and it's main practical use is "
+"calculating the distance to it. So, why is it useful to calculate the "
+"distance from a point to a plane? It's extremely useful! Let's see some "
+"simple examples.."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:519
+msgid "Constructing a plane in 2D"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:521
+msgid ""
+"Planes clearly don't come out of nowhere, so they must be built. "
+"Constructing them in 2D is easy, this can be done from either a normal "
+"(unit vector) and a point, or from two points in space."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:525
+msgid ""
+"In the case of a normal and a point, most of the work is done, as the "
+"normal is already computed, so just calculate D from the dot product of "
+"the normal and the point."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:534
+msgid ""
+"For two points in space, there are actually two planes that pass through "
+"them, sharing the same space but with normal pointing to the opposite "
+"directions. To compute the normal from the two points, the direction "
+"vector must be obtained first, and then it needs to be rotated 90° "
+"degrees to either side:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:550
+msgid ""
+"The rest is the same as the previous example, either point_a or point_b "
+"will work since they are in the same plane:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:560
+msgid ""
+"Doing the same in 3D is a little more complex and will be explained "
+"further down."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:564
+msgid "Some examples of planes"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:566
+msgid ""
+"Here is a simple example of what planes are useful for. Imagine you have "
+"a `convex <http://www.mathsisfun.com/definitions/convex.html>`__ polygon."
+" For example, a rectangle, a trapezoid, a triangle, or just any polygon "
+"where faces that don't bend inwards."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:571
+msgid ""
+"For every segment of the polygon, we compute the plane that passes by "
+"that segment. Once we have the list of planes, we can do neat things, for"
+" example checking if a point is inside the polygon."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:575
+msgid ""
+"We go through all planes, if we can find a plane where the distance to "
+"the point is positive, then the point is outside the polygon. If we "
+"can't, then the point is inside."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:581 ../../tutorials/vector_math.rst:606
+msgid "Code should be something like this:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:592
+msgid ""
+"Pretty cool, huh? But this gets much better! With a little more effort, "
+"similar logic will let us know when two convex polygons are overlapping "
+"too. This is called the Separating Axis Theorem (or SAT) and most physics"
+" engines use this to detect collision."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:597
+msgid ""
+"The idea is really simple! With a point, just checking if a plane returns"
+" a positive distance is enough to tell if the point is outside. With "
+"another polygon, we must find a plane where *all the **other** polygon "
+"points* return a positive distance to it. This check is performed with "
+"the planes of A against the points of B, and then with the planes of B "
+"against the points of A:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:642
+msgid ""
+"As you can see, planes are quite useful, and this is the tip of the "
+"iceberg. You might be wondering what happens with non convex polygons. "
+"This is usually just handled by splitting the concave polygon into "
+"smaller convex polygons, or using a technique such as BSP (which is not "
+"used much nowadays)."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:649
+msgid "Cross product"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:651
+msgid ""
+"Quite a lot can be done with the dot product! But the party would not be "
+"complete without the cross product. Remember back at the beginning of "
+"this tutorial? Specifically how to obtain a perpendicular (rotated 90 "
+"degrees) vector by swapping x and y, then negating either of them for "
+"right (clockwise) or left (counter-clockwise) rotation? That ended up "
+"being useful for calculating a 2D plane normal from two points."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:658
+msgid ""
+"As mentioned before, no such thing exists in 3D because a 3D vector has "
+"infinite perpendicular vectors. It would also not make sense to obtain a "
+"3D plane from 2 points, as 3 points are needed instead."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:662
+msgid ""
+"To aid in this kind stuff, the brightest minds of humanity's top "
+"mathematicians brought us the **cross product**."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:665
+msgid ""
+"The cross product takes two vectors and returns another vector. The "
+"returned third vector is always perpendicular to the first two. The "
+"source vectors, of course, must not be the same, and must not be parallel"
+" or opposite, else the resulting vector will be (0,0,0):"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:672
+msgid "The formula for the cross product is:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:681
+msgid "This can be simplified, in Godot, to:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:687
+msgid ""
+"However, unlike the dot product, doing ``a.cross(b)`` and ``b.cross(a)`` "
+"will yield different results. Specifically, the returned vector will be "
+"negated in the second case. As you might have realized, this coincides "
+"with creating perpendicular vectors in 2D. In 3D, there are also two "
+"possible perpendicular vectors to a pair of 2D vectors."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:693
+msgid ""
+"Also, the resulting cross product of two unit vectors is *not* a unit "
+"vector. Result will need to be renormalized."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:697
+msgid "Area of a triangle"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:699
+msgid ""
+"Cross product can be used to obtain the surface area of a triangle in 3D."
+" Given a triangle consisting of 3 points, **A**, **B** and **C**:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:704
+msgid ""
+"Take any of them as a pivot and compute the adjacent vectors to the other"
+" two points. As example, we will use B as a pivot:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:714
+msgid ""
+"Compute the cross product between **BA** and **BC** to obtain the "
+"perpendicular vector **P**:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:723
+msgid ""
+"The length (magnitude) of **P** is the surface area of the parallelogram "
+"built by the two vectors **BA** and **BC**, therefore the surface area of"
+" the triangle is half of it."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:732
+msgid "Plane of the triangle"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:734
+msgid ""
+"With **P** computed from the previous step, normalize it to get the "
+"normal of the plane."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:741
+msgid ""
+"And obtain the distance by doing the dot product of P with any of the 3 "
+"points of the **ABC** triangle:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:748
+msgid "Fantastic! You computed the plane from a triangle!"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:750
+msgid ""
+"Here's some useful info (that you can find in Godot source code anyway). "
+"Computing a plane from a triangle can result in 2 planes, so a sort of "
+"convention needs to be set. This usually depends (in video games and 3D "
+"visualization) to use the front-facing side of the triangle."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:755
+msgid ""
+"In Godot, front-facing triangles are those that, when looking at the "
+"camera, are in clockwise order. Triangles that look Counter-clockwise "
+"when looking at the camera are not drawn (this helps to draw less, so the"
+" back-part of the objects is not drawn)."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:760
+msgid ""
+"To make it a little clearer, in the image below, the triangle **ABC** "
+"appears clock-wise when looked at from the *Front Camera*, but to the "
+"*Rear Camera* it appears counter-clockwise so it will not be drawn."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:766
+msgid ""
+"Normals of triangles often are sided towards the direction they can be "
+"viewed from, so in this case, the normal of triangle ABC would point "
+"towards the front camera:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:772
+msgid "So, to obtain N, the correct formula is:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:783
+msgid "Collision detection in 3D"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:785
+msgid ""
+"This is another bonus bit, a reward for being patient and keeping up with"
+" this long tutorial. Here is another piece of wisdom. This might not be "
+"something with a direct use case (Godot already does collision detection "
+"pretty well) but It's a really cool algorithm to understand anyway, "
+"because it's used by almost all physics engines and collision detection "
+"libraries :)"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:792
+msgid ""
+"Remember that converting a convex shape in 2D to an array of 2D planes "
+"was useful for collision detection? You could detect if a point was "
+"inside any convex shape, or if two 2D convex shapes were overlapping."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:796
+msgid ""
+"Well, this works in 3D too, if two 3D polyhedral shapes are colliding, "
+"you won't be able to find a separating plane. If a separating plane is "
+"found, then the shapes are definitely not colliding."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:800
+msgid ""
+"To refresh a bit a separating plane means that all vertices of polygon A "
+"are in one side of the plane, and all vertices of polygon B are in the "
+"other side. This plane is always one of the face-planes of either polygon"
+" A or polygon B."
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:805
+msgid ""
+"In 3D though, there is a problem to this approach, because it is possible"
+" that, in some cases a separating plane can't be found. This is an "
+"example of such situation:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:811
+msgid ""
+"To avoid it, some extra planes need to be tested as separators, these "
+"planes are the cross product between the edges of polygon A and the edges"
+" of polygon B"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:817
+msgid "So the final algorithm is something like:"
+msgstr ""
+
+#: ../../tutorials/vector_math.rst:893
+msgid ""
+"This was all! Hope it was helpful, and please give feedback and let know "
+"if something in this tutorial is not clear! You should be now ready for "
+"the next challenge... :ref:`doc_matrices_and_transforms`!"
+msgstr ""
+
