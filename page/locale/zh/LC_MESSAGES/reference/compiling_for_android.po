@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: 2017-05-14 10:41+0800\n"
+"PO-Revision-Date: 2017-05-14 10:46+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -75,11 +75,11 @@ msgstr ""
 
 #: ../../reference/compiling_for_android.rst:29
 msgid "Android NDK r10e or later"
-msgstr ""
+msgstr "Android NDK r10e 或更高"
 
 #: ../../reference/compiling_for_android.rst:30
 msgid "Gradle (will be downloaded and installed automatically if missing)"
-msgstr ""
+msgstr "Gradle （如果已丢失则将会自动下载安装）"
 
 #: ../../reference/compiling_for_android.rst:31
 msgid ""
@@ -88,7 +88,7 @@ msgstr ""
 
 #: ../../reference/compiling_for_android.rst:34
 msgid "Setting up the buildsystem"
-msgstr ""
+msgstr "建立生成系统"
 
 #: ../../reference/compiling_for_android.rst:36
 msgid "Set the environment variable ANDROID_HOME to point to the Android SDK."
@@ -115,7 +115,7 @@ msgstr ""
 
 #: ../../reference/compiling_for_android.rst:54
 msgid "Toolchain"
-msgstr ""
+msgstr "工具链"
 
 #: ../../reference/compiling_for_android.rst:56
 msgid ""
@@ -169,7 +169,7 @@ msgstr ""
 
 #: ../../reference/compiling_for_android.rst:112
 msgid "Faster compilation"
-msgstr ""
+msgstr "快速编译"
 
 #: ../../reference/compiling_for_android.rst:114
 msgid ""
@@ -199,7 +199,7 @@ msgstr ""
 #: ../../reference/compiling_for_android.rst:139
 #: ../../reference/compiling_for_android.rst:182
 msgid "Troubleshooting"
-msgstr ""
+msgstr "故障排除"
 
 #: ../../reference/compiling_for_android.rst:141
 msgid ""
@@ -210,7 +210,7 @@ msgstr ""
 
 #: ../../reference/compiling_for_android.rst:146
 msgid "Using the export templates"
-msgstr ""
+msgstr "使用导出模板"
 
 #: ../../reference/compiling_for_android.rst:148
 msgid ""
@@ -229,7 +229,7 @@ msgstr ""
 
 #: ../../reference/compiling_for_android.rst:158
 msgid "Installing the templates"
-msgstr ""
+msgstr "安装模板"
 
 #: ../../reference/compiling_for_android.rst:160
 msgid ""
@@ -297,7 +297,7 @@ msgstr ""
 
 #: ../../reference/compiling_for_android.rst:205
 msgid "Application exits immediately"
-msgstr ""
+msgstr "应用程序立刻退出"
 
 #: ../../reference/compiling_for_android.rst:207
 msgid ""
