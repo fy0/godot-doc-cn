@@ -1,2 +1,2 @@
-exec ./build_classes.sh
-exec ./build_page.sh
+./build_classes.sh
+./build_page.sh
