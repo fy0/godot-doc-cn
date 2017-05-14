@@ -5,25 +5,25 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-14 11:34+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/3d/lighting.rst:4
 msgid "Lighting"
-msgstr ""
+msgstr "照明"
 
 #: ../../tutorials/3d/lighting.rst:7
 msgid "Introduction"
@@ -66,8 +66,9 @@ msgstr ""
 #: ../../tutorials/3d/lighting.rst:25
 msgid ""
 "As mentioned before, there are three types of light nodes: Directional, "
-"Ambient and Spot. Each has different uses and will be described in detail"
-" below, but first let's take a look at the common parameters for lights:"
+"Ambient and Spot. Each has different uses and will be described in "
+"detail below, but first let's take a look at the common parameters for "
+"lights:"
 msgstr ""
 
 #: ../../tutorials/3d/lighting.rst:32
@@ -102,8 +103,8 @@ msgstr ""
 
 #: ../../tutorials/3d/lighting.rst:45
 msgid ""
-"**Operator**: It is possible to make some lights negative for a darkening"
-" effect."
+"**Operator**: It is possible to make some lights negative for a "
+"darkening effect."
 msgstr ""
 
 #: ../../tutorials/3d/lighting.rst:47
@@ -147,9 +148,9 @@ msgstr ""
 
 #: ../../tutorials/3d/lighting.rst:76
 msgid ""
-"The attenuation curve for these kind of lights in nature is computed with"
-" an inverse-quadratic function that never reaches zero and has almost "
-"infinitely large values near the emissor."
+"The attenuation curve for these kind of lights in nature is computed "
+"with an inverse-quadratic function that never reaches zero and has "
+"almost infinitely large values near the emissor."
 msgstr ""
 
 #: ../../tutorials/3d/lighting.rst:80
@@ -178,8 +179,8 @@ msgstr ""
 msgid ""
 "Ambient light can be found in the properties of a WorldEnvironment "
 "(remember only one of such can be instanced per scene). Ambient light "
-"consists of a uniform light and energy. This light is applied the same to"
-" every single pixel of the rendered scene, except to objects that used "
+"consists of a uniform light and energy. This light is applied the same "
+"to every single pixel of the rendered scene, except to objects that used "
 "baked light."
 msgstr ""
 
@@ -194,4 +195,3 @@ msgid ""
 "real-time, and baking light bounces from real-time lights to add more "
 "realism to a scene (see Baked Light]] tutorial for more information)."
 msgstr ""
-

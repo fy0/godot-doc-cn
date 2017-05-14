@@ -5,29 +5,29 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-14 17:59+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/vector_math.rst:4
 msgid "Vector math"
-msgstr ""
+msgstr "向量数学"
 
 #: ../../tutorials/vector_math.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "简介"
 
 #: ../../tutorials/vector_math.rst:9
 msgid ""
@@ -37,6 +37,9 @@ msgid ""
 "get the grasp of it and makes programming of complex behaviors much "
 "simpler."
 msgstr ""
+"这个小教程旨在为向量数学做一个简短实用的介绍，对3D和2D游戏都是很有用的。"
+"再重申一次，向量数学对3D*和*2D游戏都是很有用处的。一旦你掌握了它，它就会"
+"成为一个十分不错的工具，而且会使得复杂行为的编写变得更加简单。"
 
 #: ../../tutorials/vector_math.rst:15
 msgid ""
@@ -53,7 +56,7 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:23
 msgid "Coordinate systems (2D)"
-msgstr ""
+msgstr "坐标系(2D)"
 
 #: ../../tutorials/vector_math.rst:25
 msgid ""
@@ -62,14 +65,20 @@ msgid ""
 "screen is just a rectangle in two dimensions. As an example, here is a "
 "position in 2D space:"
 msgstr ""
+"通常，我们将坐标定义为一个(x,y)有序数对，x代表横向偏移量而y代表纵向的。这"
+"是有意义的因为屏幕就是一个具有两个维度的矩形而已。比如，在2D空间中有个位"
+"置："
 
 #: ../../tutorials/vector_math.rst:32
 msgid ""
 "A position can be anywhere in space. The position (0,0) has a name, it's "
 "called the **origin**. Remember this term well because it has more "
-"implicit uses later. The (0,0) of a n-dimensions coordinate system is the"
-" **origin**."
+"implicit uses later. The (0,0) of a n-dimensions coordinate system is "
+"the **origin**."
 msgstr ""
+"位置(Position)可以是空间中的任意地方。(0,0)位置有个名字，叫做**原点"
+"(Origin)**。请牢记这一点，因为后续它会有很多隐晦的用法。在一个n维坐标系中"
+"(0,0)是**原点**。"
 
 #: ../../tutorials/vector_math.rst:37
 msgid ""
@@ -78,18 +87,24 @@ msgid ""
 "The same position as before, when imagined as a vector, has a different "
 "meaning."
 msgstr ""
+"在向量数学中，坐标有两种不同的用途，都同等地重要。它们可以被用于代表一个*"
+"位置*，也可以表示一个*向量*。表示位置就和上文所描述的一样，而当被视为向量"
+"的时候，意义就发生变化了。"
 
 #: ../../tutorials/vector_math.rst:44
 msgid ""
 "When imagined as a vector, two properties can be inferred, the "
 "**direction** and the **magnitude**. Every position in space can be a "
-"vector, with the exception of the **origin**. This is because coordinates"
-" (0,0) can't represent direction (magnitude 0)."
+"vector, with the exception of the **origin**. This is because "
+"coordinates (0,0) can't represent direction (magnitude 0)."
 msgstr ""
+"当被视为向量时，我们可以推断出两个属性，**方向(Direction)**和**模(模长，"
+"Magnitude)**。空间中每一个位置都可以成为一个向量，除了**原点**。因为(0,0)"
+"坐标不能够表示方向（模长为0）。"
 
 #: ../../tutorials/vector_math.rst:52
 msgid "Direction"
-msgstr ""
+msgstr "方向"
 
 #: ../../tutorials/vector_math.rst:54
 msgid ""
@@ -98,22 +113,30 @@ msgid ""
 "The tip of the arrow is in the position, so it always points outwards, "
 "away from the origin. Imagining vectors as arrows helps a lot."
 msgstr ""
+"方向就是向量所指向的方向。试想一个箭头从**原点**出发，行进到一个"
+"[STRIKEOUT:位置]。箭头的顶端就落在这个位置上，因此它总是从原点向外指的。"
+"将向量假想成箭头是很有帮助的。"
 
 #: ../../tutorials/vector_math.rst:62
 msgid "Magnitude"
-msgstr ""
+msgstr "模长"
 
 #: ../../tutorials/vector_math.rst:64
 msgid ""
 "Finally, the length of the vector is the distance from the origin to the "
 "position. Obtaining the length from a vector is easy, just use the "
-"`Pythagorean Theorem "
-"<http://en.wikipedia.org/wiki/Pythagorean_theorem>`__."
+"`Pythagorean Theorem <http://en.wikipedia.org/wiki/"
+"Pythagorean_theorem>`__."
 msgstr ""
+"最后，向量的长度即是从原点到该位置的举例。获取向量的模长是相当容易的，只"
+"需要使用 `勾股定理 <http://baike.baidu.com/link?"
+"url=3qmIiqcTHY1VbLnlnLpNQLygPkmyESbWEzTtGfaFC-"
+"YYrdLjWFK25IYeVtq0qpsiq9n0OnUQ-"
+"Nw9DI_hUohLkFDtvJJPF9CwjzkUDAoCRuSo4nhZQzyS8I2sqsa6pV3i>`就可以了。"
 
 #: ../../tutorials/vector_math.rst:74
 msgid "But... angles?"
-msgstr ""
+msgstr "但是……角度呢？"
 
 #: ../../tutorials/vector_math.rst:76
 msgid ""
@@ -121,22 +144,31 @@ msgid ""
 "as an angle and a magnitude, instead of a direction and a magnitude. "
 "Angles also are a more familiar concept."
 msgstr ""
+"但为什么不用*角度*呢？毕竟，我们也可以把向量想象为一个角度和一个模长来代"
+"替方向和模长。角度也是一个更令人熟悉的概念。"
 
 #: ../../tutorials/vector_math.rst:80
 msgid ""
 "To say truth, angles are not that useful in vector math, and most of the "
-"time they are not dealt with directly. Maybe they work in 2D, but in 3D a"
-" lot of what can usually be done with angles does not work anymore."
+"time they are not dealt with directly. Maybe they work in 2D, but in 3D "
+"a lot of what can usually be done with angles does not work anymore."
 msgstr ""
+"实话说，角度在向量数学中用处不大，并且在大多数时间里它们不是被直接处理"
+"的。也许在2D里它们可以工作，但是在3D中很多本来能通过角度完成的事情却不再"
+"可行了。"
 
 #: ../../tutorials/vector_math.rst:84
 msgid ""
 "Still, using angles is still not an excuse, even for 2D. Most of what "
 "takes a lot of work with angles in 2D, is still much more natural easier "
-"to accomplish with vector math. In vector math, angles are useful only as"
-" measure, but take little part in the math. So, give up the trigonometry "
-"already, prepare to embrace vectors!"
+"to accomplish with vector math. In vector math, angles are useful only "
+"as measure, but take little part in the math. So, give up the "
+"trigonometry already, prepare to embrace vectors!"
 msgstr ""
+"就算如此，使用角度也依然不是一个借口，即使是2D。在2D中许多可以通过角度完"
+"成的事情，使用向量数学一探可以更自然容易的解决。在向量数学中，角度只用作"
+"测量，而在数学中却只是一个很小的角色。因此，快放弃三角几何学，准备扑向向"
+"量的怀抱吧！"
 
 #: ../../tutorials/vector_math.rst:90
 msgid ""
@@ -144,19 +176,27 @@ msgid ""
 "accomplished with trig... er, what was that? I mean, the :ref:`atan2() "
 "<class_@GDScript_atan2>` function."
 msgstr ""
+"在任何情况下，获得一个向量的角度是很容易的，完成这件事只需要使用三角……"
+"唉，他谁啊？我的意思是，使用 :ref:`atan2() <class_@GDScript_atan2>` 函"
+"数。"
 
 #: ../../tutorials/vector_math.rst:95
 msgid "Vectors in Godot"
-msgstr ""
+msgstr "Godot中的向量"
 
 #: ../../tutorials/vector_math.rst:97
 msgid ""
 "To make examples easier, it is worth explaining how vectors are "
-"implemented in GDScript. GDscript has both :ref:`Vector2 <class_Vector2>`"
-" and :ref:`Vector3 <class_Vector3>`, for 2D and 3D math respectively. "
-"Godot uses Vector classes as both position and direction. They also "
-"contain x and y (for 2D) and x, y and z (for 3D) member variables."
+"implemented in GDScript. GDscript has both :ref:`Vector2 "
+"<class_Vector2>` and :ref:`Vector3 <class_Vector3>`, for 2D and 3D math "
+"respectively. Godot uses Vector classes as both position and direction. "
+"They also contain x and y (for 2D) and x, y and z (for 3D) member "
+"variables."
 msgstr ""
+"为了让例子更简单，有必要解释一下GDScript当中是如何实现向量的。GDScript既"
+"有:ref:`Vector2 <class_Vector2>` 又有 :ref:`Vector3 <class_Vector3>` 类，"
+"用于对应用于2D和3D数学中。Godot将Vector类同时用作位置和向量。它们都有x和"
+"y（2D）以及x、y和z（3D）作为成员变量。"
 
 #: ../../tutorials/vector_math.rst:113
 msgid ""
@@ -164,49 +204,53 @@ msgid ""
 "members directly (in fact this is much slower). Vectors support regular "
 "arithmetic operations:"
 msgstr ""
+"当使用向量进行运算时，没必要对每一个成员直接进行运算（实际上这会很慢）。"
+"向量支持一些常规的算术运算符："
 
 #: ../../tutorials/vector_math.rst:123
 msgid "It is the same as doing:"
-msgstr ""
+msgstr "这和下面是等价的："
 
 #: ../../tutorials/vector_math.rst:131
 msgid "Except the former is way more efficient and readable."
-msgstr ""
+msgstr "只是前者更加高效可读。"
 
 #: ../../tutorials/vector_math.rst:133
 msgid ""
 "Regular arithmetic operations such as addition, subtraction, "
 "multiplication and division are supported."
-msgstr ""
+msgstr "像加、减、乘、除这种常规的四则算术运算都是支持的。"
 
 #: ../../tutorials/vector_math.rst:136
 msgid ""
 "Vector multiplication and division can also be mixed with single-digit "
 "numbers, also named **scalars**."
-msgstr ""
+msgstr "向量的乘除法必须和一个数混合进行，这个数也成为**标量**。"
 
 #: ../../tutorials/vector_math.rst:145
 msgid "Which is the same as doing"
-msgstr ""
+msgstr "和下面的做法是等价的："
 
 #: ../../tutorials/vector_math.rst:153
 msgid "Except, again, the former is way more efficient and readable."
-msgstr ""
+msgstr "还是，只是前者更加高效可读。"
 
 #: ../../tutorials/vector_math.rst:156
 msgid "Perpendicular vectors"
-msgstr ""
+msgstr "正交向量"
 
 #: ../../tutorials/vector_math.rst:158
 msgid ""
-"Rotating a 2D vector 90° degrees to either side, left or right, is really"
-" easy, just swap x and y, then negate either x or y (direction of "
+"Rotating a 2D vector 90° degrees to either side, left or right, is "
+"really easy, just swap x and y, then negate either x or y (direction of "
 "rotation depends on which is negated)."
 msgstr ""
+"将一个2D向量向左右任意一边旋转90°，很简单，就是交换x和y，然后对x或y取相反"
+"数（旋转的方向决定了哪个应该取相反数）。"
 
 #: ../../tutorials/vector_math.rst:164
 msgid "Example:"
-msgstr ""
+msgstr "举例："
 
 #: ../../tutorials/vector_math.rst:174
 msgid ""
@@ -214,10 +258,12 @@ msgid ""
 "3D vectors, because there are an infinite amount of perpendicular "
 "vectors."
 msgstr ""
+"这个实用的技巧是经常使用的。但处理3D向量的时候这是不可能的，因为一个向量"
+"有无穷多个正交向量。"
 
 #: ../../tutorials/vector_math.rst:179
 msgid "Unit vectors"
-msgstr ""
+msgstr "单位向量"
 
 #: ../../tutorials/vector_math.rst:181
 msgid ""
@@ -228,12 +274,18 @@ msgid ""
 "radius one. That circle contains all unit vectors in existence for 2 "
 "dimensions:"
 msgstr ""
+"好了，我们已经知道向量是什么了，它有一个**方向**和一个**模长**。我们还知"
+"道如何在Godot里面使用它们。下一步就来了解**单位向量(Unit Vectors)**，任何"
+"**模长**为1的向量都可以被视为**单位向量**。在2D中，试想画出一个半径为1的"
+"圆（单位圆）。该圆包含了在2D中可能存在的所有单位向量。"
 
 #: ../../tutorials/vector_math.rst:190
 msgid ""
 "So, what is so special about unit vectors? Unit vectors are amazing. In "
 "other words, unit vectors have **several, very useful properties**."
 msgstr ""
+"那么，单位向量究竟有什么特殊之处呢？单位向量非常的神器，换句话说，单位向"
+"量具有**几个非常有用的属性**。"
 
 #: ../../tutorials/vector_math.rst:193
 msgid ""
@@ -241,35 +293,44 @@ msgid ""
 "but one step at a time. So, how is a unit vector created from a regular "
 "vector?"
 msgstr ""
+"我们已经迫不及待的想知道关于单位向量的更多精妙的特性，但是我们还得一步一"
+"步来。那么，如何从一个常规的向量中创建一个单位向量呢？"
 
 #: ../../tutorials/vector_math.rst:198
 msgid "Normalization"
-msgstr ""
+msgstr "规格化"
 
 #: ../../tutorials/vector_math.rst:200
 msgid ""
 "Taking any vector and reducing it's **magnitude** to 1.0 while keeping "
 "it's **direction** is called **normalization**. Normalization is "
-"performed by dividing the x and y (and z in 3D) components of a vector by"
-" it's magnitude:"
+"performed by dividing the x and y (and z in 3D) components of a vector "
+"by it's magnitude:"
 msgstr ""
+"取任意一个向量，然后把它的**模**减少为1的同时还保持它的原有**方向**的过程"
+"就叫向量的**规格化(又称正规化，单位化，Normalization)**。向量的规格化是通"
+"过用它的x、y分量分别除以它的模长来完成的。"
 
 #: ../../tutorials/vector_math.rst:212
 msgid ""
 "As you might have guessed, if the vector has magnitude 0 (meaning, it's "
-"not a vector but the **origin** also called *null vector*), a division by"
-" zero occurs and the universe goes through a second big bang, except in "
-"reverse polarity and then back. As a result, humanity is safe but Godot "
-"will print an error. Remember! Vector(0,0) can't be normalized!."
+"not a vector but the **origin** also called *null vector*), a division "
+"by zero occurs and the universe goes through a second big bang, except "
+"in reverse polarity and then back. As a result, humanity is safe but "
+"Godot will print an error. Remember! Vector(0,0) can't be normalized!."
 msgstr ""
+"正如你所猜到的那样，如果一个向量的模为0（意味着，只是个**原点**，也叫做**"
+"零向量(Null Vector)**），就会发生除零错误，然后宇宙将经历第二次大爆炸，地"
+"磁极倒转后又转回来（译注：作者你这么卖萌真的好么？？）。结果是，人类安全"
+"了，但是Godot会产生一个错误。记住！零向量不能被规格化！"
 
 #: ../../tutorials/vector_math.rst:218
 msgid "Of course, Vector2 and Vector3 already provide a method to do this:"
-msgstr ""
+msgstr "当然，Vector2和Vector3类已经提供了方法来完成这件事："
 
 #: ../../tutorials/vector_math.rst:225
 msgid "Dot product"
-msgstr ""
+msgstr "数量积(点乘、点积)"
 
 #: ../../tutorials/vector_math.rst:227
 msgid ""
@@ -277,13 +338,17 @@ msgid ""
 "Without the dot product, Quake would have never been made. This is the "
 "most important section of the tutorial, so make sure to grasp it "
 "properly. Most people trying to understand vector math give up here "
-"because, despite how simple it is, they can't make head or tails from it."
-" Why? Here's why, it's because..."
+"because, despite how simple it is, they can't make head or tails from "
+"it. Why? Here's why, it's because..."
 msgstr ""
+"好了，**数量积(Dot product)**是向量数学中最重要的部分了。没有数量积，也就"
+"不会有雷神之锤。这也是本教程里面最重要的一部分，所以请准确掌握它。绝大多"
+"数尝试理解向量数学的人全都挂在这里了因为，无论它有多简单他们都摸不着头"
+"绪，为什么呢？这就是原因，因为……"
 
 #: ../../tutorials/vector_math.rst:234
 msgid "The dot product takes two vectors and returns a **scalar**:"
-msgstr ""
+msgstr "点乘运算取得两个向量并返回一个**标量**："
 
 #: ../../tutorials/vector_math.rst:240
 msgid ""
@@ -291,33 +356,41 @@ msgid ""
 "vector **b**. Do the same with y and add it together. In 3D it's pretty "
 "much the same:"
 msgstr ""
+"是的，就是这个。将向量**a**的**x**乘以向量**b**的**x**，然后在对**y**来一"
+"遍然后加到一起。在3D里也是一样的："
 
 #: ../../tutorials/vector_math.rst:248
 msgid ""
 "I know, it's totally meaningless! You can even do it with a built-in "
 "function:"
-msgstr ""
+msgstr "我知道，这完全没意义！你甚至可以用一个内置函数来完成这件事："
 
 #: ../../tutorials/vector_math.rst:255
 msgid ""
-"The order of two vectors does *not* matter, ``a.dot(b)`` returns the same"
-" value as ``b.dot(a)``."
+"The order of two vectors does *not* matter, ``a.dot(b)`` returns the "
+"same value as ``b.dot(a)``."
 msgstr ""
+"向量的两个顺序是*无关紧要*的，``a.dot(b)``和``b.dot(a)``返回的值是一样的"
+"（点积具有交换律）。"
 
 #: ../../tutorials/vector_math.rst:258
 msgid ""
 "This is where despair begins and books and tutorials show you this "
 "formula:"
-msgstr ""
+msgstr "然后，这里就是绝望的开始，书和教程里会给你如下公式："
 
 #: ../../tutorials/vector_math.rst:263
 msgid ""
-"And you realize it's time to give up making 3D games or complex 2D games."
-" How can something so simple be so complex? Someone else will have to "
-"make the next Zelda or Call of Duty. Top down RPGs don't look so bad "
+"And you realize it's time to give up making 3D games or complex 2D "
+"games. How can something so simple be so complex? Someone else will have "
+"to make the next Zelda or Call of Duty. Top down RPGs don't look so bad "
 "after all. Yeah I hear someone did pretty will with one of those on "
 "Steam..."
 msgstr ""
+"然后你就意识到是时候该放弃制作3D或复杂的2D游戏了（译注：喂这不是从入门到"
+"放弃的教程吧？？）。为什么如此简单的东西会变得如此复杂呢？或许别人可以制"
+"作出下一个塞尔达或使命召唤。俯视角RPG游戏毕竟看起来还不是那么糟糕。好吧我"
+"还听说有人在Steam的愿望单里有它们中的一个……"
 
 #: ../../tutorials/vector_math.rst:269
 msgid ""
@@ -328,10 +401,14 @@ msgid ""
 "applications. No more formulas that don't make any sense. Formulas will "
 "make sense *once you learn* what they are useful for."
 msgstr ""
+"所以，你的机会来了，到了你该闪耀的时刻了。**不要放弃**！从这里开始，教程"
+"将会来一个大转弯然后去关注让数量积如此有用的东西。也就是，**为什么**它有"
+"用。我们会一一关注数量积的使用场合以及生活实例。没有那些废话公式。公式会"
+"在*你学会了*它们用于什么的时候才有意义。"
 
 #: ../../tutorials/vector_math.rst:277
 msgid "Siding"
-msgstr ""
+msgstr "余光检测"
 
 #: ../../tutorials/vector_math.rst:279
 msgid ""
@@ -341,6 +418,9 @@ msgid ""
 "**origin**). Does not matter what they are, but let's imagine we compute "
 "the dot product between them."
 msgstr ""
+"数量积第一个有用的也是最重要的属性就是去检测身边的东西在看什么。我们想象"
+"一下有两个向量**a**和**b**。任意**角度**或**方向**（不可以为**零向量"
+"**）。无所谓它们是什么，但我们就考虑对它们进行点积运算。"
 
 #: ../../tutorials/vector_math.rst:289
 msgid ""
@@ -348,24 +428,27 @@ msgid ""
 "are in vector world, we call them **scalar**, will keep using that term "
 "from now on). This number will tell us the following:"
 msgstr ""
+"该运算会返回一个单精度浮点数（但既然我们在向量的世界中，我们不妨称之为**"
+"标量(Scalar)**，从现在开始将一直沿用这个概念）。这个数量会告诉我们如下内"
+"容："
 
 #: ../../tutorials/vector_math.rst:293
 msgid ""
 "If the number is greater than zero, both are looking towards the same "
 "direction (the angle between them is < 90° degrees)."
-msgstr ""
+msgstr "如果该数大于0，则他们都在朝着一个大方向（两者夹角小于90°）。"
 
 #: ../../tutorials/vector_math.rst:295
 msgid ""
 "If the number is less than zero, both are looking towards opposite "
 "direction (the angle between them is > 90° degrees)."
-msgstr ""
+msgstr "如果该数小于0，则他们的大方向相反。（两者夹角大于90°）。"
 
 #: ../../tutorials/vector_math.rst:297
 msgid ""
 "If the number is zero, vectors are shaped in L (the angle between them "
 "*is* 90° degrees)."
-msgstr ""
+msgstr "如果该数为0，两个向量呈L形位置关系（两者夹角*等于*90°）。"
 
 #: ../../tutorials/vector_math.rst:302
 msgid ""
@@ -374,45 +457,54 @@ msgid ""
 "tell if the enemy has seen discovered Snake? In order to discover him, "
 "the enemy must be able to *see* Snake. Let's say, then that:"
 msgstr ""
+"所以我们来思考一个现实当中的场景。试想蛇穿过一个森林，然后一个天敌在附"
+"近。我们如何辨别出天敌能否发现蛇呢？为了发现蛇，天敌必须可以*看到*蛇。也"
+"就是："
 
 #: ../../tutorials/vector_math.rst:307
 msgid "Snake is in position **A**."
-msgstr ""
+msgstr "蛇在位置**A**。"
 
 #: ../../tutorials/vector_math.rst:308
 msgid "The enemy is in position **B**."
-msgstr ""
+msgstr "敌人在位置**B**。"
 
 #: ../../tutorials/vector_math.rst:309
 msgid "The enemy is *facing* towards direction vector **F**."
-msgstr ""
+msgstr "敌人*面朝*向量**F**的方向。"
 
 #: ../../tutorials/vector_math.rst:313
 msgid ""
 "So, let's create a new vector **BA** that goes from the guard (**B**) to "
 "Snake (**A**), by subtracting the two:"
 msgstr ""
+"我们来创建一个新的向量**BA**从守卫（**B**）走向蛇（**A**），通过对两者作"
+"差："
 
 #: ../../tutorials/vector_math.rst:322
 msgid ""
 "Ideally, if the guard was looking straight towards snake, to make eye to "
 "eye contact, it would do it in the same direction as vector BA."
 msgstr ""
+"理想状态下，如果守卫能够直接看向蛇，来进行眼神交流的话，它会顺着向量BA的"
+"同向来完成。"
 
 #: ../../tutorials/vector_math.rst:325
 msgid ""
-"If the dot product between **F** and **BA** is greater than 0, then Snake"
-" will be discovered. This happens because we will be able to tell that "
-"the guard is facing towards him:"
+"If the dot product between **F** and **BA** is greater than 0, then "
+"Snake will be discovered. This happens because we will be able to tell "
+"that the guard is facing towards him:"
 msgstr ""
+"如果**F**和**BA**的数量积大于0，社就会被发现，因为我们可以指出守卫正面向"
+"它。"
 
 #: ../../tutorials/vector_math.rst:334
 msgid "Seems Snake is safe so far."
-msgstr ""
+msgstr "就目前来看蛇似乎还算安全。"
 
 #: ../../tutorials/vector_math.rst:337
 msgid "Siding with unit vectors"
-msgstr ""
+msgstr "使用单位向量进行余光检测"
 
 #: ../../tutorials/vector_math.rst:339
 msgid ""
@@ -420,113 +512,132 @@ msgid ""
 "if they are looking towards the same side, opposite sides or are just "
 "perpendicular to each other."
 msgstr ""
+"好了，现在我们知道了两个向量之间的数量积可以让我们知道它们看向同侧、异侧"
+"还是正好彼此垂直。"
 
 #: ../../tutorials/vector_math.rst:343
 msgid ""
 "This works the same with all vectors, no matter the magnitude so **unit "
 "vectors** are not the exception. However, using the same property with "
-"unit vectors yields an even more interesting result, as an extra property"
-" is added:"
+"unit vectors yields an even more interesting result, as an extra "
+"property is added:"
 msgstr ""
+"这堆其他所有向量都有效，与模长无关，因此**单位向量**也不例外，然而，对单"
+"位向量使用同样的特性会得到更加有趣的结果，下面就是一个额外的特性："
 
 #: ../../tutorials/vector_math.rst:348
 msgid ""
 "If both vectors are facing towards the exact same direction (parallel to "
 "each other, angle between them is 0°), the resulting scalar is **1**."
-msgstr ""
+msgstr "如果两个向量完全同向（彼此平行，夹角为0°），结果标量为**1**。"
 
 #: ../../tutorials/vector_math.rst:351
 msgid ""
-"If both vectors are facing towards the exact opposite direction (parallel"
-" to each other, but angle between them is 180°), the resulting scalar is "
-"**-1**."
-msgstr ""
+"If both vectors are facing towards the exact opposite direction "
+"(parallel to each other, but angle between them is 180°), the resulting "
+"scalar is **-1**."
+msgstr "如果两个向量完全反向（彼此平行，夹角180°），结果标量为**-1**。"
 
 #: ../../tutorials/vector_math.rst:355
 msgid ""
 "This means that dot product between unit vectors is always between the "
 "range of 1 and -1. So Again..."
-msgstr ""
+msgstr "这也就意味着，两个单位向量的数量积总在-1到1之间。所以再来的话……"
 
 #: ../../tutorials/vector_math.rst:358
 msgid "If their angle is **0°** dot product is **1**."
-msgstr ""
+msgstr "如果它们的夹角是**0°**则数量积为**1**。"
 
 #: ../../tutorials/vector_math.rst:359
 msgid "If their angle is **90°**, then dot product is **0**."
-msgstr ""
+msgstr "如果它们的夹角是**90°**则数量积为**0**。"
 
 #: ../../tutorials/vector_math.rst:360
 msgid "If their angle is **180°**, then dot product is **-1**."
-msgstr ""
+msgstr "如果它们的夹角是**180°**则数量积为**-1**。"
 
 #: ../../tutorials/vector_math.rst:362
 msgid "Uh.. this is oddly familiar... seen this before... where?"
-msgstr ""
+msgstr "额……有一种莫名的熟悉感，似乎以前见过……在哪呢？"
 
 #: ../../tutorials/vector_math.rst:364
 msgid ""
-"Let's take two unit vectors. The first one is pointing up, the second too"
-" but we will rotate it all the way from up (0°) to down (180° degrees)..."
+"Let's take two unit vectors. The first one is pointing up, the second "
+"too but we will rotate it all the way from up (0°) to down (180° "
+"degrees)..."
 msgstr ""
+"我们设两个单位向量，一个向上指，另一个也是，但是我们一会会让它从上（0°）"
+"到下（180°）进行旋转……"
 
 #: ../../tutorials/vector_math.rst:370
 msgid "While plotting the resulting scalar!"
-msgstr ""
+msgstr "当我们对结果标量描点连线画图……"
 
 #: ../../tutorials/vector_math.rst:374
 msgid ""
-"Aha! It all makes sense now, this is a `Cosine "
-"<http://mathworld.wolfram.com/Cosine.html>`__ function!"
+"Aha! It all makes sense now, this is a `Cosine <http://mathworld.wolfram."
+"com/Cosine.html>`__ function!"
 msgstr ""
+"啊哈！现在就清楚了，这是`余弦函数 <http://mathworld.wolfram.com/Cosine."
+"html>`！"
 
 #: ../../tutorials/vector_math.rst:377
 msgid "We can say that, then, as a rule..."
-msgstr ""
+msgstr "我们可以说那么，作为一个规律……"
 
 #: ../../tutorials/vector_math.rst:379
 msgid ""
-"The **dot product** between two **unit vectors** is the **cosine** of the"
-" **angle** between those two vectors. So, to obtain the angle between two"
-" vectors, we must do:"
+"The **dot product** between two **unit vectors** is the **cosine** of "
+"the **angle** between those two vectors. So, to obtain the angle between "
+"two vectors, we must do:"
 msgstr ""
+"两个**单位向量**的**数量积**是这两个向量**夹角**的**余弦**值。那么，为了"
+"获得两个向量之间的夹角，我们必须："
 
 #: ../../tutorials/vector_math.rst:387
 msgid ""
 "What is this useful for? Well obtaining the angle directly is probably "
 "not as useful, but just being able to tell the angle is useful for "
-"reference. One example is in the `Kinematic Character "
-"<https://github.com/godotengine/godot/blob/master/demos/2d/kinematic_char/player.gd#L879>`__"
-" demo, when the character moves in a certain direction then we hit an "
-"object. How to tell if what we hit is the floor?"
+"reference. One example is in the `Kinematic Character <https://github."
+"com/godotengine/godot/blob/master/demos/2d/kinematic_char/player."
+"gd#L879>`__ demo, when the character moves in a certain direction then "
+"we hit an object. How to tell if what we hit is the floor?"
 msgstr ""
+"它在什么时候有用呢？直接获取角度似乎没什么用，但是能够辨别角度在作为参考"
+"就已经很有用了。其中一个例子在`运动学角色<https://github.com/godotengine/"
+"godot/blob/master/demos/2d/kinematic_char/player.gd#L879>`__ 演示项目中，"
+"当角色朝特定方向移动之后撞到一个物体。我们如何说明我们碰到的是地面呢？"
 
 #: ../../tutorials/vector_math.rst:394
 msgid ""
-"By comparing the normal of the collision point with a previously computed"
-" angle."
-msgstr ""
+"By comparing the normal of the collision point with a previously "
+"computed angle."
+msgstr "通过对碰撞点处法向量和之前计算过的角度进行比较即可。"
 
 #: ../../tutorials/vector_math.rst:397
 msgid ""
 "The beauty of this is that the same code works exactly the same and "
-"without modification in `3D "
-"<https://github.com/godotengine/godot/blob/master/demos/3d/kinematic_char/cubio.gd#L57>`__."
-" Vector math is, in a great deal, dimension-amount-independent, so adding"
-" or removing an axis only adds very little complexity."
+"without modification in `3D <https://github.com/godotengine/godot/blob/"
+"master/demos/3d/kinematic_char/cubio.gd#L57>`__. Vector math is, in a "
+"great deal, dimension-amount-independent, so adding or removing an axis "
+"only adds very little complexity."
 msgstr ""
+"它的美妙之处在于同样的代码无需改变就可以用于 `3D <https://github.com/"
+"godotengine/godot/blob/master/demos/3d/kinematic_char/cubio.gd#L57>`__之"
+"中。向量数学是普遍的，与维度数量无关的，增加或减少维度几乎不会增大复杂"
+"度。"
 
 #: ../../tutorials/vector_math.rst:404
 msgid "Planes"
-msgstr ""
+msgstr "平面"
 
 #: ../../tutorials/vector_math.rst:406
 msgid ""
 "The dot product has another interesting property with unit vectors. "
-"Imagine that perpendicular to that vector (and through the origin) passes"
-" a plane. Planes divide the entire space into positive (over the plane) "
-"and negative (under the plane), and (contrary to popular belief) you can "
-"also use their math in 2D:"
+"Imagine that perpendicular to that vector (and through the origin) "
+"passes a plane. Planes divide the entire space into positive (over the "
+"plane) and negative (under the plane), and (contrary to popular belief) "
+"you can also use their math in 2D:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:414
@@ -542,17 +653,17 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:421
 msgid ""
 "It's as simple as it looks. The plane passes by the origin and the "
-"surface of it is perpendicular to the unit vector (or *normal*). The side"
-" towards the vector points to is the positive half-space, while the other"
-" side is the negative half-space. In 3D this is exactly the same, except "
-"that the plane is an infinite surface (imagine an infinite, flat sheet of"
-" paper that you can orient and is pinned to the origin) instead of a "
-"line."
+"surface of it is perpendicular to the unit vector (or *normal*). The "
+"side towards the vector points to is the positive half-space, while the "
+"other side is the negative half-space. In 3D this is exactly the same, "
+"except that the plane is an infinite surface (imagine an infinite, flat "
+"sheet of paper that you can orient and is pinned to the origin) instead "
+"of a line."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:430
 msgid "Distance to plane"
-msgstr ""
+msgstr "到平面的距离"
 
 #: ../../tutorials/vector_math.rst:432
 msgid ""
@@ -606,18 +717,18 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:468
 msgid ""
 "Basically, N and D can represent any plane in space, be it for 2D or 3D "
-"(depending on the amount of dimensions of N) and the math is the same for"
-" both. It's the same as before, but D is the distance from the origin to "
-"the plane, travelling in N direction. As an example, imagine you want to "
-"reach a point in the plane, you will just do:"
+"(depending on the amount of dimensions of N) and the math is the same "
+"for both. It's the same as before, but D is the distance from the origin "
+"to the plane, travelling in N direction. As an example, imagine you want "
+"to reach a point in the plane, you will just do:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:478
 msgid ""
-"This will stretch (resize) the normal vector and make it touch the plane."
-" This math might seem confusing, but it's actually much simpler than it "
-"seems. If we want to tell, again, the distance from the point to the "
-"plane, we do the same but adjusting for distance:"
+"This will stretch (resize) the normal vector and make it touch the "
+"plane. This math might seem confusing, but it's actually much simpler "
+"than it seems. If we want to tell, again, the distance from the point to "
+"the plane, we do the same but adjusting for distance:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:487
@@ -655,7 +766,7 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:519
 msgid "Constructing a plane in 2D"
-msgstr ""
+msgstr "在2D中构建一个平面"
 
 #: ../../tutorials/vector_math.rst:521
 msgid ""
@@ -699,16 +810,16 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:566
 msgid ""
 "Here is a simple example of what planes are useful for. Imagine you have "
-"a `convex <http://www.mathsisfun.com/definitions/convex.html>`__ polygon."
-" For example, a rectangle, a trapezoid, a triangle, or just any polygon "
-"where faces that don't bend inwards."
+"a `convex <http://www.mathsisfun.com/definitions/convex.html>`__ "
+"polygon. For example, a rectangle, a trapezoid, a triangle, or just any "
+"polygon where faces that don't bend inwards."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:571
 msgid ""
 "For every segment of the polygon, we compute the plane that passes by "
-"that segment. Once we have the list of planes, we can do neat things, for"
-" example checking if a point is inside the polygon."
+"that segment. Once we have the list of planes, we can do neat things, "
+"for example checking if a point is inside the polygon."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:575
@@ -726,18 +837,18 @@ msgstr ""
 msgid ""
 "Pretty cool, huh? But this gets much better! With a little more effort, "
 "similar logic will let us know when two convex polygons are overlapping "
-"too. This is called the Separating Axis Theorem (or SAT) and most physics"
-" engines use this to detect collision."
+"too. This is called the Separating Axis Theorem (or SAT) and most "
+"physics engines use this to detect collision."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:597
 msgid ""
-"The idea is really simple! With a point, just checking if a plane returns"
-" a positive distance is enough to tell if the point is outside. With "
-"another polygon, we must find a plane where *all the **other** polygon "
-"points* return a positive distance to it. This check is performed with "
-"the planes of A against the points of B, and then with the planes of B "
-"against the points of A:"
+"The idea is really simple! With a point, just checking if a plane "
+"returns a positive distance is enough to tell if the point is outside. "
+"With another polygon, we must find a plane where *all the **other** "
+"polygon points* return a positive distance to it. This check is "
+"performed with the planes of A against the points of B, and then with "
+"the planes of B against the points of A:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:642
@@ -751,7 +862,7 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:649
 msgid "Cross product"
-msgstr ""
+msgstr "向量积(叉乘运算)"
 
 #: ../../tutorials/vector_math.rst:651
 msgid ""
@@ -780,8 +891,8 @@ msgstr ""
 msgid ""
 "The cross product takes two vectors and returns another vector. The "
 "returned third vector is always perpendicular to the first two. The "
-"source vectors, of course, must not be the same, and must not be parallel"
-" or opposite, else the resulting vector will be (0,0,0):"
+"source vectors, of course, must not be the same, and must not be "
+"parallel or opposite, else the resulting vector will be (0,0,0):"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:672
@@ -809,18 +920,18 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:697
 msgid "Area of a triangle"
-msgstr ""
+msgstr "三角形的面积"
 
 #: ../../tutorials/vector_math.rst:699
 msgid ""
-"Cross product can be used to obtain the surface area of a triangle in 3D."
-" Given a triangle consisting of 3 points, **A**, **B** and **C**:"
+"Cross product can be used to obtain the surface area of a triangle in "
+"3D. Given a triangle consisting of 3 points, **A**, **B** and **C**:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:704
 msgid ""
-"Take any of them as a pivot and compute the adjacent vectors to the other"
-" two points. As example, we will use B as a pivot:"
+"Take any of them as a pivot and compute the adjacent vectors to the "
+"other two points. As example, we will use B as a pivot:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:714
@@ -832,13 +943,13 @@ msgstr ""
 #: ../../tutorials/vector_math.rst:723
 msgid ""
 "The length (magnitude) of **P** is the surface area of the parallelogram "
-"built by the two vectors **BA** and **BC**, therefore the surface area of"
-" the triangle is half of it."
+"built by the two vectors **BA** and **BC**, therefore the surface area "
+"of the triangle is half of it."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:732
 msgid "Plane of the triangle"
-msgstr ""
+msgstr "三角形所在平面"
 
 #: ../../tutorials/vector_math.rst:734
 msgid ""
@@ -868,8 +979,8 @@ msgstr ""
 msgid ""
 "In Godot, front-facing triangles are those that, when looking at the "
 "camera, are in clockwise order. Triangles that look Counter-clockwise "
-"when looking at the camera are not drawn (this helps to draw less, so the"
-" back-part of the objects is not drawn)."
+"when looking at the camera are not drawn (this helps to draw less, so "
+"the back-part of the objects is not drawn)."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:760
@@ -892,16 +1003,16 @@ msgstr ""
 
 #: ../../tutorials/vector_math.rst:783
 msgid "Collision detection in 3D"
-msgstr ""
+msgstr "3D中的碰撞检测"
 
 #: ../../tutorials/vector_math.rst:785
 msgid ""
-"This is another bonus bit, a reward for being patient and keeping up with"
-" this long tutorial. Here is another piece of wisdom. This might not be "
-"something with a direct use case (Godot already does collision detection "
-"pretty well) but It's a really cool algorithm to understand anyway, "
-"because it's used by almost all physics engines and collision detection "
-"libraries :)"
+"This is another bonus bit, a reward for being patient and keeping up "
+"with this long tutorial. Here is another piece of wisdom. This might not "
+"be something with a direct use case (Godot already does collision "
+"detection pretty well) but It's a really cool algorithm to understand "
+"anyway, because it's used by almost all physics engines and collision "
+"detection libraries :)"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:792
@@ -922,22 +1033,22 @@ msgstr ""
 msgid ""
 "To refresh a bit a separating plane means that all vertices of polygon A "
 "are in one side of the plane, and all vertices of polygon B are in the "
-"other side. This plane is always one of the face-planes of either polygon"
-" A or polygon B."
+"other side. This plane is always one of the face-planes of either "
+"polygon A or polygon B."
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:805
 msgid ""
-"In 3D though, there is a problem to this approach, because it is possible"
-" that, in some cases a separating plane can't be found. This is an "
-"example of such situation:"
+"In 3D though, there is a problem to this approach, because it is "
+"possible that, in some cases a separating plane can't be found. This is "
+"an example of such situation:"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:811
 msgid ""
 "To avoid it, some extra planes need to be tested as separators, these "
-"planes are the cross product between the edges of polygon A and the edges"
-" of polygon B"
+"planes are the cross product between the edges of polygon A and the "
+"edges of polygon B"
 msgstr ""
 
 #: ../../tutorials/vector_math.rst:817
@@ -950,4 +1061,3 @@ msgid ""
 "if something in this tutorial is not clear! You should be now ready for "
 "the next challenge... :ref:`doc_matrices_and_transforms`!"
 msgstr ""
-

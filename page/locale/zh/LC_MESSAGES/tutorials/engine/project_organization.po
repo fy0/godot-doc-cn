@@ -5,39 +5,41 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-14 11:11+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/engine/project_organization.rst:4
 msgid "Project organization"
-msgstr ""
+msgstr "项目组织"
 
 #: ../../tutorials/engine/project_organization.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "简介"
 
 #: ../../tutorials/engine/project_organization.rst:9
 msgid ""
 "This tutorial is aimed to propose a simple workflow on how to organize "
 "projects. Since Godot allows the programmer to use the file-system as he "
-"or she pleases, figuring out a way to organize the projects when starting"
-" to use the engine can be a little challenging. Because of this, a simple"
-" workflow will be described, which can be used or not, but should work as"
-" a starting point."
+"or she pleases, figuring out a way to organize the projects when "
+"starting to use the engine can be a little challenging. Because of this, "
+"a simple workflow will be described, which can be used or not, but "
+"should work as a starting point."
 msgstr ""
+"本教程旨在阐明一个简单的组织项目工程的流程。因为Godot允许程序员去按照他"
+"（或她）们喜欢的方式使用文件系统。"
 
 #: ../../tutorials/engine/project_organization.rst:16
 msgid ""
@@ -47,7 +49,7 @@ msgstr ""
 
 #: ../../tutorials/engine/project_organization.rst:20
 msgid "Organization"
-msgstr ""
+msgstr "组织"
 
 #: ../../tutorials/engine/project_organization.rst:22
 msgid ""
@@ -63,10 +65,11 @@ msgstr ""
 
 #: ../../tutorials/engine/project_organization.rst:30
 msgid ""
-"It is very often necessary to use asset importing in Godot. As the source"
-" assets for importing are also recognized as resources by the engine, "
-"this can become a problem if both are inside the project folder, because "
-"at the time of export the exporter will recognize them and export both."
+"It is very often necessary to use asset importing in Godot. As the "
+"source assets for importing are also recognized as resources by the "
+"engine, this can become a problem if both are inside the project folder, "
+"because at the time of export the exporter will recognize them and "
+"export both."
 msgstr ""
 
 #: ../../tutorials/engine/project_organization.rst:36
@@ -97,8 +100,8 @@ msgstr ""
 
 #: ../../tutorials/engine/project_organization.rst:66
 msgid ""
-"myproject/ can be put directly inside a VCS (like svn or git) for version"
-" control, both game and source assets are kept track of."
+"myproject/ can be put directly inside a VCS (like svn or git) for "
+"version control, both game and source assets are kept track of."
 msgstr ""
 
 #: ../../tutorials/engine/project_organization.rst:68
@@ -110,15 +113,15 @@ msgstr ""
 
 #: ../../tutorials/engine/project_organization.rst:73
 msgid "Scene organization"
-msgstr ""
+msgstr "场景组织"
 
 #: ../../tutorials/engine/project_organization.rst:75
 msgid ""
 "Inside the game folder, a question that often arises is how to organize "
 "the scenes in the filesystem. Many developers try asset-type based "
 "organization and end up having a mess after a while, so the best answer "
-"is probably to organize them based on how the game works and not based on"
-" asset type. Here are some examples."
+"is probably to organize them based on how the game works and not based "
+"on asset type. Here are some examples."
 msgstr ""
 
 #: ../../tutorials/engine/project_organization.rst:81
@@ -143,16 +146,16 @@ msgstr ""
 #: ../../tutorials/engine/project_organization.rst:119
 msgid ""
 "This model or similar models allows projects to grow to really large "
-"sizes and still be completely manageable. Notice that everything is based"
-" on parts of the game that can be named or described, like the settings "
-"screen or the valley. Since everything in Godot is done with scenes, and "
-"everything that can be named or described can be a scene, this workflow "
-"is very smooth and easygoing."
+"sizes and still be completely manageable. Notice that everything is "
+"based on parts of the game that can be named or described, like the "
+"settings screen or the valley. Since everything in Godot is done with "
+"scenes, and everything that can be named or described can be a scene, "
+"this workflow is very smooth and easygoing."
 msgstr ""
 
 #: ../../tutorials/engine/project_organization.rst:127
 msgid "Cache files"
-msgstr ""
+msgstr "缓存文件"
 
 #: ../../tutorials/engine/project_organization.rst:129
 msgid ""
@@ -162,4 +165,3 @@ msgid ""
 "contains local information and might confuse another editor instance in "
 "another computer."
 msgstr ""
-
