@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: 2017-05-15 23:04+0800\n"
+"PO-Revision-Date: 2017-05-16 20:59+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -642,7 +642,7 @@ msgid ""
 "plane) and negative (under the plane), and (contrary to popular belief) "
 "you can also use their math in 2D:"
 msgstr ""
-"数量积和单位向量还有另一个有趣的性质。试想垂直于该项了（并穿过原点）穿过"
+"数量积和单位向量还有另一个有趣的性质。试想垂直于该向量（并穿过原点）穿过"
 "一个平面。平面将整个空间瓜分为正半部（平面之上）和负半部（平面之下），而"
 "且（与普遍看法相反），你可以在2D中使用它们的数学原理："
 
@@ -657,10 +657,10 @@ msgid ""
 msgstr ""
 "垂直于平面的（因此，它们可以描述平面的朝向）单位向量被称为 **单位法向量"
 "(Unit Normal Vector)** 。但通常它们被简称为 \\*法向量。法向量存在于平面"
-"中、3D几何中等（来决定每个面或顶点朝向哪里）。一个 **法向量** 是一个 **单"
-"位向量** （译注：这里面的“法向量”是延续上文的“单位法向量”的简称，事实上我"
-"们平时提及法向量的时候），而它们被称为 *法向量* 由它们的用途而来（就好像"
-"我们称(0,0)为原点！）。"
+"中、3D几何中等等（来决定每个面或顶点朝向哪里）。一个 **法向量** 是一个 **"
+"单位向量** （译注：这里面的“法向量”是延续上文的“单位法向量”的简称，事实上"
+"我们平时提及法向量的时候），而它们被称为 *法向量* 由它们的用途而来（就好"
+"像我们称(0,0)为原点！）。"
 
 #: ../../tutorials/vector_math.rst:421
 msgid ""
@@ -673,7 +673,10 @@ msgid ""
 "of a line."
 msgstr ""
 "就像所见的那样简单，这个平面穿过原点且它的表面与这个单位向量（法向量）垂"
-"直"
+"直。而该向量所朝向的一侧为正半区(Positive half-space)，而另一侧就是负半区"
+"(Negative half-space)。在3D中也是一样的，只不过那时候平面就不再是一条直线"
+"了，而是一个无限延展的面（试想一个无穷大的、平坦的一页纸，它被钉在原点处"
+"而你还可以给它标定方向）。"
 
 #: ../../tutorials/vector_math.rst:430
 msgid "Distance to plane"
@@ -686,20 +689,24 @@ msgid ""
 "(yes, this time we do dot product between vector and position), returns "
 "the **distance from the point to the plane**:"
 msgstr ""
+"既然我们已经清楚了平面是什么东西，那我们就回到数量积。一个 **单位法向量"
+"** 同 **空间中任意一点** 的数量积（是的，此时我们对一个向量和一个位置进行"
+"点乘），返回的就是 **该点到该平面的距离** ："
 
 #: ../../tutorials/vector_math.rst:441
 msgid ""
 "But not just the absolute distance, if the point is in the negative half "
 "space the distance will be negative, too:"
 msgstr ""
+"只不过，这不是绝对距离，如果该点在平面的负半区，我们得到的距离也是负的："
 
 #: ../../tutorials/vector_math.rst:446
 msgid "This allows us to tell which side of the plane a point is."
-msgstr ""
+msgstr "这让我们能够得知一点在该平面的哪一侧。"
 
 #: ../../tutorials/vector_math.rst:449
 msgid "Away from the origin"
-msgstr ""
+msgstr "离开原点"
 
 #: ../../tutorials/vector_math.rst:451
 msgid ""
@@ -707,6 +714,9 @@ msgid ""
 "everywhere in space, not only passing through the origin. You want real "
 "*plane* action and you want it *now*."
 msgstr ""
+"我知道你在想什么！到目前为止还算好，但是 *实际上的* 平面可以在空间中的各"
+"处，不仅仅是穿过原点。你可能希望一个真正 *平面* 的行为，而且你 *现在* 就"
+"想要。"
 
 #: ../../tutorials/vector_math.rst:455
 msgid ""
@@ -714,6 +724,8 @@ msgid ""
 "*polarity*. This means that it is possible to have perfectly overlapping "
 "planes, but their negative and positive half-spaces are swapped."
 msgstr ""
+"请记住，平面并不仅仅将平面分为两个部分而已，它们还有 *极性(Polarity)* 。"
+"这也意味着我们可以让两个平面完全重合，只是两者的正负半区被对调了。"
 
 #: ../../tutorials/vector_math.rst:459
 msgid ""
@@ -721,12 +733,17 @@ msgid ""
 "**distance from the origin** scalar *D*. Thus, our plane is represented "
 "by N and D. For example:"
 msgstr ""
+"带着这样的想法，我们不妨将一个完整的平面描述为一个 **法向量** *N* 和一个"
+"用于表达 **该平面到原点的举例** 的标量 *D* 。因此，我们的平面就可以由N和D"
+"来表示，举个例子："
 
 #: ../../tutorials/vector_math.rst:465
 msgid ""
 "For 3D math, Godot provides a :ref:`Plane <class_Plane>` built-in type "
 "that handles this."
 msgstr ""
+"对于3D数学，Godot提供了一个内置类型 :ref:`Plane <class_Plane>` 来处理这个"
+"问题。"
 
 #: ../../tutorials/vector_math.rst:468
 msgid ""
@@ -736,6 +753,9 @@ msgid ""
 "to the plane, travelling in N direction. As an example, imagine you want "
 "to reach a point in the plane, you will just do:"
 msgstr ""
+"基本上，N和D可以用来表示空间中任意一个平面，无论2D还是3D（取决于N的维"
+"数），两者的数学原理都是一致的。与之前所言一致，只是D是沿着N的方向从原点"
+"到平面的距离。比如说，假设你想要在一个平面中到达某一个点，你只需要："
 
 #: ../../tutorials/vector_math.rst:478
 msgid ""
@@ -744,14 +764,17 @@ msgid ""
 "than it seems. If we want to tell, again, the distance from the point to "
 "the plane, we do the same but adjusting for distance:"
 msgstr ""
+"这样会拉伸该法向量并使它触及到该平面。这个原理似乎听起来有点云山雾罩，不"
+"过实际上很简单。还是，如果我们想要获知从该点到该平面的距离，我们一样会这"
+"样做，只不过实在适应距离："
 
 #: ../../tutorials/vector_math.rst:487
 msgid "The same thing, using a built-in function:"
-msgstr ""
+msgstr "同样的东西，使用内置函数："
 
 #: ../../tutorials/vector_math.rst:493
 msgid "This will, again, return either a positive or negative distance."
-msgstr ""
+msgstr "还是，它会返回一个正的或负的距离。"
 
 #: ../../tutorials/vector_math.rst:495
 msgid ""
@@ -759,16 +782,20 @@ msgid ""
 "N and D. This will result in a plane in the same position, but with "
 "inverted negative and positive half spaces:"
 msgstr ""
+"反转该平面的极性也很简单，只需要对N和D同时取相反数。这样会让一个平面保持"
+"原来的位置而只对调了正负半区："
 
 #: ../../tutorials/vector_math.rst:504
 msgid ""
 "Of course, Godot also implements this operator in :ref:`Plane "
 "<class_Plane>`, so doing:"
 msgstr ""
+"当然，Godot在 :ref:`Plane <class_Plane>` 类中已经实现了这样的操作，那么就"
+"用："
 
 #: ../../tutorials/vector_math.rst:511
 msgid "Will work as expected."
-msgstr ""
+msgstr "就可以生效。"
 
 #: ../../tutorials/vector_math.rst:513
 msgid ""
@@ -777,6 +804,8 @@ msgid ""
 "distance from a point to a plane? It's extremely useful! Let's see some "
 "simple examples.."
 msgstr ""
+"所以，谨记，一个平面就是这样，它的主要实际应用是计算到它的距离。那么，为"
+"什么计算点到平面间的距离很有用呢？它老有用了，我们来看几个简单的例子……"
 
 #: ../../tutorials/vector_math.rst:519
 msgid "Constructing a plane in 2D"
@@ -788,6 +817,10 @@ msgid ""
 "Constructing them in 2D is easy, this can be done from either a normal "
 "(unit vector) and a point, or from two points in space."
 msgstr ""
+"显然，平面不会凭空出现，因此它们必须被构建。在2D中构造它们很容易，我们要"
+"么可以通过一（单位）法向量和一点来完成，要么可以使用空间中的两点来完成"
+"（译注：在2D中我们所言的平面实际上是直线，因此可以通过两点确定一条直"
+"线）。"
 
 #: ../../tutorials/vector_math.rst:525
 msgid ""
@@ -795,6 +828,8 @@ msgid ""
 "normal is already computed, so just calculate D from the dot product of "
 "the normal and the point."
 msgstr ""
+"在点和法向量（点法式）的情况中，绝大工作已经做好了，法向量也已经算好了，"
+"那么只需要通过法向量与该点坐标的数量积来计算D。"
 
 #: ../../tutorials/vector_math.rst:534
 msgid ""
@@ -804,22 +839,28 @@ msgid ""
 "vector must be obtained first, and then it needs to be rotated 90° "
 "degrees to either side:"
 msgstr ""
+"对于空间中的亮点，实际上有两个平面穿过了它们（一正一负），共享同一空间，"
+"只是法向量方向相反。为了计算通过这两点计算法向量，我们就必须先获取其方向"
+"向量(Direction Vector，平行于该平面（直线）的一个向量)，然后需要向任意一"
+"侧将其旋转90°："
 
 #: ../../tutorials/vector_math.rst:550
 msgid ""
 "The rest is the same as the previous example, either point_a or point_b "
 "will work since they are in the same plane:"
 msgstr ""
+"剩下的就和之前的例子完全相同了，point_a或者point_b中某一个将会生效因为它"
+"们都在同一平面中："
 
 #: ../../tutorials/vector_math.rst:560
 msgid ""
 "Doing the same in 3D is a little more complex and will be explained "
 "further down."
-msgstr ""
+msgstr "在3D中做这件可能会更加复杂，下文将会详细解释。"
 
 #: ../../tutorials/vector_math.rst:564
 msgid "Some examples of planes"
-msgstr ""
+msgstr "一些平面范例"
 
 #: ../../tutorials/vector_math.rst:566
 msgid ""
@@ -828,6 +869,9 @@ msgid ""
 "polygon. For example, a rectangle, a trapezoid, a triangle, or just any "
 "polygon where faces that don't bend inwards."
 msgstr ""
+"下面有一个小例子来解释平面可以用于什么。试想你有一个 `凸<http://www."
+"mathsisfun.com/definitions/convex.html>`__ 多边形。比如说，一个矩形、梯"
+"形、三角形或者任意一个表面不会向内弯曲的多边形。"
 
 #: ../../tutorials/vector_math.rst:571
 msgid ""
@@ -835,6 +879,8 @@ msgid ""
 "that segment. Once we have the list of planes, we can do neat things, "
 "for example checking if a point is inside the polygon."
 msgstr ""
+"对于多边形的每一边，我们计算通过该边所经过的平面。一旦我们获得一系列的平"
+"面，我们就可以做一些清静的工作了，比如检测一点是否在一个多边形中。"
 
 #: ../../tutorials/vector_math.rst:575
 msgid ""
@@ -842,10 +888,12 @@ msgid ""
 "the point is positive, then the point is outside the polygon. If we "
 "can't, then the point is inside."
 msgstr ""
+"我们遍历所有平面，如果我们发现有一个平面使得点到它的距离是正的，那么该点"
+"就在多边形之外，如果找不到，那么该点就在多边形之内。"
 
 #: ../../tutorials/vector_math.rst:581 ../../tutorials/vector_math.rst:606
 msgid "Code should be something like this:"
-msgstr ""
+msgstr "代码就像下面这样："
 
 #: ../../tutorials/vector_math.rst:592
 msgid ""
@@ -854,6 +902,9 @@ msgid ""
 "too. This is called the Separating Axis Theorem (or SAT) and most "
 "physics engines use this to detect collision."
 msgstr ""
+"相当酷，是吧？但还可以更好！再多做点努力，相似的逻辑还可以让我们知道两个"
+"凸多边形是否相交。这被称为分离轴定理(Separating Axis Theorem，简称SAT)，"
+"绝大多数物理引擎都是用这个算法来检测碰撞。"
 
 #: ../../tutorials/vector_math.rst:597
 msgid ""
@@ -864,6 +915,10 @@ msgid ""
 "performed with the planes of A against the points of B, and then with "
 "the planes of B against the points of A:"
 msgstr ""
+"这个想法相当简单。只需要用一个点检测一个平面是否返回一个正的距离就可以说"
+"明该点是否在外面了。对于另一个多边形，我们必须找到一个能够 *让 **另一个"
+"** 多边形的顶点* 到它都能返回一个正距离。该检测是用A的平面和B的顶点然后再"
+"用A的顶点和B的平面来完成的："
 
 #: ../../tutorials/vector_math.rst:642
 msgid ""
@@ -873,10 +928,14 @@ msgid ""
 "smaller convex polygons, or using a technique such as BSP (which is not "
 "used much nowadays)."
 msgstr ""
+"如你所见，平面相当有用，而这只是冰山一角。你可能想知道对于非凸多边形该怎"
+"么办，通常地，通过将凹多边形划分为几个较小的凸多边形就可以解决这个问题，"
+"或者使用像BSP（Binary Space Partioning，二维空间分割）这样的技术（如今已"
+"经不常用了）。"
 
 #: ../../tutorials/vector_math.rst:649
 msgid "Cross product"
-msgstr "向量积(叉乘运算)"
+msgstr "向量积(叉乘、叉积)"
 
 #: ../../tutorials/vector_math.rst:651
 msgid ""
@@ -887,6 +946,10 @@ msgid ""
 "right (clockwise) or left (counter-clockwise) rotation? That ended up "
 "being useful for calculating a 2D plane normal from two points."
 msgstr ""
+"很多东西都可以通过数量积来完成！但是如果没有向量积的话还是不能涵盖所有问"
+"题。还记得这篇教程的开头吗？特别是如何通过交换x和y，然后对任意一个取相反"
+"数决定是顺时针还是逆时针（旋转90°）来获取一个正交向量？最终，那样会有助于"
+"通过两个点来计算2D平面的法向量。"
 
 #: ../../tutorials/vector_math.rst:658
 msgid ""
@@ -894,12 +957,17 @@ msgid ""
 "infinite perpendicular vectors. It would also not make sense to obtain a "
 "3D plane from 2 points, as 3 points are needed instead."
 msgstr ""
+"正如前文所述，3D中不存在这样的东西，因为一个3D向量有无穷多个正交向量。而"
+"且通过两个点来获取一个3D平面也是不现实的，因为至少需要三个点才能确定一个"
+"3D平面。"
 
 #: ../../tutorials/vector_math.rst:662
 msgid ""
 "To aid in this kind stuff, the brightest minds of humanity's top "
 "mathematicians brought us the **cross product**."
 msgstr ""
+"为了应对这种情况，人类顶级数学家为我们带来的最明智的想法就是 **向量积"
+"(Cross Product)** 。"
 
 #: ../../tutorials/vector_math.rst:665
 msgid ""
@@ -908,14 +976,17 @@ msgid ""
 "source vectors, of course, must not be the same, and must not be "
 "parallel or opposite, else the resulting vector will be (0,0,0):"
 msgstr ""
+"向量积会取两个向量进行运算，然后返回另一个向量。所返回的这个向量总是与前"
+"两者是垂直的。而源向量（参与计算的两个向量），显然，不可以相同，也不可以"
+"彼此平行（同向或反向），否则结果向量会是(0,0,0)："
 
 #: ../../tutorials/vector_math.rst:672
 msgid "The formula for the cross product is:"
-msgstr ""
+msgstr "向量积的公式为："
 
 #: ../../tutorials/vector_math.rst:681
 msgid "This can be simplified, in Godot, to:"
-msgstr ""
+msgstr "在Godot里，还可以被简化为："
 
 #: ../../tutorials/vector_math.rst:687
 msgid ""
@@ -925,12 +996,19 @@ msgid ""
 "with creating perpendicular vectors in 2D. In 3D, there are also two "
 "possible perpendicular vectors to a pair of 2D vectors."
 msgstr ""
+"然而，不同于数量积的是，计算 ``a.cross(b)`` 和 ``b.cross(a)`` 会产生不同"
+"的结果。具体一点说，两者返回的向量是相反的（向量积具有反交换律）。正如你"
+"所料，这和2D中创建的两个正交向量正好一样。在3D中，垂直与一对2D向量的正交"
+"向量也有两个（译注：此处所言的正交向量均为单位正交向量，或者可以认为是不"
+"考虑模长但模长不可以为0）。"
 
 #: ../../tutorials/vector_math.rst:693
 msgid ""
 "Also, the resulting cross product of two unit vectors is *not* a unit "
 "vector. Result will need to be renormalized."
 msgstr ""
+"同样地，两个单位向量的向量积也 *不一定* 是一个单位向量。因此结果需要被重"
+"规格化。"
 
 #: ../../tutorials/vector_math.rst:697
 msgid "Area of a triangle"
@@ -941,18 +1019,22 @@ msgid ""
 "Cross product can be used to obtain the surface area of a triangle in "
 "3D. Given a triangle consisting of 3 points, **A**, **B** and **C**:"
 msgstr ""
+"向量积可以被用于获取3D空间中一个三角形（也叫空间三角形）的面积。所给定的"
+"三角形由3个点组成， **A** 、 **B** 和 **C** ："
 
 #: ../../tutorials/vector_math.rst:704
 msgid ""
 "Take any of them as a pivot and compute the adjacent vectors to the "
 "other two points. As example, we will use B as a pivot:"
 msgstr ""
+"取它们中的任意一点作为轴心，然后计算该点到任意两点的两个相邻的向量，比"
+"如，我们选择B作为轴心："
 
 #: ../../tutorials/vector_math.rst:714
 msgid ""
 "Compute the cross product between **BA** and **BC** to obtain the "
 "perpendicular vector **P**:"
-msgstr ""
+msgstr "然后计算 **BA** 和 **BC** 的向量积，来获得一个正交向量 **P** ："
 
 #: ../../tutorials/vector_math.rst:723
 msgid ""
@@ -960,6 +1042,8 @@ msgid ""
 "built by the two vectors **BA** and **BC**, therefore the surface area "
 "of the triangle is half of it."
 msgstr ""
+"**P** 的长度（模）就是由向量 **BA** 和 **BC** 所构成的平行四边形的面积。"
+"因此，三角形的面积就是它的一半。"
 
 #: ../../tutorials/vector_math.rst:732
 msgid "Plane of the triangle"
@@ -970,16 +1054,18 @@ msgid ""
 "With **P** computed from the previous step, normalize it to get the "
 "normal of the plane."
 msgstr ""
+"使用上一步计算出的向量 **P** ，将其单位化就可以获得三角形所在平面的法向"
+"量。"
 
 #: ../../tutorials/vector_math.rst:741
 msgid ""
 "And obtain the distance by doing the dot product of P with any of the 3 "
 "points of the **ABC** triangle:"
-msgstr ""
+msgstr "然后通过求P与三角形 **ABC** 的任意一个顶点的数量积来获取距离："
 
 #: ../../tutorials/vector_math.rst:748
 msgid "Fantastic! You computed the plane from a triangle!"
-msgstr ""
+msgstr "好极了！你算出了三角形所在的平面！"
 
 #: ../../tutorials/vector_math.rst:750
 msgid ""
@@ -988,6 +1074,9 @@ msgid ""
 "convention needs to be set. This usually depends (in video games and 3D "
 "visualization) to use the front-facing side of the triangle."
 msgstr ""
+"还有一些比较有用的信息（你可以在Godot源代码中通过各种方式都能找到的）。计"
+"算三角形所在的平面会算出两个平面，因此我们要规定一些惯例。（在游戏或3D视"
+"觉设计中）我们所取的平面通常取决于单面三角形的正面一侧。"
 
 #: ../../tutorials/vector_math.rst:755
 msgid ""
@@ -996,6 +1085,10 @@ msgid ""
 "when looking at the camera are not drawn (this helps to draw less, so "
 "the back-part of the objects is not drawn)."
 msgstr ""
+"在Godot中，单面三角形就是指，当正对着摄像机的时候，顶点是顺时针排列的。如"
+"果三角形面向摄像机的时候它的顶点是逆时针排列的，则不会被绘制出来（这有助"
+"于减少绘制量，因此物体的背面是不会被绘制出来的（译注：这个过程也被称为表"
+"面剔除(Culling)））。"
 
 #: ../../tutorials/vector_math.rst:760
 msgid ""
@@ -1003,6 +1096,8 @@ msgid ""
 "appears clock-wise when looked at from the *Front Camera*, but to the "
 "*Rear Camera* it appears counter-clockwise so it will not be drawn."
 msgstr ""
+"为了让它更明了，在下图中，三角形 **ABC** 以顺时针的顶点排列出现在 *前摄像"
+"机* 中，而在 *后摄像机* 中它是逆时针的，因此它不会在后摄像机中绘制出来。"
 
 #: ../../tutorials/vector_math.rst:766
 msgid ""
