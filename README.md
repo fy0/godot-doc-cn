@@ -56,7 +56,7 @@
 
 * [fy](https://github.com/fy0)
 
-* [小太](https://github.com/Oberon-Tonya)
+* [小太(Oberon)](https://github.com/Oberon-Tonya)
 
 * [Geequlim](https://github.com/Geequlim)
 
