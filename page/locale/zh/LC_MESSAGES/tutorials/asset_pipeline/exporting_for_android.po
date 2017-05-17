@@ -5,46 +5,48 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-17 12:34+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:4
 msgid "Exporting for Android"
-msgstr ""
+msgstr "导出到Android"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:6
 msgid ""
-"Exporting for Android has fewer requirements than compiling Godot for it."
-" The following steps detail what is needed to setup the SDK and the "
+"Exporting for Android has fewer requirements than compiling Godot for "
+"it. The following steps detail what is needed to setup the SDK and the "
 "engine."
 msgstr ""
+"向Android平台导出比Godot为Android平台编译的所需的要求更少。下面几步详细阐"
+"述了在部署SDK和引擎的时候都需要些什么。"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:10
 msgid "Download the Android SDK"
-msgstr ""
+msgstr "下载Android SDK"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:12
 msgid ""
-"Download and install the Android SDK from "
-"http://developer.android.com/sdk/index.html"
-msgstr ""
+"Download and install the Android SDK from http://developer.android.com/"
+"sdk/index.html"
+msgstr "从http://developer.android.com/sdk/index.html上下载Android SDK"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:16
 msgid "Install OpenJDK or Oracle JDK"
-msgstr ""
+msgstr "安装Open JDK或Oracle JDK"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:18
 msgid ""
@@ -52,10 +54,12 @@ msgid ""
 "work, some users have reported issues with the jarsigner (used to sign "
 "the APKs) in JDK 7."
 msgstr ""
+"下载并安装Open JDK或Oracle JDK（二选一）。目前已知版本6和版本8能够正常工"
+"作，已经有用户报告了关于JDK 7中的jarsigner（用于签名APK）的问题。"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:23
 msgid "Create a debug.keystore"
-msgstr ""
+msgstr "创建一个debug.keystore"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:25
 msgid ""
@@ -64,28 +68,35 @@ msgid ""
 "projects, ant or eclipse probably generated one for you (In Linux and "
 "OSX, you can find it in the ~/.android folder)."
 msgstr ""
+"安卓需要一个调试用的密钥库(Keystore)文件来向设备安装并发布尚未发行的APK。"
+"如果你此前已经使用SDK来构建项目的话，ant或eclipse可能已经给你生成好了一个"
+"密钥库（在Linux和OSX中，你可以在 ~/.android 文件夹下找到它）。"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:30
 msgid ""
 "If you can't find it or need to generate one, the keytool command from "
 "the JDK can be used for this purpose:"
 msgstr ""
+"如果你找不到的话那就需要生成一个了，为此我们需要使用JDK的keytool指令："
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:38
 msgid "Make sure you have adb"
-msgstr ""
+msgstr "确保你有adb"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:40
 msgid ""
 "Android Debug Bridge (adb) is the command line tool used to communicate "
 "with Android devices. It's installed with the SDK, but you may need to "
-"install one (any) of the Android API levels for it to be installed in the"
-" SDK directory."
+"install one (any) of the Android API levels for it to be installed in "
+"the SDK directory."
 msgstr ""
+"Android调试桥（adb）是一个用于与安卓设备进行通信的命令行工具。它是和SDK被"
+"一同安装的，但你可能还是需要安装（任意）一个版本的Android API来让它被安装"
+"到SDK文件夹当中。"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:45
 msgid "Setting it up in Godot"
-msgstr ""
+msgstr "在Godot中建立"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:47
 msgid ""
@@ -93,28 +104,29 @@ msgid ""
 "settings for the user account in the computer (It's independent from the "
 "project)."
 msgstr ""
+"进入编辑器设定(Editor Settings)窗口。该窗口包含了当前电脑用户账户的编辑器"
+"设定（与工程是独立的）"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:53
 msgid "Scroll down to the section where the Android settings are located:"
-msgstr ""
+msgstr "向下翻，找到Android设置（Android Settings）部分所在的位置："
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:57
 msgid "In that screen, the path to 3 files needs to be set:"
-msgstr ""
+msgstr "在该界面下，我们需要设置3个文件路径："
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:59
 msgid "The *adb* executable (adb.exe on Windows)"
-msgstr ""
+msgstr "*adb* 可执行程序（Windows上的adb.exe）"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:60
 msgid "The *jarsigner* executable (from JDK 6 or 8)"
-msgstr ""
+msgstr "*jarsigner* 可执行程序(JDK 6或JDK 8)"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:61
 msgid "The debug *keystore*"
-msgstr ""
+msgstr "调试 *keystore*"
 
 #: ../../tutorials/asset_pipeline/exporting_for_android.rst:63
 msgid "Once that is configured, everything is ready to export to Android!"
-msgstr ""
-
+msgstr "一旦设定完毕，你就可以向Android平台进行导出了！"

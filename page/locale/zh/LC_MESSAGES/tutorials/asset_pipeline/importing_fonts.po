@@ -5,37 +5,41 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-17 13:59+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:4
 msgid "Importing fonts"
-msgstr ""
+msgstr "导入字体"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:7
 msgid "What is a font?"
-msgstr ""
+msgstr "字体是什么？"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:9
 msgid ""
 "Fonts in modern operating systems are created as scalable vector "
-"graphics. They are stored as a collection of curves (usually one for each"
-" character), which are independent of the screen resolution, and stored "
-"in standardized file formats, such as TTF (TrueType) or OTF (OpenType)."
+"graphics. They are stored as a collection of curves (usually one for "
+"each character), which are independent of the screen resolution, and "
+"stored in standardized file formats, such as TTF (TrueType) or OTF "
+"(OpenType)."
 msgstr ""
+"现代操作系统中的字体(Fonts)被创建为一个可缩放的矢量图像。它们被存储为一组"
+"曲线（通常每个字符对应一组），独立于屏幕分辨率并被存储到一个标准化的文件"
+"格式当中，例如TTF(TrueType)或OTF(OpenType)。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:15
 msgid ""
@@ -46,10 +50,14 @@ msgid ""
 "support the means to do this efficiently, so fonts have to be converted "
 "to a format that is friendly to the GPU when imported to a project."
 msgstr ""
+"将这种字体渲染成一个位图是个复杂的过程，需要依据上下文和目标大小，利用不"
+"同的方法将曲线转换为像素。基于这个原因，渲染过程必须通过CPU来完成。游戏引"
+"擎使用GPU渲染，而3D API并不真正支持比较有效的方法，因此在导入项目时字体必"
+"须被转换为一个对GPU友好的格式。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:23
 msgid "Converting fonts"
-msgstr ""
+msgstr "字体转换"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:25
 msgid ""
@@ -58,6 +66,9 @@ msgid ""
 "The bitmap texture is then used by the GPU to draw a small quad for each "
 "character and form readable strings."
 msgstr ""
+"转换过程包括将一个矢量字体渲染成一个给定点大小然后将得到的字符存储到一个"
+"位图纹理中。然后这个位图纹理被GPU用于给每一个字符绘制一个小的四边图"
+"(Quad)，并将其组织成可读的字符串。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:32
 msgid ""
@@ -65,16 +76,20 @@ msgid ""
 "specific sizes that they will use in the project. However, given that "
 "that bitmap fonts compress really well, this is not as bad as it sounds."
 msgstr ""
+"这个过程的缺陷就是字体必须以指定大小预导入到所在工程中。不过，就算如此，"
+"位图字体还是可以被很好地压缩的，不像听起来那样糟糕。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:37
 msgid "Importing a font"
-msgstr ""
+msgstr "导入字体"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:39
 msgid ""
 "Fonts are imported via the Font import dialog. The dialog will ask for a "
 "font, a size, some options and a target resource file to save."
 msgstr ""
+"通过字体导入(Font Import)对话框我们可以导入一个字体。这个对话框会征求一个"
+"字体、大小、一些选项以及要存储为的目标资源文件。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:44
 msgid ""
@@ -82,6 +97,8 @@ msgid ""
 "reflected in the font preview window. The user can tweak almost every "
 "parameter and get instant feedback on how the font will look."
 msgstr ""
+"该对话框是完全动态的，意思就是说所作出的任何变动都能够通过字体预览窗口反"
+"映出来。用户可以调节几乎任意一个参数然后就能立刻得到字体外观的反馈。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:48
 msgid ""
@@ -94,29 +111,30 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:55
 msgid "Extra spacing"
-msgstr ""
+msgstr "附加间距(Extra Spacing)"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:57
 msgid "It is possible to add more space for:"
-msgstr ""
+msgstr "我们可以为如下东西添加间距："
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:59
 msgid "**Characters**, the space between them can be varied."
-msgstr ""
+msgstr "**字符(Character)** ，每个字母之间的间距是可变的。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:60
 msgid "**\"space\" character**, so the distance between words is bigger."
-msgstr ""
+msgstr "**空格字符(\"space\" character)**  ，可以让单词之间的间距变大。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:61
 msgid ""
 "**Top and Bottom margins**, this changes the spacing between lines as "
 "well as the space between the top and bottom lines and the borders."
 msgstr ""
+"**顶端与底端边距** ，可以改变每行之间以及顶端和底端与边框之间的间距。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:67
 msgid "Shadows & outline"
-msgstr ""
+msgstr "阴影(Shadows) & 描边(Outline)"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:69
 msgid ""
@@ -127,10 +145,14 @@ msgid ""
 "shadow is also provided to create some added effects, like a bump or "
 "outline+shadow."
 msgstr ""
+"字体可以有阴影。为此，该字体还会在原来内容的下方以另一个颜色再被绘制一"
+"次，然会使用不同大小的高斯核函数(Gaussian Kernel)进行高斯模糊。最终的阴影"
+"可以通过指数函数调节来决定是更柔和还是更像一个轮廓。我们还提供了一个次阴"
+"影(Second Shadow)来创建一些附加效果，例如凸起或描边+阴影。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:78
 msgid "Gradients"
-msgstr ""
+msgstr "渐变(Gradients)"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:80
 msgid ""
@@ -139,27 +161,36 @@ msgid ""
 "can be provided as a simple curve between two colors, or a special png "
 "file with a hand drawn gradient."
 msgstr ""
+"渐变也是图像设计师们常用的视觉效果。为了表达我们有多喜欢它，我们把这些也"
+"加了进来。渐变可以"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:88
 msgid "Internationalization"
-msgstr ""
+msgstr "国际化(Internationalization,i18n)"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:90
 msgid ""
 "Colors, shadows and gradients are beautiful, but it's time we get to "
-"serious business. Developing games for Asian markets is a common practice"
-" in today's globalized world and app stores."
+"serious business. Developing games for Asian markets is a common "
+"practice in today's globalized world and app stores."
 msgstr ""
+"颜色、阴影和渐变都很漂亮，不过我们也该着手一些严肃的东西了。为亚洲市场开"
+"发游戏是当今全球化的世界以及应用商店的一个普遍实践。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:94
 msgid ""
 "Here's when things get tricky with using bitmap fonts. Asian alphabets "
-"(Chinese, Japanese and Korean) contain dozens of thousands of characters."
-" Generating bitmap fonts with every single of them is pretty expensive, "
-"as the resulting textures are huge. If the font size is small enough, it "
-"can be done without much trouble, but when the fonts become bigger, we "
-"run out of video ram pretty quickly!"
+"(Chinese, Japanese and Korean) contain dozens of thousands of "
+"characters. Generating bitmap fonts with every single of them is pretty "
+"expensive, as the resulting textures are huge. If the font size is small "
+"enough, it can be done without much trouble, but when the fonts become "
+"bigger, we run out of video ram pretty quickly!"
 msgstr ""
+"那时候，使用位图字体就变得很复杂了。亚洲字库（中文、日文和韩文）包含了成"
+"千上万个文字（译注：实际上远不止这个数，作者啊你还是Naïve啊……）。为他们每"
+"一个单字生成一个位图字体的开销非常大（不知道要消耗GPU多少秒），而且得到的"
+"纹理页也比西方字符大到不知道哪里去。如果字体大小足够小的话，处理起来还好"
+"办，但如果字体变大的时候，我们很快就会用光显存！"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:101
 msgid ""
@@ -167,19 +198,24 @@ msgid ""
 "format) where it expects to find all the characters that will be used in "
 "the project. This seems difficult to provide at first, and more to keep "
 "up to date, but it becomes rather easy when one realizes that the .csv "
-"with the translations can be used as such source file (see the "
-":ref:`doc_importing_translations` section). As Godot re-imports assets "
-"when their dependencies change, both the translation and font files will "
-"be updated and re-imported automatically if the translation csv changes."
+"with the translations can be used as such source file (see the :ref:"
+"`doc_importing_translations` section). As Godot re-imports assets when "
+"their dependencies change, both the translation and font files will be "
+"updated and re-imported automatically if the translation csv changes."
 msgstr ""
+"为了解决这个问题，Godot允许用户制定一个文本文件（UTF-8编码格式），在这个"
+"文件里能找到所以在工程中期望被用到的字符。起初这似乎难以提供，不过当意识"
+"到带翻译的.csv文件能够被使用为这种源文件的时候就很简单了。（参见 :ref:"
+"`doc_importing_translations` 部分）。由于在依赖项发生变动时Godot可以重新"
+"导入资源，如果用于翻译的csv文件发生变化，翻译和字体文件都可以被自动更新和"
+"重导入。"
 
 #: ../../tutorials/asset_pipeline/importing_fonts.rst:110
 msgid ""
-"Another cool trick for using a text file as limit of which characters can"
-" be imported is when using really large fonts. For example, the user "
-"might want to use a super large font, but only to show numbers. For this,"
-" he or she writes a numbers.txt file that contains \"1234567890\", and "
-"Godot will only limit itself to import data, thus saving a lot of video "
-"memory."
+"Another cool trick for using a text file as limit of which characters "
+"can be imported is when using really large fonts. For example, the user "
+"might want to use a super large font, but only to show numbers. For "
+"this, he or she writes a numbers.txt file that contains \"1234567890\", "
+"and Godot will only limit itself to import data, thus saving a lot of "
+"video memory."
 msgstr ""
-
