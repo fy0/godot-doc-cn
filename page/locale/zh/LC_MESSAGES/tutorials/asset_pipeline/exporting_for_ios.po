@@ -5,25 +5,25 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-17 17:58+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:4
 msgid "Exporting for iOS"
-msgstr ""
+msgstr "导出到iOS"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:6
 msgid ""
@@ -31,50 +31,59 @@ msgid ""
 "load your game in an XCode project, where you can deploy to a device, "
 "publish, etc."
 msgstr ""
+"目前，向iOS平台的导出是手动完成。下面几步能够将你的游戏加载为一个XCode项"
+"目，在那里你可以将它展开到一个设备上、发布等。"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:11
 msgid "Requirements"
-msgstr ""
+msgstr "要求"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:13
 msgid "Download XCode for iOS"
-msgstr ""
+msgstr "下载iOS的XCode"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:14
 msgid "Download the export templates: https://godotengine.org/download"
-msgstr ""
+msgstr "下载导出模板(Export Templates)：https://godotengine.org/download"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:15
 msgid ""
 "Since there is no automatic deployer yet, unzip export_templates.tpz "
 "manually and extract GodotiOSXCode.zip from it."
 msgstr ""
+"因为还没有自动的部署器，手动解压 export_templates.tpz 然后从其中提取 "
+"GodotiOSXCode.zip。"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:18
 msgid ""
-"The zip contains an XCode project, godot_ios.xcodeproj, an empty data.pck"
-" file and the engine executable. Open the project, and modify the game "
-"name, icon, organization, provisioning signing certificate identities "
-"(??), etc."
+"The zip contains an XCode project, godot_ios.xcodeproj, an empty data."
+"pck file and the engine executable. Open the project, and modify the "
+"game name, icon, organization, provisioning signing certificate "
+"identities (??), etc."
 msgstr ""
+"该压缩文件中包含了一个XCode工程 godot_ios.xcodeproj 、一个空的 data.pck "
+"文件以及引擎的可执行程序。打开工程后修改游戏名称、图标、组织、配置签名证"
+"书身份(??)等。"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:24
 msgid "Add your project data"
-msgstr ""
+msgstr "添加你的工程数据"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:26
 msgid ""
-"Using the Godot editor, :ref:`doc_exporting_for_pc`, to obtain the "
-"data.pck file. Replace the empty data.pck in the XCode project with the "
-"new one, and run/archive."
+"Using the Godot editor, :ref:`doc_exporting_for_pc`, to obtain the data."
+"pck file. Replace the empty data.pck in the XCode project with the new "
+"one, and run/archive."
 msgstr ""
+"使用Godot编辑器里面的 :ref:`doc_exporting_for_pc` ，来获取 data.pck 文"
+"件，替换掉XCode工程中的空的 data.pck 文件，然后运行/归档。"
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:30
 msgid ""
 "If you want to test your scenes on the iOS device as you edit them, you "
-"can add your game directory to the project (instead of data.pck), and add"
-" a property \"godot_path\" to Info.plist, with the name of your directory"
-" as its value."
+"can add your game directory to the project (instead of data.pck), and "
+"add a property \"godot_path\" to Info.plist, with the name of your "
+"directory as its value."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:37
@@ -89,8 +98,8 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:43
 msgid ""
-"Sometimes your game becomes too big and deploying to the device takes too"
-" long every time you run. In that case you can deploy only the engine "
+"Sometimes your game becomes too big and deploying to the device takes "
+"too long every time you run. In that case you can deploy only the engine "
 "executable, and serve the game files from your computer."
 msgstr ""
 
@@ -112,9 +121,9 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:61
 msgid ""
-"On XCode, click on your app name (top left, next to the \"Stop\" button),"
-" and select \"Edit Scheme\". Go to the \"Arguments\" tab, and add 2 "
-"arguments, \"-rfs\" and the IP of your PC."
+"On XCode, click on your app name (top left, next to the \"Stop\" "
+"button), and select \"Edit Scheme\". Go to the \"Arguments\" tab, and "
+"add 2 arguments, \"-rfs\" and the IP of your PC."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:67
@@ -130,7 +139,6 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/exporting_for_ios.rst:74
 msgid ""
-"Special iOS services can be used in Godot. Check out the "
-":ref:`doc_services_for_ios` page."
+"Special iOS services can be used in Godot. Check out the :ref:"
+"`doc_services_for_ios` page."
 msgstr ""
-
