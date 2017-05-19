@@ -5,29 +5,29 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-19 14:53+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:4
 msgid "One-click deploy"
-msgstr ""
+msgstr "一键部署(One-click Deploy)"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:7
 msgid "Sounds good, what is it?"
-msgstr ""
+msgstr "听起来不错，不过是啥呢？"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:9
 msgid ""
@@ -38,6 +38,9 @@ msgid ""
 "configured, kitty ate the USB cable, etc.), it's good to let the user "
 "know that it exists."
 msgstr ""
+"当平台一经配置好并且有可支持的设备连接电脑之后，这个特性就会自动弹出。因"
+"为在很多方面都有可能出现问题（平台没有被正确配置、SDK安装不正确，设备可能"
+"没有合理配置，猫啃了USB数据线等……），它有助于让用户知道发生了什么。"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:16
 msgid ""
@@ -47,30 +50,34 @@ msgid ""
 "mode) on the device. This feature is called, in industry buzz-words, "
 "\"One Click Deploy\" (though, it's technically two clicks...)."
 msgstr ""
+"一些平台（在本文中，只有Android和Blackberry 10）可以检测USB设备何时被连接"
+"到电脑上，然后提供用户来在设备上自动导出、安装并运行工程（调试模式）。在"
+"行业术语中，这个特性被称为“一键部署”（不过，从技术上来说是两键……）。"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:23
 msgid "Steps for one-click deploy"
-msgstr ""
+msgstr "一键部署的步骤"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:25
 msgid "Configure target platform."
-msgstr ""
+msgstr "配置目标平台"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:26
 msgid ""
 "Configure device (make sure it's in developer mode, likes the computer, "
 "usb is recognized, usb cable is plugged, etc.)."
 msgstr ""
+"配置设备（请确保是在开发者模式下，像电脑一样，USB可识别，USB数据线已连接"
+"等）。"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:28
 msgid "Connect the device.."
-msgstr ""
+msgstr "连接设备……"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:29
 msgid "And voila!"
-msgstr ""
+msgstr "然后就是啦！"
 
 #: ../../tutorials/asset_pipeline/one-click_deploy.rst:33
 msgid "Click once.. and deploy!"
-msgstr ""
-
+msgstr "点击一下，然后部署！"
