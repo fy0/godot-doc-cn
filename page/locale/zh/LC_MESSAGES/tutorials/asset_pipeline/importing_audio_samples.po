@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: 2017-05-19 15:32+0800\n"
+"PO-Revision-Date: 2017-05-25 20:56+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
@@ -37,6 +37,8 @@ msgid ""
 "just copy the wav files to a folder inside the project and be over with "
 "it?\""
 msgstr ""
+"将采样音频导入到游戏引擎中本来是比它本质更简单的事情。绝大多数读者可能会"
+"想“为什么不直接复制wav波形文件到工程中的一个文件夹下然后处理它呢？”。"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:14
 msgid ""
@@ -48,12 +50,17 @@ msgid ""
 "effects, one expects a dozen of them to be playing at the same time in "
 "several situations."
 msgstr ""
+"但这通常并非很简单。大多数游戏引擎使用无压缩(Uncompressed)的音频（至少是"
+"到内存当中）作为音效。这样做的原因是便于回放和重采样。压缩的流式"
+"(Compressed Streamed)音频(例如ogg文件)需要大量使用处理器来界面，因此不会"
+"有超过一两个音频同时被流式播放。然而，对于音效来说，在某些情况下有人是需"
+"要让它们当中的好几个同时播放的。"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:22
 msgid ""
 "Because of this, sound effects are loaded uncompressed into memory, and "
 "here is where the problems begin."
-msgstr ""
+msgstr "因此，音频通常是无压缩载入内存当中，而这也正是麻烦的开始。"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:25
 msgid ""
@@ -62,6 +69,9 @@ msgid ""
 "also common in the industry. This leads to a scenario where a project "
 "ends up wasting resources unnecessarily."
 msgstr ""
+"在处理图形时候经常发生这样的情况，程序员实际上并不懂得音频，而音频师也并"
+"不懂得变成，在行业生产当中这很常见。这就导致了一个工程最后浪费掉很多不必"
+"要的资源的场面。"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:30
 msgid ""
@@ -73,16 +83,21 @@ msgid ""
 "trailing silences. Finally, many DAWs also add silence at the beginning "
 "when normalizing to wav."
 msgstr ""
+"确切的说，音效师倾向于和音频格式打交道，这给了他们很大的空间去使用一个很"
+"低的噪声底和最小的混叠来调节音频，例如96kHz 24bit。在许多情况下，他们也处"
+"理立体声道。算上这一点，很多时候他们会添加带有无限长或者非常长的淡出，例"
+"如混响，就会导致一个很明显的末端静音。最后，在对wav波形规格化的时候许多数"
+"字音频工作站(DAW)还会给音频的开始加入静音。"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:38
 msgid ""
 "These often result in extremely large files to integration into a game "
 "engine with sound effects taking dozens of megabytes."
-msgstr ""
+msgstr "这些通常会导致非常多的文件被整合到游戏引擎中来而音效占去了数十MB。"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:42
 msgid "How much does quality matter?"
-msgstr ""
+msgstr "音质会有什么影响呢？"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:44
 msgid ""
@@ -93,6 +108,10 @@ msgid ""
 "their size greatly and ensuring correct trimming. Say no to SFX with "
 "baked reverb!"
 msgstr ""
+"首先，我们有必要知道Godot具有内部的混响发生器。音效可以进入四中不同的配置"
+"（小、中、大房间和大厅），还可以传递不同的值。这些东西省去了音频师需要对"
+"音频加入混响的必要性，也很大程度上减少了文件的体积并确保首末剪辑的正确"
+"性。对带有烘焙混响的音效说不！"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:53
 msgid ""
@@ -105,14 +124,20 @@ msgid ""
 "for stereo sound. How does this affect the resource usage? Look at the "
 "following comparison:"
 msgstr ""
+"另一个常见的问题是，高位深（24位）高采样率（96kHz）在数字音频工作站里很有"
+"用，但在游戏当中这完全没必要，因为根本没有 `可以听出来的差别<http://www."
+"youtube.com/watch?v=cIQ9IXSUzuM>`__ 。如果打算使用具有方位效应（双耳效"
+"应）的音频（2D或者3D）的音频，调节混响的电平衡和立体声道化将会由引擎提"
+"供，对于立体声音几乎也没什么需要做的了。这些将如何影响资源使用呢？请看下"
+"面的比较："
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:63
 msgid "Format"
-msgstr ""
+msgstr "格式"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:63
 msgid "1 Second of Audio"
-msgstr ""
+msgstr "1秒音频"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:63
 msgid "Frame Size"
@@ -165,7 +190,7 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:78
 msgid "Trimming"
-msgstr ""
+msgstr "修剪"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:80
 msgid ""
@@ -195,7 +220,7 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:105
 msgid "Looping"
-msgstr ""
+msgstr "循环"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:107
 msgid ""
@@ -204,6 +229,9 @@ msgid ""
 "effects such as engines, machine guns, etc. Ping-pong looping is also "
 "supported."
 msgstr ""
+"Godot支持循环播放采样音频（像Sound Forge和Audition这类工具可以为wav文件添"
+"加循环点）。这对于类似于汽车引擎、机枪等物体的音效十分有用。同时，Godot还"
+"支持往返循环播放(Ping-pong looping)。"
 
 #: ../../tutorials/asset_pipeline/importing_audio_samples.rst:112
 msgid ""
