@@ -5,37 +5,37 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-05-25 20:57+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/asset_pipeline/import_process.rst:4
 msgid "Import process"
-msgstr ""
+msgstr "导入处理"
 
 #: ../../tutorials/asset_pipeline/import_process.rst:7
 msgid "What is it for?"
-msgstr ""
+msgstr "这是干什么的？"
 
 #: ../../tutorials/asset_pipeline/import_process.rst:9
 msgid ""
 "When Godot was created, it was probably after several failed and not so "
 "failed engine attempts (well, each attempt failed a little less.. and so "
-"on). One of the most difficult areas of creating game engines is managing"
-" the import process. That means, getting the assets that artists make "
-"into the game, in a way that functions optimally."
+"on). One of the most difficult areas of creating game engines is "
+"managing the import process. That means, getting the assets that artists "
+"make into the game, in a way that functions optimally."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:15
@@ -44,8 +44,8 @@ msgid ""
 "their data into a different format. This is because artists put their "
 "focus on creating assets with the best quality possible, while "
 "programmers have to make sure they actually run at decent speed (or run "
-"at all), use a certain amount of memory, and don't take ages loading from"
-" disk."
+"at all), use a certain amount of memory, and don't take ages loading "
+"from disk."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:22
@@ -62,16 +62,16 @@ msgstr ""
 #: ../../tutorials/asset_pipeline/import_process.rst:30
 msgid ""
 "The goal to establishing an import process is that both can agree on how "
-"the rules under which the assets are going to be imported the first time,"
-" and the system will apply those rules automatically each time the asset "
-"is re-imported."
+"the rules under which the assets are going to be imported the first "
+"time, and the system will apply those rules automatically each time the "
+"asset is re-imported."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:35
 msgid ""
 "Godot does not do the re-import process automatically, though. It gives "
-"the team the option to do it at any time ( a red icon on the top right of"
-" the screen, allows the ability to do it at any desired time)."
+"the team the option to do it at any time ( a red icon on the top right "
+"of the screen, allows the ability to do it at any desired time)."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:40
@@ -80,17 +80,17 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:42
 msgid ""
-"The aim of the import system is that it works well enough for most common"
-" cases and projects. What is there has been tested and seems to cover "
-"most needs."
+"The aim of the import system is that it works well enough for most "
+"common cases and projects. What is there has been tested and seems to "
+"cover most needs."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:46
 msgid ""
 "However, as mentioned before, this is one of the most difficult areas of "
 "writing a game engine. It may happen often (specially on large projects, "
-"ports, or projects with unusual requirement) that what is provided is not"
-" enough. It's easy to say that the engine is open source and that the "
+"ports, or projects with unusual requirement) that what is provided is "
+"not enough. It's easy to say that the engine is open source and that the "
 "programmer should make their own if they don't like what is there, but "
 "that would be making a huge disservice to the users and not the right "
 "attitude. Because of that, we made sure to provide as many tools and "
@@ -106,8 +106,8 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:58
 msgid ""
-"Some importers (like the 3D asset importer) support scripts to modify the"
-" data being imported."
+"Some importers (like the 3D asset importer) support scripts to modify "
+"the data being imported."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:60
@@ -118,8 +118,8 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:62
 msgid ""
-"If all else fails, Godot supports adding custom resource loaders, to load"
-" data in alternative formats, without intermediate conversion."
+"If all else fails, Godot supports adding custom resource loaders, to "
+"load data in alternative formats, without intermediate conversion."
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:65
@@ -148,10 +148,10 @@ msgstr ""
 #: ../../tutorials/asset_pipeline/import_process.rst:80
 msgid ""
 "First of all, it would be really good for this location to **not** be "
-"inside the project path (where engine.cfg is located, or any sub-folder)."
-" Godot expects regular resources in there, and may consider many of the "
-"files used as source art as regular resources. This would lead to it "
-"bundling all of them when the project is exported, something which is "
+"inside the project path (where engine.cfg is located, or any sub-"
+"folder). Godot expects regular resources in there, and may consider many "
+"of the files used as source art as regular resources. This would lead to "
+"it bundling all of them when the project is exported, something which is "
 "undesired."
 msgstr ""
 
@@ -167,9 +167,9 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:94
 msgid ""
-"The usual approach to this, when using a VCS such as Subversion, Perforce"
-" or GIT, is to create the project in a subfolder, so both it and the "
-"source assets can be committed to a same repository. For example:"
+"The usual approach to this, when using a VCS such as Subversion, "
+"Perforce or GIT, is to create the project in a subfolder, so both it and "
+"the source assets can be committed to a same repository. For example:"
 msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:98
@@ -223,8 +223,8 @@ msgstr ""
 #: ../../tutorials/asset_pipeline/import_process.rst:142
 msgid ""
 "From that moment onward, the user can choose to re-import at any given "
-"time by clicking on the red-icon. When this action is done, a dialog will"
-" pop-up showing which resources can be re-imported (all selected by "
+"time by clicking on the red-icon. When this action is done, a dialog "
+"will pop-up showing which resources can be re-imported (all selected by "
 "default)."
 msgstr ""
 
@@ -248,8 +248,7 @@ msgstr ""
 
 #: ../../tutorials/asset_pipeline/import_process.rst:163
 msgid ""
-"This screen allows the user to re-open the corresponding import-window to"
-" re-import that asset again, with the ability to change any of the "
+"This screen allows the user to re-open the corresponding import-window "
+"to re-import that asset again, with the ability to change any of the "
 "settings."
 msgstr ""
-
