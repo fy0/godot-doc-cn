@@ -5,140 +5,159 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-06-10 15:28+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:4
 msgid "Singletons (AutoLoad)"
-msgstr ""
+msgstr "单例(自动载入)"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:9
 msgid ""
-"Scene singletons are very useful, catering to a common use case where you"
-" need to store persistent information between scenes."
+"Scene singletons are very useful, catering to a common use case where you need "
+"to store persistent information between scenes."
 msgstr ""
+"场景单例（Singleton）非常有用，通常用于存储你需要在两个场景切换之间要保留的信"
+"息。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:12
 msgid "Albeit very powerful, the scene system by itself has a few drawbacks:"
-msgstr ""
+msgstr "场景系统虽然很强大，但是自身还是有些缺陷："
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:14
 msgid ""
-"There is no common place to store information (e.g. a player's items "
-"etc.) required by more than one scene."
-msgstr ""
+"There is no common place to store information (e.g. a player's items etc.) "
+"required by more than one scene."
+msgstr "没有可供存储多个场景所需的数据（例如，玩家的道具物品等）的一个公用位置。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:16
 msgid ""
-"While it is possible for a scene that loads and unloads other scenes as "
-"its children to store information common to these child scenes, it is no "
-"longer possible to run these scenes by themselves and expect them to work"
-" correctly."
+"While it is possible for a scene that loads and unloads other scenes as its "
+"children to store information common to these child scenes, it is no longer "
+"possible to run these scenes by themselves and expect them to work correctly."
 msgstr ""
+"而对于一个场景来说，它可以载入或者卸载其他场景作为它的子节点并存储这些子场景公用"
+"的信息，而独立运行这些子场景的时候就不再适用了。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:20
 msgid ""
-"While information can be stored to disk in \\`user://\\` and this "
-"information can be loaded by scenes that require it, continuously saving "
-"and loading this data when changing scenes is cumbersome and may be slow."
+"While information can be stored to disk in \\`user://\\` and this information "
+"can be loaded by scenes that require it, continuously saving and loading this "
+"data when changing scenes is cumbersome and may be slow."
 msgstr ""
+"信息可以被存到硬盘上的 \\`user://\\` 目录（该目录实际是 \\`%AppData%/Godot/<你的"
+"项目名>\\` ）下，而在切换场景的时候频繁地对硬盘存取数据实在是太笨拙缓慢了。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:24
 msgid "However there is still a need in Godot to create parts of a scene that:"
-msgstr ""
+msgstr "然而，在Godot中还可能需要创建这样的场景："
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:26
 msgid "Are always loaded, no matter which scene is opened from the editor"
-msgstr ""
+msgstr "总是被载入，无论该场景是否由编辑器打开了。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:27
 msgid ""
-"Can store global variables, such as player information, items, money etc."
-" and share information between scenes"
+"Can store global variables, such as player information, items, money etc. and "
+"share information between scenes"
 msgstr ""
+"能够存储全局变量，例如玩家信息、物品、金钱等，并在两个场景之间共享这些信息。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:29
 msgid "Can handle switching scenes and transitions"
-msgstr ""
+msgstr "能够处理场景切换和切换效果。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:30
 msgid ""
-"Acts like a singleton, since GDScript does not support global variables "
-"by design."
-msgstr ""
+"Acts like a singleton, since GDScript does not support global variables by "
+"design."
+msgstr "行为类似于单例，因为GDScript有意不支持全局变量。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:32
 msgid "Auto-loading nodes and scripts caters to this need."
-msgstr ""
+msgstr "自动载入节点和脚本来满足这个需求。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:35
 msgid "AutoLoad"
-msgstr ""
+msgstr "自动载入(AutoLoad)"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:37
 msgid ""
-"You can use AutoLoad to load a scene, or a script that inherits from Node"
-" (a Node will be created and the script will be set to it)."
+"You can use AutoLoad to load a scene, or a script that inherits from Node (a "
+"Node will be created and the script will be set to it)."
 msgstr ""
+"你可以使用自动载入来载入一个场景，或者是一个继承于Node的脚本（会创建一个Node节点"
+"并将该脚本设置给它）。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:40
 msgid ""
-"To autoload a scene or script, select Scene > Project Settings from the "
-"menu and switch to the AutoLoad tab. Each entry in the list requires a "
-"name, which is used as the name of the node, and the node is always added"
-" to the root viewport before any other scenes are loaded."
+"To autoload a scene or script, select Scene > Project Settings from the menu "
+"and switch to the AutoLoad tab. Each entry in the list requires a name, which "
+"is used as the name of the node, and the node is always added to the root "
+"viewport before any other scenes are loaded."
 msgstr ""
+"欲自动载入一个场景或脚本，从文件菜单中选择：场景(Scene) > 项目设置(Project "
+"Settings)，然后跳转到自动载入(AutoLoad)标签下。在该列表中的每一项都要求一个名"
+"字，作为该节点的名字，而且该节点将总是在其他所有节点载入之前被添加到根视窗"
+"(Viewport)。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:47
 msgid ""
-"This means that any node can access a singleton named \"playervariables\""
-" with:"
-msgstr ""
+"This means that any node can access a singleton named \"playervariables\" with:"
+msgstr "这也就意味着，任何节点都可以访问名为\"playervariables\"的单例："
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:54
 msgid "Custom scene switcher"
-msgstr ""
+msgstr "自定义场景切换器"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:56
 msgid ""
-"This short tutorial will explain how to make a scene switcher using "
-"autoload. For simple scene switching, the :ref:`SceneTree.change_scene() "
-"<class_SceneTree_change_scene>` method suffices (described in "
-":ref:`doc_scene_tree`), so this method is for more complex behavior when "
-"switching between scenes."
+"This short tutorial will explain how to make a scene switcher using autoload. "
+"For simple scene switching, the :ref:`SceneTree.change_scene() "
+"<class_SceneTree_change_scene>` method suffices (described in :ref:"
+"`doc_scene_tree`), so this method is for more complex behavior when switching "
+"between scenes."
 msgstr ""
+"这个小教程将会诠释如何通过使用自动载入来制作一个场景切换器。对于简单的场景切"
+"换， :ref:`SceneTree.change_scene() <class_SceneTree_change_scene>` 方法就足够了"
+"（在 :ref:`doc_scene_tree` 中有详细描述），因此这个方法是用于更复杂的场景切换行"
+"为的。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:62
 msgid ""
-"First download the template from here: :download:`autoload.zip "
-"</files/autoload.zip>`, then open it."
+"First download the template from here: :download:`autoload.zip </files/autoload."
+"zip>`, then open it."
 msgstr ""
+"首先，从这里下载模板： :download:`autoload.zip </files/autoload.zip>` ，然后打"
+"开。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:65
 msgid ""
-"Two scenes are present, scene_a.scn and scene_b.scn on an otherwise empty"
-" project. Each are identical and contain a button connected to a callback"
-" for switching to the other scene. When the project runs, it starts in "
-"scene_a.scn. However, this currently does nothing and pressing the button"
-" does not work."
+"Two scenes are present, scene_a.scn and scene_b.scn on an otherwise empty "
+"project. Each are identical and contain a button connected to a callback for "
+"switching to the other scene. When the project runs, it starts in scene_a.scn. "
+"However, this currently does nothing and pressing the button does not work."
 msgstr ""
+"目前有两个场景，scene_a.scn 和 scene_b.scn，其他什么都没有。两个场景是相同的，并"
+"且偶包含一个被连接到用于切换到另一个场景的回调的按钮。当项目运行时，它会在 "
+"scene_a.scn 中启动。然而，目前还什么也做不了，按下按钮也不会有效果。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:72
 msgid "global.gd"
@@ -146,58 +165,64 @@ msgstr ""
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:74
 msgid ""
-"First of all, create a global.gd script. The easy way to create a "
-"resource from scratch is from the resources tab:"
+"First of all, create a global.gd script. The easy way to create a resource from "
+"scratch is from the resources tab:"
 msgstr ""
+"首先，创建一个 global.gd 脚本。从头创建一个资源最简单的方法是在资源标签下："
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:79
 msgid "Save the script as `global.gd`:"
-msgstr ""
+msgstr "将脚本保存为 `global.gd` ："
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:83
 msgid ""
-"The script should open in the script editor. The next step is to add it "
-"to AutoLoad list. Select Scene > Project Settings from the menu, switch "
-"to the AutoLoad tab and add a new entry with name \"global\" that points "
-"to this file:"
+"The script should open in the script editor. The next step is to add it to "
+"AutoLoad list. Select Scene > Project Settings from the menu, switch to the "
+"AutoLoad tab and add a new entry with name \"global\" that points to this file:"
 msgstr ""
+"该脚本应该在脚本编辑器中打开了。下一步就把他添加到自动载入列表。在菜单栏中选择场"
+"景(Scene) > 项目设置(Project Settings)，跳到自动载入(AutoLoad)标签下然后以名称"
+"\"global\"新建一项并指向该文件："
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:90
 msgid "Now, whenever you run any of your scenes, the script is always loaded."
-msgstr ""
+msgstr "现在，无论你运行哪个场景，该脚本总会被载入。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:92
 msgid ""
 "Returning to our script, the current scene needs to be fetched in the "
-"`_ready()` function. Both the current scene and `global.gd` are children "
-"of root, but the autoloaded nodes are always first. This means that the "
-"last child of root is always the loaded scene."
+"`_ready()` function. Both the current scene and `global.gd` are children of "
+"root, but the autoloaded nodes are always first. This means that the last child "
+"of root is always the loaded scene."
 msgstr ""
+"回到我们的脚本，我们需要在 `_ready()` 函数中取得当前场景。当前场景和 `global.gd`"
+"都是根节点的子级，但是被自动载入的节点总是优先的。这也就是说，根节点的最后一个子"
+"节点总是被载入的场景。"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:97
 msgid "Note: Make sure that global.gd extends Node, otherwise it won't be loaded!"
-msgstr ""
+msgstr "注意：请确保global.gd继承于Node，否则将无法被载入！"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:110
 msgid ""
-"Next up is the function for changing the scene. This function frees the "
-"current scene and replaces it with the requested one."
-msgstr ""
+"Next up is the function for changing the scene. This function frees the current "
+"scene and replaces it with the requested one."
+msgstr "下一步就是用于改变场景的函数了。这个函数会释放掉当前场景并用"
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:147
 msgid ""
-"As mentioned in the comments above, we really want to avoid the situation"
-" of having the current scene being deleted while being used (code from "
-"functions of it being run), so using :ref:`Object.call_deferred() "
-"<class_Object_call_deferred>` is desired at this point. The result is "
-"that execution of the commands in the second function will happen at a "
-"later time when no code from the current scene is running."
+"As mentioned in the comments above, we really want to avoid the situation of "
+"having the current scene being deleted while being used (code from functions of "
+"it being run), so using :ref:`Object.call_deferred() "
+"<class_Object_call_deferred>` is desired at this point. The result is that "
+"execution of the commands in the second function will happen at a later time "
+"when no code from the current scene is running."
 msgstr ""
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:155
 msgid ""
-"Finally, all that is left is to fill the empty functions in scene_a.gd "
-"and scene_b.gd:"
+"Finally, all that is left is to fill the empty functions in scene_a.gd and "
+"scene_b.gd:"
 msgstr ""
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:165
@@ -206,13 +231,12 @@ msgstr ""
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:174
 msgid ""
-"Now if you run the project, you can switch between both scenes by "
-"pressing the button!"
+"Now if you run the project, you can switch between both scenes by pressing the "
+"button!"
 msgstr ""
 
 #: ../../tutorials/step_by_step/singletons_autoload.rst:177
 msgid ""
-"To load scenes with a progress bar, check out the next tutorial, "
-":ref:`doc_background_loading`"
+"To load scenes with a progress bar, check out the next tutorial, :ref:"
+"`doc_background_loading`"
 msgstr ""
-
