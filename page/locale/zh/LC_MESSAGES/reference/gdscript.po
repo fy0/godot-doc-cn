@@ -5,21 +5,21 @@
 # package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2016.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Godot Engine latest\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-08-22 23:27+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2017-06-13 20:57+0800\n"
 "Language: zh\n"
 "Language-Team: GoDogeCN\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.3.4\n"
+"Last-Translator: \n"
+"X-Generator: Poedit 2.0.2\n"
 
 #: ../../reference/gdscript.rst:4
 msgid "GDScript"
@@ -27,142 +27,176 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:7
 msgid "Introduction"
-msgstr ""
+msgstr "介绍"
 
 #: ../../reference/gdscript.rst:9
 msgid ""
-"*GDScript* is a high level, dynamically typed programming language used "
-"to create content. It uses a syntax similar to `Python "
-"<https://en.wikipedia.org/wiki/Python_%28programming_language%29>`_ "
-"(blocks are indent-based and many keywords are similar). Its goal is to "
-"be optimized for and tightly integrated with Godot Engine, allowing great"
-" flexibility for content creation and integration."
+"*GDScript* is a high level, dynamically typed programming language used to "
+"create content. It uses a syntax similar to `Python <https://en.wikipedia.org/"
+"wiki/Python_%28programming_language%29>`_ (blocks are indent-based and many "
+"keywords are similar). Its goal is to be optimized for and tightly integrated "
+"with Godot Engine, allowing great flexibility for content creation and "
+"integration."
 msgstr ""
+"*GDScript* 是一个用于创建内容的动态类型高级编程语言。它的语法和 `Python "
+"<https://en.wikipedia.org/wiki/Python_%28programming_language%29>`_ 有些相似"
+"（语句块基于缩进并且有很多相似的关键字）。它旨在为Godot进一步优化并紧密整合到"
+"Godot引擎当中，使得内容创作和整合具有更大的灵活度。"
 
 #: ../../reference/gdscript.rst:17
 msgid "History"
-msgstr ""
+msgstr "历史"
 
 #: ../../reference/gdscript.rst:19
 msgid ""
-"Initially, Godot was designed to support multiple scripting languages "
-"(this ability still exists today). However, only GDScript is in use right"
-" now. There is a little history behind this."
+"Initially, Godot was designed to support multiple scripting languages (this "
+"ability still exists today). However, only GDScript is in use right now. There "
+"is a little history behind this."
 msgstr ""
+"起初，Godot被设计为支持多种脚本语言的（这个能力现在依然存在）。然而，到现在，只"
+"是GDScript在投入使用了。这背后有一些些黑历史。"
 
 #: ../../reference/gdscript.rst:23
 msgid ""
-"In the early days, the engine used the `Lua <http://www.lua.org>`__ "
-"scripting language. Lua is fast, but creating bindings to an object "
-"oriented system (by using fallbacks) was complex and slow and took an "
-"enormous amount of code. After some experiments with `Python "
-"<http://www.python.org>`__, it also proved difficult to embed."
+"In the early days, the engine used the `Lua <http://www.lua.org>`__ scripting "
+"language. Lua is fast, but creating bindings to an object oriented system (by "
+"using fallbacks) was complex and slow and took an enormous amount of code. "
+"After some experiments with `Python <http://www.python.org>`__, it also proved "
+"difficult to embed."
 msgstr ""
+"很久很久以前，这个引擎是使用 `Lua <http://www.lua.org>`__ 脚本语言的。Lua很快，"
+"但是绑定到一个面向对象的系统（通过使用退路函数(Fallbacks)）是十分复杂缓慢且代码"
+"量十分庞大。之后也经过几次 `Python <http://www.python.org>`__ 的实验，结果证实"
+"它也很难嵌入。"
 
 #: ../../reference/gdscript.rst:29
 msgid ""
-"The last third party scripting language that was used for shipped games "
-"was `Squirrel <http://squirrel-lang.org>`__, but it was dropped as well. "
-"At that point, it became evident that a custom scripting language could "
-"more optimally make use of Godot's particular architecture:"
+"The last third party scripting language that was used for shipped games was "
+"`Squirrel <http://squirrel-lang.org>`__, but it was dropped as well. At that "
+"point, it became evident that a custom scripting language could more optimally "
+"make use of Godot's particular architecture:"
 msgstr ""
+"最后一个适用于运行游戏的第三方脚本语言是 `Squirrel <http://squirrel-lang."
+"org>`__ 。但是最后也弃坑了。自那时起，我们发现自定义脚本语言显然能够更好的利用"
+"Godot独特的架构："
 
 #: ../../reference/gdscript.rst:34
 msgid ""
-"Godot embeds scripts in nodes. Most languages are not designed with this "
-"in mind."
-msgstr ""
+"Godot embeds scripts in nodes. Most languages are not designed with this in "
+"mind."
+msgstr "Godot将脚本嵌入节点。而绝大多数语言都没有真心去设计这一点。"
 
 #: ../../reference/gdscript.rst:36
 msgid ""
-"Godot uses several built-in data types for 2D and 3D math. Script "
-"languages do not provide this, and binding them is inefficient."
+"Godot uses several built-in data types for 2D and 3D math. Script languages do "
+"not provide this, and binding them is inefficient."
 msgstr ""
+"Godot使用几个内置的数据类型用于2D和3D的数学运算。脚本语言并不提供这些东西，绑定"
+"它们也很没有效率。"
 
 #: ../../reference/gdscript.rst:38
 msgid ""
-"Godot uses threads heavily for lifting and initializing data from the net"
-" or disk. Script interpreters for common languages are not friendly to "
-"this."
+"Godot uses threads heavily for lifting and initializing data from the net or "
+"disk. Script interpreters for common languages are not friendly to this."
 msgstr ""
+"Godot大量地使用性能来搬运并初始化来自于网络和硬盘的数据。一般语言的脚本解释器对"
+"这一点并不友好。"
 
 #: ../../reference/gdscript.rst:41
 msgid ""
 "Godot already has a memory management model for resources, most script "
 "languages provide their own, which results in duplicate effort and bugs."
 msgstr ""
+"Godot对于资源已经具有了一种固定的内存管理模型，绝大多数脚本语言是有它们自己提供"
+"的，这会导致大量重复的无用功和bug。"
 
 #: ../../reference/gdscript.rst:44
 msgid ""
-"Binding code is always messy and results in several failure points, "
-"unexpected bugs and generally low maintainability."
+"Binding code is always messy and results in several failure points, unexpected "
+"bugs and generally low maintainability."
 msgstr ""
+"绑定代码通常会很混乱并且会产生一些缺陷点、意料之外的错误以及总体可维护性的下"
+"降。"
 
 #: ../../reference/gdscript.rst:47
 msgid ""
-"The result of these considerations is *GDScript*. The language and "
-"interpreter for GDScript ended up being smaller than the binding code "
-"itself for Lua and Squirrel, while having equal functionality. With time,"
-" having a built-in language has proven to be a huge advantage."
+"The result of these considerations is *GDScript*. The language and interpreter "
+"for GDScript ended up being smaller than the binding code itself for Lua and "
+"Squirrel, while having equal functionality. With time, having a built-in "
+"language has proven to be a huge advantage."
 msgstr ""
+"基于这些考虑的最终解决方案就是 *GDScript* 。这个语言和它的解释器最终比把代码本"
+"圣绑定给Lua和Squirrel的时候要小，而同时还具有等价的功能。随着时间的推移，拥有一"
+"个内建的语言被证明是一个巨大的优势。"
 
 #: ../../reference/gdscript.rst:53
 msgid "Example of GDScript"
-msgstr ""
+msgstr "GDScript样例"
 
 #: ../../reference/gdscript.rst:55
 msgid ""
-"Some people can learn better by just taking a look at the syntax, so "
-"here's a simple example of how GDScript looks."
+"Some people can learn better by just taking a look at the syntax, so here's a "
+"simple example of how GDScript looks."
 msgstr ""
+"有人可以只通过看一眼语法就可以把它学得很好。因此这里有一个GDScript大致外观的样"
+"例。"
 
 #: ../../reference/gdscript.rst:117
 msgid ""
-"If you have previous experience with statically typed languages such as "
-"C, C++, or C# but never used a dynamically typed one before, it is "
-"advised you read this tutorial: :ref:`doc_gdscript_more_efficiently`."
+"If you have previous experience with statically typed languages such as C, C+"
+"+, or C# but never used a dynamically typed one before, it is advised you read "
+"this tutorial: :ref:`doc_gdscript_more_efficiently`."
 msgstr ""
+"如果你之前具有静态类型语言（C、C++、C#）的经验而从未用过动态类型的语言的话，我"
+"们推荐你去阅读一下这个教程： :ref:`doc_gdscript_more_efficiently` 。"
 
 #: ../../reference/gdscript.rst:122
 msgid "Language"
-msgstr ""
+msgstr "语言"
 
 #: ../../reference/gdscript.rst:124
 msgid ""
-"In the following, an overview is given to GDScript. Details, such as "
-"which methods are available to arrays or other objects, should be looked "
-"up in the linked class descriptions."
+"In the following, an overview is given to GDScript. Details, such as which "
+"methods are available to arrays or other objects, should be looked up in the "
+"linked class descriptions."
 msgstr ""
+"在下面还会给出GDScript的概述。而细节部分，诸如那些方法可以用于数组或者其他对象"
+"之类的，请查阅带有链接的类描述。"
 
 #: ../../reference/gdscript.rst:129
 msgid "Identifiers"
-msgstr ""
+msgstr "标识符(Identifiers)"
 
 #: ../../reference/gdscript.rst:131
 msgid ""
-"Any string that restricts itself to alphabetic characters (``a`` to ``z``"
-" and ``A`` to ``Z``), digits (``0`` to ``9``) and ``_`` qualifies as an "
-"identifier. Additionally, identifiers must not begin with a digit. "
-"Identifiers are case-sensitive (``foo`` is different from ``FOO``)."
+"Any string that restricts itself to alphabetic characters (``a`` to ``z`` and "
+"``A`` to ``Z``), digits (``0`` to ``9``) and ``_`` qualifies as an identifier. "
+"Additionally, identifiers must not begin with a digit. Identifiers are case-"
+"sensitive (``foo`` is different from ``FOO``)."
 msgstr ""
+"所有限于字母（ ``A`` 到 ``Z`` 和 ``a`` 到 ``z`` ）、数字（ ``0`` 到 ``9`` ）以"
+"及 ``_`` 的字符串都有资格作为标识符。更具体一点，标识符不能用一个数字打头，而且"
+"标识符对大小写是敏感的（ ``foo`` 和 ``FOO`` 不是一个东西）。"
 
 #: ../../reference/gdscript.rst:137
 msgid "Keywords"
-msgstr ""
+msgstr "关键字(Keywords)"
 
 #: ../../reference/gdscript.rst:139
 msgid ""
 "The following is the list of keywords supported by the language. Since "
 "keywords are reserved words (tokens), they can't be used as identifiers."
 msgstr ""
+"下表是被本语言支持的所有关键字。因为关键字是保留字（符号），它们也不能用作标识"
+"符。"
 
 #: ../../reference/gdscript.rst:143
 msgid "Keyword"
-msgstr ""
+msgstr "关键字"
 
 #: ../../reference/gdscript.rst:143
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: ../../reference/gdscript.rst:145
 msgid "if"
@@ -171,7 +205,7 @@ msgstr ""
 #: ../../reference/gdscript.rst:145 ../../reference/gdscript.rst:147
 #: ../../reference/gdscript.rst:149
 msgid "See `if/else/elif`_."
-msgstr ""
+msgstr "详见 `if/else/elif`_ 。"
 
 #: ../../reference/gdscript.rst:147
 msgid "elif"
@@ -187,7 +221,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:151
 msgid "See for_."
-msgstr ""
+msgstr "详见 for_ 。"
 
 #: ../../reference/gdscript.rst:153
 msgid "do"
@@ -195,7 +229,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:153
 msgid "Reserved for future implementation of do...while loops."
-msgstr ""
+msgstr "保留以备未来可能实现的do...while型循环。"
 
 #: ../../reference/gdscript.rst:155 ../../reference/gdscript.rst:617
 msgid "while"
@@ -203,7 +237,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:155
 msgid "See while_."
-msgstr ""
+msgstr "详见 while_ 。"
 
 #: ../../reference/gdscript.rst:157
 msgid "switch"
@@ -211,7 +245,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:157 ../../reference/gdscript.rst:159
 msgid "Reserved for future implementation."
-msgstr ""
+msgstr "保留以备未来实现switch分支。"
 
 #: ../../reference/gdscript.rst:159
 msgid "case"
@@ -223,7 +257,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:161
 msgid "Exits the execution of the current ``for`` or ``while`` loop."
-msgstr ""
+msgstr "推互当前的 ``for`` 或 ``while`` 型循环。"
 
 #: ../../reference/gdscript.rst:163
 msgid "continue"
@@ -231,7 +265,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:163
 msgid "Immediately skips to the next iteration of the ``for`` or ``while`` loop."
-msgstr ""
+msgstr "立即跳入 ``for`` 或 ``while`` 型循环的下一轮迭代。"
 
 #: ../../reference/gdscript.rst:165
 msgid "pass"
@@ -239,9 +273,11 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:165
 msgid ""
-"Used where a statement is required syntactically but execution of code is"
-" undesired, e.g. in empty functions."
+"Used where a statement is required syntactically but execution of code is "
+"undesired, e.g. in empty functions."
 msgstr ""
+"用于一些从语法上来说需要语句但实际上并不需要执行任何内容的位置（即所谓的空语"
+"句），例如空函数当中。"
 
 #: ../../reference/gdscript.rst:167
 msgid "return"
@@ -249,7 +285,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:167
 msgid "Returns a value from a function."
-msgstr ""
+msgstr "从函数中返回(Return)一个值"
 
 #: ../../reference/gdscript.rst:169
 msgid "class"
@@ -257,7 +293,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:169
 msgid "Defines a class."
-msgstr ""
+msgstr "定义一个类(Class)。"
 
 #: ../../reference/gdscript.rst:171
 msgid "extends"
@@ -265,9 +301,9 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:171
 msgid ""
-"Defines what class to extend with the current class. Also tests whether a"
-" variable extends a given class."
-msgstr ""
+"Defines what class to extend with the current class. Also tests whether a "
+"variable extends a given class."
+msgstr "定义当前类由哪个类派生(Extend)。也能够检测一个变量是否派生于所给定的类。"
 
 #: ../../reference/gdscript.rst:173
 msgid "tool"
@@ -275,7 +311,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:173
 msgid "Executes the script in the editor."
-msgstr ""
+msgstr "在编辑器中执行脚本。"
 
 #: ../../reference/gdscript.rst:175
 msgid "signal"
@@ -283,7 +319,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:175
 msgid "Defines a signal."
-msgstr ""
+msgstr "定义一个信号（Signal）。"
 
 #: ../../reference/gdscript.rst:177
 msgid "func"
@@ -291,7 +327,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:177
 msgid "Defines a function."
-msgstr ""
+msgstr "定义一个函数(Function)。"
 
 #: ../../reference/gdscript.rst:179
 msgid "static"
@@ -299,7 +335,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:179
 msgid "Defines a static function. Static member variables are not allowed."
-msgstr ""
+msgstr "定义一个静态函数(Static Function)，不允许定义静态成员变量。"
 
 #: ../../reference/gdscript.rst:181
 msgid "const"
@@ -307,7 +343,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:181
 msgid "Defines a constant."
-msgstr ""
+msgstr "定义一个常量(Constant)。"
 
 #: ../../reference/gdscript.rst:183
 msgid "var"
@@ -315,7 +351,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:183
 msgid "Defines a variable."
-msgstr ""
+msgstr "定义一个变量(Variable)。"
 
 #: ../../reference/gdscript.rst:185
 msgid "onready"
@@ -325,7 +361,7 @@ msgstr ""
 msgid ""
 "Initializes a variable once the Node the script is attached to and its "
 "children are part of the scene tree."
-msgstr ""
+msgstr "在该脚本所依附的节点及其子节点进入场景树的时候初始化变量。"
 
 #: ../../reference/gdscript.rst:187
 msgid "export"
@@ -333,9 +369,9 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:187
 msgid ""
-"Saves a variable along with the resource it's attached to and makes it "
-"visible and modifiable in the editor."
-msgstr ""
+"Saves a variable along with the resource it's attached to and makes it visible "
+"and modifiable in the editor."
+msgstr "随所依附的资源一同保存该变量并使其在编辑器中可见可修改。"
 
 #: ../../reference/gdscript.rst:189
 msgid "setget"
@@ -343,7 +379,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:189
 msgid "Defines setter and getter functions for a variable."
-msgstr ""
+msgstr "定义一个变量的存取器(Setter & Getter)函数。"
 
 #: ../../reference/gdscript.rst:191
 msgid "breakpoint"
@@ -351,25 +387,25 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:191
 msgid "Editor helper for debugger breakpoints."
-msgstr ""
+msgstr "编辑器用来调试断点(Breakpoint)的好帮手。"
 
 #: ../../reference/gdscript.rst:195
 msgid "Operators"
-msgstr ""
+msgstr "运算符(Operators)"
 
 #: ../../reference/gdscript.rst:197
 msgid ""
-"The following is the list of supported operators and their precedence "
-"(TODO, change since this was made to reflect python operators)"
-msgstr ""
+"The following is the list of supported operators and their precedence (TODO, "
+"change since this was made to reflect python operators)"
+msgstr "下表是所有支持的运算符及它们的优先级（TODO，因为是用于映射python运算符）"
 
 #: ../../reference/gdscript.rst:201
 msgid "**Operator**"
-msgstr ""
+msgstr "**运算符**"
 
 #: ../../reference/gdscript.rst:201
 msgid "**Description**"
-msgstr ""
+msgstr "**描述**"
 
 #: ../../reference/gdscript.rst:203
 msgid "``x[index]``"
@@ -377,7 +413,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:203
 msgid "Subscription, Highest Priority"
-msgstr ""
+msgstr "下标运算符，优先级最高"
 
 #: ../../reference/gdscript.rst:205
 msgid "``x.attribute``"
@@ -385,7 +421,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:205
 msgid "Attribute Reference"
-msgstr ""
+msgstr "属性引用"
 
 #: ../../reference/gdscript.rst:207
 msgid "``extends``"
@@ -393,7 +429,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:207
 msgid "Instance Type Checker"
-msgstr ""
+msgstr "实例类别检测器"
 
 #: ../../reference/gdscript.rst:209
 msgid "``~``"
@@ -401,7 +437,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:209
 msgid "Bitwise NOT"
-msgstr ""
+msgstr "位取反"
 
 #: ../../reference/gdscript.rst:211
 msgid "``-x``"
@@ -409,7 +445,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:211
 msgid "Negative"
-msgstr ""
+msgstr "相反数"
 
 #: ../../reference/gdscript.rst:213
 msgid "``*`` ``/`` ``%``"
@@ -417,7 +453,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:213
 msgid "Multiplication / Division / Remainder"
-msgstr ""
+msgstr "乘法、除法、余数"
 
 #: ../../reference/gdscript.rst:215
 msgid "``+`` ``-``"
@@ -425,7 +461,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:215
 msgid "Addition / Subtraction"
-msgstr ""
+msgstr "加法、减法"
 
 #: ../../reference/gdscript.rst:217
 msgid "``<<`` ``>>``"
@@ -433,7 +469,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:217
 msgid "Bit Shifting"
-msgstr ""
+msgstr "移位"
 
 #: ../../reference/gdscript.rst:219
 msgid "``&``"
@@ -441,7 +477,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:219
 msgid "Bitwise AND"
-msgstr ""
+msgstr "位与"
 
 #: ../../reference/gdscript.rst:221
 msgid "``^``"
@@ -449,7 +485,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:221
 msgid "Bitwise XOR"
-msgstr ""
+msgstr "位异或"
 
 #: ../../reference/gdscript.rst:223
 msgid "``|``"
@@ -457,7 +493,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:223
 msgid "Bitwise OR"
-msgstr ""
+msgstr "位或"
 
 #: ../../reference/gdscript.rst:225
 msgid "``<`` ``>`` ``==`` ``!=`` ``>=`` ``<=``"
@@ -465,7 +501,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:225
 msgid "Comparisons"
-msgstr ""
+msgstr "比较"
 
 #: ../../reference/gdscript.rst:227
 msgid "``in``"
@@ -473,7 +509,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:227
 msgid "Content Test"
-msgstr ""
+msgstr "内容检测"
 
 #: ../../reference/gdscript.rst:229
 msgid "``!`` ``not``"
@@ -481,7 +517,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:229
 msgid "Boolean NOT"
-msgstr ""
+msgstr "逻辑非"
 
 #: ../../reference/gdscript.rst:231
 msgid "``and`` ``&&``"
@@ -489,7 +525,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:231
 msgid "Boolean AND"
-msgstr ""
+msgstr "逻辑且（与）"
 
 #: ../../reference/gdscript.rst:233
 msgid "``or`` ``||``"
@@ -497,7 +533,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:233
 msgid "Boolean OR"
-msgstr ""
+msgstr "逻辑或"
 
 #: ../../reference/gdscript.rst:235
 msgid "``=`` ``+=`` ``-=`` ``*=`` ``/=`` ``%=`` ``&=`` ``|=``"
@@ -505,19 +541,19 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:235
 msgid "Assignment, Lowest Priority"
-msgstr ""
+msgstr "赋值，优先级最低"
 
 #: ../../reference/gdscript.rst:239
 msgid "Literals"
-msgstr ""
+msgstr "字面值(Literals)"
 
 #: ../../reference/gdscript.rst:242
 msgid "**Literal**"
-msgstr ""
+msgstr "**字面值**"
 
 #: ../../reference/gdscript.rst:242
 msgid "**Type**"
-msgstr ""
+msgstr "**类型**"
 
 #: ../../reference/gdscript.rst:244
 msgid "``45``"
@@ -525,7 +561,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:244
 msgid "Base 10 integer"
-msgstr ""
+msgstr "十进制整数(Decimal Integer)"
 
 #: ../../reference/gdscript.rst:246
 msgid "``0x8F51``"
@@ -533,7 +569,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:246
 msgid "Base 16 (hex) integer"
-msgstr ""
+msgstr "十六进制整数(Hexadecimal Integer)"
 
 #: ../../reference/gdscript.rst:248
 msgid "``3.14``, ``58.1e-10``"
@@ -541,7 +577,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:248
 msgid "Floating point number (real)"
-msgstr ""
+msgstr "浮点数（实数，real）"
 
 #: ../../reference/gdscript.rst:250
 msgid "``\"Hello\"``, ``\"Hi\"``"
@@ -549,7 +585,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:250
 msgid "Strings"
-msgstr ""
+msgstr "字符串(String)"
 
 #: ../../reference/gdscript.rst:252
 msgid "``\"\"\"Hello, Dude\"\"\"``"
@@ -557,7 +593,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:252
 msgid "Multiline string"
-msgstr ""
+msgstr "多行字符串(Multiline String)"
 
 #: ../../reference/gdscript.rst:254
 msgid "``@\"Node/Label\"``"
@@ -565,29 +601,29 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:254
 msgid "NodePath or StringName"
-msgstr ""
+msgstr "节点路径(NodePath)或字符串路径名称(StringName)"
 
 #: ../../reference/gdscript.rst:258
 msgid "Comments"
-msgstr ""
+msgstr "注释(Comments)"
 
 #: ../../reference/gdscript.rst:260
 msgid ""
-"Anything from a ``#`` to the end of the line is ignored and is considered"
-" a comment."
-msgstr ""
+"Anything from a ``#`` to the end of the line is ignored and is considered a "
+"comment."
+msgstr "从一个 ``#`` 开始到行尾都被认为是一个注释并被忽略过去。"
 
 #: ../../reference/gdscript.rst:279
 msgid "Built-in types"
-msgstr ""
+msgstr "内置类型(Built-in Types)"
 
 #: ../../reference/gdscript.rst:282
 msgid "Basic built-in types"
-msgstr ""
+msgstr "基本内置类型"
 
 #: ../../reference/gdscript.rst:284
 msgid "A variable in GDScript can be assigned to several built-in types."
-msgstr ""
+msgstr "GDScript中的一个变量可以被赋值为下列几种内置类型。"
 
 #: ../../reference/gdscript.rst:287
 msgid "null"
@@ -595,9 +631,9 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:289
 msgid ""
-"``null`` is an empty data type that contains no information and can not "
-"be assigned any other value."
-msgstr ""
+"``null`` is an empty data type that contains no information and can not be "
+"assigned any other value."
+msgstr "``null`` 是一个空的数据类型，不包含任何信息，也不能赋予其他的值。"
 
 #: ../../reference/gdscript.rst:293
 msgid "bool"
@@ -605,7 +641,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:295
 msgid "The Boolean data type can only contain ``true`` or ``false``."
-msgstr ""
+msgstr "布尔型（Boolean）数据类型，只包含 ``true`` 或 ``false`` 。"
 
 #: ../../reference/gdscript.rst:298
 msgid "int"
@@ -613,9 +649,9 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:300
 msgid ""
-"The integer data type can only contain integer numbers, (both negative "
-"and positive)."
-msgstr ""
+"The integer data type can only contain integer numbers, (both negative and "
+"positive)."
+msgstr "整数型数据类型，只包含整数（正负均可）。"
 
 #: ../../reference/gdscript.rst:304
 msgid "float"
@@ -623,7 +659,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:306
 msgid "Used to contain a floating point value (real numbers)."
-msgstr ""
+msgstr "用于包含一个浮点值（实数）"
 
 #: ../../reference/gdscript.rst:309
 msgid ":ref:`String <class_String>`"
@@ -631,17 +667,19 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:311
 msgid ""
-"A sequence of characters in `Unicode format "
-"<https://en.wikipedia.org/wiki/Unicode>`_. Strings can contain the "
-"`standard C escape sequences "
-"<https://en.wikipedia.org/wiki/Escape_sequences_in_C>`_. GDScript "
-"supports :ref:`format strings aka printf functionality "
-"<doc_gdscript_printf>`."
+"A sequence of characters in `Unicode format <https://en.wikipedia.org/wiki/"
+"Unicode>`_. Strings can contain the `standard C escape sequences <https://en."
+"wikipedia.org/wiki/Escape_sequences_in_C>`_. GDScript supports :ref:`format "
+"strings aka printf functionality <doc_gdscript_printf>`."
 msgstr ""
+"一个 `Unicode 格式 <https://en.wikipedia.org/wiki/Unicode>`_ 。的字符序列。字符"
+"串可以包含 `标准C风格的转义字符 <https://en.wikipedia.org/wiki/"
+"Escape_sequences_in_C>`_ 。GDScript支持 :ref:` 这种也被称作用于printf功能的格式"
+"字符串 <doc_gdscript_printf>` 。"
 
 #: ../../reference/gdscript.rst:317
 msgid "Vector built-in types"
-msgstr ""
+msgstr "内置向量类型(Vector)"
 
 #: ../../reference/gdscript.rst:320
 msgid ":ref:`Vector2 <class_Vector2>`"
@@ -649,10 +687,12 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:322
 msgid ""
-"2D vector type containing ``x`` and ``y`` fields. Can alternatively "
-"access fields as ``width`` and ``height`` for readability. Can also be "
-"accessed as array."
+"2D vector type containing ``x`` and ``y`` fields. Can alternatively access "
+"fields as ``width`` and ``height`` for readability. Can also be accessed as "
+"array."
 msgstr ""
+"2D向量类型，包含 ``x`` 和 ``y`` 字段。处于可读性也可以通过 ``width`` 和 "
+"``height`` 替代访问。也可以以数组的形式访问。"
 
 #: ../../reference/gdscript.rst:327
 msgid ":ref:`Rect2 <class_Rect2>`"
@@ -663,6 +703,8 @@ msgid ""
 "2D Rectangle type containing two vectors fields: ``pos`` and ``size``. "
 "Alternatively contains an ``end`` field which is ``pos+size``."
 msgstr ""
+"2D矩形类型，包含两个向量字段 ``pos`` 和 ``size`` 。还包含一个 ``end`` 字段来替"
+"代表示 ``pos+size`` 。"
 
 #: ../../reference/gdscript.rst:333
 msgid ":ref:`Vector3 <class_Vector3>`"
@@ -670,9 +712,9 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:335
 msgid ""
-"3D vector type containing ``x``, ``y`` and ``z`` fields. This can also be"
-" accessed as an array."
-msgstr ""
+"3D vector type containing ``x``, ``y`` and ``z`` fields. This can also be "
+"accessed as an array."
+msgstr "3D向量类型，包含 ``x`` ， ``y`` 和 ``z`` 字段。亦可以数组形式访问。"
 
 #: ../../reference/gdscript.rst:339
 msgid ":ref:`Matrix32 <class_Matrix32>`"
@@ -680,7 +722,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:341
 msgid "3x2 matrix used for 2D transforms."
-msgstr ""
+msgstr "用于2D变换的3×2矩阵。"
 
 #: ../../reference/gdscript.rst:344
 msgid ":ref:`Plane <class_Plane>`"
@@ -688,9 +730,11 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:346
 msgid ""
-"3D Plane type in normalized form that contains a ``normal`` vector field "
-"and a ``d`` scalar distance."
+"3D Plane type in normalized form that contains a ``normal`` vector field and a "
+"``d`` scalar distance."
 msgstr ""
+"3D平面类型，具有规格化的点法形式（包含一个 ``normal`` 法向量字段和一个标量距离 "
+"``d`` ）。"
 
 #: ../../reference/gdscript.rst:350
 msgid ":ref:`Quat <class_Quat>`"
@@ -698,9 +742,10 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:352
 msgid ""
-"Quaternion is a datatype used for representing a 3D rotation. It's useful"
-" for interpolating rotations."
+"Quaternion is a datatype used for representing a 3D rotation. It's useful for "
+"interpolating rotations."
 msgstr ""
+"四元数（Quaternion）是一种用于表达3D旋转的数据类型，对于旋转补间非常有用。"
 
 #: ../../reference/gdscript.rst:356
 msgid ":ref:`AABB <class_AABB>`"
@@ -708,11 +753,12 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:358
 msgid ""
-"Axis Aligned bounding box (or 3D box) contains 2 vectors fields: ``pos`` "
-"and ``size``. Alternatively contains an ``end`` field which is "
-"``pos+size``. As an alias of this type, ``Rect3`` can be used "
-"interchangeably."
+"Axis Aligned bounding box (or 3D box) contains 2 vectors fields: ``pos`` and "
+"``size``. Alternatively contains an ``end`` field which is ``pos+size``. As an "
+"alias of this type, ``Rect3`` can be used interchangeably."
 msgstr ""
+"轴对齐碰撞盒（Axis Aligned Bounding Box, AABB），包含两个向量字段： ``pos`` 和 "
+"``size`` ，还包含一个用来替代表示 ``pos+size`` 的 ``end`` 字段。"
 
 #: ../../reference/gdscript.rst:364
 msgid ":ref:`Matrix3 <class_Matrix3>`"
@@ -720,10 +766,11 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:366
 msgid ""
-"3x3 matrix used for 3D rotation and scale. It contains 3 vector fields "
-"(``x``, ``y`` and ``z``) and can also be accessed as an array of 3D "
-"vectors."
+"3x3 matrix used for 3D rotation and scale. It contains 3 vector fields (``x``, "
+"``y`` and ``z``) and can also be accessed as an array of 3D vectors."
 msgstr ""
+"用于3D旋转和缩放的3阶方阵。包含三个向量字段 (``x`` 、 ``y`` 和 ``z``)，亦可以3D"
+"向量数组的形式访问。"
 
 #: ../../reference/gdscript.rst:371
 msgid ":ref:`Transform <class_Transform>`"
@@ -731,13 +778,14 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:373
 msgid ""
-"3D Transform contains a Matrix3 field ``basis`` and a Vector3 field "
-"``origin``."
+"3D Transform contains a Matrix3 field ``basis`` and a Vector3 field ``origin``."
 msgstr ""
+"包含一个Matrix3类型字段 ``basis`` 和一个Vector3类型字段 ``origin`` 的3D变换类"
+"型。"
 
 #: ../../reference/gdscript.rst:377
 msgid "Engine built-in types"
-msgstr ""
+msgstr "引擎内置类型"
 
 #: ../../reference/gdscript.rst:380
 msgid ":ref:`Color <class_Color>`"
@@ -745,9 +793,11 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:382
 msgid ""
-"Color data type contains ``r``, ``g``, ``b``, and ``a`` fields. It can "
-"also be accessed as ``h``, ``s``, and ``v`` for hue/saturation/value."
+"Color data type contains ``r``, ``g``, ``b``, and ``a`` fields. It can also be "
+"accessed as ``h``, ``s``, and ``v`` for hue/saturation/value."
 msgstr ""
+"包含 ``r`` 、 ``g`` 、 ``b`` 和 ``a`` 字段的颜色数据类型，也可以被访问为 "
+"``h`` 、 ``s`` 和 ``v`` 作为色相、饱和度、亮度。"
 
 #: ../../reference/gdscript.rst:386
 msgid ":ref:`Image <class_Image>`"
@@ -755,7 +805,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:388
 msgid "Contains a custom format 2D image and allows direct access to the pixels."
-msgstr ""
+msgstr "包含一个自定义格式并可以直接访问像素点的2D图像类型。"
 
 #: ../../reference/gdscript.rst:392
 msgid ":ref:`NodePath <class_NodePath>`"
@@ -763,8 +813,8 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:394
 msgid ""
-"Compiled path to a node used mainly in the scene system. It can be easily"
-" assigned to, and from, a String."
+"Compiled path to a node used mainly in the scene system. It can be easily "
+"assigned to, and from, a String."
 msgstr ""
 
 #: ../../reference/gdscript.rst:398
@@ -773,7 +823,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:400
 msgid "Resource ID (RID). Servers use generic RIDs to reference opaque data."
-msgstr ""
+msgstr "资源ID（RID）。服务器使用不同的RID来引用不透明的数据。"
 
 #: ../../reference/gdscript.rst:403
 msgid ":ref:`Object <class_Object>`"
@@ -781,7 +831,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:405
 msgid "Base class for anything that is not a built-in type."
-msgstr ""
+msgstr "一切非内置类型的基类"
 
 #: ../../reference/gdscript.rst:408
 msgid ":ref:`InputEvent <class_InputEvent>`"
@@ -789,14 +839,14 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:410
 msgid ""
-"Events from input devices are contained in very compact form in "
-"InputEvent objects. Due to the fact that they can be received in high "
-"amounts from frame to frame they are optimized as their own data type."
-msgstr ""
+"Events from input devices are contained in very compact form in InputEvent "
+"objects. Due to the fact that they can be received in high amounts from frame "
+"to frame they are optimized as their own data type."
+msgstr "来自于"
 
 #: ../../reference/gdscript.rst:415
 msgid "Container built-in types"
-msgstr ""
+msgstr "内置容器类型"
 
 #: ../../reference/gdscript.rst:418
 msgid ":ref:`Array <class_Array>`"
@@ -805,57 +855,68 @@ msgstr ""
 #: ../../reference/gdscript.rst:420
 msgid ""
 "Generic sequence of arbitrary object types, including other arrays or "
-"dictionaries (see below). The array can resize dynamically. Arrays are "
-"indexed starting from index ``0``. Starting with Godot 2.1, indices may "
-"be negative like in Python, to count from the end."
+"dictionaries (see below). The array can resize dynamically. Arrays are indexed "
+"starting from index ``0``. Starting with Godot 2.1, indices may be negative "
+"like in Python, to count from the end."
 msgstr ""
+"任意类型对象的序列，包括其他数组(Arrays)或映射典(Dictionary)（详见下文）。数组"
+"可以动态地改变大小。数组索引号从 ``0`` 开始。从Godot 2.1开始，索引可以像Python"
+"那样是负值了，来表示倒数第几个元素。"
 
 #: ../../reference/gdscript.rst:434
 msgid ""
-"GDScript arrays are allocated linearly in memory for speed. Very large "
-"arrays (more than tens of thousands of elements) may however cause memory"
-" fragmentation. If this is a concern special types of arrays are "
-"available. These only accept a single data type. They avoid memory "
-"fragmentation and also use less memory but are atomic and tend to run "
-"slower than generic arrays. They are therefore only recommended to use "
-"for very large data sets:"
+"GDScript arrays are allocated linearly in memory for speed. Very large arrays "
+"(more than tens of thousands of elements) may however cause memory "
+"fragmentation. If this is a concern special types of arrays are available. "
+"These only accept a single data type. They avoid memory fragmentation and also "
+"use less memory but are atomic and tend to run slower than generic arrays. "
+"They are therefore only recommended to use for very large data sets:"
 msgstr ""
+"GDScript的数组在内存当中被线性分配（Linearly Allocate）以提高速度。过大的数组"
+"（数万多的元素）可能会产生内存碎片（Memory Fragmentation）。If this is a "
+"concern special types of arrays are available. 这些将只接受单一的数据类型。它们"
+"会避免内存碎片的产生并占用更少的内存，但会机器微小并且很可能比常规数组要慢。它"
+"们因此只在处理非常大的数据集合的时候才被推荐使用："
 
 #: ../../reference/gdscript.rst:441
 msgid ""
-":ref:`ByteArray <class_ByteArray>`: An array of bytes (integers from 0 to"
-" 255)."
-msgstr ""
+":ref:`ByteArray <class_ByteArray>`: An array of bytes (integers from 0 to 255)."
+msgstr ":ref:`ByteArray <class_ByteArray>`: 字节数据（0到255）数组"
 
 #: ../../reference/gdscript.rst:442
 msgid ":ref:`IntArray <class_IntArray>`: An array of integers."
-msgstr ""
+msgstr ":ref:`IntArray <class_IntArray>`: 整数数组"
 
 #: ../../reference/gdscript.rst:443
 msgid ":ref:`FloatArray <class_FloatArray>`: An array of floats."
-msgstr ""
+msgstr ":ref:`FloatArray <class_FloatArray>`: 浮点型数组。"
 
 #: ../../reference/gdscript.rst:444
 msgid ":ref:`StringArray <class_StringArray>`: An array of strings."
-msgstr ""
+msgstr ":ref:`StringArray <class_StringArray>`: 字符串数组。"
 
 #: ../../reference/gdscript.rst:445
 msgid ""
 ":ref:`Vector2Array <class_Vector2Array>`: An array of :ref:`Vector2 "
 "<class_Vector2>` objects."
 msgstr ""
+":ref:`Vector2Array <class_Vector2Array>`:  :ref:`Vector2 <class_Vector2>` 对象"
+"数组"
 
 #: ../../reference/gdscript.rst:446
 msgid ""
 ":ref:`Vector3Array <class_Vector3Array>`: An array of :ref:`Vector3 "
 "<class_Vector3>` objects."
 msgstr ""
+":ref:`Vector3Array <class_Vector3Array>`: :ref:`Vector3 <class_Vector3>` 对象数"
+"组。"
 
 #: ../../reference/gdscript.rst:447
 msgid ""
-":ref:`ColorArray <class_ColorArray>`: An array of :ref:`Color "
-"<class_Color>` objects."
+":ref:`ColorArray <class_ColorArray>`: An array of :ref:`Color <class_Color>` "
+"objects."
 msgstr ""
+":ref:`ColorArray <class_ColorArray>`: :ref:`Color <class_Color>` 对象数组。"
 
 #: ../../reference/gdscript.rst:450
 msgid ":ref:`Dictionary <class_Dictionary>`"
@@ -863,64 +924,73 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:452
 msgid "Associative container which contains values referenced by unique keys."
-msgstr ""
+msgstr "映射典，一种包含一个唯一的键(Key)及其所引用的值(Value)的关联容器。"
 
 #: ../../reference/gdscript.rst:465
 msgid ""
-"Lua-style table syntax is also supported. Lua-style uses ``=`` instead of"
-" ``:`` and doesn't use quotes to mark string keys (making for slightly "
-"less to write). Note however that like any GDScript identifier, keys "
-"written in this form cannot start with a digit."
+"Lua-style table syntax is also supported. Lua-style uses ``=`` instead of ``:"
+"`` and doesn't use quotes to mark string keys (making for slightly less to "
+"write). Note however that like any GDScript identifier, keys written in this "
+"form cannot start with a digit."
 msgstr ""
+"映射典同样支持Lua风格数据表(Lua-style table)的语法风格。Lua风格使用 ``=`` 来替"
+"代 ``:`` ，并且不使用引号来标注字符串键（以减少书写量）。注意，无论如何，这都和"
+"GDScript的标识符一样，以这种形式书写的键也不能以数字打头。"
 
 #: ../../reference/gdscript.rst:479
 msgid ""
-"To add a key to an existing dictionary, access it like an existing key "
-"and assign to it::"
+"To add a key to an existing dictionary, access it like an existing key and "
+"assign to it::"
 msgstr ""
+"欲对一个已有的映射典添加一个键，只需要把他当作已有键来访问并为其赋值就可以了::"
 
 #: ../../reference/gdscript.rst:488
 msgid "Data"
-msgstr ""
+msgstr "数据"
 
 #: ../../reference/gdscript.rst:491
 msgid "Variables"
-msgstr ""
+msgstr "变量"
 
 #: ../../reference/gdscript.rst:493
 msgid ""
-"Variables can exist as class members or local to functions. They are "
-"created with the ``var`` keyword and may, optionally, be assigned a value"
-" upon initialization."
+"Variables can exist as class members or local to functions. They are created "
+"with the ``var`` keyword and may, optionally, be assigned a value upon "
+"initialization."
 msgstr ""
+"变量可以以类的成员或函数的局部变量的形式存在。它们通过 ``var`` 关键字被创建并且"
+"可能，可选地，在同时被赋值以初始化。"
 
 #: ../../reference/gdscript.rst:505
 msgid "Constants"
-msgstr ""
+msgstr "常量（Constants）"
 
 #: ../../reference/gdscript.rst:507
 msgid ""
 "Constants are similar to variables, but must be constants or constant "
 "expressions and must be assigned on initialization."
 msgstr ""
+"常量和变量差不多，但是在初始化的时候必须被赋为常数或常量表达式，且不可变。"
 
 #: ../../reference/gdscript.rst:521
 msgid "Functions"
-msgstr ""
+msgstr "函数"
 
 #: ../../reference/gdscript.rst:523
 msgid ""
 "Functions always belong to a `class <Classes_>`_. The scope priority for "
-"variable look-up is: local → class member → global. The ``self`` variable"
-" is always available and is provided as an option for accessing class "
-"members, but is not always required (and should *not* be sent as the "
-"function's first argument, unlike Python)."
+"variable look-up is: local → class member → global. The ``self`` variable is "
+"always available and is provided as an option for accessing class members, but "
+"is not always required (and should *not* be sent as the function's first "
+"argument, unlike Python)."
 msgstr ""
+"函数总会隶属于一个  `类 <Classes_>`_ 。变量查找的作用域优先级是：局部变量"
+"(Local) → 类成员 → 全局。 ``self``变量总是可用的，并且被提供为一个用来访问类成"
+"员的选项，但也并非总需要这样做（并且和Python不一样的是，self *不* 应该被）"
 
 #: ../../reference/gdscript.rst:536
 msgid ""
-"A function can ``return`` at any point. The default return value is "
-"``null``."
+"A function can ``return`` at any point. The default return value is ``null``."
 msgstr ""
 
 #: ../../reference/gdscript.rst:539
@@ -929,32 +999,30 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:541
 msgid ""
-"To call a function in a *base class* (i.e. one ``extend``-ed in your "
-"current class), prepend ``.`` to the function name:"
+"To call a function in a *base class* (i.e. one ``extend``-ed in your current "
+"class), prepend ``.`` to the function name:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:548
 msgid ""
-"Contrary to Python, functions are *not* first class objects in GDScript. "
-"This means they cannot be stored in variables, passed as an argument to "
-"another function or be returned from other functions. This is for "
-"performance reasons."
+"Contrary to Python, functions are *not* first class objects in GDScript. This "
+"means they cannot be stored in variables, passed as an argument to another "
+"function or be returned from other functions. This is for performance reasons."
 msgstr ""
 
 #: ../../reference/gdscript.rst:552
 msgid ""
-"To reference a function by name at runtime, (e.g. to store it in a "
-"variable, or pass it to another function as an argument) one must use the"
-" ``call`` or ``funcref`` helpers::"
+"To reference a function by name at runtime, (e.g. to store it in a variable, "
+"or pass it to another function as an argument) one must use the ``call`` or "
+"``funcref`` helpers::"
 msgstr ""
 
 #: ../../reference/gdscript.rst:565
 msgid ""
-"Remember that default functions like  ``_init``, and most notifications "
-"such as ``_enter_tree``, ``_exit_tree``, ``_process``, "
-"``_fixed_process``, etc. are called in all base classes automatically. So"
-" there is only a need to call the function explicitly when overloading "
-"them in some way."
+"Remember that default functions like  ``_init``, and most notifications such "
+"as ``_enter_tree``, ``_exit_tree``, ``_process``, ``_fixed_process``, etc. are "
+"called in all base classes automatically. So there is only a need to call the "
+"function explicitly when overloading them in some way."
 msgstr ""
 
 #: ../../reference/gdscript.rst:573
@@ -963,9 +1031,9 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:575
 msgid ""
-"A function can be declared static. When a function is static it has no "
-"access to the instance member variables or ``self``. This is mainly "
-"useful to make libraries of helper functions:"
+"A function can be declared static. When a function is static it has no access "
+"to the instance member variables or ``self``. This is mainly useful to make "
+"libraries of helper functions:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:586
@@ -974,9 +1042,9 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:588
 msgid ""
-"Statements are standard and can be assignments, function calls, control "
-"flow structures, etc (see below). ``;`` as a statement separator is "
-"entirely optional."
+"Statements are standard and can be assignments, function calls, control flow "
+"structures, etc (see below). ``;`` as a statement separator is entirely "
+"optional."
 msgstr ""
 
 #: ../../reference/gdscript.rst:593
@@ -985,10 +1053,10 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:595
 msgid ""
-"Simple conditions are created by using the ``if``/``else``/``elif`` "
-"syntax. Parenthesis around conditions are allowed, but not required. "
-"Given the nature of the tab-based indentation, ``elif`` can be used "
-"instead of ``else``/``if`` to maintain a level of indentation."
+"Simple conditions are created by using the ``if``/``else``/``elif`` syntax. "
+"Parenthesis around conditions are allowed, but not required. Given the nature "
+"of the tab-based indentation, ``elif`` can be used instead of ``else``/``if`` "
+"to maintain a level of indentation."
 msgstr ""
 
 #: ../../reference/gdscript.rst:609
@@ -997,16 +1065,16 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:619
 msgid ""
-"Simple loops are created by using ``while`` syntax. Loops can be broken "
-"using ``break`` or continued using ``continue``:"
+"Simple loops are created by using ``while`` syntax. Loops can be broken using "
+"``break`` or continued using ``continue``:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:630
 msgid ""
-"To iterate through a range, such as an array or table, a *for* loop is "
-"used. When iterating over an array, the current array element is stored "
-"in the loop variable. When iterating over a dictionary, the *index* is "
-"stored in the loop variable."
+"To iterate through a range, such as an array or table, a *for* loop is used. "
+"When iterating over an array, the current array element is stored in the loop "
+"variable. When iterating over a dictionary, the *index* is stored in the loop "
+"variable."
 msgstr ""
 
 #: ../../reference/gdscript.rst:655
@@ -1015,14 +1083,13 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:657
 msgid ""
-"By default, the body of a script file is an unnamed class and it can only"
-" be referenced externally as a resource or file. Class syntax is meant to"
-" be very compact and can only contain member variables or functions. "
-"Static functions are allowed, but not static members (this is in the "
-"spirit of thread safety, since scripts can be initialized in separate "
-"threads without the user knowing). In the same way, member variables "
-"(including arrays and dictionaries) are initialized every time an "
-"instance is created."
+"By default, the body of a script file is an unnamed class and it can only be "
+"referenced externally as a resource or file. Class syntax is meant to be very "
+"compact and can only contain member variables or functions. Static functions "
+"are allowed, but not static members (this is in the spirit of thread safety, "
+"since scripts can be initialized in separate threads without the user "
+"knowing). In the same way, member variables (including arrays and "
+"dictionaries) are initialized every time an instance is created."
 msgstr ""
 
 #: ../../reference/gdscript.rst:666
@@ -1069,10 +1136,10 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:719
 msgid ""
-"The class constructor, called on class instantiation, is named ``_init``."
-" As mentioned earlier, the constructors of parent classes are called "
-"automatically when inheriting a class. So there is usually no need to "
-"call ``._init()`` explicitly."
+"The class constructor, called on class instantiation, is named ``_init``. As "
+"mentioned earlier, the constructors of parent classes are called automatically "
+"when inheriting a class. So there is usually no need to call ``._init()`` "
+"explicitly."
 msgstr ""
 
 #: ../../reference/gdscript.rst:723
@@ -1085,9 +1152,8 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:733
 msgid ""
-"A class file can contain inner classes. Inner classes are defined using "
-"the ``class`` keyword. They are instanced using the ``ClassName.new()`` "
-"function."
+"A class file can contain inner classes. Inner classes are defined using the "
+"``class`` keyword. They are instanced using the ``ClassName.new()`` function."
 msgstr ""
 
 #: ../../reference/gdscript.rst:753
@@ -1096,11 +1162,11 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:755
 msgid ""
-"Classes stored as files are treated as :ref:`resources <class_GDScript>`."
-" They must be loaded from disk to access them in other classes. This is "
-"done using either the ``load`` or ``preload`` functions (see below). "
-"Instancing of a loaded class resource is done by calling the ``new`` "
-"function on the class object::"
+"Classes stored as files are treated as :ref:`resources <class_GDScript>`. They "
+"must be loaded from disk to access them in other classes. This is done using "
+"either the ``load`` or ``preload`` functions (see below). Instancing of a "
+"loaded class resource is done by calling the ``new`` function on the class "
+"object::"
 msgstr ""
 
 #: ../../reference/gdscript.rst:771
@@ -1109,32 +1175,30 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:773
 msgid ""
-"Class members can be exported. This means their value gets saved along "
-"with the resource (e.g. the :ref:`scene <class_PackedScene>`) they're "
-"attached to. They will also be available for editing in the property "
-"editor. Exporting is done by using the ``export`` keyword::"
+"Class members can be exported. This means their value gets saved along with "
+"the resource (e.g. the :ref:`scene <class_PackedScene>`) they're attached to. "
+"They will also be available for editing in the property editor. Exporting is "
+"done by using the ``export`` keyword::"
 msgstr ""
 
 #: ../../reference/gdscript.rst:782
 msgid ""
-"An exported variable must be initialized to a constant expression or have"
-" an export hint in the form of an argument to the export keyword (see "
-"below)."
+"An exported variable must be initialized to a constant expression or have an "
+"export hint in the form of an argument to the export keyword (see below)."
 msgstr ""
 
 #: ../../reference/gdscript.rst:785
 msgid ""
-"One of the fundamental benefits of exporting member variables is to have "
-"them visible and editable in the editor. This way artists and game "
-"designers can modify values that later influence how the program runs. "
-"For this, a special export syntax is provided."
+"One of the fundamental benefits of exporting member variables is to have them "
+"visible and editable in the editor. This way artists and game designers can "
+"modify values that later influence how the program runs. For this, a special "
+"export syntax is provided."
 msgstr ""
 
 #: ../../reference/gdscript.rst:864
 msgid ""
-"It must be noted that even if the script is not being run while at the "
-"editor, the exported properties are still editable (see below for "
-"\"tool\")."
+"It must be noted that even if the script is not being run while at the editor, "
+"the exported properties are still editable (see below for \"tool\")."
 msgstr ""
 
 #: ../../reference/gdscript.rst:869
@@ -1143,23 +1207,22 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:871
 msgid ""
-"Integers used as bit flags can store multiple ``true``/``false`` "
-"(boolean) values in one property. By using the export hint ``int, "
-"FLAGS``, they can be set from the editor:"
+"Integers used as bit flags can store multiple ``true``/``false`` (boolean) "
+"values in one property. By using the export hint ``int, FLAGS``, they can be "
+"set from the editor:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:880
 msgid ""
-"Restricting the flags to a certain number of named flags is also "
-"possible. The syntax is very similar to the enumeration syntax:"
+"Restricting the flags to a certain number of named flags is also possible. The "
+"syntax is very similar to the enumeration syntax:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:888
 msgid ""
-"In this example, ``Fire`` has value 1, ``Water`` has value 2, ``Earth`` "
-"has value 4 and ``Wind`` corresponds to value 8. Usually, constants "
-"should be defined accordingly (e.g. ``const ELEMENT_WIND = 8`` and so "
-"on)."
+"In this example, ``Fire`` has value 1, ``Water`` has value 2, ``Earth`` has "
+"value 4 and ``Wind`` corresponds to value 8. Usually, constants should be "
+"defined accordingly (e.g. ``const ELEMENT_WIND = 8`` and so on)."
 msgstr ""
 
 #: ../../reference/gdscript.rst:893
@@ -1174,11 +1237,11 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:899
 msgid ""
-"Exporting arrays works but with an important caveat: While regular arrays"
-" are created local to every class instance, exported arrays are *shared* "
-"between all instances. This means that editing them in one instance will "
-"cause them to change in all other instances. Exported arrays can have "
-"initializers, but they must be constant expressions."
+"Exporting arrays works but with an important caveat: While regular arrays are "
+"created local to every class instance, exported arrays are *shared* between "
+"all instances. This means that editing them in one instance will cause them to "
+"change in all other instances. Exported arrays can have initializers, but they "
+"must be constant expressions."
 msgstr ""
 
 #: ../../reference/gdscript.rst:925
@@ -1187,26 +1250,24 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:927
 msgid ""
-"It is often useful to know when a class' member variable changes for "
-"whatever reason. It may also be desired to encapsulate its access in some"
-" way."
+"It is often useful to know when a class' member variable changes for whatever "
+"reason. It may also be desired to encapsulate its access in some way."
 msgstr ""
 
 #: ../../reference/gdscript.rst:930
 msgid ""
-"For this, GDScript provides a *setter/getter* syntax using the ``setget``"
-" keyword. It is used directly after a variable definition:"
+"For this, GDScript provides a *setter/getter* syntax using the ``setget`` "
+"keyword. It is used directly after a variable definition:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:937
 msgid ""
-"Whenever the value of ``variable`` is modified by an *external* source "
-"(i.e. not from local usage in the class), the *setter* function "
-"(``setterfunc`` above) will be called. This happens *before* the value is"
-" changed. The *setter* must decide what to do with the new value. Vice-"
-"versa, when ``variable`` is accessed, the *getter* function "
-"(``getterfunc`` above) must ``return`` the desired value. Below is an "
-"example:"
+"Whenever the value of ``variable`` is modified by an *external* source (i.e. "
+"not from local usage in the class), the *setter* function (``setterfunc`` "
+"above) will be called. This happens *before* the value is changed. The "
+"*setter* must decide what to do with the new value. Vice-versa, when "
+"``variable`` is accessed, the *getter* function (``getterfunc`` above) must "
+"``return`` the desired value. Below is an example:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:954
@@ -1215,14 +1276,14 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:963
 msgid ""
-"Get/Setters are especially useful when exporting variables to editor in "
-"tool scripts or plugins, for validating input."
+"Get/Setters are especially useful when exporting variables to editor in tool "
+"scripts or plugins, for validating input."
 msgstr ""
 
 #: ../../reference/gdscript.rst:966
 msgid ""
-"As said *local* access will *not* trigger the setter and getter. Here is "
-"an illustration of this:"
+"As said *local* access will *not* trigger the setter and getter. Here is an "
+"illustration of this:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:981
@@ -1232,10 +1293,10 @@ msgstr ""
 #: ../../reference/gdscript.rst:983
 msgid ""
 "Scripts, by default, don't run inside the editor and only the exported "
-"properties can be changed. In some cases it is desired that they do run "
-"inside the editor (as long as they don't execute game code or manually "
-"avoid doing so). For this, the ``tool`` keyword exists and must be placed"
-" at the top of the file:"
+"properties can be changed. In some cases it is desired that they do run inside "
+"the editor (as long as they don't execute game code or manually avoid doing "
+"so). For this, the ``tool`` keyword exists and must be placed at the top of "
+"the file:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:998
@@ -1244,13 +1305,13 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:1000
 msgid ""
-"If a class inherits from :ref:`class_Reference`, then instances will be "
-"freed when no longer in use. No garbage collector exists, just simple "
-"reference counting. By default, all classes that don't define inheritance"
-" extend **Reference**. If this is not desired, then a class must inherit "
-":ref:`class_Object` manually and must call instance.free(). To avoid "
-"reference cycles that can't be freed, a ``weakref`` function is provided "
-"for creating weak references."
+"If a class inherits from :ref:`class_Reference`, then instances will be freed "
+"when no longer in use. No garbage collector exists, just simple reference "
+"counting. By default, all classes that don't define inheritance extend "
+"**Reference**. If this is not desired, then a class must inherit :ref:"
+"`class_Object` manually and must call instance.free(). To avoid reference "
+"cycles that can't be freed, a ``weakref`` function is provided for creating "
+"weak references."
 msgstr ""
 
 #: ../../reference/gdscript.rst:1010
@@ -1260,33 +1321,33 @@ msgstr ""
 #: ../../reference/gdscript.rst:1012
 msgid ""
 "It is often desired to send a notification that something happened in an "
-"instance. GDScript supports creation of built-in Godot signals. Declaring"
-" a signal in GDScript is easy using the `signal` keyword."
+"instance. GDScript supports creation of built-in Godot signals. Declaring a "
+"signal in GDScript is easy using the `signal` keyword."
 msgstr ""
 
 #: ../../reference/gdscript.rst:1023
 msgid ""
-"These signals, just like regular signals, can be connected in the editor "
-"or from code. Just take the instance of a class where the signal was "
-"declared and connect it to the method of another instance:"
+"These signals, just like regular signals, can be connected in the editor or "
+"from code. Just take the instance of a class where the signal was declared and "
+"connect it to the method of another instance:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:1039
 msgid ""
-"It is also possible to bind arguments to a signal that lacks them with "
-"your custom values:"
+"It is also possible to bind arguments to a signal that lacks them with your "
+"custom values:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:1047
 msgid ""
-"This is very useful when a signal from many objects is connected to a "
-"single callback and the sender must be identified:"
+"This is very useful when a signal from many objects is connected to a single "
+"callback and the sender must be identified:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:1059
 msgid ""
-"Finally, emitting a custom signal is done by using the Object.emit_signal"
-" method:"
+"Finally, emitting a custom signal is done by using the Object.emit_signal "
+"method:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:1070
@@ -1295,13 +1356,12 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:1072
 msgid ""
-"GDScript offers support for `coroutines "
-"<https://en.wikipedia.org/wiki/Coroutine>`_ via the ``yield`` built-in "
-"function. Calling ``yield()`` will immediately return from the current "
-"function, with the current frozen state of the same function as the "
-"return value. Calling ``resume`` on this resulting object will continue "
-"execution and return whatever the function returns. Once resumed the "
-"state object becomes invalid. Here is an example:"
+"GDScript offers support for `coroutines <https://en.wikipedia.org/wiki/"
+"Coroutine>`_ via the ``yield`` built-in function. Calling ``yield()`` will "
+"immediately return from the current function, with the current frozen state of "
+"the same function as the return value. Calling ``resume`` on this resulting "
+"object will continue execution and return whatever the function returns. Once "
+"resumed the state object becomes invalid. Here is an example:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:1096 ../../reference/gdscript.rst:1122
@@ -1310,8 +1370,7 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:1104
 msgid ""
-"It is also possible to pass values between yield() and resume(), for "
-"example:"
+"It is also possible to pass values between yield() and resume(), for example:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:1131
@@ -1320,9 +1379,9 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:1133
 msgid ""
-"The real strength of using ``yield`` is when combined with signals. "
-"``yield`` can accept two parameters, an object and a signal. When the "
-"signal is received, execution will recommence. Here are some examples:"
+"The real strength of using ``yield`` is when combined with signals. ``yield`` "
+"can accept two parameters, an object and a signal. When the signal is "
+"received, execution will recommence. Here are some examples:"
 msgstr ""
 
 #: ../../reference/gdscript.rst:1149
@@ -1331,17 +1390,16 @@ msgstr ""
 
 #: ../../reference/gdscript.rst:1151
 msgid ""
-"When using nodes, it's very common to desire to keep references to parts "
-"of the scene in a variable. As scenes are only warranted to be configured"
-" when entering the active scene tree, the sub-nodes can only be obtained "
-"when a call to Node._ready() is made."
+"When using nodes, it's very common to desire to keep references to parts of "
+"the scene in a variable. As scenes are only warranted to be configured when "
+"entering the active scene tree, the sub-nodes can only be obtained when a call "
+"to Node._ready() is made."
 msgstr ""
 
 #: ../../reference/gdscript.rst:1163
 msgid ""
-"This can get a little cumbersome, specially when nodes and external "
-"references pile up. For this, GDScript has the ``onready`` keyword, that "
-"defers initialization of a member variable until _ready is called. It can"
-" replace the above code with a single line:"
+"This can get a little cumbersome, specially when nodes and external references "
+"pile up. For this, GDScript has the ``onready`` keyword, that defers "
+"initialization of a member variable until _ready is called. It can replace the "
+"above code with a single line:"
 msgstr ""
-
